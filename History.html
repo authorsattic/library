@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>History Books | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/*---------- course ----------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------Campus Codes---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #eed7d7;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/*----------------------CONTACT----------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----------------------BLOG CONTENT----------------------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h4{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: lightcoral;
+    text-align: left;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="books.html">BOOKS</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Comment.html">COMMENT</a></li>
+                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>History Books</h1>
+    </section>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Napoleon : A Biography</h1>
+              <br>
+               <img src=https://books.google.com/books/content?id=FRj1MNP-3xwC&printsec=frontcover&img=1&zoom=5>
+               <br>
+              <p class="leading-relaxed">Tracing Napoleon's career, Frank McLynn begins with his Corsican roots, through the years of the French Revolution and the military triumphs, to the coronation in 1804, and ultimate defeat and imprisonment. McLynn reveals how Napoleon was both existential hero and plaything of fate.</p>
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/17-1fWGXna_cKEsXjts3ZIJg-AVQtMbmC/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+          <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Silk Road In History</h1>
+            <br>
+            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348791820l/8619917.jpg">
+            <br>
+            <p class="leading-relaxed">
+              The Silk Road was the contemporary name for a complex of ancient trade routes linking East Asia with Central Asia, South Asia, and the Mediterranean world. This network of exchange emerged along the borders between agricultural China and the steppe nomads during the Han Dynasty (206BCE-220CE), in consequence of the inter-dependence and the conflicts of these two distinctive societies. In their quest for horses, fragrances, spices, gems, glassware, and other exotics from the lands to their west, the Han Empire extended its dominion over the oases around the Takla Makan Desert and sent silk all the way to the Mediterranean,
+            </p>
+         
+            <br>
+            <br>
+              <a href="https://drive.google.com/file/d/1HhjqCgxwOSogCv4VOrkj-f9hDx5LBMDa/view?usp=sharing">
+              <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+              </button>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Gandhi: An Autobiography</h1>
+              <br>
+               <img src=https://books.google.com/books/content?id=XgvXrQEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71AiVNU9f5W5SaHqlwIx2CoQ4bZzvg4JV_285FFHSZnRkixhXF4ar6tgWlp4bji1tMNYk8IHlNSyUVD0UVmCeoLBSeVugAgSbTwK52AyqWzBEDdgvqCbHqkQi5rIzAq4FL1UoiQ>
+               <br>
+              <p class="leading-relaxed">"My purpose," Mahatma Gandhi writes of this book, "is to describe experiments in the science of Satyagraha, not to say how good I am." Satyagraha, Gandhi's nonviolent protest movement (satya = true, agraha = firmness), came to stand, like its creator, as a moral principle and a rallying cry; the principle was truth and the cry freedom. The life of Gandhi has given fire and fiber to freedom fighters and to the untouchables of the world: hagiographers and patriots have capitalized on Mahatma myths. Yet Gandhi writes: "Often the title [Mahatma, Great Soul] has deeply pained me. . . . But I should certainly like to narrate my experiments in the spiritual field which are known only to myself, and from which I have derived such power as I possess for working in the political field." Clearly, Gandhi never renounced the world; he was neither pacifist nor cult guru. Who was Gandhi? In the midst of resurging interest in the man who freed India, inspired the American Civil Rights Movement, and is revered, respected, and misunderstood all over the world, the time is proper to listen to Gandhi himself -- in his own words, his own "confessions," his autobiography. Gandhi made scrupulous truth-telling a religion and his Autobiography inevitably reminds one of other saints who have suffered and burned for their lapses. His simply narrated account of boyhood in Gujarat, marriage at age 13, legal studies in England, and growing desire for purity and reform has the force of a man extreme in all things. He details his gradual conversion to vegetarianism and ahimsa (non-violence) and the state of celibacy (brahmacharya, self-restraint) that became one of his more arduous spiritual trials. In the political realm he outlines the beginning of Satyagraha in South Africa and India, with accounts of the first Indian fasts and protests, his initial errors and misgivings, his jailings, and continued cordial dealings with the British overlords. Gandhi was a fascinating, complex man, a brilliant leader and guide, a seeker of truth who died for his beliefs but had no use for martyrdom or sainthood. His story, the path to his vision of Satyagraha and human dignity, is a critical work of the twentieth century, and timeless in its courage and inspiration.</p>
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/19gQ5eFFQAcNSy6gctf10ZlxbDV5Ou_bn/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Girls Who Rocked The World</h1>
+              <br>
+               <img src=data:image/jpeg;base64,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>
+               <br>
+              <p class="leading-relaxed">“Young women looking for inspiration will surely find it” (Booklist) in these profiles of forty-six movers and shakers who made their mark before they turned twenty.
+  
+  This fun and inspiring collection of influential stories provides forty-six illustrated examples of strong, independent female role models, all of whom first impacted the world as teenagers or younger. Originally published in two volumes over a decade ago, this fully updated and expanded edition of Girls Who Rocked the World spans a variety of achievements, interests, and backgrounds, from Harriet Tubman and Coco Chanel to S.E. Hinton and Maya Lin—each with her own incredible story of how she created life-changing opportunities for herself and the world. Personal aspirations from today’s young women are interspersed throughout the book, which also includes profiles of teenagers who are rocking the world right now—girls like Winter Vinecki, the creator of the nonprofit organization Team Winter, and Jazmin Whitley, the youngest designer to show at L.A. Fashion Week.
+  It’s never too soon to start making a difference, and these exhilarating examples of girl power in action make for ideal motivation.</p>
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/18tDnX8CXqXB6nWD9343_mI9NyA0n_RLo/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+          <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">100 mistakes that changed History</h1>
+            <br>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/91L9ThBrkZL.jpg">
+            <br>
+            <p class="leading-relaxed">
+              From the Maginot Line to the Cuban Missile Crisis, history is filled with bad moves and not-so-bright ideas that snowballed into disasters and unintended consequences.
+  This engrossing book looks at one hundred such tipping points. Japan bombs Pearl Harbor. The Caliphs of Baghdad spend themselves into bankruptcy. The Aztecs greet the Conquistadors with open arms. Mexico invites the Americans to Texas-and the Americans never leave.
+            </p>
+         
+            <br>
+            <br>
+              <a href="https://drive.google.com/file/d/1HfUHj_jMvGCbJFDcR9ziU-VWfr_yXtYq/view?usp=sharing">
+              <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+              </button>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of Mathematics</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/content?id=bBoPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE710pNbzUXY6gbMn5M6yAQSFb8uDSDwxBO8eckXGajDw3VJu42YB5820YutCKo2FEO4Lneq8i04ySI792zSAD8BaWeRad5v8qnJmekBFiphqA_MKHn3_N8wEHE8xTW512Bxt28Qt">
+                <br>
+                <p class="leading-relaxed">Originally issued in 1893, this popular Fifth Edition (1991) covers the period from antiquity to the close of World War I, with major emphasis on advanced mathematics and, in particular, the advanced mathematics of the nineteenth and early twentieth centuries.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jphE8cPJ3aBYDSup-0dVN8cLnhYKaDbe/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Derrida and The End of History</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51CyFSc6OmL._SX308_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">"Derrida and the End of History" places Derrida's rejection of Fukuyama's claim within a wider tradition of 'endist' thought. ... "Derrida and the End of History" places Derrida's rejection of Fukuyama's claim within a wider tradition of 'endist' thought.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nc2CzCrpYXoSs0BJejN1eJYRj58vGGgN/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Discovering The Mysteries of Ancient America</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/51XoI97lQBL.jpg">
+                <br>
+                <p class="leading-relaxed">In Discovering the Mysteries of Ancient America, the author of The Atlantis Encyclopedia turns his sextant towards this hemisphere. Here is a collection of the most controversial articles selected from seventy issues of the infamous Ancient American magazine. They range from the discovery of Roman relics in Arizona and California's Chinese treasure, to Viking rune-stones in Minnesota and Oklahoma and the mysterious religions of ancient Americans.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nS9cPn12Vws2oBYIdedaOf0TI-X0NlyV/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Economic and Social History of Medieval Europe</h1>
+                <br>
+                 <img src="https://images.routledge.com/common/jackets/originals/978041586/9780415860161.tif">
+                <br>
+                <p class="leading-relaxed">Excellent description of the development of the economy during the middle ages. Although it was written over 80 years ago, it is still very relevant. ... He looks mostly at the medieval period, but gives background covering the sixth to the ninth centuries, which was my main goal.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jdKBWY0Y32PRqZAJ165x4ZD3QT1fl-D_/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Everlasting Flower- A History of Korea </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/41GhVsZ4pTL._SX326_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Everlasting Flower surveys the political and social history of Korea dealing with topics such as the unification of much of the peninsula under Silla, the establishment of the Koryŏ state, the Mongol invasions, the Imjin Waeran, the "opening" of Korea, the division, the Korean War, and the construction of highly divergent societies in North and South Korea. There are nine chapters: the first four cover before 1800 and last four since 1864.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jenLm-zC9kSxdrV2gA2s0Mp8bGyS7_tS/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Freshwater Heritage</h1>
+                <br>
+                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390432561l/1598518.jpg">
+                <br>
+                <p class="leading-relaxed">Freshwater Heritage: A History of Sail on the Great Lakes, 1670-1918 represents the culmination of a lifelong passion for sailing and for the history of sail as it applies to Canada.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jjPbjAZc2EydGikS-0TmVlzU8egdh7hf/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">History of India</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/31N3nTr7tfL._SX336_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">This book has been considered by academicians and scholars of great significance and value to literature. This forms a part of the knowledge base for future generations. We have represented this book in the same form as it was first published. Hence any marks seen are left intentionally to preserve its true nature.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1npJi0K1hRzTxTMqbbViZX_BwmooeQpP9/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">2012 World History</h1>
+                <br>
+                 <img src="https://d20ohkaloyme4g.cloudfront.net/img/document_thumbnails/729e6c57babbb717fe23a7a7a21e331f/thumb_1200_2100.png">
+                <br>
+                <p class="leading-relaxed">2012 World History by Harvard University gives  ways of looking at classical culture and history.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nukoVBte98vejBPZIe0cBAlYY1ad4Ah8/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">India Since Independence</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51ZqrVsYCjL._SX322_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">An insightful narration on how the world’s largest democracy, India, was forged, India Since Independence is the sequel to India's Struggle for Independence</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jpxtxcXBpausJRKmqvP8L2_ZnBRFBPBx/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The History of Terrorism</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/917JeP9hnlL.jpg">
+                <br>
+                <p class="leading-relaxed">Examines the political agendas, actions, and religious beliefs of individuals and groups who, throughout history, have resorted to violent actions in order to generate fear and gain their objectives.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1ngBAoXioziAe-omPAQmpqVQJVDsJ6wtO/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of Philosophy</h1>
+                <br>
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/A_History_of_Philosophy_volume_I_Greece_and_Rome_part_I.jpeg/220px-A_History_of_Philosophy_volume_I_Greece_and_Rome_part_I.jpeg">
+                <br>
+                <p class="leading-relaxed">Originally conceived as a three volume work covering ancient, medieval and modern philosophy, and written to serve as a textbook for use in Catholic ecclesiastical seminaries, the work grew into nine volumes published between 1946 and 1975 and to become a standard work of reference for philosophers and philosophy.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jM48DV4fp1z-B4XVFwT5yfqV3jU7rW2J/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Prolegomena to the History of Ancient Israel</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51xfvK9uaTL._SX365_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">An early exponent of scientific philology, he placed the Pentateuch in a historical-social context, setting aside theological traditions. ... He then examines the history of worship, sacrifice, sacred feasts, priests, and the law in ancient Israel.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nQEJ8wBSojoc5HtA6YUq9-zPfVKIObol/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Submarine Warfare</h1>
+                <br>
+                 <img src="data:image/jpeg;base64,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">
+                <br>
+                <p class="leading-relaxed">Submarine Warfare is an authoritative history of these crafts, from their humble, leaky beginnings to their high-tech modern successors.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nym7Moy1PCT5MwXKsfXkUFMwjccZOA5i/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Great American History Fact Finder</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/61+WcSAFcPL.jpg">
+                <br>
+                <p class="leading-relaxed">Completely revised and expanded with 200 new entries, The Great American History Fact-Finder covers a wide spectrum of American history and culture, including political events, military history, sports, arts, entertainment, landmark legislation, and business.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nV-BCS7VLAfszgIDpqn-KvHiCH8johwl/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">History of Film</h1>
+                <br>
+                 <img src="http://i.imgur.com/J5LVHEL.jpg">
+                <br>
+                <p class="leading-relaxed">In this lively, informative and up-to-date new analysis of what has been called the seventh art, David Parkinson traces the evolution of the moving image from the earliest shadow shows to the contemporary cinema.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1nguKle6Fk2iNgWdj4KIexQRb4JsPAHra/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Unnatural History of the Sea</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/816T4gh0htL.jpg">
+                <br>
+                <p class="leading-relaxed">The Unnatural History of the Sea Kindle Edition. Humanity can make short work of the oceans' creatures. ... Drawing on firsthand accounts of early explorers, pirates, merchants, fishers, and travelers, the book recreates the oceans of the past: waters teeming with whales, sea lions, sea otters, turtles, and giant fish.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jbX4veB80f3H5F-9J4OFeZfy9-FNE2DS/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Virtual History</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51TDgRLL-+L._SX331_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Counterfactual history, also sometimes referred to as virtual history, is a form of historiography that attempts to answer "what if" questions known as counterfactuals. ... It has produced a literary genre which is variously called alternate history, speculative history, or hypothetical history.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1jhpkhMcn6LjFkHSuHG0M6bERkEZNYN8U/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">History of Modern India</h1>
+                <br>
+                 <img src="https://studymaterial.oureducation.in/wp-content/uploads/2018/02/History-of-Modern-India.png">
+                <br>
+                <p class="leading-relaxed">History of Modern India is one of the famous books of Bipin Chandra. ... This book is a journey mapping the path of colonial India in from the eighteenth century to the twentieth century. It traces the timeline of British rule which majorly coincides with the modern Indian history.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1qQ3NOyWZ250XSR-gwlauYthg0CZiiROG/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">HISTORY</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Modern Indian History</h1>
+                <br>
+                 <img src="http://i.imgur.com/J5LVHEL.jpg">
+                <br>
+                <p class="leading-relaxed">In its given premises, it includes a wide range of topics such geographical conditions and human settlements, society and cultures; type of governance and administrative systems; trade and economic policy; interstate relationships; wars and battles, etc. in the time frame of Ancient, Medieval, and Modern.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1qTOKDhuPbc89kPbv2112a1ArGuOVoHjM/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of Time            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/A1xkFZX5k-L.jpg               ">
+                <br>
+                <p class="leading-relaxed">In A Brief History of Time, Hawking writes in non-technical terms about the structure, origin, development and eventual fate of the Universe, which is the object of study of astronomy and modern physics. He talks about basic concepts like space and time, basic building blocks that make up the Universe (such as quarks) and the fundamental forces that govern it (such as gravity).             </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MGWYqL2knmb0BYUK4ri1IKDUADx7A4NB/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of India - 3rd Edition             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/41X0zdGDrzL._SX373_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed">Hermann Kulke and Dietmar Rothermund provide a comprehensive overview of the structural pattern of Indian history, covering each historical period in equal depth.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1PtZr4w2OD1vL3a9UEEjbEIWh9kxVPCy6/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of the Classical Greek World - 478 - 323 BC            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51AVOTm6X7L._SX345_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed">This book gives an accessible account of classical Greek history, from the aftermath of the Persian Wars in 478 bc to the death of Alexander the Great in 323 bc. Covers political and military events, including: the flourishing of democracy in Athens; the Peloponnesian war, which involved the whole Greek world; and the conquests of Alexander the Great            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1NIpCzhXxjY7iXkOEXXdBkm-xOebDZlQ2/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of the Later Roman Empire AD 284-641 Second Edition             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/81haM+kOgWL.jpg               ">
+                <br>
+                <p class="leading-relaxed">The Second Edition of A History of the Later Roman Empire features extensive revisions and updates to the highly-acclaimed, sweeping historical survey of the Roman Empire from the accession of Diocletian in AD 284 to the death of Heraclius in 641.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1NEscbouz0oig8qkd_h18OYeVbiNf8la8/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A History of the World- From the 20th to 21st Century             </h1>
+                <br>
+                 <img src="https://images-eu.ssl-images-amazon.com/images/I/51BmzTzfhqL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_PIStarRatingFOURANDHALF%2CBottomLeft%2C360%2C-6_SR600%2C315_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg               ">
+                <br>
+                <p class="leading-relaxed">A comprehensive survey of the key events and personalities of this period throughout the world, it includes discussion on topics such as: the rivalry between European nations from 1900–1914. the Depression and the rise of Fascism during the 1920s and 1930s. the global impact of the Cold War.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MjtdIAC8Tjya2iB0MeYAblp3alLh1s27/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Biblical History and Israel`s Past            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/71zhWOXVW5L.jpg               ">
+                <br>
+                <p class="leading-relaxed"> In Biblical History and Israel's Past Megan Bishop Moore and Brad E. Kelle describe how scholars have increasingly begun in recent years to tell the story of ancient Israel and its neighbors on its own terms, using both biblical and extrabiblical sources without privileging the biblical perspective.             </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1N8uoAFutsc7aSImKU3As8s2dc_IGhV0d/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Destiny Disrupted             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51X9b59mO7L._SX330_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed">In Destiny Disrupted, Tamim Ansary tells the rich story of world history as the Islamic world saw it, from the time of Mohammed to the fall of the Ottoman Empire and beyond. He clarifies why our civilizations grew up oblivious to each other, what happened when they intersected, and how the Islamic world was affected by its slow recognition that Europe-a place it long perceived as primitive and disorganized-had somehow hijacked destiny.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MsvaNzMXtYRExz8vuQpdh-cqHyJOeY2l/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Don't Know Much About History            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/71+2cA35UnL.jpg               ">
+                <br>
+                <p class="leading-relaxed">From the arrival of Columbus through the bizarre election of 2000 and beyond, Davis carries readers on a rollicking ride through more than 500 years of American history. In this updated edition of the classic anti-textbook, he debunks, recounts, and serves up the real story behind the myths and fallacies of American history.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MZ3Cgd2ysAq1D3cRZYJmJBq4xKjVxBZ6/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">First Americans : A History of Native Peoples - Second Edition             </h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/510nl-rpZRL.jpg               ">
+                <br>
+                <p class="leading-relaxed">First Americans provides a comprehensive history of Native Americans from their earliest appearance in North America to the present, highlighting the complexity and diversity of their cultures and their experiences.             </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1N7v_2fYSpQgT16Fr4foCACuEVtb4004B/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Heroes of History: A Brief History of Civilization From Ancient Times to the Dawn of the Modern Age             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/81icV9vH6lL.jpg               ">
+                <br>
+                <p class="leading-relaxed">Heroes of History: A Brief History of Civilization From Ancient Times to the Dawn of the Modern Age is a compilation of historical events and the tale of human civilisation, dating back to its origin.             </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1N1KdVOmvqMvir4lxC0oZYLU7ixP4LVdP/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">History of Medieval India             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/81EnLSu8pdL.jpg               ">
+                <br>
+                <p class="leading-relaxed">There are great amount of historical moments strung together to bring India where it is today. A slice of these events add up to make this history book by Satish Chandra. The 1000 year period covered in this book details about the sequence of events and the empires that governed different parts of the country from the eighth to the eighteenth century.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1Q3ShL2k6x_TCEDiYv3BDTXKTQTeNORNT/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Homo Deus : A Brief History of Tommorrow             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/71N6LbagzSL.jpg               ">
+                <br>
+                <p class="leading-relaxed">Yuval Noah Harari envisions a near future in which we face a new set of challenges. Homo Deus explores the projects, dreams and nightmares that will shape the twenty-first century and beyond - from overcoming death to creating artificial life.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MVdeo2XB-XXKsOkW_h2oQrCiU5Jc7kjC/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">India : The Ancient Past_ A History of the Indian Subcontinent from 7000 BC To AD 1200            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51vv5l72exL._SX331_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed">India: The Ancient Past: A History of the Indian Sub-Continent from C. 7000 BC to Ad 1200. This carefully crafted study presents the fascinating story of the development and establishment of India's culture and civilization from early pre-history through to the early second millennium.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1QED-MpNVAxtGYokr0USxBl8iZbQIGrkN/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Sapiens and Homo Deus_The E-Book Collection              </h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/51W5ZCos7nL.jpg               ">
+                <br>
+                <p class="leading-relaxed">Discover humanity’s past and its future in this in this special e-book collection featuring Sapiens—a reading pick of President Barack Obama, Bill Gates, and Mark Zuckerberg—and its acclaimed companion Homo Deus.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MBhRqOgqXMM82r0WZjVvApCdskqMTY4R/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Sapiens _A Brief History of Humankind             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/41yu2qXhXXL._SX324_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed"></p>In this bold and provocative book, Yuval Noah Harari explores who we are, how we got here and where we're going.              </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MPmDlQy0jpzrl6CKtRLLrXyqNky8x4iU/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Shaping History Through Prayer and Fasting            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/61KWkftL-dL.jpg               ">
+                <br>
+                <p class="leading-relaxed">The times we are living in are scary, to say the least, yet what we are facing isn't new. History is spotted with violent episodes of unimaginable carnage and terror. And what did people do about them? The only thing they could do--they prayed! Discover with Derek Prince how your prayers can make a difference. You can learn to touch the heart of God through effective fasting and prayer--prayer that will change the world!            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1NT7b_ylr3m6SaUXqPz1hXsEhSS1LPDV1/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Social  History of Art             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/41XqHdZdUkL._SX319_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed"> Exploring the interaction between art and society, Hauser effectively details social and historical movements and sketches the frameworks in which visual art is produced.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1NLuNK04A1zpj3xRqe-MwNRfNax5F_pgx/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Decisive Battles of World History             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/91n2f+jU9wL.jpg               ">
+                <br>
+                <p class="leading-relaxed"> Professor Aldrete leads you in discovering the military conflicts that have had the greatest impact in shifting the direction of events and defining our world.             </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1Mr0g8RkIFMw_dgYpvnQX7kzFJN87jzZT/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Murder of History             </h1>
+                <br>
+                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1476627109l/32619078.jpg               ">
+                <br>
+                <p class="leading-relaxed">The Murder of History: A critique of history textbooks used in Pakistan [1] is a 1985 (263 page) book by Khursheed Kamal Aziz. It explains the various errors, misquotations, misinterpretations and misleading statements found in various curriculum textbooks taught in Pakistan.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MVvxuAD7Ziej-lMCOqoePrJLZfDiN_6e/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Mughal Empire             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/618G59t+JCL.jpg               ">
+                <br>
+                <p class="leading-relaxed"> In this volume, Professor John Richards traces the history of this magnificent empire from its creation in 1526 to its breakup in 1720            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1NDxhx1gdIHBnmLjQzJ-D6sVTKgD_lvrV/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Secret History of The Reptilians             </h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/51MDrvza75L.jpg               ">
+                <br>
+                <p class="leading-relaxed">In The Secret History of the Reptilians, Scott Alan Roberts investigates and examines the pervasive presence of the serpent in human history, religion, culture, and politics.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MZef6o59oF9kFOfCD_Q79NePbIt4Yj-A/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Secret History of The World And How  to Get Out Alive             </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51KYUro3FiL._SX331_BO1,204,203,200_.jpg               ">
+                <br>
+                <p class="leading-relaxed">Previously published as Ancient Science, Secret History contains 150 pages of new material. The Secret History of The World and How To Get Out Alive is the definitive book of the real answers where Truth is more fantastic than fiction.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MObsUj-hFJN1cKPq841vacOAf5VAgH4F/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Silk Road in World History             </h1>
+                <br>
+                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385921256l/19086637.jpg               ">
+                <br>
+                <p class="leading-relaxed">The Silk Road survived the turmoil of the demise of the Han and Roman Empires, reached its golden age during the early middle age, when the Byzantine Empire and the Tang Empire became centers of silk culture and established the models for high culture of the Eurasian world. The coming of Islam extended silk culture to an even larger area and paved the way for an expanded market for textiles and other commodities. By the 11th century, however, the Silk Road was in decline because of intense competition from the sea routes of the Indian Ocean.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MhdZAkpeMMZ-3P7LADBn84x1Z2G1vR83/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">World History 101            </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/81A6Uqp4XqL.jpg               ">
+                <br>
+                <p class="leading-relaxed">Uncover the mysteries of the past with this exciting, comprehensive guide on world history.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1MNvTmmeVxmVGE1kuBoe2tI7uw94yQGAF/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">History</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">World History For Dummies- Second Edition             </h1>
+                <br>
+                 <img src="https://images-eu.ssl-images-amazon.com/images/I/51E-DpbqyeL.__BG0,0,0,0_FMpng_AC_UL600_SR474,600_.jpg               ">
+                <br>
+                <p class="leading-relaxed">Want to know more about global history? This concise guide explains in clear detail all the major players and events that have made the world what it is today. Covering the entirety of human history, this comprehensive resource highlights important developments in everything from religion and science to art and war — giving you an understanding of how the 21st-century world came to be.            </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1PeuJS6BRMNeImWeySIiTzfMfgmVwfHtp/view?usp=sharing                ">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                    <!--------JavaScript for toggle menu------>
+                    <script>
+                      var navLinks = document.getElementById("navLinks");
+                      function showMenu(){
+                          navLinks.style.right = "0";
+                      }
+                      function hideMenu(){
+                          navLinks.style.right = "-200px";
+                      }
+                      var Cat90 = document.getElementbyId("Cat90");
+          if(x = Cat90) {
+            Window.location.href("Cat90")
+          }
+                  </script>
+</body>
+</html>

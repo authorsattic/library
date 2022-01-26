@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Science Books | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/*---------- course ----------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------Campus Codes---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #eed7d7;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/*----------------------CONTACT----------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----------------------BLOG CONTENT----------------------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h4{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: lightcoral;
+    text-align: left;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="Books.html">BOOKS</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Comment.html">COMMENT</a></li>
+                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Science Books</h1>
+    </section>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1"> Science : Knowledge Encyclopedia</h1>
+              <br>
+               <img src="https://cdn.asaha.com/assets/thumbs/ee6/ee632469679b25df665a6ea25e9ec8f3.jpg">
+              <br>
+              <p class="leading-relaxed">
+                An amazing encyclopedia with a ground-breaking new visual approach to science, illustrated with jaw-dropping details of the natural world and the wonders of the Universe.
+  
+  Stunning computer-generated images pack the pages of this encyclopedia to reveal and explain spectacular aspects of the scientific world. Bursting with astonishing 3D images, Knowledge Encyclopedia Science! shows core science in stunning detail, from atomic particles and universal forces to life in all its diversity.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://www.pdfdrive.com/download.pdf?id=158440857&h=df47cb4371e93db2bd41a3832ddc411e&u=cache&ext=pdf">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Social Media Marketing</h1>
+              <br>
+               <img src="https://cdn.asaha.com/assets/thumbs/3d7/3d721cafb681643e52c1824ba07cdf0d.jpg">
+              <br>
+              <p class="leading-relaxed">
+                “Social Media Marketing deserves special kudos for its courage in tackling the new frontier of social media marketing. This textbook challenges its readers to grapple with the daunting task of understanding rapidly evolving social media and its users."—TAA Judges Panel
+  
+  Social Media Marketing was the first textbook to cover this vital subject. It shows how social media fits into and complements the marketer’s toolbox. The book melds essential theory with practical application as it covers core skills such as strategic planning for social media applications, incorporating these platforms into the brand’s marketing communications executions, and harnessing social media data to yield customer insights.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1R0K-mMFKBo9wk6KDHH24pvX_0BAU3-X9/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Human Body Encyclopedia</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                The ultimate head-to-toe guide to the human body for kids. Incredible computer-generated images reveal the amazing inside story of what goes on under our skin. All-new 3D illustrations offer a unique, strikingly realistic close-up of this fascinating, complex machine - what it looks like and how it works. Every image is supported with easy-to-understand explanations and a wealth of fascinating facts and figures. Knowledge Encyclopedia Human Body! allows you to take a closer look at the amazing world of your own human body.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/100xFjssENW_sF5lRbT5wNgv4UgQ31I1l/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Kinetics In Materials Science And Engineering</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                "A pedagogical gem.... Professor Readey replaces ‘black-box’ explanations with detailed, insightful derivations. A wealth of practical application examples and exercise problems complement the exhaustive coverage of kinetics for all material classes." –Prof. Rainer Hebert, University of Connecticut
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/109lk3V1xNxeblUO932jjybXYE-jLfKgS/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Botany Illustrated</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                This easy-to-use book helps you acquire a wealth of fascinating information about plants. There are 130 pages with text, each facing 130 pages of beautiful illustrations. Each page is a separate subject. Included is a coloring guide for the realistic illustrations. The illustration pages are composed of scientifically accurate line drawings with the true sizes of the plants indicated. Using colored pencils and the authors’ instructions, you can color the various plant structures to stand out in vivid clarity. Your knowledge of plants increases rapidly as you color the illustrations.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1-uoZi2ZG5JtfBkXq2ONmrDlr4lZY6PIT/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Science : Facts At Your Fingertips</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                Covering the basic principles of science, including matter and materials, energy and forces, and the living world, DK's Pocket Genius: Science is a junior look at science, teaching young readers what things are made of, how things move, and how life works. Touching on biology, chemistry, physics, and more, Pocket Genius: Science answers questions such as "Why do lemons taste sour?", "Where does electricity come from?", "How do plants make their own food?", and more to help explain everyday science in our world.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/10X2c4OQgeqFOr1CSydwEO8Nkhy5yLcS-/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Junior Science Experiments</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                Junior Science Experiments On File?, Volume 4 provides 75 brand-new experiments and activities designed for elementary and middle school students in the major branches of science, including general science, life science, physical science, and Earth science. As in previous volumes, the experiments are written and designed in a manner that is easily understood by the layperson and enhanced by more than 250 black-and-white illustrations, tables, and diagrams. 
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1-jh8_CO8wxFzmA7sR5ui-WYOnLOf22m3/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Human Brain</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                CGI illustrations and brain MRI scans reveal the brain's anatomy in unprecedented detail. Step-by-step sequences unravel and simplify the complex processes of brain function, such as how nerves transmit signals, how memories are laid down and recalled, and how we register emotions. The book answers fundamental and compelling questions about the brain: what does it mean to be conscious, what happens when we're asleep, and are the brains of men and women different?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/10qa1SiO2vm-sy-bwgtjchpE5JYcNJ3Eb/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Very Important Animals</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                A charming first animal encyclopedia bursting with facts, perfect for little learners ages 4-7 who want to know everything about the creatures they love.
+  
+  From elephants to sharks to penguins, My Encyclopedia of Very Important Animals is bursting with facts about the wonderful world of animals-what they eat, what they do, where they live, and so much more. Kids can even learn what makes an animal an animal, what makes a mammal a mammal, and what it means to be be endangered or become extinct. Animal folklore and legends are included to add cultural context and significance.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/10LN6pt8uOP4oi7GLKE2gZf17VYAWtxB2/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">101 Facts Of Polar Animals</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                Find out how polar bears survive in the frozen Arctic Circle and how long they can stay underwater. In 101 Facts About Polar Bears you'll also learn what young polar bears do in the winter.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1-eXBFt4GEYsaf5wUX3UrG3_kY_SUMoft/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Science Book : Big Ideas Simply Explained
+              </h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/91c6XyRt36L._AC_UL600_SR600,600_.jpg">
+                <br>
+                <p class="leading-relaxed">"Part of the popular Big Ideas series, The Science Book explores the history of science, how scientists have sought to explain our incredible universe and how amazing scientific discoveries have been made. Discover how Galileo worked out his scientific theories of motion and inertia, why Copernicus's ideas were contentious and what the discovery of DNA meant. All the big scientific ideas and discoveries are brought to life with quirky graphics, pithy quotes and step-by-step 'mind maps', plus every area of science is covered, including astronomy, biology, chemistry, geology, maths and physics. You'll be brought up-to-date on scientific ideas from black holes to genetic engineering with eye-catching artworks showing how the ideas of key scientists have impacted our understanding of the world. Whether you are a science student or just have an interest in scientific ideas, The Science Book is a perfect way to explore this fascinating subject."
+                  </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fv3pM5hd-z8CJCVdzIGESogmaOJXTe2H/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Comets And Asteroids</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/41BBYHAW7YL.jpg">
+                <br>
+                <p class="leading-relaxed">These cosmic objects -- the leftovers of the formation of our solar system -- are the most plentiful bodies in that system. Covered in this fact-filled, up-to-date volume are how asteroids were first discovered, how asteroids and comets formed, their sizes, shapes and orbits, ongoing space flights to these bodies, plans to mine them for their valuable materials, and the very real threat of disaster caused by asteroids and comets impacting the Earth.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fxwtG-MnwC29xnt-jaDoc6jryjol_ZIc/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Complete Idiots Guide to Life Science</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51QXBHSGBWL.jpg">
+                <br>
+                <p class="leading-relaxed">What’s alive and what’s not? This chapter covers the character- istics of life and the development of science from its earliest ori- gins to present-day methods of research.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1edd6Kpo8gm7FDUV1HSaur3RKx9oGNvaC/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Cosmology and Particle Asstrophysics 2nd edition</h1>
+                <br>
+                 <img src="https://files.passeidireto.com/Thumbnail/045cf938-7359-42dd-a7b9-c3c766f4c7c3/210/1.jpg">
+                <br>
+                <p class="leading-relaxed">This edition will again target students of physics, astrophysics and ... which were expanded in the second edition, have been very well received by students. This book offers advanced undergraduate level and beginning graduate level students a highly readable, yet comprehensive review of particle astrophysics.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fIMxXilP1dkadPwd2w5TEwE6GEDOu7M9/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Forensic Science</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/91ve4xEJUBL.jpg">
+                <br>
+                <p class="leading-relaxed">An informative and visual guide to the world of crime-scene investigation, this DK Eyewitness book explores how science helps crack the case</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1f4d-Sc47u65-uCUt71b2xF6tgeopKzXu/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Global Climatology and Ecodynamics</h1>
+                <br>
+                 <img src="https://n2.sdlcdn.com/imgs/d/q/o/large/Global-Climatology-and-Ecodynamics-Anthropogenic-SDL515731816-1-4b716.jpg">
+                <br>
+                <p class="leading-relaxed">Uncertainties of information on the problems of global climatology are a principal barrier for adequate understanding of the anthropogenic effects on global ecodynamics. The purpose of the book is to summarize existing information and assess the level of these uncertainties.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1f9NW41_ymObA7_pEJu3H6gOIMi000-rI/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Global Warming</h1>
+                <br>
+                 <img src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9783/6420/9783642062919.jpg">
+                <br>
+                <p class="leading-relaxed">To date, definitive answers to questions about ultimate causes and effects of global warming remain elusive. In Global Warming - Myth or Reality? . Marcel Leroux seeks to separate fact from fiction and lays out the scientific cause of the sizable sceptical scientific community that challenges the accepted wisdom.
+              </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1ehUhBlhzEq5nf3LflbCoOt_UZyz5Pq2H/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Human Reasoning and Congitive Science</h1>
+                <br>
+                 <img src="https://mitpress.mit.edu/sites/default/files/styles/large_book_cover/http/mitp-content-server.mit.edu%3A18180/books/covers/cover/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262195836%26type%3D.jpg?itok=csHZNqFs">
+                <br>
+                <p class="leading-relaxed">In Human Reasoning and Cognitive Science, Keith Stenning and Michiel van Lambalgen—a cognitive scientist and a logician—argue for the indispensability of modern mathematical logic to the study of human reasoning.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fFSA-okO1e4oF_7hyOdvEQl501v4PJ8x/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Science Imponderables</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/41VzmT0DrcL.jpg">
+                <br>
+                <p class="leading-relaxed">In gathering the most fascinating questions asked about science into a handy Gem format, pop culture guru David Feldman demystifies these and much more in Science Imponderables . Providing you with information you can't find in encyclopedias, dictionaries, or almanacs, Science is a fun look at the little things that make life so interesting.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fu55GCfhMw3V433087RE2AkFyPyAMNNc/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Introductions to electric circuits</h1>
+                <br>
+                 <img src="https://secure-ecsd.elsevier.com/covers/80/Tango2/large/9780340631980.jpg">
+                <br>
+                <p class="leading-relaxed">An Introduction to Electric Circuits is essential reading for first year students of electronics and electrical engineering who need to get to grips quickly with the basic theory. This text is a comprehensive introduction to the topic and, assuming virtually no knowledge, it keeps the mathematical content to a minimum.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fSYu6Y_zAQduB-hmY-bqAkUkTQvjQliE/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Engineering for Every Kid</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/71zfQoelOLL.jpg">
+                <br>
+                <p class="leading-relaxed">Janice VanCleave's Engineering for Every Kid presents entertaining, challenging experiments and activities to help you understand the different types of engineering there are—including structural, solar, electrical, and chemical—and how each is applied to real world everyday situations.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fQZEE1HqbrR2WsicgjkH43j4RQrXp1-N/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Planting Plans For Your Kitchen Garden</h1>
+                <br>
+                 <img src="https://image.isu.pub/180201022634-56a558a95fcc77f040644d211ea75a43/jpg/page_1.jpg">
+                <br>
+                <p class="leading-relaxed">'Planting Plans for Your Kitchen Garden' gives you all you need to turn your back garden into a productive paradise with modular planting plans for simple beds of vegetables, herbs, fruit and cut flowers. You can also mix and match the beds to create your own kitchen garden or allotment. </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fz7n2h4d0BAlBYyj_l_k9uaPSUd38H1E/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Everything Kids' Bugs Book</h1>
+                <br>
+                 <img src="https://ia802903.us.archive.org/BookReader/BookReaderPreview.php?id=everythingkidsbu0000wagn&subPrefix=everythingkidsbu0000wagn&itemPath=/25/items/everythingkidsbu0000wagn&server=ia802903.us.archive.org&page=leaf1&fail=preview&&scale=14.212669683257918&rotate=0">
+                <br>
+                <p class="leading-relaxed">The Everything. Kids' Bugs Book is guaranteed to have you digging in the dirt, winning bug races, cooking up a “bug feast, ” and creating your own spectacular bug collection!</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1fSNH3mvWRTfRtVAxrDItzJ6MW6LUzc2n/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Handy Science Answer Book 4th Edition</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/712drcY6TbL.jpg">
+                <br>
+                <p class="leading-relaxed">It covers many different categories with answers to many common questions and every day phenomenon, this book is great for increasing overall knowledge or for killing time with interesting and relevant facts. ... According to him, the science is "sound" in this book, and so he really appreciated it for that reason.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1exhGX_wQPk98caMh23DnfNDLLn13ImA7/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Ayurvedic Science of Food and Nutrition</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/41JvTHKJOZL._SX330_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Food and nutrition play a crucial role in the health care wisdom of Ayurveda. The Ayurvedic Science of Food and Nutrition discusses the various principles of healthy eating as prescribed by Ayurveda. Divided into three sections, it addresses the fundamentals, the clinical applications, and the future challenges of Ayurveda. Specifically, the book discusses issues such as the concept of diet, the use of food as medicine, especially to treat diabetes and cancer, convalescent food practices, and fasting therapy.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1AzmFfUjaKZ5BZf39RF3au3e4jaFAoJd2/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Dictionary of Food Science and Nutrition"</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/41zpM6MpBKL._SY346_.jpg">
+                <br>
+                <p class="leading-relaxed">Covering nutrition, dietary requirements, chemistry, preparation and cooking, hygiene, health and safety, commercial food production, labelling, packaging and public health, this dictionary provides clear, informative and up-to-date terms relating to all aspects of food science and nutrition.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B-0_smpgJAyTj7QSq2eh-A91aJCtaPYn/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Earth science</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/514YUTHf36L._SX371_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Read Earth Science, Global Edition book reviews & author details and more at Amazon.in. ... Earth Science, Global Edition Paperback – 13 January 2015 little or no science background, Earth Science provides a student-friendly overview of ...</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CtX2qSmLv0EZn7X7hmXh5DRs3nAtYK-K/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Education Management and Management Science"</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/publisher/content?id=j_YOCgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2RZ9YkCIflTA3iA0NQ02CA5mj3YQ&w=1280">
+                <br>
+                <p class="leading-relaxed">This proceedings volume contains selected papers presented at the 2014 International Conference on Education Management and Management Science (ICEMMS 2014), held August 7-8, 2014, in Tianjin, China. The objective of ICEMMS2014 is to provide a platform for researchers, engineers, academicians as well as industrial professionals from all over the world to present their research results and development activities in Education Management and Management Science.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CRu_WZ-Vr3aD8qdFsYi0Mi0UWjo_erDz/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"ENCYCLOPEDIA of FOODS a guide to Healthy Nutrition"</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/content?id=wLf8IpZDh48C&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0hR0mzZCHnPXvOKiXOgrUvCPR8hQ&w=1280">
+                <br>
+                <p class="leading-relaxed">The Encyclopedia of Foods: A Guide to Healthy Nutrition is a definitive resource for what to eat for maximum health as detailed by medical and nutritional experts. This book makes the connection between health, disease, and the food we eat.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B2v8pAG_WnkidHx1HUgIF6NDhiVAazGo/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">ENCYCLOPEDIA OF PHYSICAL SCIENCE</h1>
+                <br>
+                 <img src="https://rukminim1.flixcart.com/image/416/416/kl5hh8w0/book/t/0/c/encyclopedia-of-physical-science-original-imagycknrez86myj.jpeg?q=70">
+                <br>
+                <p class="leading-relaxed">Encyclopedia of Physical Science discusses concepts that unify the physical sciences with life, Earth, and space science. Examining topics such as natural hazards, global challenges, and the history and nature of science, this new two-volume set complements the material typically taught in high school and college physics and chemistry courses. The substance in this definitive resource reflects the fundamental concepts and principles that underlie the content standards for life science as identified by the National Committee on Science Education Standards and Assessment of the National Research Council for grades 9-12. More than 200 entries cover National Science Education Standards concepts and topics, theories, sub-disciplines, biographies of people who have made significant contributions to the physical sciences, common methods, and techniques relevant to modern science. Entries average approximately 2,000 words each and most include cross-references of related entries and a selection of recommended further readings. Entries include: Acceleration; Acid rain; Black hole; Francis Crick; Doppler effect; Albert Einstein; Greenhouse effect; Liquid crystals; Matter and antimatter; Dmitry Mendeleyev; Organic chemistry; Speed and velocity; Theory of everything; Waves; and, X-ray crystallography.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CLKPsM_Ld6tzb86Ue6MOro0TXitdbjn2/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Encyclopedia of Time :</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/41kPyRpEpnL._SY346_.jpg">
+                <br>
+                <p class="leading-relaxed">"With a strong interdisciplinary approach to a subject that does not lend itself easily to the reference format, this work may not seem to support directly academic programs beyond general research, but it is a more thorough and up-to-date treatment than Taylor and Francis′s 1994 Encyclopedia of Time. Highly recommended."</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1D5r-lHTl30TEArmg8mzS_c3kr0aHmjoq/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Essentials of Organic Chemistry</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/51h-vF6jKqL._SY346_.jpg">
+                <br>
+                <p class="leading-relaxed">Designed to provide a thorough grounding in fundamental chemical principles, the book focuses on key elements of organic chemistry and carefully chosen material is illustrated with the extensive use of pharmaceutical and biochemical examples.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1D7Hf8z-wHSdl8EXIXrhVBWAfHpvFTUuL/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Food Analysis</h1>
+                <br>
+                 <img src="https://images-eu.ssl-images-amazon.com/images/I/311bikZYjFL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg">
+                <br>
+                <p class="leading-relaxed">This book provides information on the techniques needed to analyze foods in laboratory experiments. All topics covered include information on the basic principles, procedures, advantages, limitations, and applications. This book is ideal for undergraduate courses in food analysis and is also an invaluable reference to professionals in the food industry. General information is provided on regulations, standards, labeling, sampling and data handling as background for chapters on specific methods to determine the</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B-VMCka7HTZU1t91Ab0SxJXaOXlBVggt/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Food Science Text Series</h1>
+                <br>
+                 <img src="https://images.springer.com/sgw/series/medium/5999.jpg">
+                <br>
+                <p class="leading-relaxed">"The Food Science Text Series provides faculty with the leading teaching tools. The Editorial Board has outlined the most appropriate and complete content for each food science course in a typical food science program and has identified textbooks of the highest quality, written by the leading food science educators."</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B6c0AZcrbrzI0J0fQ8pZNt7WyY0Shct-/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Food science & nutrition</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51Lx0q9Y2SL._SX331_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed"> Food Science and Nutrition provides complete and exhaustive coverage of topics related to food science, food safety, and nutrition. ... The book is designed keeping in mind the changing trends in hospitality and food business operators.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B-rX32StM0SZL5Aax0uT5LnrUOh4W4ep/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Forensic Investigations</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/publisher/content?id=V75pAgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2EstZRKvyId68HleordgdG0I3lZw&w=1280">
+                <br>
+                <p class="leading-relaxed">Connect students in grades 4–8 with science using Forensic Investigations: Using Science to Solve Crimes. In this 80-page book, students build deductive-reasoning skills as they become crime-solving stars. Most scenarios in the book have more than one plausible outcome, allowing individuals or groups to broadly interpret evidence. Activities include interpreting handwriting and body language and fingerprinting. The book supports National Science Education Standards.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1BFwcCVqdFPiqUbG9tneAbxRxzG9IAGA1/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">How to Be Good at Science, Technology, and Engineering</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/publisher/content?id=VjVZDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U07GQC_1vsCHfhxB63DiV-yNFdxkg&w=1280">
+                <br>
+                <p class="leading-relaxed">Little scientists will understand science in seconds with this essential homework-helping guide. Learn about everything from molecules and magnetism to rockets and radio waves and find out how a hot-air balloon rises, how erosion flattens mountains, how light waves zip through space, and how the human eye sees colours!</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CQuT95jzZNDzdxQdzI_H3X-RP5H0FDZf/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Great Science Project Ideas from Real Kids</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/content?id=FiaWiQw5vh8C&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2grueq76mWRyybtslkEwftC-6ltA&w=1280">
+                <br>
+                <p class="leading-relaxed">There's plenty for you to choose from in this collection of forty terrific science project ideas from real kids, chosen by well-known children's science writer Janice VanCleave. Developing your own science project requires planning, research, and lots of hard work. This book saves you time and effort by showing you how to develop your project from start to finish and offering useful design and presentation techniques. Projects are in an easy-to-follow format, use easy-to-find materials, and include dozens illustrations and diagrams that show you what kinds of charts and graphs to include in your science project and how to set up your project display. You’ll also find clear scientific explanations, tips for developing your own unique science project, and 100 additional ideas for science projects in all science categories.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/13ttxaTcl_qYMhQ17WeS35gi2ZVXLUMLJ/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Knowing What Students Know</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/515ezxUHpgL._SY346_.jpg">
+                <br>
+                <p class="leading-relaxed">Education is a hot topic. From the stage of presidential debates to tonight's dinner table, it is an issue that most Americans are deeply concerned about. While there are many strategies for improving the educational process, we need a way to find out what works and what doesn't work as well. ...</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CeA4tOVVUZOR0njRHgWXHlqB0_-YKlVR/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Modern food microbiology</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/publisher/content?id=KbTDBAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3Xq2EE6B9XU1z-XYanzZdyYp90Yg&w=1280">
+                <br>
+                <p class="leading-relaxed">With 30 revised and updated chapters, the new edition of this classic text brings benefits to professors and students alike who will find new sections on proteobacteria, bottled water, food sanitizers (eletrolyzed oxidating water, ozone, chlorine, activin, chitosans, endolysins, etc.), bicontrol, biosensors quorum sensing, molecular genetic methods of analysis, food safety objectives, noroviruses, and prions. The book builds on the trusted and established sections on food preservation by modified atmosphere, high pressure and pulsed electric field processing, food-borne pathogens, food regulations, fresh-cut produce, new food products, and risk assessment and analysis. In-depth references, appendixes, illustrations, index and thorough updating of taxonomies make this an essential for every food scientist.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B0JGxHUHaJNH9TcHLuKnbD69L46eloWL/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">CPO Focus on Physical Science</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51GS9xWF51L._SX384_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Combines comprehensive content with colorful graphics and diagrams to deliver important concepts to students of all ability levels. Topics covered include; properties of matter, atomic structure, chemical reactions, and the periodic table. The physics of motion, forces, Newton's laws and astronomy complete this physical science adventure!</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CtkSBr-5wWolODSf9p8kAGV2gSuTec8W/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Projectile Science</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/51eQMxZJ7UL._SX260_.jpg">
+                <br>
+                <p class="leading-relaxed">Projectile Science: The Physics Behind Kicking a Field Goal and Launching a Rocket with Science Activities for Kids, kids ages 10 to 15 learn why projectiles follow the paths they do and what factors influence those paths. Readers who are fascinated with potato cannons, slingshots, and rocketry will love taking that next step and applying what they learn about the laws of physics to the science of figuring out where to aim.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1BM0wItb296WuKYnBrUomQpIYXmxwUr43/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Science! (Knowledge Encyclopedias)</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/612V0wzrKnL._SX418_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">This extraordinary encyclopedia fuels your imagination with its truly ground-breaking visual approach to the world around us. Jaw-dropping 3D computer-generated images burst from the pages, detailing the tiny atoms that make up our Universe and the incredible forces that keep it all together. From mixtures and metamorphosis to friction and flying, the wonders of biology, chemistry, and physics are brought to together in one must-have volume. Travel to the tropics to see feeding flamingoes dive deep underwater to swim with a blue whale, and rush to the racetrack to lift the top on a Formula 1 car.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1CIHdQWx-7lw6iEdjvMAZvjobMqII_inP/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Book of Why: The New Science of Cause and Effects</h1>
+                <br>
+                 <img src="https://images-eu.ssl-images-amazon.com/images/I/31T-6hG0qDL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg">
+                <br>
+                <p class="leading-relaxed">"Correlation is not causation." This mantra, chanted by scientists for more than a century, has led to a virtual prohibition on causal talk. Today, that taboo is dead. The causal revolution, instigated by Judea Pearl and his colleagues, has cut through a century of confusion and established causality -- the study of cause and effect -- on a firm scientific basis. His work explains how we can know easy things, like whether it was rain or a sprinkler that made a sidewalk wet; and how to answer hard questions, like whether a drug cured an illness. Pearl's work enables us to know not just whether one thing causes another: it lets us explore the world that is and the worlds that could have been. It shows us the essence of human thought and key to artificial intelligence. Anyone who wants to understand either needs The Book of Why.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1BJFZqjE2SYB8FQ7paC3RoTQ3U57V9Tey/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Nature Fix: Why Nature Makes Us Happier, Healthier, and More Creative</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/publisher/content?id=8kl8DAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3-uq9xwrTNkQBszYWAcGsmbh7DnA&w=1280">
+                <br>
+                <p class="leading-relaxed">For centuries, poets and philosophers extolled the benefits of a walk in the woods: Beethoven drew inspiration from rocks and trees; Wordsworth composed while tromping over the heath; and Nikola Tesla conceived the electric motor while visiting a park. Intrigued by our storied renewal in the natural world, Florence Williams set out to uncover the science behind nature's positive effects on the brain.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B73h2rNv6wS2d_J7EcoF81l6eOAlCKZl/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Science Book</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/61KMt4m8M3L._SX438_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Award-winning author Cliff Pickover (The Math Book, The Physics Book, and The Medical Book) gathers into one fully illustrated volume the most important thinkers and ideas in the history of science. This unique omnibus edition includes 250 thoughtfully selected entries from many of the science-based books in the Sterling Milestones series, including math, physics, medicine, biology, chemistry, engineering, psychology, and space. With a new introduction by Pickover explaining how this impressive collection was curated, The Science Book showcases humanity's greatest achievements and provides readers with a sense of wonder at the diversity of scientific discovery.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1BB8MJfRpoOl-1UNCxfjwqVuPS3PeScrN/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Science of Daily Self-Discipline:</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/41HBJANmPGL._SY346_.jpg">
+                <br>
+                <p class="leading-relaxed">Self-discipline is simply having the ability to do what needs to be done when it needs to be done. This extremely simple concept is often times the defining factor between success and failure in near or long-term goals. Whether that goal is to diet and exercise, write a novel, learn a language, build a business, or any other long-term goal; self-discipline is the quintessential component for the day-in and day-out actions that eventually lead to success. Without consciously developing self-discipline it is easy to fall victim to unhealthy temptations and continually fall short of achieving your goals. However, by building your self-discipline you are able to make healthy lifestyle changes, patiently pursue and achieve your most desired goals, and live a life of great fulfillment and happiness. Don't fret. If you currently feel that you lack in self-discipline you have found your solution and key to salvation. This book will serve you as a definitive guide to build your self-discipline and reap the many rewards the change and improvement will bear.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1D64MhnkAqijkwnT4ztchUeUkyrQR8DGE/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"The Secret Science of Numerology"</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51-JHCaKJKL._SX348_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">The Secret Science of Numerology is unlike any other book on numerology, because it explains why numerology works. It reveals the science behind this ancient mystical art. And, the book introduces the Inner Guidance Number, a powerful tool for accessing our inner knowing. The Secret Science of Numerology is the first book to present a thorough explanation of the numbers and letters, starting with their origins-the how and why of their design, and exploring their nature in names and in language.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1AtHVOkLsMEKqsvq6jphiBlcvAUwFhS0W/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCIENCE</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Traditional Herbal Medicine Research Methods"</h1>
+                <br>
+                 <img src="https://books.google.co.in/books/content?id=ft3KBiPKKrYC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U251qcaUecOqMm-jCeRVKlgSCXrPA&w=1280">
+                <br>
+                <p class="leading-relaxed">This book introduces the methodology for collection and identification of herbal materials, extraction and isolation of compounds from herbs, in vitro bioassay, in vivo animal test, toxicology, and clinical trials of herbal research. To fully understand and make the best use of herbal medicines requires the close combination of chemistry, biochemistry, biology, pharmacology, and clinical science. Although there are many books about traditional medicines research, they mostly focus on either chemical or pharmacological study results of certain plants. This book, however, covers the systematic study and analysis of herbal medicines in general – including chemical isolation and identification, bioassay and mechanism study, pharmacological experiment, and quality control of the raw plant material and end products.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1B71wEiY0N67lvJL0BfuHXHKn6CrElUSU/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> 
+
+                                <!--------JavaScript for toggle menu------>
+                                <script>
+                                    var navLinks = document.getElementById("navLinks");
+                                    function showMenu(){
+                                        navLinks.style.right = "0";
+                                    }
+                                    function hideMenu(){
+                                        navLinks.style.right = "-200px";
+                                    }
+                                </script>
+</body>
+</html>

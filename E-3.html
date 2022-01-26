@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Gerniomo Stilton Spacemice | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/*---------- course ----------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------Campus Codes---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #eed7d7;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/*----------------------CONTACT----------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----------------------BLOG CONTENT----------------------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h4{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: lightcoral;
+    text-align: left;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="books.html">BOOKS</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Comment.html">COMMENT</a></li>
+                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Gerniomo Stilton Spacemice</h1>
+    </section>
+
+
+
+
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Spacemice</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Alien Escape</h1>
+              <br>
+               <img src="https://m.media-amazon.com/images/I/51gpVL+Da9L.jpg">
+              <br>
+              <p class="leading-relaxed">
+                An all-new Geronimo Stilton series spin-off, set in outer space!Meet Geronimo Stiltonix:He is a spacemouse -- the Geronimo Stilton of a parallel universe! He is captain of the spaceship MouseStar 1. While flying through the cosmos he visits distant planets and meets crazy aliens. His adventures are out of this world!ALIEN ESCAPEGeroimo Stiltonix's spaceship is in danger of exploding! The only solution is to replace the engine's batteries by tracking down a rare element. When a group of mysterious aliens claim they can help, Geronimo is relieved. But are the aliens as friendly as they seem?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ZaIoA89cSZ0VMxHs5rEa59w6O0ioyPPV/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">You're Mine, Captain!</h1>
+              <br>
+               <img src="https://m.media-amazon.com/images/I/519yS7l1LTL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geronimo Stilton meets outer space in this cosmically fun spin-off series! Meet Geronimo Stiltonix: He is a spacemouse -- the Geronimo Stilton of a parallel universe! He is captain of the spaceship MouseStar 1. While flying through the cosmos he visits distant planets and meets crazy aliens. His adventures are out of this world! YOU'RE MINE, CAPTAIN! The MouseStar 1 is contacted by strange aliens whose ship has broken down! Geronimo Stiltonix is happy to help them out, and even accompanies them to their home planet Flurkon. But during his visit, the alien queen becomes enchanted by Geronimo -- and wants to marry him! Will he be forced to stay on Flurkon forever?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/15YeoijZS22jzadnYc4i6Cpm3DGWARatS/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Ice Planet Adventure</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/81MZRD4icfL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geronimo Stilton meets outer space in this cosmically fun spin-off series! Friends of the spacemice have disappeared on a strange ice planet, Polarix! Geronimo Stiltonix and his crew are called to search for them. When the spacemice arrive on Polarix, they're surprised at the inhabitants -- cute little aliens that look like colorful fuzz balls! But are these creatures as harmless as they look?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/19q1VDtk7OIdsWgi09TLDtm-zk6HxKnQE/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Galactic Goal</h1>
+              <br>
+               <img src="https://m.media-amazon.com/images/I/61YHUGtmFCL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geronimo Stilton meets outer space in this cosmically fun spin-off series! The spacemice have received an invitation to participate in the intergalactic soccerix championship. It's a tournament for the most popular sport in space! But Geronimo doesn't even know how to play soccerix, let alone lead a team to victory against aliens with bizarre skills (like flying)! Can the spacemice team prevail?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1RSfyqqvmZS7y3q9kHlM4Gad5H3CQyEwN/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Rescue Reblelion</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/513X4dExh4L._SX342_BO1,204,203,200_.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geronimo Stiltonix and his crew head to the planet Jurassix to warn its inhabitants of a giant comet heading straight toward them! But the creatures there turn out to be ferocious, dinosaur-like beasts . . . who like to eat rodents. Squeak! Can the spacemice save these aliens and still make it out alive?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1iEYLFHBftBTgq6lrtWjKbGXF_g9GVDN-/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Underwater Planet</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/71wVCqRcGzL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                While at the beach, Geronimo Stiltonix stumbles upon a mysterious treasure map! The spacemice follow it and end up on Aquarix, a planet that's entirely underwater. During their exploration, they face fur-eating seaweed, ferocious piranha aliens, and . . . pirate spacecats! Squeak! Can the spacemice keep the spacecats from stealing the treasure?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/10q6XZpXsKH0TTtKdcTTSavAWljbi0dHf/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Beware! Space Junk! </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/81eLstjKRlL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                MouseStar 1 is surrounded by floating space junk! It's yucky -- and dangerous. It's coming from a nearby planet, Cleanix. Geronimo Stiltonix goes to visit, and discovers that the aliens there are very wasteful. Even worse, robots that they've thrown in the trash have started to rebel! Can the spacemice restore harmony before the robots take over?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1e7WtgyivAW0F9HuqwZHG3VD-kY8wCGhZ/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Away in a Star Sled</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/91OVV1KkkyL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Each year on the Night of Dancing Stars, the elfix aliens distribute gifts to all the creatures of the galaxy. But this year, the holiday is fast approaching, and the spacemice discover that the elfix have all disappeared! Can Geronimo Stiltonix and his crew find them before their special night?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1gcWRHedxdGke7KTWyqXcDsldMLdUid7h/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Slurp Monster Showdown</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51TszvdGoSL._SX341_BO1,204,203,200_.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geronimo Stiltonix and the spacemice are visiting a planet where the most delicious wild mozzarella grows. Yum! But the planet is plagued by the slurp monster -- a scary alien who wants all the mozzarella for himself! Can the spacemice restore harmony on this cheesy planet without getting slurped up themselves?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1iksAjQzgyXN-De5ddrorwbz6r5-d_7ei/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Pirate Spacecat Attack</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/61rkJMxS+IL._SX341_BO1,204,203,200_.jpg">
+              <br>
+              <p class="leading-relaxed">
+                The on board computer on spaceship MouseStar 1, Hologramix, is out of order! To fix it, Geronimo Stiltonix must take it to a brilliant inventor who lives on a distant planet. But while Hologramix is being repaired, pirate spacecats attack, and steal it! Can the spacemice get Hologramix back before the spacecats turn it evil and set it against them?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/13gEF67LNZRw17ObEM2I6Oq_E6N_KD_EJ/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">We'll Bite Your Tail, Geronimo!</h1>
+              <br>
+               <img src="https://geronimostilton.com/upload/assets/files/US,116,-1,12635/43205-0.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Professor Greenfur, the onboard scientist on spaceship MouseStar 1, has changed color from green to... orange! What's going on? To find out, the spacemice travel to his home planet of Photosyntheson. There, they learn that all of Professor Greenfur's relatives are being threatened by the nibblix, tiny aliens with very sharp teeth! Can the spacemice help in time?
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1CS69uKvuzm7pmfITlnYKIs4V1oBxp8qO/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SPACEMICE</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Invisible Planet</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/91Lr6EsNo7L.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geronimo discovers a planet on the radar that mysteriously appears and disappears. MouseStar 1 lands to investigate and they discover mysterious aliens who hide a secret!
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/13lOAIeTm7zAaDYNqB6YCRno-51mddOUU/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+    
+                                <!--------JavaScript for toggle menu------>
+                                <script>
+                                    var navLinks = document.getElementById("navLinks");
+                                    function showMenu(){
+                                        navLinks.style.right = "0";
+                                    }
+                                    function hideMenu(){
+                                        navLinks.style.right = "-200px";
+                                    }
+                                    var Cat90 = document.getElementbyId("Cat90");
+                        if(x = Cat90) {
+                          Window.location.href("Cat90")
+                        }
+                                </script>
+
+</body>
+</html>

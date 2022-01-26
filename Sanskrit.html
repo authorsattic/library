@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Sanskrit Books | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/*---------- course ----------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------Campus Codes---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #eed7d7;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/*----------------------CONTACT----------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----------------------BLOG CONTENT----------------------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h4{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: lightcoral;
+    text-align: left;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="books.html">BOOKS</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Comment.html">COMMENT</a></li>
+                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Sanskrit Books</h1>
+    </section>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">ऋग्वेद</h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51mDE-WDILL._SX342_SY445_QL70_ML2_.jpg">
+              <br>
+              <p class="leading-relaxed">The Rigveda is the oldest known Vedic Sanskrit text. ... The text is layered consisting of the Samhita, Brahmanas, Aranyakas and Upanishads. The Rigveda Samhita is the core text, and is a collection of 10 books (maṇḍalas) with 1,028 hymns (sūktas) in about 10,600 verses (called ṛc, eponymous of the name Rigveda).
+  Language: Vedic Sanskrit
+  Verses: 10,552 mantras</p>
+           
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/1KPGFpJiFDnpow-e1_oZnGkOHFNBhlWuH/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">सामवेद</h1>
+              <br>
+               <img src="data:image/jpeg;base64,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>
+              <br>
+              <p class="leading-relaxed">Samveda is an extraordinary collection of hymns, portions of hymns and detached verses. It deals with that knowledge and activity by which the human soul is relieved from the eternal cycle of life and death. It emphasizes the importance of developing mental and spiritual powers to the highest order.</p>
+           
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/1KLvR7m1aO_bYTPYGXQAGeSxswTTp4w98/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">यजुर्वेद</h1>
+              <br>
+               <img src=https://images-eu.ssl-images-amazon.com/images/I/51fkgWsI%2BqL._SX342_SY445_QL70_ML2_.jpg>
+              <br>
+              <p class="leading-relaxed">An ancient Vedic Sanskrit text, it is a compilation of ritual-offering formulas that were said by a priest while an individual performed ritual actions such as those before the yajna fire. Yajurveda is one of the four Vedas, and one of the scriptures of Hinduism.
+  Language: Vedic Sanskrit</p>
+           
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/1J_YTXyZjRFYl5PN9GzabnJ70y8G_280R/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">अथर्ववेद भाग - १</h1>
+              <br>
+               <img src=https://images-eu.ssl-images-amazon.com/images/I/51-Nbd8L4OL._SX342_SY445_QL70_ML2_.jpg>
+              <br>
+              <p class="leading-relaxed">The Atharvaveda is a collection of 20 books, with a total of 730 hymns of about 6,000 stanzas. The text is, state Patrick Olivelle and other scholars, a historical collection of beliefs and rituals addressing practical issues of daily life of the Vedic society, and it is not a liturgical Yajurveda-style collection.</p>
+           
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/1KPGFpJiFDnpow-e1_oZnGkOHFNBhlWuH/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">अथर्ववेद भाग - २</h1>
+              <br>
+               <img src=https://images-eu.ssl-images-amazon.com/images/I/51-Nbd8L4OL._SX342_SY445_QL70_ML2_.jpg>
+              <br>
+              <p class="leading-relaxed">The Atharvaveda is a collection of 20 books, with a total of 730 hymns of about 6,000 stanzas. The text is, state Patrick Olivelle and other scholars, a historical collection of beliefs and rituals addressing practical issues of daily life of the Vedic society, and it is not a liturgical Yajurveda-style collection.</p>
+           
+              <br>
+              <br>
+                <a href=https://drive.google.com/file/d/1KK3KAcTiOIooFVDcLKhSok_ucPs38Egc/view?usp=sharing>
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Ariyabhatiya </h1>
+              <br>
+               <img src="https://ia800801.us.archive.org/BookReader/BookReaderImages.php?zip=/10/items/Aryabhatiya1976/Aryabhatiya%20v1%201976_jp2.zip&file=Aryabhatiya%20v1%201976_jp2/Aryabhatiya%20v1%201976_0000.jp2&id=Aryabhatiya1976&scale=8&rotate=0">
+              <br>
+              <p class="leading-relaxed">"K. S. Shukla and K. V. Sarma, Āryabhaṭīya of Āryabhaṭa, Indian National Science Academy, New Delhi 1976. Three volumes.  V.1: Critically edited text with English translation and notes.  V.2: with the commentary of Bhāskara I and Someśvara, by K. S. Shukla . V.3 with the commentary of Sūryadeva, by K. V. Sarma."</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1RJI11JdMw5FrOU7M8c9lIhKAAHBk3s-v/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Brahma Sphuta Siddhanta</h1>
+              <br>
+               <img src="https://ia803007.us.archive.org/BookReader/BookReaderImages.php?zip=/30/items/Brahmasphutasiddhanta_Vol_1/BSS_VOL_I_jp2.zip&file=BSS_VOL_I_jp2/BSS_VOL_I_0003.jp2&id=Brahmasphutasiddhanta_Vol_1&scale=4&rotate=0">
+              <br>
+              <p class="leading-relaxed">"Written c. 628, in Sanskrit, it contains ideas including a good understanding of the mathematical role of zero, rules for manipulating both negative and positive numbers. It also contains a method for computing square roots, methods of solving linear and some quadratic equations, and rules for summing series, Brahmagupta's identity, and the Brahmagupta’s theorem. The book was written completely in verse."</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1jzoVz5HM18K9-PRUt_rKAMMPW0JXbq_Y/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Bramha Puran
+            </h1>
+              <br>
+               <img src="https://ia803208.us.archive.org/BookReader/BookReaderImages.php?zip=/28/items/puran_bramha/Bramha_jp2.zip&file=Bramha_jp2/Bramha_0000.jp2&id=puran_bramha&scale=2&rotate=0
+               ">
+              <br>
+              <p class="leading-relaxed">"Bramha Puran Information ब्रह्म पुराण के बारे में हिंदू धर्म के 18 पुराणों में से एक प्रमुख पुराण है। इसे पुराणों में महापुराण भी कहा जाता है। सम्पूर्ण 'ब्रह्म पुराण' में २४६ अध्याय हैं। इसकी श्लोक संख्या लगभग १०,००० |</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1lwXDqLACGA828KmC48BKUENsLOdYndVc/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Bramhasutra 
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">The Brahma Sutra is the third of the canonical texts and is regarded as the Nyaya-prasthana, because it sets forth the teachings of Vedanta in a logical order.The work is known by other names including Vedanta-sutra, Sariraka-sutra, and Bhiksu-sutra. The Brahma Sutra Bhasya is an important but difficult Vedanta scripture. This is our most popular translation, and is regarded by some as indispensable for all students of Vedanta. Includes word for word meaning of each aphorism under its Sanskrit text.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1lgCdlRA_6hHffAPkm3zq-dvg-2gAp96D/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Devi Mahatmya</h1>
+              <br>
+               <img src="https://cdn.exoticindia.com/images/products/thumbnails/t160x120/books/nai650b.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">Also going by the name of 'Sri Durga Saptasati', this is a treatise on one of the most important reigning branches of Hindu religion.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1lhBkIjJJeMAdGfvg9jRjsd6IGgn6GUe7/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Bhagvad gita
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">He Bhagavad Gita, often referred to as the Gita, is a 700 verse Hindu scripture in Sanskrit that is part of the Hindu epic Mahabharata.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1RXExRxfkCKmd_8VSetQRrKC4PWqZrtSF/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">वेदांत दर्शन</h1>
+              <br>
+               <img src="https://www.hindibookspdf.com/wp-content/uploads/2016/03/vedant-darshan-pdf.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">Vedant Darshan is assumed to be written in 200 BCE to 200 CE by Badarayana . He was popularly known as VedVyas. This book consist of Sanskrit text which summarizes as well as systematize the philosophical and spiritual ides in Upanishads.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1leC-3oGCTR6eJr9QR-LQTr-eReEzLfFh/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">श्री नारद महापुराण भाग 
+            </h1>
+              <br>
+               <img src="https://www.44books.com/wp-content/uploads/2016/02/eeee.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">नारद पुराण' एक वैष्णव पुराण है। इस पुराण के विषय में कहा जाता है कि इसका श्रवण करने से पापी व्यक्ति भी पाप मुक्त हो जाते हैं। पापियों का उल्लेख करते हुए कहा गया है कि जो व्यक्ति ब्रह्महत्या का दोषी है, मदिरापान करता है, मांस भक्षण करता है, वेश्यागमन करता हे, लहसुन-प्याज खाता है तथा चोरी करता है; वह पापी है। इस पुराण का प्रतिपाद्य विषय 'विष्णु भक्ति' है। नारद जी विष्णु के परम भक्त हैं
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mZz1qoPuWEqkjfpnPqyjs9PVh-srBQF2/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">श्री नरसिंह पुराण
+            </h1>
+              <br>
+               <img src="https://www.44books.com/wp-content/uploads/2016/12/narsinhapuran.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">पुस्तक का विवरण : अन्तर्यामी भगवान नारायण (श्रीकृष्ण) उनके सखा नरश्रेष्ठ नर (अर्जुन) तथा इनकी लीला प्रकट करने वाली सरस्वती देवी को नमस्कार करने के पश्चात ‘जय’ (इतिहास पुराण) का पाठ करें | प्रस्तुत पुस्तक “श्री नरसिंह पुराण” में भगवान् श्री नरसिंह जी की लीलाओं का वर्णन किया गया है
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mDiB4fTjRgkLhSlhOGH3UF0mywsgQ7cS/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Padma Puran 
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">‘पद्म पुराण’ हिन्दू धर्म के प्रसिद्ध धार्मिक ग्रंथों में विशाल पुराण है। केवल स्कन्द पुराण ही इससे बड़ा है। इस पुराण के श्लोकों |श्लोक की संख्या पचास हज़ार है। वैसे तो इस पुराण से संबंधित सभी विषयों का वर्णन स्थान विशेष पर आ गया है, किन्तु इसमें प्रधानता उपाख्यानों और कथानकों की है।ये कथानक तीर्थों तथा व्रत सम्बन्धी नहीं हैं, वरन् पौराणिक पुरुषों और राजाओं से सम्बन्धित हैं।अन्य पुराणों में यही कथानक जिस रूप में प्राप्त होते हैं, यहाँ ये दूसरे रूप में हैं। ये आख्यान और उपाख्यान सर्वथा नवीन, विचित्र और सामान्य पाठकों को चमत्कृत कर देने वाले हैं।
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1QeV8RyAiexEzIG9-TZOFGrdqSMSnr6CT/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Panchatantra Stories by Vishnu Sharma
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">‘पंचतन्त्र’ विश्व साहित्य को भारतीय साहित्य की सबसे महत्त्वपूर्ण देन है। पंचतन्त्र की लोकप्रियता इस बात से आंकी जा सकती है कि विश्व की अधिकांश भाषाओं में इसका अनुवाद हो चुका है। विष्णु शर्मा द्वारा रचित ‘पंचतन्त्र’ की छोटी-छोटी कहानियाँ राजनीति और व्यवहार नीति की सीख देती हैं। सीधी सरल भाषा में लिखी ये कहानियाँ अंत में ऐसा गूढ़ संदेश दे जाती हैं जो देर तक पाठक को याद रहती हैं।
+            </p>
+           
+              <br>
+              <br>
+                <a href="">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">रावण संहिता
+            </h1>
+              <br>
+               <img src="https://www.astromantra.com/wp-content/uploads/2018/12/Prachin-Ravan-Sanhita-Book-1.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">"Pustak Ka Vivaran : Jigyasa, prani ke vigyanatmak-utkarsh ki aadharshila hai ” is tathy ko prayah sabhi mante v jante hai. Yah bhi jante hai ki nisargat: jigyasu prani apni charon or ghatit hone wali ghatnaon ke prati bhi sarvada sanvedanasheel rahne ke aadi rahe hai is aadhar par yah sochna anuchit nahin hai ki aadi kaal se hi manushy khagoliy ghatnaon ke prati bhi svabhavat: aakrsht hota raha hai…………"</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1lanuYJiNVQDIfBp4v07Eem3WMZjvDySI/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">विष्णु पुराण
+            </h1>
+              <br>
+               <img src="https://cdn.ourhindi.com/wp-content/uploads/2015/05/vishnu-puran-hindi-book-pdf-download.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">"Name of the Book is : Vishnu Puran | This Book is written by Unknown | To Read and Download More Books written by Unknown in Hindi, Please Click : Unknown | The size of this book is 43.4 MB | This Book has 625 Pages | The Download link of the book ""Vishnu Puran"" is given above, you can downlaod Vishnu Puran from the above link for free | Vishnu Puran is posted under following categories dharm, hindu, Uncategorized |</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mZb6MmJdky5IyDfzcDp5JIFxa44JWAQP/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">श्रीमाद्भाग्वात्म्हात्म्य
+            </h1>
+              <br>
+               <img src="https://www.44books.com/wp-content/uploads/2016/02/sss-1.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">We salute Lord Shrikrishna in the form of Sachchidanand, which is to destroy all the three types of heat, for the origin, position and destruction of the world and spiritual, atypical and acoustic. At the time when Shree Shukdev ji did not offer sacrifice and even the opportunity of rituals of the temporal-vedic karmas had not come…………….
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mUnAqxY5j3KC2SUoWuNYkuIEouljKhxy/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">कल्याण
+            </h1>
+              <br>
+               <img src="https://epustakalay.com/wp-content/uploads/2021/06/book_id14228-211x300.
+               ">
+              <br>
+              <p class="leading-relaxed">पुस्तकें ही हमारी सच्ची मित्र होती हैं । ऐसी ही पुस्तकों का विशाल संकलन हम लाए हैं आपके लिए बिल्कुल निशुल्क पढ़ें अथवा डाउनलोड करें । booksinhindi पर हज़ारो अन्य ई-पुस्तकें  निशुल्क उपलब्ध है ।
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1maoyS5ybH431spusYcer7h5aIhdpTprM/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Brahamand Puran -
+            </h1>
+              <br>
+               <img src="https://ia803204.us.archive.org/BookReader/BookReaderImages.php?zip=/6/items/puran_brahamand/Brahamand-II_jp2.zip&file=Brahamand-II_jp2/Brahamand-II_0000.jp2&id=puran_brahamand&scale=2&rotate=0
+               ">
+              <br>
+              <p class="leading-relaxed">The Brahmanda Purana (The history of the universe) (Sanskrit: ब्रह्माण्ड पुराण, Brahmāṇḑa Purāņa) is one of the eighteen Mahapuranas, a genre of eighteen Hindu religious texts and has been assigned the eighteenth place in almost all the lists of the Puranas.[1] Brahma in Sanskrit means "the biggest" or "the universe", anda/andam means Egg. So, Brahmanda means the "Biggest Egg" signifying the life from which Universe is born. The Padma Purana categorizes Brahmanda Purana as a Rajas Purana(Purana which represents dimness and passion).[2] 
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mmkkhH0_aAE3WZ5Zo3wP7lBzOJ1gECAI/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">कल्याण 2
+            </h1>
+              <br>
+               <img src="https://epustakalay.com/wp-content/uploads/2021/06/book_id14228-211x300.
+               ">
+              <br>
+              <p class="leading-relaxed">पुस्तकें ही हमारी सच्ची मित्र होती हैं । ऐसी ही पुस्तकों का विशाल संकलन हम लाए हैं आपके लिए बिल्कुल निशुल्क पढ़ें अथवा डाउनलोड करें । booksinhindi पर हज़ारो अन्य ई-पुस्तकें  निशुल्क उपलब्ध है ।
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1nPHLyFDWVdu5cUuU_NurLAXtjOoHv9TH/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">कूर्म पुराण :
+            </h1>
+              <br>
+               <img src="https://www.44books.com/wp-content/uploads/2016/02/aaa-1.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">Shrinarayan ko, naron mein utpann shri nar ko, tatha shri devi Sarasvati ko pratham namaskar karne ke pashchat jay granth ka aarambh karna chahie. Main apramey (aabhav) kurmarupadhari vishnu ko naman karke samast vishv ki utpattisthan brahma (athava kurmarupdhari vishnu) dwara kathit is (kurm) puran ka varnan karunga…………
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mzd9kR7SqvMDofXi_UuIEgepkZBrASi3/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">प्राक्कथन
+            </h1>
+              <br>
+               <img src="http://literature.awgp.org/var/node/1733/4.gif
+               ">
+              <br>
+              <p class="leading-relaxed">With the Yogavikak and spiritual ideology of Shri Arvind, now people are slowly getting acquainted with something, the interest of thoughtful people has started to appear in their books in this subject. But very few people are still familiar with what they wrote about the Vedas
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1moS_2EdPGOxYZZtDnVWLCg1hChDZpu_7/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Sankshipta Markandey Puran
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">भगवती की विस्तृत महिमा का परिचय देने वाले इस पुराण में दुर्गासप्तशती की कथा एवं माहात्म्य, हरिशचन्द्र की कथा, मदालसा-चरित्र, अत्रि-अनसूया की कथा, दत्तात्रेय-चरित्र आदि अनेक सुन्दर कथाओं का विस्तृत वर्णन है। This puran describes glory of Bhagvati, story and glory of Durga-Saptshati, story of Harishchandra and Atri-Anusuya, characters of Madalsa and Dattatreya in detail.
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1n02r7Nb7QG7R9EgKbBQ3mL1BBLDFP-p3/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">श्रीवाराहपुराण
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">यह पुस्तक Shivarahpuran Bhasha | श्रीवाराहपुराण भाषा , Sharma, Durgaprasad द्वारा रचित एक प्रसिद्ध पुस्तक है । इस पुस्तक को Unknown ने प्रकशित किया है ।
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1n7zKz88Zi4h8jB-OTqXI1VyPTVR58QMD/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">श्री शिवपुराण-माहात्म्य
+            </h1>
+              <br>
+               <img src="https://www.44books.com/wp-content/uploads/2016/02/eee.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">Srishakak ji asked- Mahagi Yogi Sutaji! You are the knower of all the principles. Prabhu! Let me explain the essence of the stories of the Puranas. How is the discrimination gained from devotion including knowledge and quietness? And how does a sage man solve mental disorders like work and anger?………………
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1mByF9DQ8-qgeFn35onwQYKB-G9XQMHoB/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Vidur Niti
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg">
+              <br>
+              <p class="leading-relaxed">महाभारत हिंदू सभ्यता और संस्कृति का एक पावन धर्मग्रंथ है। इसका आधार अधर्म के साथ धर्म की लड़ाई पर टिका है। इसे पाँचवाँ वेद भी कहा जाता है। महाभारत में ही समाहित ‘श्रीमद‍्भगवद‍्गीता’ एवं ‘व‌िदुर नीति’ इसके दो आधार-स्तंभ हैं। एक में भगवान् श्रीकृष्ण अधर्म के विरुद्ध अर्जुन को युद्ध के लिए प्रेरित करते हैं तो दूसरे में महात्मा विदुर युद्ध टालने के लिए धृतराष्‍ट्र को अधर्म (दुर्योधन) का साथ छोड़ने के लिए उपदेश करते हैं। यहाँ श्रीकृष्ण तो अपने उद‍्देश्‍य में सफल हो जाते हैं, लेकिन विदुर के उपदेश धृतराष्‍ट्र का हृदय-परिवर्तन नहीं कर पाते, जिसका परिणाम महाभारत के युद्ध के रूप में सामने आता है। लेकिन इसके लिए हम विदुरजी की नीति को विफल नहीं ठहरा सकते। उनका प्र
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1RK2dEaewurX33gBors9KBKmZloIAH7kL/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">बृहद विमानशास्त्र
+            </h1>
+              <br>
+               <img src="https://cdn.ourhindi.com/wp-content/uploads/2015/10/bhrihad-vimanshastra-hindi-pdf-maharshi-bharadwaj-download.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">Brihad Viman Shastra | This Book is written by Maharshi Bharadwaj | To Read and Download More Books written by Maharshi Bharadwaj in Hindi, Please Click : Maharshi Bharadwaj | The size of this book is 13.3 MB | This Book has 368 Pages | The Download link of the book "Brihad Viman Shastra" is given above, you can downlaod Brihad Viman Shastra from the above link for free | Brihad Viman Shastra is posted under following categories dharm, hindu, history, india, Uncategorized
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1licuIW-8DHD695uLiluuG5aKKaEMftSX/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Vamanpurarm 
+            </h1>
+              <br>
+               <img src="https://i.imgur.com/J5LVHEL.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">यह पुराण मुख्यरूप से त्रिविक्रम भगवान् विष्णु के दिव्य माहात्म्य का व्याख्याता है। इसमें भगवान् वामन, नर-नारायण, भगवती दुर्गा के उत्तम चरित्र के साथ भक्त प्रह्लाद तथा श्रीदामा आदि भक्तों के बड़े रम्य आख्यान हैं। इसके अतिरिक्त, शिवजी का लीला-चरित्र, जीवमूत वाहन-आख्यान, दक्ष-यज्ञ-विध्वंस, हरि का कालरूप, कामदेव-दहन, अंधक-वध, लक्ष्मी-चरित्र, प्रेतोपाख्यान, विभिन्न व्रत, स्तोत्र और अन्त में विष्णुभक्ति के उपदेशों के साथ इस पुराण का उपसंहार हुआ है।
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1R1siSbVDnOkB8J5YjOH8Aq8X-lwR_1FC/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">ब्रह्मवैवर्त पुराण :
+            </h1>
+              <br>
+               <img src="https://www.44books.com/wp-content/uploads/2016/02/ccc.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">anesha, Brahma, Mahadevji, Devraj Indra, Sheshnag etc. All goddesses, Manu, Munindra, Saraswati, Lakshmi and Parvati, etc. also bow down the heads, those omnipresent saints, I prove. Those who are oriented towards creation, accepting three qualities, accepting Brahma, Vishnu and Shiva, three Divine Blinds, and being Virat Purushas, take the entire world into their follicles……………….
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1lr3hw-YDlrL1IqCr3Xth6KfFJlB9MP1R/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Srimad Bhagavad Gita"</h1>
+              <br>
+               <img src="https://ia801202.us.archive.org/BookReader/BookReaderImages.php?zip=/25/items/SrimadBhagavadGitaSanskritHindiEnglish/Srimad%20Bhagavad%20Gita%20%28Sanskrit%2C%20Hindi%20%26%20English%29_jp2.zip&file=Srimad%20Bhagavad%20Gita%20%28Sanskrit%2C%20Hindi%20%26%20English%29_jp2/Srimad%20Bhagavad%20Gita%20%28Sanskrit%2C%20Hindi%20%26%20English%29_0000.jp2&id=SrimadBhagavadGitaSanskritHindiEnglish&scale=4&rotate=0
+               ">
+              <br>
+              <p class="leading-relaxed">The Gita is set in a narrative framework of a dialogue between Pandava prince Arjuna and his guide and charioteer Lord Krishna. Facing the duty as a warrior to fight the Dharma Yudhha or righteous war between Pandavas and Kauravas, Arjuna is counselled by Lord Krishna to "fulfill his Kshatriya (warrior) duty as a warrior and establish Dharma."[2] Inserted[2] in this appeal to kshatriya dharma (chivalry)[3] is "a dialogue ... between diverging attitudes concerning methods toward the attainment of liberation (moksha)".[4] The Bhagavad Gita was exposed to the world through Sanjaya, who senses and cognises all the events of the battlefield.[5] Sanjaya is Dhritarashtra's advisor and also his charioteer.
+            </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1RYTI_4Fnro_HFWQM9oxv5Za_ZCAi4udN/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">SANSKRIT</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1"> श्रीमद्भागवद्गीता
+            </h1>
+              <br>
+               <img src="https://cdn.ourhindi.com/wp-content/uploads/2014/02/%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BEgita.jpg
+               ">
+              <br>
+              <p class="leading-relaxed">"Name of the Book is : ShrimadBhagvadGita (Gita) | This Book is written by Shri Krishna | To Read and Download More Books written by Shri Krishna in Hindi, Please Click : Shri Krishna | The size of this book is 485 KB | This Book has 256 Pages | The Download link of the book ""ShrimadBhagvadGita (Gita)"" is given above, you can downlaod ShrimadBhagvadGita (Gita) from the above link for free | ShrimadBhagvadGita (Gita) is posted under following categories dharm, gita-press |</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1QqbpRBhnTs8mheoTWdQ0cX4GYsocxwaG/view?usp=sharing
+                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                                    <!--------JavaScript for toggle menu------>
+                                <script>
+                                    var navLinks = document.getElementById("navLinks");
+                                    function showMenu(){
+                                        navLinks.style.right = "0";
+                                    }
+                                    function hideMenu(){
+                                        navLinks.style.right = "-200px";
+                                    }
+                                </script>
+    </body>
+</html>

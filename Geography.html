@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Geography Books | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/*---------- course ----------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------Campus Codes---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #eed7d7;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/*----------------------CONTACT----------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----------------------BLOG CONTENT----------------------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h4{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: lightcoral;
+    text-align: left;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="Books.html">BOOKS</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Comment.html">COMMENT</a></li>
+                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Geography Books</h1>
+    </section>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Student World Atlas </h1>
+              <br>
+               <img src="https://cdn.slidesharecdn.com/ss_thumbnails/student-world-atlas-malestrom-161219130615-thumbnail-4.jpg?cb=1482152814">
+              <br>
+              <p class="leading-relaxed">The new fifth edition of National Geographic's award-winning atlas is more fascinating and fact-filled than ever! It's the definitive atlas for middle and high-school students to explore and use in the classroom, college prep, and at home.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/19uey_AVSmHzBqvZPuOqP6xO5nWcgIbit/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Nature‐based
+                Solutions to
+                Climate Change
+                Adaptation
+                in Urban Areas</h1>
+              <br>
+              <img src="https://media.springernature.com/w306/springer-static/cover-hires/book/978-3-319-56091-5">
+              <br>
+              <p class="leading-relaxed">This open access book brings together research findings and experiences from science, policy and practice to highlight and debate the importance of nature-based solutions to climate change adaptation in urban areas. Emphasis is given to the potential of nature-based approaches to create multiple-benefits for society.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ALR1RmxwUrygY-O091r6OGmrmyWYHhhk/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Space A Visual Encyclopedia</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/91duLSWw4XL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                This space encyclopedia for children presents the entire Universe in one stunning book.
+  
+  Let the countdown begin as you launch into space to view the many wonders of the Solar System. Ride a rocket like an astronaut, take your first steps on the Moon, feel the rocky red surface of Mars, and run rings around Saturn. Travel further into deepest, darkest space and be dazzled by the biggest and brightest stars millions of light years away.
+  
+  Packed with amazing images from NASA missions, as well as exclusive interviews and incredible facts, you'll experience and understand the Universe as never before.
+  
+  Calling all space cadets and aspiring astronauts, this one is for you!
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1AGdLg0J_IdSupl8k6XgU6tut31LIoIwp/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Ecology Of Trees in Tropical Rainforest</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51+wbstLyQL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Current knowledge of the ecology of tropical rain-forest trees is limited, yet a good understanding of the trees is essential to unravelling the workings of the forest itself. This book aims to summarise contemporary understanding of the ecology of tropical rain-forest trees. The emphasis is on comparative ecology, an approach that can help to identify possible adaptive trends and evolutionary constraints and which may also lead to a workable ecological classification for tree species, conceptually simplifying the rain-forest community and making it more amenable to analysis.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ALivnFcITYQDKJwNP_k5Br55KCV65vDS/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Essentials of Ecology</h1>
+              <br>
+              <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                Essentials of Ecology, 4th Edition presents introductory ecology in an accessible, state-of-the-art format designed to cultivate the novice student's understanding of and fascination with the natural world. In a concise, engaging style, this text outlines the essential principles of ecology from the theoretical fundamentals to their practical applications. Full color artwork, simple pedagogical features and a wide range of carefully-chosen examples make this book an ideal introduction to ecology for students at all levels.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ANnrkxFpovhfCN55ZYA-6meUXrhLjjOK/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Physical Geography Of SouthEast Asia</h1>
+              <br>
+              <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                The Physical Geography of Southeast Asia examines the complex mosaic of physical environments which comprise Southeast Asia, and the current environmental problems and management practices which have arisen in this part of the world. The book is in three sections. The first section introduces the basic environmental components (geology, landforms, rivers, vegetation, and others) across the entire region. The second section discusses specific environments that arecharacteristic of this assemblage of continental and maritime landscapes (volcanic islands, coastal environment, granitic terrains, karst, etc.). The third and final section illustrates the ecological relationship between the environment and people (volcanic hazards, urban environment, coastal zone development, coralreefs, and others).The physical environment of Southeast Asia is examined at different levels, covering a world region that ranges from ancient, stable landmasses to dynamic, unstable plate boundaries, from aged, primary rainforests to brash, vibrant, resource-demanding built environments.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1APryPq2tCN9UlVSxgDROIZbbsxA0tQ_u/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section><section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Earth Science 2015-2016</h1>
+              <br>
+              <img src="data:image/jpeg;base64,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">
+              <br>
+              <p class="leading-relaxed">
+                Whether hiking along a mountain trail, driving down a highway, or making a decision about their energy usage, instructors want their students to see and assess the physical world they live in with more informed eyes. Through the most contemporary and applied text; the most vibrant visuals; and the most hands-on learning resources, Earth Science, Second Edition gets students leaving the class with a richer understanding of the science behind the physical world around them, and why it matters in their everyday lives
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1AU5hz9d5NuVOoIlBu8HG4X29hTx6htT1/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Deserts</h1>
+              <br>
+              <img src="https://m.media-amazon.com/images/I/41QL62D97nL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Deserts make up a third of the planet's land surface, but if you picture a desert, what comes to mind? A sandy wasteland? A drought-parched dust bowl? An alien landscape devoid of all life forms? In this marvelous Very Short Introduction, geographer and popular science writer Nick Middleton reveals that deserts are places of immense natural charm and rich biodiversity. Typified by drought and extremes of temperature, they can be harsh and hostile, but Middleton shows that many deserts are also spectacularly beautiful, and on occasion they can teem with life.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1AbgR0AuXX4sV38NpV0UxJkRTxtNDCQ8N/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Britain's Oceanic Empire</h1>
+              <br>
+              <img src="https://assets.cambridge.org/97811075/15529/large_cover/9781107515529i.jpg">
+              <br>
+              <p class="leading-relaxed">
+                This pioneering comparative study of British imperialism in the Atlantic and Indian Ocean worlds draws on the perspectives of British newcomers overseas and their native hosts, of metropolitan officials and corporate enterprises, migrants and settlers. Leading scholars examine the divergences and commonalities in the legal and economic regimes that allowed Britain to project imperium across the globe. 
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1FxoiFxindP3sm7vG3zOqor3J8hmWB-da/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+  
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY BOOKS</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Environmental Policy And Public Health</h1>
+              <br>
+              <img src="https://media.wiley.com/product_data/coverImage300/31/04705934/0470593431.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Environmental Policy and Public Health examines the main sources of pollution and threats to environmental integrity and explores the consequences of pollution on the environment and the population. Throughout the book, noted environmental policy expert William N. Rom explains the legal basis for environmental action, beginning with the Clean Air Act, the Wilderness Act, the National Environmental Policy Act, the Endangered Species Act, and international treaties. In addition to providing information about existing laws.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1G2pEdg9etgZh70bPjcvEGbgysLrZMxEj/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Encyclopedia of human geography</h1>
+              <br>
+               <img src="https://books.google.co.in/books/publisher/content?id=K2k5DQAAQBAJ&pg=PT3&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U06GH9X43Je5BWSJJ41n1YzWPao4g&w=1280">
+              <br>
+              <p class="leading-relaxed">
+                Human geography focuses on the ways that humans interact with each other and with the environment, illuminating the complex processes and nature of our global society.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1k7B_PGQAV_4C_6g2zhFSt6QzP9_iHLE8/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Atlas of Challenges and Opportunities in European neighbourhoods</h1>
+              <br>
+               <img src="https://books.google.co.in/books/publisher/content?id=0NhCDwAAQBAJ&pg=PR3&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3svjOmybg-ioTA-uSPptTIKz0gzQ&w=1280">
+              <br>
+              <p class="leading-relaxed">
+                This atlas provides a macro-regional overview of the areas that surround the European Union, from the Sahara to the Middle East, Western Balkans to European Russia, Turkey to the Arctic.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1cW7UtDwB2DXNtrdVdIyFHIVq774CX3ga/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Ecosystem Services for Well-Being in Deltas</h1>
+              <br>
+               <img src="https://books.google.co.in/books/publisher/content?id=O9ldDwAAQBAJ&pg=PR2&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1MVviR71IgIyW75ajL_p9cTbjsbA&w=1280">
+              <br>
+              <p class="leading-relaxed">
+                Ecosystem Services for Well-Being in Deltas analyses changing ecosystem services in deltas; the health and well-being of people reliant on them; the continued central role of agriculture and fishing; and the implications of aquaculture in such environments.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kR8dwaw-SiYU1EAJ-JyfF2x_-QyHWRYT/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography (tutorials point)</h1>
+              <br>
+               <img src="https://upscpdf.com/wp-content/uploads/2018/10/Tutorials-Point-Geograohy-PDF-Download.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Geography is a comprehensive subject that includes a wide range of topics like the location of geographic regions; weather system; soils; physical features such as mountains, rivers, and other relief features; population composition; infrastructure; diversity of nature as well as people and their cultures, and many ...
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kCBHM-nrPdR6kcPZMVkNQjm5cV1HIlAG/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography a visual encyclopedia</h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/A1prC0lXmwL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Created in conjunction with the Smithsonian Institution, Geography: A Visual Encyclopedia explores every aspect of our world, from the North to the South Pole, and from the outer atmosphere to the fiery core and from natural processes to human impact.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kdqygwd1p8l5a1THefP3PrME5O5LTMXW/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Indian Geography</h1>
+              <br>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhTJSOaykYWn_GDsvFssHBJP5_rvnII1LtAdyE0CvGwYSsDHH_3JJ7d8jLON6YuBpUuaw&usqp=CAU">
+              <br>
+              <p class="leading-relaxed">
+                Summary of Indian Geography. Page 1. Indian Geography India : General Introduction Sindhu (Persian) becomes Hindu Bharata Varsha (Legendry King Bharata, or Bharata tribe ) European =India Location : Latitude : Northern Hemisphere, from 604' to 37o6, N latitude Longitude : Eastern Hemisphere ...
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1cEzYfow3IAWrmdsNfe-SchWvRYbjCGxa/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Knowing the Salween River: Resource Politics of a Contested Transboundary River</h1>
+              <br>
+               <img src="https://books.google.co.in/books/publisher/content?id=weeoDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0x5Ht7FOvl7B7TbtY-ULCF2rw6tg&w=1280">
+              <br>
+              <p class="leading-relaxed">
+                This open access book focuses on the Salween River, shared by China, Myanmar, and Thailand, that is increasingly at the heart of pressing regional development debates. The basin supports the livelihoods of over 10 million people, and within it there is great socio-economic, cultural and political diversity. ... 
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1cVDYLhxDg-Rj_mxV3Jivn8HBXhBnd__A/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">models theory & systems analysis in geography</h1>
+              <br>
+               <img src="https://imgv2-1-f.scribdassets.com/img/document/228540577/original/752f8e51ca/1612940391?v=1">
+              <br>
+              <p class="leading-relaxed">
+                 Models, theories and systems analysis provide important tools of explanation in ... pictures and a direct description of the logical characteristics of our ... enough to suggest novel hypothesis and speculations in the primary field of investigation'.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kIcNx6XIKebPF3H2FZaMVnRIUMIG9QsB/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Nature‐based Solutions to Climate Change adaption in urban areas</h1>
+              <br>
+               <img src="https://books.google.co.in/books/publisher/content?id=QtpCDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3sRjStQWxY-cekcttlJFZYDp1aPA&w=1280">
+              <br>
+              <p class="leading-relaxed">
+                This open access book brings together research findings and experiences from science, policy and practice to highlight and debate the importance of nature-based solutions to climate change adaptation in urban areas. .
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ka0dSlRe5KkGoniamrF_hvALMmS26Iid/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">certificate physical and human geography </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/81V-sJp5YaL.jpg">
+              <br>
+              <p class="leading-relaxed">
+                Certificate Physical And Human Geography provides coverage of fundamental concepts regarding the earth s topology, the weather and climate, the different climatic regions, and vegetation across the planet. The book is divided into two parts, Physical Geography, and Weather, Climate and Vegetation.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kc7j8rI-H9B7MsMEquiW4phLQW3veU04/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Physical geography </h1>
+              <br>
+               <img src="https://open.umn.edu/opentextbooks/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcXNHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76a0804e57e6d3beadf9ecf5004dba430a6c6e85/PhysGeo.PNG">
+              <br>
+              <p class="leading-relaxed">
+                It examines the basic physical elements of Earth and the processes that affect climate, water, soils, vegetation, landforms, how humans and the environment interrelate, the fundamentals of Earth/Sun relationships and cartography
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kCJ8N_-2JqWxGp7RCjylt00n25uyGBxt/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">AGE 301: PHYSICAL GEOGRAPHY</h1>
+              <br>
+               <img src=https://lh3.googleusercontent.com/proxy/F9fWttzsP6bFORWfP00v_iOIIuhXCG63mEHlKmX1RUXBWjoQBC9fbjtXB5-MtGjYqo_LQGpecIFx6jXTe3faCOIOv2P2mC3Z4ntJ2M0JZJH_TNq94MNZmUfRV_BtJw0pvCepq5gXx4Eb9klky3th2qPEBbinuuz7RbaRavysIbAkjjng-gRyYuL8fXPXRo3l_zqWXsqxnLSRtfNrnVKmCk8>
+              <br>
+              <p class="leading-relaxed">
+                 It builds on the knowledge of the atmosphere introduced in Physical Geography I and introduces the basic concepts of Biogeography, mainly concerned with the factors that determine the distribution of living organisms and their impact on the environment.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1jzKBJp2LyW6PaCw0hApi4X2NiWwVIV0S/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">An introduction to geography </h1>
+              <br>
+               <img src="https://www.tutorialathome.in/postimg/2017/12/introduction-to-geography.jpg">
+              <br>
+              <p class="leading-relaxed">
+                . An Introduction to Geography SIMPLE LESSONS ON GEOGRAPHICAL TERMS AND ELEMENTARY NOTIONS IN PHYSICAL GEOGRAPHY LONDON ... 10, 11, correspond respectively to Raleigh Geography Readers IV, V, VI, VII. ... He exerted himself to the utmost; but not the least sign of a shadow of the poplar-tree ...
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1o7JORuYwRMJSL8leO_VinEaLHQiliDuA/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+           
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">GEOGRAPHY</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">IAS 100 Indian geography</h1>
+              <br>
+               <img src="https://1.bp.blogspot.com/-UmZjL5DkVsk/Xa2QFo4axEI/AAAAAAAADwo/dSyY4rLN8GUXDoYx3G_Oi5buyC0KVJbrwCLcBGAsYHQ/s1600/Geography%2BChronicle.png">
+              <br>
+              <p class="leading-relaxed">
+                The Chronicle of GEOGRAPHY Indian & the World for Civil Services Examinations. by Chronicle Editorial Team | 1 January 2021. Explained Samajik Aarthik Vikas. Hindi Edition | by Chronicle Editorial Team | 1 January 2021. CHRONICLE 9 YEARS SOLVED SAMANYA ADHYAN CIVIL SEVA prarambhik PARIKSHA.
+              </p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1syNKgWqbMIvJxBgEtRh3zS9743BPyFOa/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Ancient Geography Of India             </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/41SF0Zvm+JL._SX289_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">This is a reproduction of a book published before 1923. This book may have occasional imperfections such as missing or blurred pages, poor pictures, errant marks, etc. that were either part of the original artifact, or were introduced by the scanning process. We believe this work is culturally important, and despite the imperfections, have elected to bring it back into print as part of our continuing commitment to the preservation of printed works worldwide. We appreciate your understanding of the imperfections in the preservation process, and hope you enjoy this valuable book.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kH7Lr6vAvBR4HOKXUwa0dPDLVHHPgydh/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Companion To Environmental Geography             </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/518vgb2gEJL._SX346_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">A Companion to Environmental Geography is the first book to comprehensively and systematically map the research frontier of 'human-environment geography' in an accessible and comprehensive way.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IRwrdVOQomMm0TTbfFWse1LRfbS9zt7o/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Approaches To Human Geography             </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51sIhtW68AL._SX349_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Approaches to Human Geography is the essential student primer on theory and practice in Human Geography. It is a systematic review of the key ideas and debates informing post-war geography, explaining how those ideas work in practice. Avoiding jargon - while attentive to the rigor and complexity of the ideas that underlie geographic knowledge – the text is written for students who have not met philosophical or theoretical approaches before. This is a beginning guide to geographic research and practice.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1HZ9YK4oGPZDagNdYiAfSMFo0nsSgWGqm/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Atlas Of Challenges And Opportunities In European Neighbourhood            </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/41q9dH1rnmL._SX330_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">This atlas provides a macro-regional overview of the areas that surround the European Union, from the Sahara to the Middle East, Western Balkans to European Russia, Turkey to the Arctic. Detailing key socio-economic data as well as developmental trends, the maps provide a comprehensive territorial analysis at a local scale and explore the potential for regional integration and cooperation.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1cW7UtDwB2DXNtrdVdIyFHIVq774CX3ga/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">China's  Geography :Second Edition : Globalization and The Dynamics Of The Political,Economic and Social Change             </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/516NQOy44mL._SX348_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed"> Now in a thoroughly revised and updated edition that offers the only sustained geography of the reform era, this book traces the changes occurring in this powerful and ancient nation across both time and space            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1I5DUQEHNfW32SEUhLz5cVwU88SNGbmCE/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Ecosystem Services For Well-Being In Deltas             </h1>
+              <br>
+               <img src="https://m.media-amazon.com/images/I/41iBiDprAAL.jpg               ">
+              <br>
+              <p class="leading-relaxed">This book answers key questions about environment, people and their shared future in deltas. It develops a systematic and holistic approach for policy-orientated analysis for the future of these regions. It does so by focusing on ecosystem services in the world’s largest, most populous and most iconic delta region, that of the Ganges-Brahmaputra delta in Bangladesh. The book covers the conceptual basis, research approaches and challenges, while also providing a methodology for integration across multiple disciplines, offering a potential prototype for assessments of deltas worldwide.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kR8dwaw-SiYU1EAJ-JyfF2x_-QyHWRYT/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Encyclopedia Of Geography Terms, Themes And Concepts             </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/412afIesafL._SX330_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">This handbook offers a broad coverage of terminology and concepts, serving as both an encyclopedic dictionary of geography terms and an approachable overview to the human and physical aspects of world geography. Approximately 150 geographic terms and concepts are defined and discussed, providing an accessible reference for anyone who requires a deeper knowledge of the language and ideas that are important to geography as a discipline.             </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IrM6JmNBcusrne9lcrL5cz0axhaxnSvE/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography & Geographers            </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51Go+Ntm+QS._SX352_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Geography and Geographers continues to be the most comprehensive and up-to-date overview of human geography available. It provides a survey of the major debates, key thinkers and schools of thought in the English-speaking world, setting them within the context of economic, social, cultural, political and intellectual changes. It is essential reading for all undergraduate geography students.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ItDs0zMrYz3gyk_P4Fh_OX45tyjB47bc/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography And Revolution             </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51x2c1f5F7L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">. "Geography and Revolution" examines the ways that place and space matter in a variety of revolutionary situations. David N. Livingstone and Charles W. J. Withers assemble a set of essays that are themselves revolutionary in uncovering not only the geography of revolutions but the role of geography in revolutions.            </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ILDA2PSjZ1C_W0iQ-mqZV_uS2mtnbIYN/view?usp=sharing				                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography G110 : Introduction to Human Geography               </h1>
+              <br>
+               <img src="https://reantverlibrary.s3.eu-central-1.wasabisys.com/storage/ebooks/March2021/J7cCEoYVRjyTsNd5m0DA.JPG               ">
+              <br>
+              <p class="leading-relaxed">To Learn Abot Human Geography,Geography G110: Introduction to Human Geography is the best book out there              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1Hle6gUGYWJ96JZZWu6JX2Zm6WGcRAGE0/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography               </h1>
+              <br>
+               <img src="http://i.imgur.com/J5LVHEL.jpg               ">
+              <br>
+              <p class="leading-relaxed">Geography is a comprehensive subject that includes a wide range of topics like the location of geographic regions; weather system; soils; physical features such as mountains, rivers, and other relief features; population composition; infrastructure; diversity of nature as well as people and their cultures, and many more. So, Geography is one of the essential disciplines of Social Science and its applied knowledge is used in everyday life. This tutorial is divided into different chapters and explains the concept of Geography along with relevant examples.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kCBHM-nrPdR6kcPZMVkNQjm5cV1HIlAG/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Encyclopedia Of Human Geography               </h1>
+              <br>
+               <img src="https://us.sagepub.com/sites/default/files/upm-assets/8283_book_item_8283.jpg               ">
+              <br>
+              <p class="leading-relaxed">This Encyclopedia, on this relatively new strand of geography, considers all these new developments and helps to further establish this field.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1k7B_PGQAV_4C_6g2zhFSt6QzP9_iHLE8/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Facets of Social Geography               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51j38HWTSmL._SX332_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Facets of Social Geography: International and Indian Perspectives provides a breadth of information on the nature, scope, history and evolution of social geography along with a good representation of approaches and techniques used in this field. It discusses both conceptual and empirical approaches, and traditional and emergent social geography themes including art and culture, urbanism and crime, social institutions of caste, class and religion, gender, disability, activism, feminism, social planning, enterprise zones, social and economic inequities, post-colonialism, post-modernism and development of quantitative, qualitative and mixed methods. India 's social structure based on centuries-old Karma principles and a four-level caste system are dealt with in this book to help unravel the country's social geography.               </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IbphTkDt0kfaU1bsv0JAo8BOvAjQFzt_/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geographical Thought : An Introduction to Ideas In Human Geography               </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51xHhugBqaL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Geographical Thought provides a clear and accessible introduction to the key ideas and figures in human geography. The book provides an essential introduction to the theories that have shaped the study of societies and space. Opening with an exploration of the founding concepts of human geography in the nineteenth century academy, the authors examine the range of theoretical perspectives that have emerged within human geography over the last century from feminist and marxist scholarship, through to post-colonial and non-representational theories. Each chapter contains insightful lines of argument that encourage readers towards independent thinking and critical evaluation.               </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1I6bQMtEEpIN35ZjcnkHe_C8vF0gQpZCm/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geography Course Companion: Second Edition               </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/518xz3ui-zL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Prepare IB learners to achieve and progress. Developed directly with the IB for the revised syllabus first examined 2019, this Course Book fully supports all the SL and HL themes. Integrating concept-based learning and with even more support for EAL learners, this text helps you truly deliver the IB approach to learning Geography.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1J-JjeEkNbJ5DdtCgEpuzsmYitf7es1a1/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1"><Geography- A Visual Encyclopedia                 /h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/61Y9KvNMPFL._SX395_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Created in conjunction with the Smithsonian Institution, Geography: A Visual Encyclopedia explores every aspect of our world, from the North to the South Pole, and from the outer atmosphere to the fiery core and from natural processes to human impact.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kdqygwd1p8l5a1THefP3PrME5O5LTMXW/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Glencoe: World Geography               </h1>
+              <br>
+               <img src="https://i.ebayimg.com/images/g/AbsAAOSw2gxYnk-D/s-l600.jpg               ">
+              <br>
+              <p class="leading-relaxed">The only high school geography text co-authored by the National Geographic Society, Glencoe World Geography offers not only a fascinating view of the world, enlivened by but also a meticulous, accurate presentation. This program focuses on the development of geographic literacy. Features: Unequalled Authorship-! National Geographic writers and photographers have teamed to make Glencoe World Geography the most engaging geography program available.- Every page, map, chart, and picture has been carefully fact-checked by National Geographic''s Cartographer in Residence, and the maps are carefully labeled, up-to-date, and colorful.- A Geographic View, taken from the pages of National Geographic magazine, opens every section of the text and grabs your students' attention.               </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IsRp0LZ1LgvVupPKHn3Gkf2N8O-4lH-h/view?usp=sharing	https://drive.google.com/file/d/1ILDA2PSjZ1C_W0iQ-mqZV_uS2mtnbIYN/view?usp=sharing                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Handbook of Cultural Geography               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51H3VLOSavL._SX349_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">The Handbook of Cultural Geography lives up to its name. It is a book about where things are, how people live, what life means and why events happen. It should be carried at all times by anyone who is curious about the world.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1ICLtZpQaSN3e8_ZUAAULUll3MeeSBKCM/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">HUMAN GEOGRAPHY : A Concise Introduction               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51c3FLaJb1L._SX342_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Using the story of the “West and the world” as its backdrop, this book provides for beginning students a clear and concise introduction to Human Geography, including its key concepts, seminal thinkers and their theories, contemporary debates, and celebrated case studies.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IJBuRZRGAZ4rURT_Z8LeTgOJenD7uTO_/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">INDIA : A Sacred Geography               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51Xt16i5e5L._SX334_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">India: A Sacred Geography is the culmination of more than a decade's work from the renowned Harvard scholar Diana L. Eck. The book explores the sacred places of India, taking the reader on an extraordinary trip through the beliefs and history of this rich and profound place, as well as providing a basic introduction to Hindu religious ideas and how those ideas influence our understanding of the modern sense of "India" as a nation.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IeCokr9PzK-BFRpz1OCAh-xZgr55mqUB/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Indian Geography               </h1>
+              <br>
+               <img src="http://i.imgur.com/J5LVHEL.jpg               ">
+              <br>
+              <p class="leading-relaxed"> It is now a widely read reference book that deals with the relevant features and topics of India’s geographical landscape in a systematic and comprehensive manner. Varied topics covered are resources of India, different types of irrigation, cropping patterns of India, transport and public distribution system and food security. It is also being increasingly referred to by graduates and postgraduates of the subject and by researchers and academicians.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1cEzYfow3IAWrmdsNfe-SchWvRYbjCGxa/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Indian Geography               </h1>
+              <br>
+               <img src="http://i.imgur.com/J5LVHEL.jpg               ">
+              <br>
+              <p class="leading-relaxed">1.Based on latest CSAT syllabus 2.Previous 18 years Topicwise solved paper with Explanation 3.Covered question of UPSC and STATE PCS EXAM 4.Also included Solved Paper of 2017              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1Iau7wfJ6_oaBLa9bRM4RMv7xlAere8Kj/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Indian & World Geography              </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/81hI4lc2NSL.jpg               ">
+              <br>
+              <p class="leading-relaxed">The book <Indian and World Geography, fifth edition is written mainly for candidates preparing for Civil Services and State Services Examination. With the ever changing landscapes and dynamism in the world, The book provides an insight on updated "physical, social, and economic Geography" Of India and the world.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IkdKxiUvuTzOVmi2YZVY9DCfwM9wImXs/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Indian Geography               </h1>
+              <br>
+               <img src="http://i.imgur.com/J5LVHEL.jpg               ">
+              <br>
+              <p class="leading-relaxed">Chronicle IAS Books Collection will aid in preparing for UPSC Civil Services Examination. The books in the collection include, reference books on various subjects of IAS examination, model answers for previous year question papers, reference books for optional subjects and many more. Books will cater to both Prelims and Mains. They are available in both English and Hindi.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1syNKgWqbMIvJxBgEtRh3zS9743BPyFOa/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Knowing The Salween River: Resource Politics Of A Contested Transboundary River               </h1>
+              <br>
+               <img src="https://m.media-amazon.com/images/I/41yyJ4a-RML._SY346_.jpg               ">
+              <br>
+              <p class="leading-relaxed">This open access book focuses on the Salween River, shared by China, Myanmar, and Thailand, that is increasingly at the heart of pressing regional development debates. The basin supports the livelihoods of over 10 million people, and within it there is great socio-economic, cultural and political diversity. The basin is witnessing intensifying dynamics of resource extraction, alongside large dam construction, conservation and development intervention, that is unfolding within a complex terrain of local, national and transnational governance. With a focus on the contested politics of water and associated resources in the Salween basin, this book offers a collection of empirical case studies that highlights local knowledge and perspectives.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1cVDYLhxDg-Rj_mxV3Jivn8HBXhBnd__A/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Models , Theory and Systems Analysis in Geography               </h1>
+              <br>
+               <img src="https://0.academia-photos.com/attachment_thumbnails/46825102/mini_magick20190208-22127-5vpkz.png?1549673030               ">
+              <br>
+              <p class="leading-relaxed">It represents one of the major current research frontiers in geography. Models, theories and systems analysis provide important tools of explanation in geography in modern times. very fashionable in geographic research (Harvey, 1969, 141). ... The models link generalizations with theories.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kIcNx6XIKebPF3H2FZaMVnRIUMIG9QsB/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Certificate Physical and Human Geography               </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51b1pdSXPKL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">This book is an indispensable tool for preparing core concepts of physical Geography for Civil Services Preliminary Examination. Gives a lucid and crystal clear explanation of concepts.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1kCJ8N_-2JqWxGp7RCjylt00n25uyGBxt/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Physical Geography_The Basics              </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51RRxrnbdzL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Physical Geography: The Basics is a concise and engaging introduction to the interactions, systems and processes that have shaped, and continue to shape, the physical world around us. This book introduces five key aspects of the study of physical geography. The book features diagrams, maps and a glossary to aid understanding of key ideas and suggestions for further reading to allow readers to develop their interest in the subject – making Physical Geography: The Basics the ideal starting point for anyone new to the study of geography and the environment.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1Hk-gxWkZv2YPyvJZeD3yf54ffmSsc_x7/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Age 301: Physical Geography               </h1>
+              <br>
+               <img src="http://i.imgur.com/J5LVHEL.jpg               ">
+              <br>
+              <p class="leading-relaxed">Physical Geography III is a course that builds on the knowledge gained from the study ofPhysical Geography I and II. It builds on the knowledge of the atmosphere introduced inPhysical Geography I and introduces the basic concepts of Biogeography, mainly concernedwith the factors that determine the distribution of living organisms and their impact on theenvironment. The course also examines the scope and growth of Biogeography, vegetationand soils. Aspects of the atmosphere such as climatic elements and their distribution, climaticfactors, climatic classification schemes and climatic change are adequately covered              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1jzKBJp2LyW6PaCw0hApi4X2NiWwVIV0S/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Political Geography               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/41cuX10sV6L._SX385_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">In 1904 Sir Halford Mackinder published his seminal paper The Geographical Pivot of History demonstrating the central position of political geography in the study of geography as a whole; a century later and political geography is still at the heart of human geography              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1I2aZKZzwdVzcW4O4gF2l-AYcp3XTHZSn/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Political Geography Seventh Edition               </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51DwVddoTmL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">The new and updated seventh edition of Political Geography once again shows itself fit to tackle a frequently and rapidly changing geopolitical landscape. It retains the intellectual clarity, rigour and vision of previous editions based upon its world-systems approach, and is complemented by the perspective of feminist geography. The book successfully integrates the complexity of individuals with the complexity of the world-economy by merging the compatible, but different, research agendas of the co-authors.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1I6oUNChPbxJl-AkvaNOE1tGCbS5eQkjo/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Geography Of India: Sacred And Historic Places               </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51qbPrsQMsL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Describes the physical, historical, and cultural geography of India, from its major physical features, world heritage sites, and cities, to sites in the union territories and Kashmir region.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1Ihz6j67GCFhLTLKHwLbZ-S8jxWrjWk5M/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Handy Geography Answer Book : Second Edition               </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/51428V9jMcL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg               "
+              <br>
+              <p class="leading-relaxed">The Handy Geography Answer Book. Handy Geography answers 1,000 common and intriguing questions about the natural features of the world and the ever-changing mark humans make on our planet              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1I1sh3_3BKmJHAcxR3F1Xfe3QZRAJFprt/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Revenge Of Geography               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51SRciH98nL._SX322_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">Bestselling author Robert D. Kaplan builds on the insights, discoveries, and theories of great geographers and geopolitical thinkers of the recent and distant past to look back at critical pivots in history and then to look forward at the evolving global scene. Kaplan traces the history of the world’s hot spots by examining their climates, topographies, and proximities to other embattled lands. He then applies the lessons learned to the present crises in Europe, Russia, China, the Indian Subcontinent, Turkey, Iran, and the Arab Middle East.               </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1Hfm9In2QDaRHCsVLlgfMMDmWx5F33ZWJ/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Urban Social Geography_An Introduction: Sixth Edition              </h1>
+              <br>
+               <img src="https://images-eu.ssl-images-amazon.com/images/I/41p3vonE9lL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg               ">
+              <br>
+              <p class="leading-relaxed">The 6th edition of this highly respected text builds upon the successful structure, engaging writing style and clear presentation of previous editions. Examining urban social geography from a theoretical and historical perspective, it also explores how it has developed into the modern day. Taking account of recent critical work, whilst simultaneously presenting well established approaches to the subject, it ensures students are well-informed about all the issues. The result is a topical book that is clear and accessible for students              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1IO4miHJGrh5O7oUgT5Lowghexzqioiau/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">An Introduction To Geography              </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51iB8gUFi5L._SX302_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">An Introduction to Geography- SIMPLE LESSONS ON GEOGRAPHICAL TERMS AND ELEMENTARY NOTIONS IN PHYSICAL GEOGRAPHY was Originally published in 1901.               </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1o7JORuYwRMJSL8leO_VinEaLHQiliDuA/view?usp=sharing	                ">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geography</h2>
+              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">World Geography Of Travel And Tourism : A Regional Approach               </h1>
+              <br>
+               <img src="https://images-na.ssl-images-amazon.com/images/I/51wBC+SRD0L._SY344_BO1,204,203,200_.jpg               ">
+              <br>
+              <p class="leading-relaxed">World Geography of Travel and Tourism addresses the need to understand the cultural, environmental, historical and political context in which international tourism takes place. The expert author team has included major themes and issues in tourism, and positioned them in a regional context. In this way, this text takes a major step into a more analytical approach to global tourism while still providing a clear account of the geography of travel and tourism.              </p>
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1InBXZwls3BwUOr1vpiqYsr7BmstB5UPc/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                                    <!--------JavaScript for toggle menu------>
+                                <script>
+                                    var navLinks = document.getElementById("navLinks");
+                                    function showMenu(){
+                                        navLinks.style.right = "0";
+                                    }
+                                    function hideMenu(){
+                                        navLinks.style.right = "-200px";
+                                    }
+                                </script>
+    </body>
+</html>

@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Gerniomo Stilton | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+/*---------- course ----------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*----------Campus Codes---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #eed7d7;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/*----------------------CONTACT----------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 40px;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: white;
+}
+
+/*----------------------BLOG CONTENT----------------------*/
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h4{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: lightcoral;
+    text-align: left;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="Books.html">bOOKS</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Comment.html">COMMENT</a></li>
+                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Gerniomo Stilton</h1>
+    </section>
+
+    <section id="Cat2" class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Curse of the Cheese Pyramid</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51u2JxZHMML.jpg">
+              <br>
+              <p class="leading-relaxed">The Mystery of the Great Cheese Pyramid I'm off to Egypt! I climbed onboard a crabby old camel that would take me across the desert to the Great Cheese Pyramid. There, among mummies and hieroglyphics, I would learn the secret of the Seven Wonders of the Ancient Mouse World....</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1bFzsLaZwTxks90pRVAypIt7SwnxcL9yU/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Cat and Mouse in a Haunted House</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51UXT4fFBIL._SX324_BO1,204,203,200_.jpg">
+              <br>
+              <p class="leading-relaxed">The Case of Curlypaw Cannycat's Castle I was lost in a dark, spooky forest! Until I stumbled upon Curlypaw Cannycat's Castle. The castle was completely empty, or so I thought. But I quickly discovered that it was haunted - by cats! Let me tell you, this was one case where curiosity almost killed the mouse!</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1fETK_wbFh7wzQRvkWbGWLs4i3vRy1ZBR/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Temple of the Ruby of Fire</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51y8A-35lHL.jpg">
+              <br>
+              <p class="leading-relaxed">It was my most thrilling adventure yet! My old friend Professor von Volt had discovered the location of the famous Ruby of Fire. And before I could let out a squeak of protest, my sister Thea had dragged me into race to be the first to find the legendary gem. The jewel was protected by thousands of ancient booby-traps -- a 'fraidy mouse's worst nightmare? Would I make it through with my fur?</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1BcBt4sb-YW2Wr2goq3NzCb-XUlPqoneZ/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">It's Halloween You 'Fraidy Mouse !</h1>
+              <br>
+              <img src="https://geronimostilton.com/upload/assets/files/US,116,-1,762/2750-0.jpg">
+              <br>
+              <p class="leading-relaxed">It's Halloween on Mouse Island, and it seemed like everyone was out to get me, Geronimo Stilton! My cousin Trap kept pulling scary pranks on me. And then my sister Thea told me I had to write a book about Halloween in less than one day! Before you could say boo, my nephew Benjamin had dragged me to a graveyard to do research. There I met a very spooky mouse who -- yikes! -- tried to lock me up in her coffin! Oh, how would a 'fraidy mouse like me ever survive the year's scariest holiday?</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1DzxmcvGgCeVfbmJvuDisd7BSUagX-5ow/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Flight of the Red Bandit</h1>
+              <br>
+              <img src="https://www.akshardhara.com/81171/Flight-Of-The-Red-Bandit-Geronimo-Stilton-IBD--Distributor--buy-marathi-books-online-at-akshardhara.jpg">
+              <br>
+              <p class="leading-relaxed">One hot summer afternoon, I was trying to write, but I just couldn't get inspired. I needed a break! Who would've thought that soon I'd be in Arizona, hanging from cliffs and white-water rafting? Grandfather Shortpaws had sent me on a hunt for his old friend -- the Red Bandit. What a fabumouse adventure!</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1-v3EqcU791BFpXNtGCm7lEE6FUBfImJS/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Mystery in Venice</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/91S0x0GfftL.jpg">
+              <br>
+              <p class="leading-relaxed">When my friend Petunia Pretty Paws gave me a crystal figurine of a boat as a gift, I had to accept it. After all, I have the biggest crush on Petunia! But oh, was that crystal boat ugly! So I wasn't too sad when my cousin Trap accidentally broke it, especially when I discovered a piece of paper inside with a mysterious message from someone in Venice, Italy, asking for help! A gentlemouse never ignores a request for assistance. So I, Geronimo Stilton, would do whatever it took to save the day!</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1yRiPmNSPcrpoVS48thrIZWbAlHZ6E-Ne/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Lost Treasure of the Emrald Eye</h1>
+              <br>
+              <img src="https://geronimostilton.com/upload/assets/files/US,116,-1,746/2734-0.jpg">
+              <br>
+              <p class="leading-relaxed">When Geronimo's sister Thea discovers a mysterious old map showing a secret treasure hidden on a faraway island, Geronimo and his cousin Trap get roped into an action-packed adventure they'll never forget!</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/148wUgHSMP6BvyC9GSc-PkVbhTGxdxXMh/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Mona Mousa Code</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51MwTReoxWL.jpg">
+              <br>
+              <p class="leading-relaxed">Do you like art? I do! So when Thea heard that there was a secret map hidden beneath Mouse Island's most famous painting, the Monamouse, I knew we had to get the scoop! Together we began to investigate, and soon we discovered secret clues that led us to the most fabumouse secret. And it all</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/1DvHLZPXmDQTmL7ZzeSNKbJ6d5w0-HHIp/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Way of Samurai</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61X4AHSNapL.jpg">
+              <br>
+              <p class="leading-relaxed">When Wild Willie showed up at my door and invited me to travel with him to Japan, I jumped at the chance. We were in search of an ancient, legendary samurai scroll that holds the secret to a long-lost fighting technique. The scroll had fallen into the wrong hands, and it was up to me and Wild Willie to track it down and save the day. But first, we would have to fight a group of talented ninjas. Holey cheese -- this would be one adventure I would never forget!</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/12IyiBi3zDdsSgyaulNtRIOufAkY2koUS/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Geronimo Stilton</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Discovery of America</h1>
+              <br>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51O+P3padmL._SX357_BO1,204,203,200_.jpg">
+              <br>
+              <p class="leading-relaxed">The popular children's story appears in graphic novel form for the first time in the U.S., with stories never seen in America. Geronimo Stilton is a talking mouse who lives in New Mouse City on Mouse Island with his friends and relatives. He works at The Rodent's Gazette, the most famous newspaper in New Mouse City. In this series of comics, Geronimo Stilton travels through time in order to defend history from his arch nemeses, the Pirate Cats. These devious felines plan to travel back in time in order to change history to make them supreme rulers of Mouse Island! In his first time-traveling adventure, Geronimo and co. join Christopher Columbus on his voyage from Italy to America in 1492 in order to stop the Pirate cats and save all of the mice on Mouse Island.</p>
+           
+              <br>
+              <br>
+                <a href="https://drive.google.com/file/d/14FK3fgtdjk3G5rkwDRYsgjZES6kUkoiR/view?usp=sharing">
+                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Mummy with no Name</h1>
+                <br>
+                 <img src="https://geronimostilton.com/upload/assets/files/US,116,-1,797/2784-0.jpg">
+                <br>
+                <p class="leading-relaxed">Enter the world of Geronimo Stilton, where another funny adventure is always right around the corner. Each book is a fast-paced adventure with lively art and a unique format kids 7-10 will love. Halloween and Egypt and mummies . . . oh, my! I admit it, I am a 'fraidy mouse. Halloween scares me out of my fur! But this Halloween, I was heading off on an adventure in one of my very favorite places: Egypt. I couldn't wait to see the sights and soak up some sun far away from New Mouse City. What I didn't realize was that Halloween is popular in Egypt, too -- with the mummies, that is! Oh, what's a 'fraidy mouse to do?</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1I2P_6Fyl5cAk-58FPMXTMkhlSgEmUtfe/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+            <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Karate Mouse</h1>
+                <br>
+                 <img src="https://geronimostilton.com/upload/assets/files/US,116,-1,821/2810-0.jpg">
+                <br>
+                <p class="leading-relaxed">The Karate Mouse, the 40th book in the Geronimo Stilton series of children's books, takes readers through yet another adventure in the exciting life of Geronimo, the mouse. Geronimo is a journalist for the fictional newspaper, The Rodent's Gazette, and lives in Mouse City with other mice characters from the book.
+              </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/19CfcBsZuB4bSKJsPtwxC7hfVIm2KJxGg/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+            <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">I'M too Fond of my Fur</h1>
+                <br>
+                 <img src="https://m.media-amazon.com/images/I/515-YWEEBNL.jpg">
+                <br>
+                <p class="leading-relaxed">Enter the world of Geronimo Stilton, where another funny adventure is always right around the corner. Each book is a fast-paced adventure with lively art and a unique format kids 7-10 will love. Who Is Geronimo Stilton? That's me! I run a newspaper, but my true passion is writing tales of adventure. Here on Mouse Island, my books are all best-sellers! What's that? You've never read one? Well, my books are full of fun. They are whisker-licking good stories, and that's a promise! I'm Too Fond of My Fur! I was on my way 'round the world to Mouse Everest! The trip was long and dangerous. I almost froze my tail off on the way. And then I was kidnapped by the Abominable Snowman! Yes, it was truly an amazing</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1xCQlMIDb-eTJvAGUMeX68PGa9U4s9vzp/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+            <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Attack of the Bandit Cats</h1>
+                <br>
+                 <img src="https://comicclan.com/pub/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/a/t/attack_of_the_bandit_cats.jpg">
+                <br>
+                <p class="leading-relaxed">Perfect for both avid and reluctant readers of 5+ Attack of the Bandit Cats Geronimo and cousin Trap are on the hunt for a legendary island when they're kidnapped by a crew of pirates! And not just any old pirates but pirate cats!
+              </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1EBRyJtryo4rt2v8skaa7K36emIKirttr/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+            <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Chrismas Tale</h1>
+                <br>
+                 <img src="https://geronimostilton.com/upload/assets/files/US,116,-1,881/2907-0.jpg">
+                <br>
+                <p class="leading-relaxed">It was Christmastime on Mouse Island, and I couldn't wait to celebrate with my friends and family. Until I learned that they were all traveling out of town for the holidays, and I'd be spending Christmas alone! I was depressed, down, despondent, and starting to feel like a real grinch! I wandered the streets of New Mouse City, feeling sorry for myself. But then I discovered an amazing surprised that taught me the true meaning of Christmas.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1KjZ05VbNQSwafV6UcCZxZX5S3EFGY1a5/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+            <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Paws off , Cheddarface</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51pS1tdsLRL.jpg">
+                <br>
+                <p class="leading-relaxed">There's a Geronimo Stilton imposter on the loose in New Mouse City and the real Geronimo is furious. Worst of all, the imposter is trying to take over The Rodent's Gazette! Can the genuine Geronimo come up with the master plan he needs to stop the fake one before it's too late?</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/10PxpnlWFpcHMrzxzRHqk1SeAVo_1u2VL/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Red Pizzas for a blue Count</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/517yfqMyuwL._SX342_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Geronimo's cousin is stuck in Transratania, the land of vampire bats! His sister Thea drags Geronimo along on a rescue mission, but he might be more of a hindrance than a help. After all, he knows that a vampire bat would love to sink its fangs into a tender mouse like him! Geronimo Stilton has taken the world by storm! Funny and adventurous stories with colourful, engaging text design from the UK publishers</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1Fed-hgvJ3k6yDzpO6Kxi0luz106dY4kf/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+            <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Four Mice deep in the Jungle</h1>
+                <br>
+                 <img src="https://geronimostilton.com/upload/assets/files/GB,116,-1,8359/41404-0.jpg">
+                <br>
+                <p class="leading-relaxed">Geronimo Stilton is not a brave mouse. In fact, he's scared of everything! His sister Thea decides it's time for him to face his fears, so she drags him off to the jungle to face raging rivers, deadly snakes and a diet of bugs. Will Geronimo survive long enough to become King of the Jungle?
+  
+              </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1EBfL7Qbatt69YejzLh2ZO3fbPohyyLVx/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">All because of a Cup of coffee</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/61stA5JrpuL._SX342_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">Enter the world of Geronimo Stilton, where another funny adventure is always right around the corner. Each book is a fast-paced adventure with lively art and a unique format kids 7-10 will love. I, Geronimo Stilton, was in love! I went out for a cup of coffee one morning and laid eyes on the most beautiful rodent I'd ever seen. Unfortunately, I immediately tripped over my paws and ended up with my tail in a toaster! I was one mortified mouse. But I was determined to prove that I wasn't a complete stumblemouse. So I decided to join my family on their most daring adventure yet -- a journey to the eighth wonder of the world! There I made a discovery so truly amazing, I knew I could win the heart of my darling ratlette....</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1E2x2GVujhAHdzdGX6TJNIwQhP80-9bdG/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON !</h2> 
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Watch your Whiskers , Stilton</h1>
+                <br>
+                 <img src="https://embed.cdn.pais.scholastic.com/v1/channels/tso/products/identifiers/isbn/9780439691406/primary/renditions/700?useMissingImage=true">
+                <br>
+                <p class="leading-relaxed">Enter the world of Geronimo Stilton, where another funny adventure is always right around the corner. Each book is a fast-paced adventure with lively art and a unique format kids 7-10 will love. Cheesecake! A mysterious one-eyed rat was trying to steal The Rodent's Gazette from under my snout! I had to stop him -- but how? My business manager, Shif T. Paws, came up with a plan. He arranged for me to appear on a TV quiz show. If I won, the Gazette was safe. But if I lost -- SQUEAK! -- I had to give up my tail!</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1IMnxdTqUIlPl-CjljmhOVFX_PFBFc0uv/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Cyber Theif , Showdown</h1>
+                <br>
+                 <img src="https://target.scene7.com/is/image/Target/GUEST_89eedc83-253c-4274-a993-6ea53791ed63?wid=488&hei=488&fmt=pjpeg">
+                <br>
+                <p class="leading-relaxed">I am not the kind of mouse who spends money on useless things. But one day I kept getting packages of things I did not order or need. Someone on the Internet had stolen my identity! Professor Margo Bitmouse, a well-known computer expert, helped me track down the hacker. Could I find the thief before my reputation was ruined?</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1IBqWCn6LwBvO8QJjAzzZey7txAp1CO__/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Surf's Up , Gerniomo !</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/71HhGekv7CL.jpg">
+                <br>
+                <p class="leading-relaxed">Geronimo is stressed! Luckily, Trap knows just the place for a holiday. Geronimo is dreaming of a tropical paradise, but when he arrives, he finds a nightmare: the hotel is falling apart, the sea is full of sharks and the weather is terrible. How on earth will Geronimo survive a whole week of this?The series is perfect for 5 to 8 year old's both avid and reluctant readers due to its expressive typeset, fun illustrations and humorous stories. Supplementary material is available: www.sweetcherrypublishing.com/resources</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1ySujCKOtbMK6nBHbm7in4NLdvqjWg9H-/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Fabumouse Vacation for Gerniomo</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51bwncyAfKL._SX343_BO1,204,203,200_.jpg">
+                <br>
+                <p class="leading-relaxed">By the time Geronimo tore himself away from The Rodent¿s Gazette all the good trips were booked. He ends up in a flea-ridden old hotel, sharing a room with Gerbil Scouts! Includes colorful illustrations, a Geronimo profile, a book preview and maps of Geronimo¿s world.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1E7aN2GixRefxUs1OpFMgJKZlO3rOB15e/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Chesse-Colored Camper</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/5142MQ1h8TL.jpg">
+                <br>
+                <p class="leading-relaxed">Geronimo's grandfather comes back to The Rodent¿s Gazette and wants Geronimo to publish a guide book to the coldest, darkest, most remote spot on Mouse Island, Ratzikistan! Includes colorful illustrations, a Geronimo profile, a book preview and maps of Geronimo's world.</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1DujZN0J5GQIqUbG6jB6hMo1pGntRdDpC/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Merry Christmas , Gerniomo !</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/812m8vnYdUL.jpg">
+                <br>
+                <p class="leading-relaxed">Enter the world of Geronimo Stilton, where another funny adventure is always right around the corner. Each book is a fast-paced adventure with lively art and a unique format kids 7-10 will love.I was so excited about Christmas, I could squeak! My favorite nephew Benjamin was going to come over, and we were planning to trim the tree and eat lots of delicious holiday Cheesy Chews. But before you could say "cat alert," disaster struck! I slipped over my tail and ended up in the hospital. And then my mouse hole caught on fire! Holey cheese, this was turning out to be the worst Christmas ever....</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1DwsCB7Om4gP9AIDqP_ASEhSHt1cYn_W1/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Secret of Cakelfur Castle</h1>
+                <br>
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/51CoTBe91QL.jpg">
+                <br>
+                <p class="leading-relaxed">Moldy mozzarella, it was every mouse's worst nightmare! My old friend Creepella von Cacklefur called me one night and ordered me to join her for the weekend at her family's spooky castle. And before I could say "boo!" she'd mouse-napped me! Now I was stuck in the gloomiest, eeriest castle I'd ever seen. Even worse, I was surrounded by Creepella's creepy family! Oh, would I ever escape back to my safe, cozy mouse hole in New Mouse City?</p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1DwmxDsb9_4yrDWIwqt9uo07FtVuZ1XTQ/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="text-gray-600 body-font overflow-hidden">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
+              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest">GERNIOMO STILTON</h2>
+                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Wild , Wild West</h1>
+                <br>
+                 <img src="https://embed.cdn.pais.scholastic.com/v1/systems/kids/products/identifiers/isbn/9780439691444/cover/renditions/600">
+                <br>
+                <p class="leading-relaxed">Enter the world of Geronimo Stilton, where another funny adventure is always right around the corner. Each book is a fast-paced adventure with lively art and a unique format kids 7-10 will love. Jumpin' gerbil babies, I was so excited! I was heading to America for the first time ever. ... </p>
+                <br>
+                <br>
+                  <a href="https://drive.google.com/file/d/1Dw55Z8UKI7uKio4HVwUJ1LLRpfVAFO_r/view?usp=sharing">
+                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+
+
+    <!--------JavaScript for toggle menu------>
+                                <script>
+                                    var navLinks = document.getElementById("navLinks");
+                                    function showMenu(){
+                                        navLinks.style.right = "0";
+                                    }
+                                    function hideMenu(){
+                                        navLinks.style.right = "-200px";
+                                    }
+                                    var Cat90 = document.getElementbyId("Cat90");
+                        if(x = Cat90) {
+                          Window.location.href("Cat90")
+                        }
+                                </script>
+
+</body>
+</html>
