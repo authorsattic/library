@@ -47,7 +47,7 @@
 
 .book-name{
     font-size: 24px;
-    font-family:'Quicksand',sans-serif;
+    font-family: 'Mali', cursive;
     font-weight: 500;
 }
 
@@ -155,7 +155,6 @@
 
     .book-name{
         width: 380px;
-        height:75px;    
         font-size: 25px;
         font-weight: 500;
     }
@@ -178,10 +177,8 @@
     .books-description{
         margin-top: 10px;
         width: 380px;
-        height: 166px;
-        overflow-y: scroll;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 300;
         line-height:24px;
     }
     
