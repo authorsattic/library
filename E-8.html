@@ -1,437 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <title>Goosebumps | Author's Attic Virtual Library</title>
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-        *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktem.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="About_Page">ABOUT</a></li>
                     <li><a href="books.html">BOOKS</a></li>
                     <li><a href="Blog.html">BLOG</a></li>
                     <li><a href="Comment.html">COMMENT</a></li>
@@ -443,447 +31,328 @@ h3{
         <h1>Goosebumps</h1>
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">Goosebumps</h2>
-              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Escape From The Carnival of Horrors</h1>
-              <br>
-              <img src="https://static.wikia.nocookie.net/goosebumps/images/f/f0/Carnival_of_Horrors.jpg/revision/latest?cb=20190318192251">
-              <br>
-              <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Late one night you and your friends visit the old fairgrounds. They're putting up rides and booths for the annual carnival. But this year things look really different. Really odd. Really scary. The place is lit up by a hundred fiery torches. And spooky music is coming from the main tent. Then you meeting Big Al, the creepy carnival manager. He's invited you in to test some of the rides. Will you brave the terrifying Supersonic Space Coaster? Risk the horrors of the Reptile Petting Zoo? Slice through the oily waters of Booger Bog? Or confront the evil Snake Lady? The choice is yours in this scary GOOSEBUMPS adventure that's packed with over 20 super-spooky endings!".</p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1SlVTr3c2I7DPazyR0DeziRMKvqAy7QrC/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        </section>
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">Goosebumps</h2>
-              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Tick Tock You're Dead</h1>
-              <br>
-              <img src="https://static.wikia.nocookie.net/goosebumps/images/5/57/Tick_Tock%2C_You%27re_Dead%21.jpg/revision/latest/top-crop/width/360/height/450?cb=20171003073005">
-              <br>
-              <p class="leading-relaxed">B-O-R-I-N-G. That's how you'd describe your family vacation in New York City. Instead of visting all the cool spots, like Rockefeller Center and the Statue of Liberty, your parents drag you to a bunch of stupid museums. Then, at the Museum of Natural History something really strange happens. You accidentally get involved in a strange experiment that sends you traveling through time! Will you duel with knights at a medieval castle? Come face-to-face with a man-eating dinosaurs? Or take a ride through outer space? The choice is yours in this scary GOOSEBUMPS adventure that's packed with over 20 super-spooky endings!</p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/11HZRcTLdGS1KBGfzy4ERZvz_M9GuNcHI/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                  <h2 class="text-sm title-font text-gray-500 tracking-widest">Goosebumps</h2>
-                  <h1 class="text-gray-900 text-3xl title-font font-medium mb-1"> Trapped In A Bat Wing Hall</h1>
-                  <br>
-                  <img src="https://m.media-amazon.com/images/I/5194MJTbS8L.jpg">
-                  <br>
-                  <p class="leading-relaxed">Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Being the new kid in school is no picnic. At your old school you had tons of friends, but now you don't even have one. Then you meet Nick. He asks you to join Horror Club. The Horror Club meets in an old mansion known as Bat Wing Hall. It's dark. It's spooky. And it's where your adventure begins. The members of the Horror Club are going on a scavenger hunt. If you join the red team, you find out the truth about your new friends- they're actually monsters! One is a green-skinned reptile. Another is a hulking giant! If you join the blue team you get turned into a furry-faced vampire bat! The choice is yours in this scary GOOSEBUMPS adventure that's packed with over 20 super-spooky endings!</p>
-               
-                  <br>
-                  <br>
-                    <a href="https://drive.google.com/file/d/114i0AH5RpYAvPt_jY7ScB_afBySKgreR/view?usp=sharing">
-                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                    </button>
-                  </div>
+        <main class="wrapper" id="main0">
+            <section class="container" id="g0">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Escape From The Carnival of Horrors
+                    </h1><img
+                        src="https://kbimages1-a.akamaihd.net/4028a4ba-e5df-44c9-9586-5005601eb2bf/1200/1200/False/escape-from-the-carnival-of-horrors-give-yourself-goosebumps.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Reader beware--you choose
+                        the scare! GIVE YOURSELF GOOSEBUMPS! Late one night you and your friends visit the old
+                        fairgrounds. They're putting up rides and booths for the annual carnival. But this year things
+                        look really different. Really odd. Really scary. The place is lit up by a hundred fiery torches.
+                        And spooky music is coming from the main tent. Then you meeting Big Al, the creepy carnival
+                        manager. He's invited you in to test some of the rides. Will you brave the terrifying Supersonic
+                        Space Coaster? Risk the horrors of the Reptile Petting Zoo? Slice through the oily waters of
+                        Booger Bog? Or confront the evil Snake Lady? The choice is yours in this scary GOOSEBUMPS
+                        adventure that's packed with over 20 super-spooky endings!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1SlVTr3c2I7DPazyR0DeziRMKvqAy7QrC/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
             </section>
-  
-            <section class="text-gray-600 body-font overflow-hidden">
-                <div class="container px-5 py-24 mx-auto">
-                  <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                      <h2 class="text-sm title-font text-gray-500 tracking-widest">Goosebumps</h2>
-                      <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Deadly Experiments Of DR Eeek</h1>
-                      <br>
-                      <img src="https://static.wikia.nocookie.net/goosebumps/images/a/a9/Gyg_0042.jpg/revision/latest?cb=20190425022611">
-                      <br>
-                      <p class="leading-relaxed">Your mom has just gotten a job at Dr. Eeek's lab and she promises to take you and your friend Sam to the movies if you meet her at work. But then, you begin to see weird things and before you know it, you are lost. Readers are invited to choose one of 20 spooky endings to escape Dr. Eeek's lab before you and Sam become human science experiments!</p>
-                   
-                      <br>
-                      <br>
-                        <a href="https://drive.google.com/file/d/1RFy3OwO8IgPa1ih5tTx9AaMS8BNF71Hg/view?usp=sharing">
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                        </button>
-                      </div>
+            <section class="container" id="g1">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Tick Tock You're Dead</h1><img
+                        src="https://kbimages1-a.akamaihd.net/ece10879-34bb-4dea-9ff3-8fa4fb39cc24/1200/1200/False/tick-tock-you-re-dead-give-yourself-goosebumps.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">B-O-R-I-N-G. That's how
+                        you'd describe your family vacation in New York City. Instead of visting all the cool spots,
+                        like Rockefeller Center and the Statue of Liberty, your parents drag you to a bunch of stupid
+                        museums. Then, at the Museum of Natural History something really strange happens. You
+                        accidentally get involved in a strange experiment that sends you traveling through time! Will
+                        you duel with knights at a medieval castle? Come face-to-face with a man-eating dinosaurs? Or
+                        take a ride through outer space? The choice is yours in this scary GOOSEBUMPS adventure that's
+                        packed with over 20 super-spooky endings!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/11HZRcTLdGS1KBGfzy4ERZvz_M9GuNcHI/view?usp=sharing">Download</a>
                     </div>
-                  </div>
                 </div>
-                </section>
-  
-                <section class="text-gray-600 body-font overflow-hidden">
-                    <div class="container px-5 py-24 mx-auto">
-                      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                          <h2 class="text-sm title-font text-gray-500 tracking-widest">Goosebumps</h2>
-                          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Night In Werewolf Woods</h1>
-                          <br>
-                          <img src="https://static.wikia.nocookie.net/goosebumps/images/3/3c/Gyg_005.jpg/revision/latest/top-crop/width/360/height/450?cb=20170521032319">
-                          <br>
-                          <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Get out your bathing suit! You and your family are off on a summer vacation to a place called WoodsWorld. You can't wait to mess around down at the lake. Then at the Kids only Campfire you hear the rumor about WoodsWorld. Legend has it, werewolves roam the woods at night. But you're not scared. You're ready for adventure. Will you explore the deepest, darkest part of the woods? Brave the Tunnel of Waves, home of the terrifying lake monster? Or battle an army of red fire ants? The choice is yours in this scary GOOSEBUMPS adventure that's packed with over 20 super-spooky endings! "</p>
-                       
-                          <br>
-                          <br>
-                            <a href="https://drive.google.com/file/d/1ZtIXjzmWQyoGsErrCMmPRQF2I9jbzjBl/view?usp=sharing">
-                            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main2">
+            <section class="container" id="g2">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Trapped In A Bat Wing Hall</h1><img
+                        src="https://m.media-amazon.com/images/I/5194MJTbS8L.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Reader beware--you choose
+                        the scare! GIVE YOURSELF GOOSEBUMPS! Being the new kid in school is no picnic. At your old
+                        school you had tons of friends, but now you don't even have one. Then you meet Nick. He asks you
+                        to join Horror Club. The Horror Club meets in an old mansion known as Bat Wing Hall. It's dark.
+                        It's spooky. And it's where your adventure begins. The members of the Horror Club are going on a
+                        scavenger hunt. If you join the red team, you find out the truth about your new friends- they're
+                        actually monsters! One is a green-skinned reptile. Another is a hulking giant! If you join the
+                        blue team you get turned into a furry-faced vampire bat! The choice is yours in this scary
+                        GOOSEBUMPS adventure that's packed with over 20 super-spooky endings!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/114i0AH5RpYAvPt_jY7ScB_afBySKgreR/view?usp=sharing">Download</a>
                     </div>
-                    </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Attack of the Beastly Baby-sitter</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/815fAFQQT-L.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Rats! You're too old for a baby-sitter. But your mom hired one anyway. And that’s the good news. The bad news is the baby-sitter works for a company called KidScare. So what do you do? If you like to play games, meet Dare</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1ichuP1gn21AY0R9XjW-bcD1fF-k0xmSZ/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Escape from the Camp Run-for-your-Life</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/81igpDa--CL.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Heads up! You're on your way to sports camp! If only Uncle Ed can find the place. He’s the lamest driver ever. A sign up ahead says CAMP RUNNING LEAF. Hey! That's not the name of the camp you signed up for! But Uncle Ed is already driving away. Oh, well. ... </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1irjFQgMukyBloA31yvcRcI5I4rintE22/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g3">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Deadly Experiments Of DR Eeek</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/61BA2H6CR6L._SX320_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Your mom has just gotten a
+                        job at Dr. Eeek's lab and she promises to take you and your friend Sam to the movies if you meet
+                        her at work. But then, you begin to see weird things and before you know it, you are lost.
+                        Readers are invited to choose one of 20 spooky endings to escape Dr. Eeek's lab before you and
+                        Sam become human science experiments!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1RFy3OwO8IgPa1ih5tTx9AaMS8BNF71Hg/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Beware of the Purple Peanut Butter</h1>
-                <br>
-                 <img src="https://static.wikia.nocookie.net/goosebumps/images/d/d4/Beware_of_the_Purple_Peanut_Butter_-_Norwegian_Cover_-_Pass_deg_for_det_lilla_pean%C3%B8ttsm%C3%B8ret.jpg/revision/latest/scale-to-width-down/250?cb=20160801202708">
-                <br>
-                <p class="leading-relaxed">Your aunt and uncle told you to stay out of their basement. So, of course, you check it out. That's where you find the dusty old refrigerator. In the fridge there are two containers. One is filled with purple goop. It smells just like a peanut-butter-and-jelly sandwich. The other holds a piece of chocolate cake.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1TptLaG6xF-8ei9EsqwstjGF5xiZGsYj7/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main4">
+            <section class="container" id="g4">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Night In Werewolf Woods</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/81sbtO9lILL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Reader beware--you choose
+                        the scare! GIVE YOURSELF GOOSEBUMPS! Get out your bathing suit! You and your family are off on a
+                        summer vacation to a place called WoodsWorld. You can't wait to mess around down at the lake.
+                        Then at the Kids only Campfire you hear the rumor about WoodsWorld. Legend has it, werewolves
+                        roam the woods at night. But you're not scared. You're ready for adventure. Will you explore the
+                        deepest, darkest part of the woods? Brave the Tunnel of Waves, home of the terrifying lake
+                        monster? Or battle an army of red fire ants? The choice is yours in this scary GOOSEBUMPS
+                        adventure that's packed with over 20 super-spooky endings!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ZtIXjzmWQyoGsErrCMmPRQF2I9jbzjBl/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Under the Magician's Spell</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/810MLU9OSFL.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! You, and your little sister, and your best friend just found a new magic shop at the mall. The man inside calls himself the Magician. He's pretty creepy. Before you know it, your little sister runs out of the shop with his book of magic spells.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n-hsdf-gUniUQcksGfJhnoPc-M23mVgr/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g5">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Attack of the Beastly Baby-sitter
+                    </h1><img src="https://images-na.ssl-images-amazon.com/images/I/815fAFQQT-L.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! Rats! You're too old for a baby-sitter. But your mom hired one anyway. And
+                        that’s the good news. The bad news is the baby-sitter works for a company called KidScare. So
+                        what do you do? If you like to play games, meet Dare</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ichuP1gn21AY0R9XjW-bcD1fF-k0xmSZ/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Cruse of the Creeping Coffin</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51DcEg9kUQL.jpg">
-                <br>
-                <p class="leading-relaxed">You're off to visit your grandmother, whose house backs up to a graveyard. At first the tombstones seem far away. But every day they move a little closer. Then you discover the headstones are disappearing. But the dead aren't gone — their ghosts are moving. Right into your grandmother’s house!</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sGzIJxwMi2ZftYDbKpkpUJOzErcMhM-Q/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main6">
+            <section class="container" id="g6">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Escape from the Camp
+                        Run-for-your-Life</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/81igpDa--CL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! Heads up! You're on your way to sports camp! If only Uncle Ed can find the
+                        place. He’s the lamest driver ever. A sign up ahead says CAMP RUNNING LEAF. Hey! That's not the
+                        name of the camp you signed up for! But Uncle Ed is already driving away. Oh, well. ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1irjFQgMukyBloA31yvcRcI5I4rintE22/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Kinght in Screaming Armor</h1>
-                <br>
-                 <img src="https://static.wikia.nocookie.net/goosebumps/images/e/ec/Gyg_009.jpg/revision/latest?cb=20191018165621">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Your cousins, Kip and Abbey, have come to visit you from jolly old England -- and guess what they brought with them? Two huge crates, each containing a suit of armor and a curse. But it doesn’t matter, 'cause you're ""dying"" to see what's inside</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1klPqY5CR13ELocgMxBAKuuQOS2Ujde98/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g7">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Beware of the Purple Peanut Butter
+                    </h1><img
+                        src="https://static.wikia.nocookie.net/goosebumps/images/7/7d/GYG6.jpg/revision/latest?cb=20190305083652"><br>
+                    <p class="books-description" style="height: 166px;">Your aunt and uncle told you to stay out of
+                        their basement. So, of course, you check it out. That's where you find the dusty old
+                        refrigerator. In the fridge there are two containers. One is filled with purple goop. It smells
+                        just like a peanut-butter-and-jelly sandwich. The other holds a piece of chocolate cake.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1TptLaG6xF-8ei9EsqwstjGF5xiZGsYj7/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Diary of the Mad Mummy</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51ta8a2Q-jL.jpg">
-                <br>
-                <p class="leading-relaxed">While you're on vacation in San Francisco you get a chance to check out an exhibit of Egyptian artifacts and a pretty cool mummy. But when you get to where the mummy is supposed to be all you find is a pile of bandages and a really old diary filled with entries that seem to have been written by Mr. Mummy himself! ...</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1eqcMjpgqIr8iwaRVgeBgvQECnrc-yqYJ/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main8">
+            <section class="container" id="g8">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Under the Magician's Spell</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/810MLU9OSFL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! You, and your little sister, and your best friend just found a new magic
+                        shop at the mall. The man inside calls himself the Magician. He's pretty creepy. Before you know
+                        it, your little sister runs out of the shop with his book of magic spells.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1n-hsdf-gUniUQcksGfJhnoPc-M23mVgr/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Deep in the Jungle of Doom</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51TQIf6ODXL.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! You're headed to a South American jungle with your nature-study class. Everything seems pretty cool at first, but then you start to get bored. Where's the beach? Where's the excitement? So you and your friend decide to do a little exploring on your own.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1BWHzO_e2KVtd41-8gi33hcbfZTk79gdo/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g9">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The Cruse of the Creeping Coffin
+                    </h1><img src="https://m.media-amazon.com/images/I/51DcEg9kUQL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">You're off to visit your grandmother, whose
+                        house backs up to a graveyard. At first the tombstones seem far away. But every day they move a
+                        little closer. Then you discover the headstones are disappearing. But the dead aren't gone —
+                        their ghosts are moving. Right into your grandmother’s house!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sGzIJxwMi2ZftYDbKpkpUJOzErcMhM-Q/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Welcome to the Wicked Wax Museum</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51IKmhl10PL.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Your teacher thinks it'll be good for your class to hang out at the new wax museum in town. Yeah, right! Once you get there your teacher starts blah-blahing about something or other and that’s when you and your friend see the red door.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1H3zCwbmqUJ-lKjMNtJ1-P6b_DdFLdQvY/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main10">
+            <section class="container" id="g10">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">The Kinght in Screaming Armor</h1><img
+                        src="https://static.wikia.nocookie.net/goosebumps/images/e/ec/Gyg_009.jpg/revision/latest?cb=20191018165621"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! Your cousins, Kip and Abbey, have come to visit you from jolly old England
+                        -- and guess what they brought with them? Two huge crates, each containing a suit of armor and a
+                        curse. But it doesn’t matter, 'cause you're 'dying' to see what's inside</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1klPqY5CR13ELocgMxBAKuuQOS2Ujde98/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Scream of the Evil Genie</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/61HB642FQ5L._SX319_BO1,204,203,200_.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! As usual, it was a pretty long day at school. So before you do your homework you decide to grab a soda. But when you open the can, out pops a genie who offers you three wishes. She seems pretty cool, so you accept.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1XXghel6LZWsV6UlN1o1rtWE_9PtiP3G_/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g11">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Diary of the Mad Mummy</h1><img
+                        src="https://m.media-amazon.com/images/I/51ta8a2Q-jL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">While you're on vacation in San Francisco you
+                        get a chance to check out an exhibit of Egyptian artifacts and a pretty cool mummy. But when you
+                        get to where the mummy is supposed to be all you find is a pile of bandages and a really old
+                        diary filled with entries that seem to have been written by Mr. Mummy himself! ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1eqcMjpgqIr8iwaRVgeBgvQECnrc-yqYJ/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Creepy Creations of Professor Shock</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/61oEDu8zz9L.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! You and your friends decide to check out a new part of town. That's when you notice an old house with a sign that says ""BEWARE--DANGER"" on one side and ""PLEASE COME IN"" on the other. Of course, you decide to go and see what's up.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/11wUEilnV7qbGBIQ8YMrdbwLUMbxT_lP1/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main12">
+            <section class="container" id="g12">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Deep in the Jungle of Doom</h1><img
+                        src="https://m.media-amazon.com/images/I/51TQIf6ODXL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! You're headed to a South American jungle with your nature-study class.
+                        Everything seems pretty cool at first, but then you start to get bored. Where's the beach?
+                        Where's the excitement? So you and your friend decide to do a little exploring on your own.</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1BWHzO_e2KVtd41-8gi33hcbfZTk79gdo/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Please don't feed the Vampire</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/51dJ7cnqcML._SX342_SY445_QL70_ML2_.jpg">
-                <br>
-                <p class="leading-relaxed">The original books featuring the scariest creatures from the Goosebumps movie, in theaters October 16, 2015! You buy something called ""Vampire in a Can."" At first you think its just a goofy vampire costume with a cape, plastic fangs, and a tattoo of teeth marks.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1b66lCPsUgboKPHLGnUukzO3r7bNwk_GT/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g13">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Welcome to the Wicked Wax Museum
+                    </h1><img src="https://m.media-amazon.com/images/I/51IKmhl10PL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! Your teacher thinks it'll be good for your class to hang out at the new wax
+                        museum in town. Yeah, right! Once you get there your teacher starts blah-blahing about something
+                        or other and that’s when you and your friend see the red door.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1H3zCwbmqUJ-lKjMNtJ1-P6b_DdFLdQvY/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Secret Agent Grandma</h1>
-                <br>
-                 <img src="https://static.wikia.nocookie.net/goosebumps/images/6/6b/Gyg_016.jpg/revision/latest?cb=20180104213638">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! Your parents are going away so your super-cool grandma is coming to stay with you. But when you go to meet granny at the train station you start seeing double—double grannies! There's one granny on the station platform.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1itT281ld-t9B3qBE7-0Uk-U-FMk5A8m1/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main14">
+            <section class="container" id="g14">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Scream of the Evil Genie</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/61HB642FQ5L._SX319_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! As usual, it was a pretty long day at school. So before you do your
+                        homework you decide to grab a soda. But when you open the can, out pops a genie who offers you
+                        three wishes. She seems pretty cool, so you accept.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1XXghel6LZWsV6UlN1o1rtWE_9PtiP3G_/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Little Comic Shop of Horrors</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/61AybF7svDL.jpg">
-                <br>
-                <p class="leading-relaxed">"Reader beware--you choose the scare! GIVE YOURSELF GOOSEBUMPS! You're walking through a creepy part of town when you find a new comic shop--Milos Comics Dungeon. Dungeon is right. The place is dusty, dingy, and really dark. You can see the comics are awesome. But there’s something you can't see. Trouble.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1ieuzy2OqdXjL9KYeaeiJB3ZhhilPTFDx/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="g15">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The Creepy Creations of Professor
+                        Shock</h1><img src="https://m.media-amazon.com/images/I/61oEDu8zz9L.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! You and your friends decide to check out a new part of town. That's when
+                        you notice an old house with a sign that says 'BEWARE--DANGER' on one side and 'PLEASE COME IN'
+                        on the other. Of course, you decide to go and see what's up.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/11wUEilnV7qbGBIQ8YMrdbwLUMbxT_lP1/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GOOSEBUMPS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Toy Terror - Battries included</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/61RVCKWT6ZL._SX333_BO1,204,203,200_.jpg">
-                <br>
-                <p class="leading-relaxed">Readers are placed in the character of a contest winner who must decide between two toy prizes, including Nasty Kathy the talking doll and a robot called the Annihilator 3000.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1icgDJRX0ebV_sjXo0rpBj5P_IgI1XAem/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main16">
+            <section class="container" id="g16">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Please don't feed the Vampire</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51dJ7cnqcML._SX342_SY445_QL70_ML2_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">The original books featuring the scariest
+                        creatures from the Goosebumps movie, in theaters October 16, 2015! You buy something called
+                        'Vampire in a Can.' At first you think its just a goofy vampire costume with a cape, plastic
+                        fangs, and a tattoo of teeth marks.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1b66lCPsUgboKPHLGnUukzO3r7bNwk_GT/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-  
-
-
-    <!--------JavaScript for toggle menu------>
-                                <script>
-                                    var navLinks = document.getElementById("navLinks");
-                                    function showMenu(){
-                                        navLinks.style.right = "0";
-                                    }
-                                    function hideMenu(){
-                                        navLinks.style.right = "-200px";
-                                    }
-                                    var Cat90 = document.getElementbyId("Cat90");
-                        if(x = Cat90) {
-                          Window.location.href("Cat90")
-                        }
-                                </script>
-
+            </section>
+            <section class="container" id="g17">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Secret Agent Grandma</h1><img
+                        src="https://static.wikia.nocookie.net/goosebumps/images/6/6b/Gyg_016.jpg/revision/latest?cb=20180104213638"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! Your parents are going away so your super-cool grandma is coming to stay
+                        with you. But when you go to meet granny at the train station you start seeing double—double
+                        grannies! There's one granny on the station platform.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1itT281ld-t9B3qBE7-0Uk-U-FMk5A8m1/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main18">
+            <section class="container" id="g18">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Little Comic Shop of Horrors</h1><img
+                        src="https://m.media-amazon.com/images/I/61AybF7svDL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Reader beware--you choose the scare! GIVE
+                        YOURSELF GOOSEBUMPS! You're walking through a creepy part of town when you find a new comic
+                        shop--Milos Comics Dungeon. Dungeon is right. The place is dusty, dingy, and really dark. You
+                        can see the comics are awesome. But there’s something you can't see. Trouble.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ieuzy2OqdXjL9KYeaeiJB3ZhhilPTFDx/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="g19">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Goosebumps</h2>
+                    <h1 class="book-name" style="height: 50px;">Toy Terror - Batteries included</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/61RVCKWT6ZL._SX333_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Readers are placed in the character of a contest
+                        winner who must decide between two toy prizes, including Nasty Kathy the talking doll and a
+                        robot called the Annihilator 3000.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1icgDJRX0ebV_sjXo0rpBj5P_IgI1XAem/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
 </body>
+
 </html>
