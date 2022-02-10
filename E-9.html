@@ -1,437 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <title>Harry Potter | Author's Attic Virtual Library</title>
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-        *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktem.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="About_Page">ABOUT</a></li>
                     <li><a href="books.html">BOOKS</a></li>
                     <li><a href="Blog.html">BLOG</a></li>
                     <li><a href="Comment.html">COMMENT</a></li>
@@ -443,203 +31,154 @@ h3{
         <h1>Harry Potter</h1>
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and the Philosopher's Stone</h1>
-              <br>
-              <img src="https://th.bing.com/th/id/OIP.MhxVJ1QxXLmm9oqASVj2PQHaLH?pid=ImgDet&rs=1">
-              <br>
-              <p class="leading-relaxed">Harry Potter has no idea how famous he is. That's because he's being raised by his miserable muggle aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend Hogwarts school for witchcraft and wizardry and he begins to discover some clues about his illustrious birthright ...</p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1ipbG9s-SqZKfrDM7X_qLgsrR8R-zLW76/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        </section>
-
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and The Chamber of Secerts</h1>
-                <br>
-                <img src="https://static.wikia.nocookie.net/harrypotter/images/6/6d/Chamber_of_Secrets_New_UK_Cover.jpg/revision/latest/top-crop/width/360/height/450?cb=20170109045927">
-                <br>
-                <p class="leading-relaxed">The Dursleys were so mean and hideous that summer that al Harry Potter wanted was to get back to the Hogwarts School of Witchcraft and Wizardry. But just as he packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike. And strike it does. For in Harry s second year at Hogwarts, fresh torments and horrors arise, including and outrageously stuck-up new professor, Gilderoy Lockheart, a spirit named Moaning Myrtle who haunts the girls bathroom, and the unwanted attentions of Ron Weasley s younger sister, Ginny. But each of these seem minor annoyances when the real trouble begins, and someone or something starts turning Hogwarts students to stone. Could it be Draco Malfoy, a more poisonous rival than ever? Could it possible be Hagrid, whose mysterious past is finally told? Or could it be the one everyone at Hogwarts most suspects... Harry Potter himself?</p>
-             
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1_UqDHEGP9i0fMDU_Ouf70wPJ_6c2TErp/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <main class="wrapper" id="main0">
+            <section class="container" id="hp0">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and the Philosopher's
+                        Stone</h1><img
+                        src="https://th.bing.com/th/id/OIP.MhxVJ1QxXLmm9oqASVj2PQHaLH?pid=ImgDet&amp;rs=1"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Harry Potter has no idea how
+                        famous he is. That's because he's being raised by his miserable muggle aunt and uncle who are
+                        terrified Harry will learn that he's really a wizard, just as his parents were. But everything
+                        changes when Harry is summoned to attend Hogwarts school for witchcraft and wizardry and he
+                        begins to discover some clues about his illustrious birthright ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ipbG9s-SqZKfrDM7X_qLgsrR8R-zLW76/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          </section>
-
-          <section class="text-gray-600 body-font overflow-hidden">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                  <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                  <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and The Prisoner of Azkaban</h1>
-                  <br>
-                  <img src="https://images-na.ssl-images-amazon.com/images/I/91uix57X+jL.jpg">
-                  <br>
-                  <p class="leading-relaxed">When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it's the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run - and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry's tea leaves... But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss...</p>
-               
-                  <br>
-                  <br>
-                    <a href="https://drive.google.com/file/d/1NPRPKzGz-gWRyhX97mjHGG9YbO8rz0-h/view?usp=sharing">
-                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
             </section>
-
-            
-            <section class="text-gray-600 body-font overflow-hidden">
-              <div class="container px-5 py-24 mx-auto">
-                <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                  <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                    <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and The Goblet of Fire</h1>
+            <section class="container" id="hp1">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and The Chamber of
+                        Secerts</h1><img src="https://images-na.ssl-images-amazon.com/images/I/91HHqVTAJQL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The Dursleys were so mean
+                        and hideous that summer that al Harry Potter wanted was to get back to the Hogwarts School of
+                        Witchcraft and Wizardry. But just as he packing his bags, Harry receives a warning from a
+                        strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster
+                        will strike. And strike it does. For in Harry s second year at Hogwarts, fresh torments and
+                        horrors arise, including and outrageously stuck-up new professor, Gilderoy Lockheart, a spirit
+                        named Moaning Myrtle who haunts the girls bathroom, and the unwanted attentions of Ron Weasley s
+                        younger sister, Ginny. But each of these seem minor annoyances when the real trouble begins, and
+                        someone or something starts turning Hogwarts students to stone. Could it be Draco Malfoy, a more
+                        poisonous rival than ever? Could it possible be Hagrid, whose mysterious past is finally told?
+                        Or could it be the one everyone at Hogwarts most suspects... Harry Potter himself?</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1_UqDHEGP9i0fMDU_Ouf70wPJ_6c2TErp/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main2">
+            <section class="container" id="hp2">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and The Prisoner of
+                        Azkaban</h1><img src="https://images-na.ssl-images-amazon.com/images/I/91uix57X+jL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">When the Knight Bus crashes
+                        through the darkness and screeches to a halt in front of him, it's the start of another far from
+                        ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of
+                        Lord Voldemort, is on the run - and they say he is coming after Harry. In his first ever
+                        Divination class, Professor Trelawney sees an omen of death in Harry's tea leaves... But perhaps
+                        most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking
+                        kiss...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1NPRPKzGz-gWRyhX97mjHGG9YbO8rz0-h/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="hp3">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and The Goblet of Fire
+                    </h1><img src="https://www.themoviedb.org/t/p/w500/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The Triwizard Tournament is
+                        to be held at Hogwarts. Only wizards who are over seventeen are allowed to enter - but that
+                        doesn't stop Harry dreaming that he will win the competition. Then at Hallowe'en, when the
+                        Goblet of Fire makes its selection, Harry is amazed to find his name is one of those that the
+                        magical cup picks out. He will face death-defying tasks, dragons and Dark wizards, but with the
+                        help of his best friends, Ron and Hermione, he might just make it through - alive!</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Gy08RZdSZE7k7QZZZGItNn_1OgsT7cv3/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main4">
+            <section class="container" id="hp4">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and The Order of
+                        Phoenix</h1><img src="https://images-na.ssl-images-amazon.com/images/I/91t5-Juqt9L.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Dark times have come to
+                        Hogwarts. After the Dementors' attack on his cousin Dudley, Harry Potter knows that Voldemort
+                        will stop at nothing to find him. There are many who deny the Dark Lord's return, but Harry is
+                        not alone: a secret order gathers at Grimmauld Place to fight against the Dark forces. Harry
+                        must allow Professor Snape to teach him how to protect himself from Voldemort's savage assaults
+                        on his mind. But they are growing stronger by the day and Harry is running out of time...</p>
                     <br>
-                    <img src="https://www.themoviedb.org/t/p/w500/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg">
-                    <br>
-                    <p class="leading-relaxed">The Triwizard Tournament is to be held at Hogwarts. Only wizards who are over seventeen are allowed to enter - but that doesn't stop Harry dreaming that he will win the competition. Then at Hallowe'en, when the Goblet of Fire makes its selection, Harry is amazed to find his name is one of those that the magical cup picks out. He will face death-defying tasks, dragons and Dark wizards, but with the help of his best friends, Ron and Hermione, he might just make it through - alive!
-</p>
-                 
-                    <br>
-                    <br>
-                      <a href="https://drive.google.com/file/d/1Gy08RZdSZE7k7QZZZGItNn_1OgsT7cv3/view?usp=sharing">
-                      <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                      </button>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Ah26jqhNgMbp-iro8HYHGjKnX7aZwTye/view?usp=sharing">Download</a>
                     </div>
-                  </div>
                 </div>
-              </div>
-              </section>
-
-              
-              <section class="text-gray-600 body-font overflow-hidden">
-                <div class="container px-5 py-24 mx-auto">
-                  <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                      <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                      <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and The Order of Phoenix</h1>
-                      <br>
-                      <img src="data:image/jpeg;base64,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">
-                      <br>
-                      <p class="leading-relaxed">Dark times have come to Hogwarts. After the Dementors' attack on his cousin Dudley, Harry Potter knows that Voldemort will stop at nothing to find him. There are many who deny the Dark Lord's return, but Harry is not alone: a secret order gathers at Grimmauld Place to fight against the Dark forces. Harry must allow Professor Snape to teach him how to protect himself from Voldemort's savage assaults on his mind. But they are growing stronger by the day and Harry is running out of time...</p>
-                   
-                      <br>
-                      <br>
-                        <a href="https://drive.google.com/file/d/1Ah26jqhNgMbp-iro8HYHGjKnX7aZwTye/view?usp=sharing">
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                        </button>
-                      </div>
+            </section>
+            <section class="container" id="hp5">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and The Half Blood
+                        Prince</h1><img src="https://images-na.ssl-images-amazon.com/images/I/A1clNOpnpNL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">When Dumbledore arrives at
+                        Privet Drive one summer night to collect Harry Potter, his wand hand is blackened and
+                        shrivelled, but he does not reveal why. Secrets and suspicion are spreading through the
+                        wizarding world, and Hogwarts itself is not safe. Harry is convinced that Malfoy bears the Dark
+                        Mark: there is a Death Eater amongst them. Harry will need powerful magic and true friends as he
+                        explores Voldemort's darkest secrets, and Dumbledore prepares him to face his destiny...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1fyCahwOcIxNBOeX78phvOcCh4MN3jBIK/view?usp=sharing">Download</a>
                     </div>
-                  </div>
                 </div>
-                </section>
-              
-              <section class="text-gray-600 body-font overflow-hidden">
-                <div class="container px-5 py-24 mx-auto">
-                  <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                      <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                      <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and The Half Blood Prince</h1>
-                      <br>
-                   <img src=https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587697303l/1._SX318_.jpg>
-                      <br>
-                      <p class="leading-relaxed">When Dumbledore arrives at Privet Drive one summer night to collect Harry Potter, his wand hand is blackened and shrivelled, but he does not reveal why. Secrets and suspicion are spreading through the wizarding world, and Hogwarts itself is not safe. Harry is convinced that Malfoy bears the Dark Mark: there is a Death Eater amongst them. Harry will need powerful magic and true friends as he explores Voldemort's darkest secrets, and Dumbledore prepares him to face his destiny...</p>
-                   
-                      <br>
-                      <br>
-                        <a href=https://drive.google.com/file/d/1fyCahwOcIxNBOeX78phvOcCh4MN3jBIK/view?usp=sharing>
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                        </button>
-                      </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main6">
+            <section class="container" id="hp6">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and The Deathly Hallows
+                    </h1><img
+                        src="https://static.wikia.nocookie.net/harrypotter/images/d/da/Deathly_Hallows_New_Cover.jpg/revision/latest?cb=20170109054859"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Harry Potter is preparing to
+                        leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of
+                        danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only
+                        by destroying Voldemort's remaining Horcruxes can Harry free himself and overcome the Dark
+                        Lord's forces of evil. In this dramatic conclusion to the Harry Potter series, Harry must leave
+                        his most loyal friends behind, and in a final perilous journey find the strength and the</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1fuEGgL2j4zAMgH3LOf75ziQocEsJc0MU/view?usp=sharing">Download</a>
                     </div>
-                  </div>
                 </div>
-                </section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-                <div class="container px-5 py-24 mx-auto">
-                  <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                      <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                      <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and The Deathly Hallows</h1>
-                      <br>
-                   <img src=data:image/jpeg;base64,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>
-                      <br>
-                      <p class="leading-relaxed">Harry Potter is preparing to leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only by destroying Voldemort's remaining Horcruxes can Harry free himself and overcome the Dark Lord's forces of evil. In this dramatic conclusion to the Harry Potter series, Harry must leave his most loyal friends behind, and in a final perilous journey find the strength and the</p>
-                   
-                      <br>
-                      <br>
-                        <a href=https://drive.google.com/file/d/1fuEGgL2j4zAMgH3LOf75ziQocEsJc0MU/view?usp=sharing>
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                        </button>
-                      </div>
+            </section>
+            <section class="container" id="hp7">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Harry Potter</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Harry Potter and the Cursed Child
+                    </h1><img src="https://images-na.ssl-images-amazon.com/images/I/81hV7BRj8vL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Based on an original new
+                        story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, Harry Potter and
+                        the Cursed Child is the eighth story in the Harry Potter series and the first official Harry
+                        Potter story to be presented on stage. The play received its world premiere in London’s West End
+                        on 30th July 2016.It was always difficult being Harry Potter and it isn’t much easier now that
+                        he is an overworked employee of the Ministry of Magic, a husband and father of three school-age
+                        children.While Harry grapples with a past that refuses to stay where it belongs, his youngest
+                        son Albus must struggle with the weight of a family legacy he never wanted. As past and present
+                        fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes
+                        from unexpected places.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1wgR96W3bEiD7wkouDnNsrpnnxCoAMw5n/view?usp=sharing">Download</a>
                     </div>
-                  </div>
                 </div>
-                </section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-                <div class="container px-5 py-24 mx-auto">
-                  <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                      <h2 class="text-sm title-font text-gray-500 tracking-widest">HARRY POTTER</h2>
-                      <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Harry Potter and the Cursed Child</h1>
-                      <br>
-                  <img src=https://static.wikia.nocookie.net/harrypotter/images/1/14/Harry_Potter_and_the_Cursed_Child_Script_Book_Cover.jpg/revision/latest/top-crop/width/360/height/450?cb=20160726165903>
-                      <br>
-                      <p class="leading-relaxed">Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be presented on stage. The play received its world premiere in London’s West End on 30th July 2016.It was always difficult being Harry Potter and it isn’t much easier now that he is an overworked employee of the Ministry of Magic, a husband and father of three school-age children.While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.</p>
-                   
-                      <br>
-                      <br>
-                        <a href=https://drive.google.com/file/d/1wgR96W3bEiD7wkouDnNsrpnnxCoAMw5n/view?usp=sharing>
-                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </section>
-
-  
-  
-
-
-    <!--------JavaScript for toggle menu------>
-                                <script>
-                                    var navLinks = document.getElementById("navLinks");
-                                    function showMenu(){
-                                        navLinks.style.right = "0";
-                                    }
-                                    function hideMenu(){
-                                        navLinks.style.right = "-200px";
-                                    }
-                                    var Cat90 = document.getElementbyId("Cat90");
-                        if(x = Cat90) {
-                          Window.location.href("Cat90")
-                        }
-                                </script>
-
+            </section>
+        </main>
 </body>
+
 </html>
