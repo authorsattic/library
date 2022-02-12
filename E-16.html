@@ -1,437 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
     <title>Malory Towers | Author's Attic Virtual Library</title>
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-              *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktem.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="About_Page">ABOUT</a></li>
                     <li><a href="books.html">BOOKS</a></li>
                     <li><a href="Blog.html">BLOG</a></li>
                     <li><a href="Comment.html">COMMENT</a></li>
@@ -442,265 +30,187 @@ h3{
         </nav>
         <h1>Malory Towers</h1>
     </section>
-<section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">First Term at Mallory towers</h1>
-          <br>
-       <img src=https://books.google.com/books/content?id=iOq2ngEACAAJ&printsec=frontcover&img=1&zoom=5>
-          <br>
-          <p class="leading-relaxed">Darrell and her friends grow together as they share their school days. There are new students to induct, sporting matches to be won, tempers to control and tricks to play on teachers. This work presents stories about life at boarding school as readers follow the girls' lives through 6 years at Malory Towers.</p>
-       
-          <br>
-          <br>
-            <a href=https://drive.google.com/file/d/1Qus3xtBEHSHHLMowbFwM3euXTSiB4ZVI/view?usp=sharing>
-            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
+        <main class="wrapper" id="main0">
+            <section class="container" id="ta0">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">First Term at Malory towers</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/71KW+v0S9cL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Darrell and her friends grow together as they
+                        share their school days. There are new students to induct, sporting matches to be won, tempers
+                        to control and tricks to play on teachers. This work presents stories about life at boarding
+                        school as readers follow the girls' lives through 6 years at Malory Towers.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Qus3xtBEHSHHLMowbFwM3euXTSiB4ZVI/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta1">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Second term at Malory towers</h1><img
+                        src="https://www.hachette.co.uk/wp-content/uploads/2019/05/hbg-title-9781444926699-34.jpg?fit=440%2C675"><br>
+                    <p class="books-description" style="height: 166px;">Darrell Rivers is excited to be going into her
+                        second year at Malory Towers - but is she ready for the drama it will bring? Jealousy flares
+                        when a new head of the form is chosen, and the girls become suspicious when their belongings go
+                        missing. Who could the thief be? And why on earth has timid Mary-Lou ventured out during a
+                        terrible storm?</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/14suaFTlhbjI33devhzHbTnjYJKh8F-7g/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main2">
+            <section class="container" id="ta2">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Third year at Malory towers</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51ZndwNljJL._SX322_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">The girls return for another term to find
+                        several new faces in their form. There is Zerelda, the American girl, Bill, short for
+                        Wilhelmina, who is mad about horses, and Mavis who has a remarkable voice</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1R9Kjs2R0mL82qhmyaXDCmQIi6rZhKlIW/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta3">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Upper fourth at Malory towers</h1><img
+                        src="https://m.media-amazon.com/images/I/51luW5NE4TL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Darrell Rivers is delighted to be Head Girl of
+                        her form - and this year her sister Felicity joins Malory Towers too. Most of the time Darrell
+                        couldn't be prouder of Felicity, but she's much less keen on her sister's trouble-making new
+                        friend. With twins Connie and Ruth also causing problems, Darrell's first time in charge is a
+                        big challenge...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1x3nL6CFmZxavzltvkkZ7p7CatWOm-JcS/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main4">
+            <section class="container" id="ta4">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">In the Fifth at Malory Towers</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/71VrlPDlApL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Darrell and her friends grow together as they
+                        share their school days. There are new students to induct, sporting matches to be won, tempers
+                        to control and tricks to play on teachers. This work presents stories about life at boarding
+                        school as readers follow the girls' lives through 6 years at Malory Towers.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1F9yNZgTWT6Yu4Z_VwY4OtTaxBd_RCVGu/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta5">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Last Term at Malory Towers</h1><img
+                        src="https://m.media-amazon.com/images/I/515br8VhRoL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Last Term at Malory Towers is the sixth and the
+                        final book of the original Malory Towers series. In this final book about the girls at Malory
+                        Towers, Darrell becomes head girl and has to prepare to say goodbye to the school forever.</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1LBPYtgIJVHtKAk4Qt1ghaob-HTsLCkup/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main6">
+            <section class="container" id="ta6">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">New Term at Malory Towers</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/71X4O-2MtxL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Darrell has left, and Felicity is head of the
+                        third form! And what a lot she has to deal with - June and new girl Freddie playing tricks
+                        continually, the sickly Bonnie shadowing her, and the stuck-up Amy, who has a strange family
+                        secret...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ZlA6ArDtkmkm2Nh-TnhYeZl_RW0C7DXL/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta7">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Summer Term at Malory Towers</h1><img
+                        src="https://m.media-amazon.com/images/I/51lvExGN6GL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Summer Term at Malory Towers is the second book
+                        of the Malory Towers sequel, written by Pamela Cox. There's a mystery at the nearby stables -
+                        someone has stolen money and then poor Julie's horse. Can the third form help old girls Bill and
+                        Clarissa discover who is behind it?</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1UeU9cWfSoiuHptKNz418dMZtpj9CfB5Y/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main8">
+            <section class="container" id="ta8">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Winter Term at Malory Towers</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/71+drSt0lnL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Susan is excited to be in charge of the winter
+                        concert, but Miss Tallant, a new teacher, has very strong ideas about it. And when she
+                        interferes in a midnight feast, they realise there's a spy in their midst. But who could it be?
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1umThPQ7Kbzflo1W9F3LkVYwemtZNb0ks/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta9">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Fun and Games at Malory Towers</h1>
+                    <img src="https://m.media-amazon.com/images/I/51FVmiKSUfL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">New girl Millicent clashes with the feisty June
+                        over the school's priorities: a music concert or tennis tournament? But both pale into
+                        insignificance when it's found there's a thief in the fifth form.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1GLcnQB6PxVMD2g_KglahLzeKhP9jeu92/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main10">
+            <section class="container" id="ta10">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Secrets at Malory Towers</h1><img
+                        src="https://m.media-amazon.com/images/I/51Egn6kMHhL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">This book is filled with mischief, pranks ,
+                        suspense , dangerous activities, excitement and the usuall excitement of malory towers books. If
+                        you come to the garden shed at 12p.m., everything will be revealed: Daffy's latest naughty
+                        prank, what Mam'zelle found in her handbag and Alice's amazing secret. The sixth form are in for
+                        a shock !</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WEP93qfVj5fXa-bJcQapav2VvbCE8cJR/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta11">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Malory Towers</h2>
+                    <h1 class="book-name" style="height: 50px;">Goodbye Malory Towers</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/71LSkuQONkL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">After taking their Higher Certificate, the sixth
+                        formers want to relax this term. But the Head has a surprise: a finishing school course, with
+                        old girl Gwendoline Lacey as teacher. Yet someone is determined to drive her out - and it takes
+                        the return of Darrell to solve the mystery.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1TVNmNBURDWRgy3ns_q7t1F8palBAG1ic/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+</body>
 
-<section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Second term at Mallory towers</h1>
-          <br>
-       <img src=https://www.hachette.co.uk/wp-content/uploads/2019/05/hbg-title-9781444926699-34.jpg?fit=440%2C675>
-          <br>
-          <p class="leading-relaxed">Darrell Rivers is excited to be going into her second year at Malory Towers - but is she ready for the drama it will bring? Jealousy flares when a new head of the form is chosen, and the girls become suspicious when their belongings go missing. Who could the thief be? And why on earth has timid Mary-Lou ventured out during a terrible storm?</p>
-       
-          <br>
-          <br>
-            <a href=https://drive.google.com/file/d/14suaFTlhbjI33devhzHbTnjYJKh8F-7g/view?usp=sharing>
-            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Third year at Mallory towers</h1>
-          <br>
-       <img src=https://books.google.com/books/content?id=1Zv3AQAAQBAJ&printsec=frontcover&img=1&zoom=5>
-          <br>
-          <p class="leading-relaxed">The girls return for another term to find several new faces in their form. There is Zerelda, the American girl, Bill, short for Wilhelmina, who is mad about horses, and Mavis who has a remarkable voice</p>
-       
-          <br>
-          <br>
-            <a href=https://drive.google.com/file/d/1R9Kjs2R0mL82qhmyaXDCmQIi6rZhKlIW/view?usp=sharing>
-            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Upper fourth at Mallory towers</h1>
-          <br>
-       <img src=https://books.google.com/books/content?id=Ip-eAAAACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71kFZPLQ8Fbaenni3pqJFdfaitYSJbXod_nBozgLvStQfb7v1gS0iqYhKiIE5S8pkLka4XPQQHfbKCrGKkmbeKnuaslau09lzKBkgCTgvMT9g9AVhj7KdPXvU8m7WLXgHuDs6Xw>
-          <br>
-          <p class="leading-relaxed">Darrell Rivers is delighted to be Head Girl of her form - and this year her sister Felicity joins Malory Towers too. Most of the time Darrell couldn't be prouder of Felicity, but she's much less keen on her sister's trouble-making new friend. With twins Connie and Ruth also causing problems, Darrell's first time in charge is a big challenge...</p>
-       
-          <br>
-          <br>
-            <a href=https://drive.google.com/file/d/1x3nL6CFmZxavzltvkkZ7p7CatWOm-JcS/view?usp=sharing>
-            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">In the Fifth at Malory Towers</h1>
-<br>
-<img src="https://images-na.ssl-images-amazon.com/images/I/51bcc0Eq2AL._SX309_BO1,204,203,200_.jpg">
-<br>
-<p class="leading-relaxed">Darrell and her friends grow together as they share their school days. There are new students to induct, sporting matches to be won, tempers to control and tricks to play on teachers. This work presents stories about life at boarding school as readers follow the girls' lives through 6 years at Malory Towers.</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1F9yNZgTWT6Yu4Z_VwY4OtTaxBd_RCVGu/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Last Term at Malory Towers</h1>
-<br>
-<img src="https://m.media-amazon.com/images/I/515br8VhRoL.jpg">
-<br>
-<p class="leading-relaxed">Last Term at Malory Towers is the sixth and the final book of the original Malory Towers series. In this final book about the girls at Malory Towers, Darrell becomes head girl and has to prepare to say goodbye to the school forever.</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1LBPYtgIJVHtKAk4Qt1ghaob-HTsLCkup/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">New Term at Malory Towers</h1>
-<br>
-<img src="https://images-na.ssl-images-amazon.com/images/I/51sbQekihML._SX310_BO1,204,203,200_.jpg">
-<br>
-<p class="leading-relaxed">Darrell has left, and Felicity is head of the third form! And what a lot she has to deal with - June and new girl Freddie playing tricks continually, the sickly Bonnie shadowing her, and the stuck-up Amy, who has a strange family secret...</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1ZlA6ArDtkmkm2Nh-TnhYeZl_RW0C7DXL/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Summer Term at Malory Towers</h1>
-<br>
-<img src="https://images-na.ssl-images-amazon.com/images/I/51tE+93YCeL._SX310_BO1,204,203,200_.jpg">
-<br>
-<p class="leading-relaxed">Summer Term at Malory Towers is the second book of the Malory Towers sequel, written by Pamela Cox. There's a mystery at the nearby stables - someone has stolen money and then poor Julie's horse. Can the third form help old girls Bill and Clarissa discover who is behind it?</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1UeU9cWfSoiuHptKNz418dMZtpj9CfB5Y/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Winter Term at Malory Towers</h1>
-<br>
-<img src="https://images-na.ssl-images-amazon.com/images/I/51g+bnN7plL._SX310_BO1,204,203,200_.jpg">
-<br>
-<p class="leading-relaxed">Susan is excited to be in charge of the winter concert, but Miss Tallant, a new teacher, has very strong ideas about it. And when she interferes in a midnight feast, they realise there's a spy in their midst. But who could it be?</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1umThPQ7Kbzflo1W9F3LkVYwemtZNb0ks/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Fun and Games at Mallory Towers</h1>
-<br>
-<img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451738009l/28430144._SY475_.jpg">
-<br>
-<p class="leading-relaxed">New girl Millicent clashes with the feisty June over the school's priorities: a music concert or tennis tournament? But both pale into insignificance when it's found there's a thief in the fifth form.</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1GLcnQB6PxVMD2g_KglahLzeKhP9jeu92/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Secrets at Malory Towers</h1>
-<br>
-<img src="https://images-na.ssl-images-amazon.com/images/I/51L1t-fdOIL._SX312_BO1,204,203,200_.jpg">
-<br>
-<p class="leading-relaxed">This book is filled with mischief, pranks , suspense , dangerous activities, excitement and the usuall excitement of malory towers books. If you come to the garden shed at 12p.m., everything will be revealed: Daffy's latest naughty prank, what Mam'zelle found in her handbag and Alice's amazing secret. The sixth form are in for a shock !</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1WEP93qfVj5fXa-bJcQapav2VvbCE8cJR/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-gray-600 body-font overflow-hidden">
-<div class="container px-5 py-24 mx-auto">
-<div class="lg:w-4/5 mx-auto flex flex-wrap">
-
-<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-<h2 class="text-sm title-font text-gray-500 tracking-widest">MALORY TOWERS</h2>
-<h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Goodbye Malory Towers</h1>
-<br>
-<img src="https://images-na.ssl-images-amazon.com/images/I/51YdGImhb7L._SX313_BO1,204,203,200_.jpg">
-<br>
-<p class="leading-relaxed">After taking their Higher Certificate, the sixth formers want to relax this term. But the Head has a surprise: a finishing school course, with old girl Gwendoline Lacey as teacher. Yet someone is determined to drive her out - and it takes the return of Darrell to solve the mystery.</p>
-<br>
-<br>
-<a href="https://drive.google.com/file/d/1TVNmNBURDWRgy3ns_q7t1F8palBAG1ic/view?usp=sharing">
-<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
+</html>
