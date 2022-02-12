@@ -1,437 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <title>Trails of Apollo | Author's Attic Virtual Library</title>
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <title>Trials of Apollo | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-              *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktem.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="About_Page">ABOUT</a></li>
                     <li><a href="books.html">BOOKS</a></li>
                     <li><a href="Blog.html">BLOG</a></li>
                     <li><a href="Comment.html">COMMENT</a></li>
@@ -442,169 +30,63 @@ h3{
         </nav>
         <h1>Trials of Apollo</h1>
     </section>
-
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">THE TRIALS OF APOLLO</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Hidden Oracle</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/91HGx+d2qQL.jpg">
-              <br>
-              <p class="leading-relaxed">
-                He was once an immortal God. Now, he's a teenage boy called Lester.
-                Apollo has angered his father Zeus for the last time.
-                So, how do you punish an immortal?
-                By making him human. Obviously.
-                Cast down from Olympus, he's weak, disorientated and stuck in New York City as a teenage boy.
-                It's the first time he's been without his powers, and he has to survive in the modern world.
-                Which isn't an easy feat for a four-thousand-year old deity, especially one with as many enemies as he has.
-                Apollo needs help, and he can only think of one place to go . . . an enclave of modern demigods known as Camp Half-Blood.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1oea7Ss7k7betCqC5WBpDmZPTb_KAWR2d/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">THE TRIALS OF APOLLO</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Dark Prophecy</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/910NfqAPmRL.jpg">
-              <br>
-              <p class="leading-relaxed">
-                He was once an immortal God, now he's an awkward teenager. Things aren't going well for Apollo.
-                There's only one way he can earn back Zeus' favour, and that's to seek and restore the ancient oracles - but that's easier said than done.
-                Apollo must head to the American Midwest where, rumour has it, a haunted cave may hold answers.
-                There are a few things standing in his way though. The cave could kill him, or drive him insane.
-                Oh, and a Roman Emperor, whose love of bloodshed makes Nero look tame.
-                To stay alive, Apollo needs the help of a mortal goddess, a bronze dragon, and some familiar faces from Camp Half-Blood.
-                Will he survive the greatest challenge of his four thousand year existence?
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1VEaxCLm7UN7Qq5rmz-Ud8xksJqd4ucAT/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">THE TRIALS OF APOLLO</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Burning Maze</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/81rJy6quO6L.jpg">
-              <br>
-              <p class="leading-relaxed">
-                He was a God once. Until he was cast out his father, Zeus. Now, he's an awkward teenager.
-                Called Lester.
-                The only way out is a series of scary and dangerous trials, of course.
-                For his third trial, Apollo must journey through the Labyrinth to free an Oracle who only speaks in puzzles.
-                Then, defeat the most vicious of three very vicious Roman Emperors.
-                (All without the use of his godly powers.)
-                It looks like he will need all the help he can get - from some new and old friends.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1bxrGgto9B96Y6MyxWohuOdRgkiSijm89/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">THE TRIALS OF APOLLO</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Tyrant’s Tomb</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/81+AhaPcYwL.jpg">
-              <br>
-              <p class="leading-relaxed">
-                Things are getting very bad, very fast, for Apollo . . .
-                The former God Apollo is having a pretty rough time of it. Well, for one thing, he's been turned into a human and banished from Olympus. And he's called Lester. But being an awkward mortal teenager is the least of his worries right now.
-                Though he and some of his friends have emerged from the Burning Maze, rescued the Oracle and lived to fight another day, they can't escape the tragedy that has befallen them, or the terrible trials still to face.
-                So, with heavy heart, Apollo (OK, Lester) and Meg have a triumvirate still to defeat, oracles to rescue, and prophecies to decipher,
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1nkbMHhd2eGvSMgdrV3Wo9Mtmg3fOSEHQ/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">THE TRIALS OF APOLLO</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Tower of Nero</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/91xepr8Bx1L.jpg">
-              <br>
-              <p class="leading-relaxed">
-                The battle for Camp Jupiter is over. New Rome is safe. Tarquin and his army of the undead have been defeated. Somehow Apollo has made it out alive, with a little bit of help from the Hunters of Artemis.
-                But though the battle may have been won, the war is far from over.
-                Now Apollo and Meg must get ready for the final - and, let's face it, probably fatal - adventure. They must face the last emperor, the terrifying Nero, and destroy him once and for all.
-                Can Apollo find his godly form again? Will Meg be able to face up to her troubled past?
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/14Wue3uWpSjEm9zjOgaX58kUhJHvqDEzn/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    <!--------JavaScript for toggle menu------>
-                                <script>
-                                    var navLinks = document.getElementById("navLinks");
-                                    function showMenu(){
-                                        navLinks.style.right = "0";
-                                    }
-                                    function hideMenu(){
-                                        navLinks.style.right = "-200px";
-                                    }
-                                    var Cat90 = document.getElementbyId("Cat90");
-                        if(x = Cat90) {
-                          Window.location.href("Cat90")
-                        }
-                                </script>
-
+        <main class="wrapper" id="main0">
+            <section class="container" id="ta0">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Trials of Apollo</h2>
+                    <h1 class="book-name" style="height: 50px;">The Hidden Oracle</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/91HGx+d2qQL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">He was once an immortal God.
+                        Now, he's a teenage boy called Lester. Apollo has angered his father Zeus for the last time. So,
+                        how do you punish an immortal? By making him human. Obviously. Cast down from Olympus, he's
+                        weak, disorientated and stuck in New York City as a teenage boy. It's the first time he's been
+                        without his powers, and he has to survive in the modern world. Which isn't an easy feat for a
+                        four-thousand-year old deity, especially one with as many enemies as he has. Apollo needs help,
+                        and he can only think of one place to go . . . an enclave of modern demigods known as Camp
+                        Half-Blood.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1oea7Ss7k7betCqC5WBpDmZPTb_KAWR2d/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="ta1">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Trials of Apollo</h2>
+                    <h1 class="book-name" style="height: 50px;">The Dark Prophecy</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/910NfqAPmRL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">He was once an immortal God,
+                        now he's an awkward teenager. Things aren't going well for Apollo. There's only one way he can
+                        earn back Zeus' favour, and that's to seek and restore the ancient oracles - but that's easier
+                        said than done. Apollo must head to the American Midwest where, rumour has it, a haunted cave
+                        may hold answers. There are a few things standing in his way though. The cave could kill him, or
+                        drive him insane. Oh, and a Roman Emperor, whose love of bloodshed makes Nero look tame. To stay
+                        alive, Apollo needs the help of a mortal goddess, a bronze dragon, and some familiar faces from
+                        Camp Half-Blood. Will he survive the greatest challenge of his four thousand year existence?</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1VEaxCLm7UN7Qq5rmz-Ud8xksJqd4ucAT/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main2">
+            <section class="container" id="ta2">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Trials of Apollo</h2>
+                    <h1 class="book-name" style="height: 50px;">The Burning Maze</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/81rJy6quO6L.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">He was a God once. Until he
+                        was cast out his father, Zeus. Now, he's an awkward teenager. Called Lester. The only way out is
+                        a series of scary and dangerous trials, of course. For his third trial, Apollo must journey
+                        through the Labyrinth to free an Oracle who only speaks in puzzles. Then, defeat the most
+                        vicious of three very vicious Roman Emperors. (All without the use of his godly powers.) It
+                        looks like he will need all the help he can get - from some new and old friends.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1bxrGgto9B96Y6MyxWohuOdRgkiSijm89/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
 </body>
+
 </html>
