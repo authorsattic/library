@@ -533,41 +533,6 @@ hr{
         flex-basis: 100%;
     }
 }
-
-.wrapper{
-    margin-top: 100px;
-}
-.wrapper a{
-    text-decoration: none;
-}
-.wrapper h3{
-    margin-top: 55px;
-    font-size: 17px;
-    padding: 10px;
-    text-align: center;
-    font-weight: 500;
-    color: #f44;
-    border: 2px solid #f44;
-    margin-right: 45%;
-    margin-left: 45%;
-    transition: 0.5s;
-}
-.wrapper h3:hover{
-    background-color: #f44;
-    color: #fff;
-}
-@media (max-width: 1000px) {
-    .wrapper{
-        height: 600px;
-    }
-    .wrapper h1{
-        height: 200px;
-    }
-    .wrapper h3{
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-}
 /* Main (Books) stylings */
 
 .container{
