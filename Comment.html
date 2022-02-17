@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/3a48330618.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="comment-style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Comment Us | Author's Attic | Virtual Library</title>
 </head>
 <body>
@@ -40,14 +41,68 @@
 
         <div class="comment-box">
             <h3>Leave a Comment</h3>
-            <form class="comment-form" action="form-handler.php" method="post">
-                <input type="text" name="name" placeholder="Enter your name" required>
-                <input type="email" name="email" placeholder="Enter your Email Address" required>
-                <input type="text" name="subject" placeholder="Enter your Subject" required>
-                <textarea rows="8" name="message" placeholder="Your Comment" required></textarea>
-                <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+            <form class="comment-form" style="
+    height: 450px;
+">
+                <input type="text" name="name" placeholder="Enter your name" required="">
+                <input type="email" name="email" placeholder="Enter your Email Address" required="">
+                <input type="text" name="subject" placeholder="Enter your Subject" required="">
+                <textarea rows="8" name="message" placeholder="Your Comment" required=""></textarea>
+                <a href="oops.html" style="
+    border: 2px solid #f44;
+    padding: 10px;
+    color: #f44;
+">Post Comment</a>
             </form>
         </div>
+
+         <!------------Footer------------------------->
+
+     <footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <img src="footer-logo.png" alt="logo" class="footer-logo">
+                <p style="margin-top: -50px;line-height: 25px;">This is an Online Platform for the reading of students. Please note that all the books in this platform are borrowed from other Websites and we give equal credits to them.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Credits <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a></li>
+                    <li><a href="https://z-lib.org/" target="_blank">Z Library</a></li>
+                    <li><a href="https://pdfroom.com/" target="_blank">PDF Room</a></li>
+                    <li><a href="https://planetpdf.com/" target="_blank">Planet PDF</a></li>
+                    <li><a href="https://www.planetebook.com/" target="_blank">Planet E-Book</a></li>
+                    <li><a href="https://fb2bookfree.com/" target="_blank">FB2 Book Free</a></li>
+                    <li><a href="https://allreadingworld.com/" target="_blank">All Reading World</a>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="About_Page.html" target="_blank">About</a></li>
+                    <li><a href="books.html" target="_blank">Books</a></li>
+                    <li><a href="Comment.html" target="_blank">Contact</a></li>
+                    <li><a href="Comment.html" target="_blank">Comment</a></li>
+                    <li><a href="Books_Review.html" target="_blank">Book Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us <div class="underline"><span></span></div></h3>
+                <form class="footer-form"> 
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email-id" required>
+                    <button class="footer-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCtN5a1UpFa2vPBlOLosZs-A" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <i class="fa-brands fa-discord"></i>
+                </div> 
+            </div>
+        </div>
+        <hr>
+        <p class="copywright">Author's Attic | Virtual Library &#169 2022 - All rights reserved</p>
+    </footer>
 
 
     <!--------JavaScript for toggle menu------>
@@ -59,6 +114,20 @@
         function hideMenu(){
             navLinks.style.right = "-200px";
         }
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.yourisp.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+        }
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
