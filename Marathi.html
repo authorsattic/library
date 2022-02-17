@@ -4,427 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <title>Marathi Books | Author's Attic Virtual Library</title>
     <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a48330618.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Marathi Books | Author's Attic Virtual Library</title>
     <style>
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-        *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
+                    .book-categorys{
+                font-family: 'Poppins' , sans-serif;
+            }
+            .book-name{
+                font-family: 'Poppins' , sans-serif;
+                font-weight: 400;
+            }
 
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
+        @media screen and (min-device-width:768px) and (max-device-width:1028px){
+            .book-categorys{
+                font-family: 'Poppins' , sans-serif;
+            }
+            .book-name{
+                font-family: 'Poppins' , sans-serif;
+                font-weight: 400;
+            }
     }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
+@media only screen and (min-device-width:1200px) and (max-device-width:1600px){
+    .book-category{
+                font-family: 'Poppins' , sans-serif;
+            }
+            .book-name{
+                font-family: 'Poppins' , sans-serif;
+                font-weight: 400;
+            }
 }
+/* End */
 
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+.end-container h2{
+    font-family: 'Poppins' , sans-serif;
 }
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
+.end-container h3{
+    font-family: 'Poppins' , sans-serif;
 }
     </style>
 </head>
 <body>
+
+    <!----------------------Header------------------------------->
+
+
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
@@ -443,981 +71,921 @@ h3{
         <h1>Marathi Books</h1>
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">ट्रांजिस्टर</h1>
-              <br>
-               <img src="http://i.imgur.com/J5LVHEL.jpg">
-              <br>
-              <p class="leading-relaxed">इस पुस्तक का नाम : ट्रांजिस्टर है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |</p>
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1JtW8BCs1uQ6qZlQ8dDsjFYeBHPCLghWJ/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्र का शिल्पकार</h1>
-              <br>
-               <img src="https://ia800801.us.archive.org/BookReader/BookReaderImages.php?zip=/14/items/MaharashtraCheShilpkarShankarraoKirloskar/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2.zip&file=Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_0000.jp2&id=MaharashtraCheShilpkarShankarraoKirloskar&scale=16&rotate=0">
-              <br>
-              <p class="leading-relaxed">इस पुस्तक का नाम : महाराष्ट्र का शिल्पकार है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |</p>
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1K4UxFQKWQL_utJoD_TXe8dUw8IImQAfK/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">कलप्पा यशवंत ढाले हयांची</h1>
-              <br>
-               <img src="http://i.imgur.com/J5LVHEL.jpg">
-              <br>
-              <p class="leading-relaxed">इस पुस्तक का नाम : कलप्पा यशवंत ढाले हयांची है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |</p>
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1K6CeIWzUoi3L4cfGdZQ7_t3el7w7rlar/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">पंडिता रमाबाई यांचा इंगल्डचा प्रवास</h1>
-              <br>
-               <img src="data:image/jpeg;base64,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">
-              <br>
-              <p class="leading-relaxed">इस पुस्तक का नाम : पंडिता रमाबाई यांचा इंगल्डचा प्रवास है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |</p>
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1K9vzLCe-ejGalsZqS0K715JvAxGPiRAA/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">नाट्य मंडप</h1>
-              <br>
-               <img src="http://i.imgur.com/J5LVHEL.jpg">
-              <br>
-              <p class="leading-relaxed">इस पुस्तक का नाम : नाट्य मंडप है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |</p>
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1KDJF5REP0oZLfg2wJ_eFzMJvnsJZj7wx/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">एशियाई क्रीडा स्पर्धा</h1>
-                <br>
-                 <img src="https://mpng.subpng.com/20180621/bji/kisspng-paper-logo-marathi-heritage-maharashtra-5b2c4ed4b4a286.6279630815296304207399.jpg">
-                <br>
-                <p class="leading-relaxed">Written by Prabhakar Gorwale, this is an interesting marathi book about sports.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1mxyLhw4vpKMeFYvdPUwjg-i-NGRDltoP/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+    <!----------------Main (Books)------------------------->
+
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्र का शिल्पकार</h1>
+                    <br>
+                <img src="https://ia800801.us.archive.org/BookReader/BookReaderImages.php?zip=/14/items/MaharashtraCheShilpkarShankarraoKirloskar/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2.zip&file=Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_0000.jp2&id=MaharashtraCheShilpkarShankarraoKirloskar&scale=16&rotate=0">
+                    <br>
+                <p class="books-description">
+                    इस पुस्तक का नाम : महाराष्ट्र का शिल्पकार है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1K4UxFQKWQL_utJoD_TXe8dUw8IImQAfK/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-  
-            <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MARATHI</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">बहुरूपी बहुगुणी कार्बन</h1>
-                <br>
-                 <img src="https://mpng.subpng.com/20180621/bji/kisspng-paper-logo-marathi-heritage-maharashtra-5b2c4ed4b4a286.6279630815296304207399.jpg">
-                <br>
-                <p class="leading-relaxed">Bahuroopi Bahuguni Carbon is an excellent science fiction book in the Marathi language.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n3Bc-_SJ0VaX4DwPJOeRPuPbThKWfeEk/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">पंडिता रमाबाई यांचा इंगल्डचा प्रवास</h1>
+                    <br>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/4104rD96jAL._SX314_BO1,204,203,200_.jpg">
+                    <br>
+                <p class="books-description">
+                    इस पुस्तक का नाम : पंडिता रमाबाई यांचा इंगल्डचा प्रवास है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1K9vzLCe-ejGalsZqS0K715JvAxGPiRAA/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MARATHI</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">चलेजाव आंदोलन</h1>
-                <br>
-                 <img src="https://mpng.subpng.com/20180621/bji/kisspng-paper-logo-marathi-heritage-maharashtra-5b2c4ed4b4a286.6279630815296304207399.jpg">
-                <br>
-                <p class="leading-relaxed">This book to provide you the information about 'Chale Jao Andola'</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1nCtQKvZvPEbZMJHu3ZyUsZmu11BhQLXa/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+    </main>  
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">ट्रांजिस्टर</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    इस पुस्तक का नाम : ट्रांजिस्टर है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1JtW8BCs1uQ6qZlQ8dDsjFYeBHPCLghWJ/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MARATHI</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">धर्म कीर्तन</h1>
-                <br>
-                 <img src="https://mpng.subpng.com/20180621/bji/kisspng-paper-logo-marathi-heritage-maharashtra-5b2c4ed4b4a286.6279630815296304207399.jpg">
-                <br>
-                <p class="leading-relaxed">Written by Vamanrao Chorghade , this book is here to inform us about our 'Dharma'</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n87kKcAfx5iNCTVE3XKborURA-txIb-V/view?usp=sharing
-                  ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">कलप्पा यशवंत ढाले हयांची</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    इस पुस्तक का नाम : कलप्पा यशवंत ढाले हयांची है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1K6CeIWzUoi3L4cfGdZQ7_t3el7w7rlar/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MARATHI</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">गजाआडच्या कविता</h1>
-                <br>
-                 <img src="https://www.akshardhara.com/71114-large_default/Gajaadchya-Kavita-Uttam-Kamble-Manovikas-Prakashan-buy-marathi-books-online-at-akshardhara.jpg">
-                <br>
-                <p class="leading-relaxed">The inner feelings of the prisoners and their constructive rebellion are "Gajaad's poems"</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1mvfzVSoBbbcZtHOTON2068pzQ3nhZqn7/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">नाट्य मंडप</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    इस पुस्तक का नाम : नाट्य मंडप है | अधिक पढ़ने के लिए पुस्तक डाउनलोड करें | यह मराठी की एक किताब है। यह बहुत ही गहन पुस्तक है जिसे हमने यहां रखा है ताकि आप किताबों के साथ प्यार में पड़ जाए |
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1KDJF5REP0oZLfg2wJ_eFzMJvnsJZj7wx/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">सर्वज्ञ श्री चक्रधर            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2019/05/sarvagya-shree-chakradhar-by-purushottam-nagpure-184x300.jpg               ">
-                <br>
-                <p class="leading-relaxed">Sarvadnya Shri Chakradhar Swami was an Kalyug Avtar of Lord Shri Krishna, and one of the ... Find sources: "Chakradhar Swami" – news · newspapers · books · scholar · JSTOR ... Directorate-General of Information and Public Relations.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1EZJVAtk1TOak5vycOVA4aG8N6aFpD3nz/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">एशियाई क्रीडा स्पर्धा</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    Written by Prabhakar Gorwale, this is an interesting marathi book about sports.   
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1mxyLhw4vpKMeFYvdPUwjg-i-NGRDltoP/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">इस्लामसंबंधी एक आधुनिक दृष्टीकोन            </h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/31StIfsgUjL._SX327_BO1,204,203,200_.jpg               ">
-                <br>
-                <p class="leading-relaxed">Read A Modern Approach to Islam book reviews & author details and more at Amazon.in. ... by Asaf A.A. Fyzee (Author) ... This classic work, written by one of the greatest modern scholars of Islamic law, focuses on the need for a reinter- pretation of Islamic jurisprudence and for a rediscovery of its original philosophy.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1H-SJwnqrksc50jg4KBw1AQVexR7iTWDO/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">बहुरूपी बहुगुणी कार्बन</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    Bahuroopi Bahuguni Carbon is an excellent science fiction book in the Marathi language
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1n3Bc-_SJ0VaX4DwPJOeRPuPbThKWfeEk/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्रचे शिल्पकार बॉ राजाभाऊ खोब्रागडे             </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">भाऊराव देवाजी खोब्रागडे (२५ सप्टेंबर १९२५ - ९ एप्रिल १९८४) हे सामान्यत: राजाभाऊ खोब्रागडे म्हणून ओळखले जाणारे एक भारतीय बॅरिस्टर, आंबेडकरी समाजसेवक आणि राजकारणी होते.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Eyt7gf67qvGtopxtxp2lkUjzaStO_Kh9/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">चलेजाव आंदोलन</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    This book to provide you the information about 'Chale Jao Andola'  
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1nCtQKvZvPEbZMJHu3ZyUsZmu11BhQLXa/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">बहुरूपी बहुगुणी कार्बन            </h1>
-                <br>
-                 <img src="https://marathipdf.com/wp-content/uploads/2020/08/Bahuroopi-Bahuguni-carbon-1.jpg               ">
-                <br>
-                <p class="leading-relaxed">यह पुस्तक Bahurupi Bahuguni Carban Books Free Read And Download, Dr. Ramdas Jashi द्वारा रचित प्रसिद्ध पुस्तक है । इस पुस्तक को Maharashtra Sahitya Sansukri Mandal, Mumbai ने प्रकशित किया है             </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n3Bc-_SJ0VaX4DwPJOeRPuPbThKWfeEk/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">धर्म कीर्तन</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    Written by Vamanrao Chorghade , this book is here to inform us about our 'Dharma'
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1n87kKcAfx5iNCTVE3XKborURA-txIb-V/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">भारत-मुनि-प्रणीत             </h1>
-                <br>
-                 <img src="https://cdn.exoticindia.com/images/products/thumbnails/t160x120/books-2017/nzm697.jpg               ">
-                <br>
-                <p class="leading-relaxed">इस जानकारी का सबसे पुराना ग्रंथ भी नाट्यशास्त्र के नाम से जाना जाता है जिसके रचयिता भरत मुनि थे। भरत मुनि का जीवनकाल ४०० ईसापूर्व से १०० ई के मध्य किसी समय माना जाता है। ... ३७ अध्यायों में भरतमुनि ने रंगमंच, अभिनेता, अभिनय, नृत्यगीतवाद्य, दर्शक, दशरूपक और रस निष्पत्ति से सम्बन्धित सभी तथ्यों का विवेचन किया है।            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Gi86wb_ziHxjwkrlKalGgd_DO3KJWna_/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">गजाआडच्या कविता</h1>
+                    <br>
+                <img src="https://www.akshardhara.com/71114-large_default/Gajaadchya-Kavita-Uttam-Kamble-Manovikas-Prakashan-buy-marathi-books-online-at-akshardhara.jpg">
+                    <br>
+                <p class="books-description">
+                    The inner feelings of the prisoners and their constructive rebellion are "Gajaad's poems"  
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1mvfzVSoBbbcZtHOTON2068pzQ3nhZqn7/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">चलेजाव आंदोलन            </h1>
-                <br>
-                 <img src="https://www.akshardhara.com/94364-large_default/Chale-Jav-Gandhi--Nehru-Patel-Azad-Sadhana-Prakashan-buy-marathi-books-online-at-akshardhara.jpg               ">
-                <br>
-                <p class="leading-relaxed">8 ऑगस्ट 1942 च्या त्या ऐतिहासिक सभेत चौघांची भाषणे झाली होती. त्यावेळी काँग्रेसच्या अध्यक्षपदावर मौलाना अबुल कलाम आझाद होते, त्यामुळे त्यांचे भाषण सर्वप्रथम झाले.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1nCtQKvZvPEbZMJHu3ZyUsZmu11BhQLXa/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">सर्वज्ञ श्री चक्रधर</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    Sarvadnya Shri Chakradhar Swami was an Kalyug Avtar of Lord Shri Krishna, and one of the ... Find sources: "Chakradhar Swami" - news · newspapers · books · scholar · JSTOR ... Directorate-General of Information and Public Relations.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1EZJVAtk1TOak5vycOVA4aG8N6aFpD3nz/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">चारियापिटक            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg"               >
-                <br>
-                <p class="leading-relaxed">उदान, इतिवुत्तक चारियापिटक, खुद्दकपाठ मूल पालि पाठ एवं हिन्दी अनुवाद सहित 1st Edition is written by and is published by Bauddha Bharati. ISBN - is Hardback. The listed price of this book is£ 6.64.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Fn2ywGGUJk5PSfAxMCV_s0HKsMY9EEhW/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">इस्लामसंबंधी एक आधुनिक दृष्टीकोन</h1>
+                    <br>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/31StIfsgUjL._SX327_BO1,204,203,200_.jpg">
+                    <br>
+                <p class="books-description">
+                    Read A Modern Approach to Islam book reviews & author details and more at Amazon.in. ... by Asaf A.A. Fyzee (Author) ... This classic work, written by one of the greatest modern scholars of Islamic law, focuses on the need for a reinter- pretation of Islamic jurisprudence and for a rediscovery of its original philosophy.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1H-SJwnqrksc50jg4KBw1AQVexR7iTWDO/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">चिरकालीन सिरामिकस            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed"> Ceramics: The Complexity of Simplicity [Amos Klausner, Catherine Bailey, Robin ... Sold by: Forever Books & Media ..            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Eq4lh-rRNBHIY0JKPFeeunfUVjUAhLpd/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्रचे शिल्पकार बॉ राजाभाऊ खोब्रागडे</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    भाऊराव देवाजी खोब्रागडे (२५ सप्टेंबर १९२५ - ९ एप्रिल १९८४) हे सामान्यत: राजाभाऊ खोब्रागडे म्हणून ओळखले जाणारे एक भारतीय बॅरिस्टर, आंबेडकरी समाजसेवक आणि राजकारणी होते.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Eyt7gf67qvGtopxtxp2lkUjzaStO_Kh9/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">धन्याचा बंदा गुलाम            </h1>
-                <br>
-                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsahitya.marathi.gov.in%2Fscans%2FDhanyacha%2520Banda%2520Gulam%2520(Original%2520Page).pdf&psig=AOvVaw0v3MlxRvuBuSfQqr7Tsgca&ust=1622629967650000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOD4rumd9vACFQAAAAAdAAAAABAQ               ">
-                <br>
-                <p class="leading-relaxed">TIBHA. U. HLA. धन्याचा बंदा गुलाम. मूळ लेखक. तपन भट्टाचार्य. मराठी अनुवाद. श्री. र. म. भागवत. 000. मस्पराष्ट्र राज्य. महाराष्ट्र राज्य साहित्य आणि संस्कृती मंडळ, मुंबई.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1GWeBFY0lxsGRe2u5ZluYywRX4jzJ1sJ0/view?usp=sharin                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">बहुरूपी बहुगुणी कार्बन</h1>
+                    <br>
+                <img src="https://marathipdf.com/wp-content/uploads/2020/08/Bahuroopi-Bahuguni-carbon-1.jpg">
+                    <br>
+                <p class="books-description">
+                    यह पुस्तक Bahurupi Bahuguni Carban Books Free Read And Download, Dr. Ramdas Jashi द्वारा रचित प्रसिद्ध पुस्तक है । इस पुस्तक को Maharashtra Sahitya Sansukri Mandal, Mumbai ने प्रकशित किया है
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1n3Bc-_SJ0VaX4DwPJOeRPuPbThKWfeEk/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">धर्मकीर्तन            </h1>
-                <br>
-                 <img src="https://www.jamnalalbajajfoundation.org/Media/Images/Content/Jamnalal-Bajaj_Books_Dharmakirtan.jpg               ">
-                <br>
-                <p class="leading-relaxed">aman Krushna Chorghade (Devanagari: वामन कृष्ण चोरघडे) (16 July 1914 – 1 December 1995) was a Marathi writer from Maharashtra, India. He was born in Narkhed, Nagpur ... before moving on to become the vice-principal of G. S. College of Commerce and Economics in Nagpur. For some time, he chaired the Text Books Board of Maharashtra state government. In 1979, he presided over the 53rd ...            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n87kKcAfx5iNCTVE3XKborURA-txIb-V/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">भारत-मुनि-प्रणीत</h1>
+                    <br>
+                <img src="https://cdn.exoticindia.com/images/products/thumbnails/t160x120/books-2017/nzm697.jpg">
+                    <br>
+                <p class="books-description">
+                    इस जानकारी का सबसे पुराना ग्रंथ भी नाट्यशास्त्र के नाम से जाना जाता है जिसके रचयिता भरत मुनि थे। भरत मुनि का जीवनकाल ४०० ईसापूर्व से १०० ई के मध्य किसी समय माना जाता है। ... ३७ अध्यायों में भरतमुनि ने रंगमंच, अभिनेता, अभिनय, नृत्यगीतवाद्य, दर्शक, दशरूपक और रस निष्पत्ति से सम्बन्धित सभी तथ्यों का विवेचन किया है।
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Gi86wb_ziHxjwkrlKalGgd_DO3KJWna_/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">डीझेल इंजिन            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2020/04/diesel-engin-by-subhash-savarkar-212x300.jpg               ">
-                <br>
-                <p class="leading-relaxed">डीझेळ एंजिन | Diesel Engin. 5 5/10 Ratings. 1 Review(s) Add Your Review. Book Image : डीझेळ एंजिन - Diesel Engin. Book Author : सुभाष सावरकर - Subhash Savarkar. Book Language. मराठी | Hindi. Book Size : 7 MB. Total Pages : 85. Genre : Genre not Defined. Suggest Genre.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FREFR70MvUHDdB5-VR6-Ysnuokoiir1L/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">चलेजाव आंदोलन
+                </h1>
+                    <br>
+                <img src="https://www.akshardhara.com/94364-large_default/Chale-Jav-Gandhi--Nehru-Patel-Azad-Sadhana-Prakashan-buy-marathi-books-online-at-akshardhara.jpg">
+                    <br>
+                <p class="books-description">
+                    8 ऑगस्ट 1942 च्या त्या ऐतिहासिक सभेत चौघांची भाषणे झाली होती. त्यावेळी काँग्रेसच्या अध्यक्षपदावर मौलाना अबुल कलाम आझाद होते, त्यामुळे त्यांचे भाषण सर्वप्रथम झाले.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1nCtQKvZvPEbZMJHu3ZyUsZmu11BhQLXa/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">गजाआडच्या कविता            </h1>
-                <br>
-                 <img src="http://online.anyflip.com/cetr/ilif/files/mobile/1.jpg               ">
-                <br>
-                <p class="leading-relaxed">तुरुंगातल्या कैद्यांच्या कविता खरोखरच प्रकाशनयोग्य असतील तर आपण असा कवितासंग्रह. अवश्य प्रकाशित करू, असे मी त्याच क्षणी त्यांना आश्वासन दिले. 'गजाआडच्या कविता' हा             </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1mvfzVSoBbbcZtHOTON2068pzQ3nhZqn7/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">चारियापिटक</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    उदान, इतिवुत्तक चारियापिटक, खुद्दकपाठ मूल पालि पाठ एवं हिन्दी अनुवाद सहित 1st Edition is written by and is published by Bauddha Bharati. ISBN - is Hardback. The listed price of this book is£ 6.64.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Fn2ywGGUJk5PSfAxMCV_s0HKsMY9EEhW/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">हॉकी            </h1>
-                <br>
-                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsahitya.marathi.gov.in%2Fscans%2FHocky.pdf&psig=AOvVaw04f-8d8lmeAiT_USS4G0j0&ust=1622631779391000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKimtsqk9vACFQAAAAAdAAAAABAD               ">
-                <br>
-                <p class="leading-relaxed">हॉकी .. लेखक. शरद जोगळेकर. त्या. Boo. तिमंडळ. 10000. महाराष्ट्र राज्य. महाराष्ट्र. राज्य साहित्य संस्कृती ... हॉकी ( चेंड्ने खेळला जाणारा खेळ ), जगातील जुन्या खेळांपैकी एक आहे असे.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FSNYIA2bp_8kAIt_KNa595n8l3ORrlcJ/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">चिरकालीन सिरामिकस</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    Ceramics: The Complexity of Simplicity [Amos Klausner, Catherine Bailey, Robin ... Sold by: Forever Books & Media .. 
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Eq4lh-rRNBHIY0JKPFeeunfUVjUAhLpd/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">हुतात्मा दामोदर हरि चापेकर यांचे आत्मवृत्त            </h1>
-                <br>
-                 <img src="https://static.langimg.com/thumb/msid-63064097,imgsize-14259,width-700,height-525,resizemode-75/maharashtra-times.jpg               ">
-                <br>
-                <p class="leading-relaxed">२२ जून १८९७ रोजी रँड आणि लेफ्टनंट आयरिस्ट या दोन इंग्रज अधिकाऱ्यांचा दामोदर हरि चापेकर आणि त्यांचे बंधू बाळकृष्ण यांनी खून केला आणि संपूर्ण इंग्रज सत्ता हादरली. पुण्याला प्लेगची मोठी साथ आलेली होती. या काळात बंदोबस्तासाठी या दोन अधिकाऱ्यांची सरकारने नेमणूक केलेली होती. ही साथ पसरू नये म्हणून लोकांना गावाबाहेर नेऊन ठेवण्याच्या नावाखाली इंग्रजी सैन्याने घरोघरी अत्याचार केले. त्याचा राग येऊन या दोन भावांनी या दोन अधिकाऱ्यांचा खून केला. त्यांना फाशीची शिक्षा सुनावली गेली व यथावकाश त्यांना फाशीवर चढविण्यात आले. क्रांतिकारकांमध्ये चापेकरबंधूंचे नाव अग्रक्रमाने नोंदविले गेले. हा इतिहास आपणास माहीत आहे. परंतु दामोदर हरि चापेकर यांनी आत्मवृत्त लिहिलेले आहे, याची मात्र फारशी चर्चा होत नाही. वस्तुत: हे आत्मवृत्त वि. गो. खोबरेकर यांनी संपादित केलेले असून म. रा. साहित्य संस्कृती मंडळाने १९७४ मध्ये प्रकाशित केलेले आहे. मराठीमध्ये हे आत्मवृत्त जरा उशिराच प्रकाशित झाले. त्यापूर्वी त्याचा इंग्रजी अनुवाद १९५५ मध्ये 'स्वातंत्र्य संग्राम इतिहासाची साधने, भाग २'मध्ये प्रकाशित झालेला होता."</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Gmw8Jv9R-mhiAdWL3dtrmQxWYdncVoIo/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">धन्याचा बंदा गुलाम</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    TIBHA. U. HLA. धन्याचा बंदा गुलाम. मूळ लेखक. तपन भट्टाचार्य. मराठी अनुवाद. श्री. र. म. भागवत. 000. मस्पराष्ट्र राज्य. महाराष्ट्र राज्य साहित्य आणि संस्कृती मंडळ, मुंबई.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1GWeBFY0lxsGRe2u5ZluYywRX4jzJ1sJ0/view?usp=sharin" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">जीवनसंग्राम            </h1>
-                <br>
-                 <img src="https://www.bookganga.com/eBooks/Content/images/books/64e9980ab51f4c07bc2cc4251bc94586.jpg               ">
-                <br>
-                <p class="leading-relaxed">Vilas Phadke - Jivan Sangram Marathi Book buy online | Jivan Sangram by Vilas Phadke | Varada Prakashan buy online at Akshardhara.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Gapv9mBDBgmTmpeg3p0js-lCZuxrjh0r/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">धर्मकीर्तन</h1>
+                    <br>
+                <img src="https://www.jamnalalbajajfoundation.org/Media/Images/Content/Jamnalal-Bajaj_Books_Dharmakirtan.jpg">
+                    <br>
+                <p class="books-description">
+                    aman Krushna Chorghade (Devanagari: वामन कृष्ण चोरघडे) (16 July 1914 – 1 December 1995) was a Marathi writer from Maharashtra, India. He was born in Narkhed, Nagpur ... before moving on to become the vice-principal of G. S. College of Commerce and Economics in Nagpur. For some time, he chaired the Text Books Board of Maharashtra state government. In 1979, he presided over the 53rd ... 
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1n87kKcAfx5iNCTVE3XKborURA-txIb-V/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">काव्ये आणि विज्ञाने            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">This book name is काव्ये आणि विज्ञाने and it  is in marathi language            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Fw9W4A139T1sAGkVsnmB4tvDglP8BXw8/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">डीझेल इंजिन</h1>
+                    <br>
+                <img src="https://epustakalay.com/wp-content/uploads/2020/04/diesel-engin-by-subhash-savarkar-212x300.jpg">
+                    <br>
+                <p class="books-description">
+                    डीझेळ एंजिन | Diesel Engin. 5 5/10 Ratings. 1 Review(s) Add Your Review. Book Image : डीझेळ एंजिन - Diesel Engin. Book Author : सुभाष सावरकर - Subhash Savarkar. Book Language. मराठी | Hindi. Book Size : 7 MB. Total Pages : 85. Genre : Genre not Defined. Suggest Genre.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FREFR70MvUHDdB5-VR6-Ysnuokoiir1L/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">लेओनार्डो दा विंची            </h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/41+n42JjrbL._SX260_.jpg               ">
-                <br>
-                <p class="leading-relaxed">कोई व्यक्‍ति एक अच्छा चित्रकार हो सकता है; वैज्ञानिक हो सकता है; इंजीनियर और गणितज्ञ हो सकता है; पर एक ही व्यक्‍ति उत्कृष्‍ट चित्रकार; अच्छा वैज्ञानिक; श्रेष्‍ठ इंजीनियर; कुशल गणितज्ञ; अद‍्भुत चिंतक; गजब का वास्तुविद्; योजनाकार; संगीतज्ञ; वाद्ययंत्र डिजाइनर आदि सबकुछ हो— विश्‍वास करना कठिन है; लेकिन ऐसा ही एक अद‍्भुत व्यक्‍ति था—लियोनार्डो दा विंची।            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1EZ_gsliTmN4xhj11vcd5hvN57wUhXTwL/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">गजाआडच्या कविता</h1>
+                    <br>
+                <img src="http://online.anyflip.com/cetr/ilif/files/mobile/1.jpg">
+                    <br>
+                <p class="books-description">
+                    तुरुंगातल्या कैद्यांच्या कविता खरोखरच प्रकाशनयोग्य असतील तर आपण असा कवितासंग्रह. अवश्य प्रकाशित करू, असे मी त्याच क्षणी त्यांना आश्वासन दिले. 'गजाआडच्या कविता' हा
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1mvfzVSoBbbcZtHOTON2068pzQ3nhZqn7/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">ल्रुकेना क्रांतिकारी कल्पवृक्ष            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2020/04/lukena-by-vi-vi-deshpande-199x300.jpg               ">
-                <br>
-                <p class="leading-relaxed">भारत की स्वतंत्रता के लिए अंग्रेज़ों के विरुद्ध आन्दोलन दो प्रकार का था - एक अहिंसक आन्दोलन एवं दूसरा सशस्त्र क्रान्तिकारी आन्दोलन। आज़ादी के लिए 1857 से 1947 के बीच जितने भी प्रयत्न हुए, उनमें स्वतंत्रता का सपना संजोये क्रान्तिकारियों और शहीदों की उपस्थिति सबसे अधिक प्रेरणादायी सिद्ध हुई। इसलिए भारतीय क्रांतिकारी आन्दोलन भारतीय इतिहास का स्वर्ण युग कहा जाता है। मातृभूमि के प्रति जितनी भक्ति और मातृ - भावना उस युग में थी, उतनी कभी नहीं रही। प्रस्तुत पुस्तक में स्वाधीनता के लिए प्राणों की आहूति देने वाले, सर्वस्व समर्पित करने वाले महान क्रांतिकारियों, अमर बलिदानियों की ये जीवन झांकियां सजीव ढंग से उकेरी गई हैं। सबसे ख़ास बात यह है कि इस पुस्तक को एक महान क्रान्तिकारी मन्मथनाथ गुप्त ने ही लिखा है, इसलिए यह एक प्रामाणिक रचना बन गई है।            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n8Wj6UQzGJPkvfwZLVsNoXbXduiK3l8t/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">हॉकी</h1>
+                    <br>
+                <img src="https://www.bookganga.com/eBooks/Content/images/books/5db0f2f2e4b5494fbe789d80fbd0f1ee.jpg">
+                    <br>
+                <p class="books-description">
+                    हॉकी .. लेखक. शरद जोगळेकर. त्या. Boo. तिमंडळ. 10000. महाराष्ट्र राज्य. महाराष्ट्र. राज्य साहित्य संस्कृती ... हॉकी ( चेंड्ने खेळला जाणारा खेळ ), जगातील जुन्या खेळांपैकी एक आहे असे.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FSNYIA2bp_8kAIt_KNa595n8l3ORrlcJ/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">मधुमेह            </h1>
-                <br>
-                 <img src="https://www.bookganga.com/Preview/Books/4986599776184401391/Source/page6.jpg               ">
-                <br>
-                <p class="leading-relaxed">उच्च रक्त शर्करा के लक्षणों में अक्सर पेशाब आना होता है, प्यास की बढ़ोतरी होती है, और भूख में वृद्धि होती है। यदि अनुपचारित छोड़ दिया जाता है, मधुमेह कई जटिलताओं का कारण बन .            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Gd6SZh-kzdLCElV9MzZwMg8rdCs-XWkN/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">हुतात्मा दामोदर हरि चापेकर यांचे आत्मवृत्त</h1>
+                    <br>
+                <img src="https://static.langimg.com/thumb/msid-63064097,imgsize-14259,width-700,height-525,resizemode-75/maharashtra-times.jpg">
+                    <br>
+                <p class="books-description">
+                    २२ जून १८९७ रोजी रँड आणि लेफ्टनंट आयरिस्ट या दोन इंग्रज अधिकाऱ्यांचा दामोदर हरि चापेकर आणि त्यांचे बंधू बाळकृष्ण यांनी खून केला आणि संपूर्ण इंग्रज सत्ता हादरली. पुण्याला प्लेगची मोठी साथ आलेली होती. या काळात बंदोबस्तासाठी या दोन अधिकाऱ्यांची सरकारने नेमणूक केलेली होती. ही साथ पसरू नये म्हणून लोकांना गावाबाहेर नेऊन ठेवण्याच्या नावाखाली इंग्रजी सैन्याने घरोघरी अत्याचार केले. त्याचा राग येऊन या दोन भावांनी या दोन अधिकाऱ्यांचा खून केला. त्यांना फाशीची शिक्षा सुनावली गेली व यथावकाश त्यांना फाशीवर चढविण्यात आले. क्रांतिकारकांमध्ये चापेकरबंधूंचे नाव अग्रक्रमाने नोंदविले गेले. हा इतिहास आपणास माहीत आहे. परंतु दामोदर हरि चापेकर यांनी आत्मवृत्त लिहिलेले आहे, याची मात्र फारशी चर्चा होत नाही. वस्तुत: हे आत्मवृत्त वि. गो. खोबरेकर यांनी संपादित केलेले असून म. रा. साहित्य संस्कृती मंडळाने १९७४ मध्ये प्रकाशित केलेले आहे. मराठीमध्ये हे आत्मवृत्त जरा उशिराच प्रकाशित झाले. त्यापूर्वी त्याचा इंग्रजी अनुवाद १९५५ मध्ये 'स्वातंत्र्य संग्राम इतिहासाची साधने, भाग २'मध्ये प्रकाशित झालेला होता."
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Gmw8Jv9R-mhiAdWL3dtrmQxWYdncVoIo/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">मध्ययुगीन महाराष्ट्र            </h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/41Q7uPR0wrL._SX320_BO1,204,203,200_.jpg               ">
-                <br>
-                <p class="leading-relaxed">Prachin va Madhyayugin Bharatacha Itihaas: Maharashtrachya Vishesh Sandarbhasah पेपरबैक – 1 जनवरी 2019 ... Bhugol va Paryavaran - 9th Edition (Maharashtra, Bharat Aani Jag) - Prakrutik, Samajik, Aarthik Bhugol (Marathi) ... Good Book, much deeper information as compared with state board books.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1H-HeyqwHctXel-X-BYfngFVNs1uHZaos/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">जीवनसंग्राम</h1>
+                    <br>
+                <img src="https://www.bookganga.com/eBooks/Content/images/books/64e9980ab51f4c07bc2cc4251bc94586.jpg">
+                    <br>
+                <p class="books-description">
+                    Vilas Phadke - Jivan Sangram Marathi Book buy online | Jivan Sangram by Vilas Phadke | Varada Prakashan buy online at Akshardhara.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Gapv9mBDBgmTmpeg3p0js-lCZuxrjh0r/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्राचे शिल्पकार महर्षी धोंडो के शव कवे            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2020/04/maharashtrache-shilpkar-maharishi-dhondu-keshav-karve-300x212.jpg               ">
-                <br>
-                <p class="leading-relaxed">महाराष्ट्राचे शिल्पकार महर्षी धोंडो केशव कर्वे | Maharashtrache Shilpakar Maharshi Dhondo Keshav Karve. भाषा : मराठी लेखक : एम. एन. जोशी (M. N. Joshi) पृष्ठे : ९८ वजन : १३४ ग्रॅम. Send to friends; Print. Categories: इतिहास ...            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FuDix5StRgME6hnhfNmO8S_hWXjoDbce/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">काव्ये आणि विज्ञाने</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    This book name is काव्ये आणि विज्ञाने and it is in marathi language
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Fw9W4A139T1sAGkVsnmB4tvDglP8BXw8/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्राचे शिल्पकार दादासाहेब फाळके            </h1>
-                <br>
-                 <img src="https://www.bookganga.com/Preview/eBooks/080811055518/Source/index.jpg               ">
-                <br>
-                <p class="leading-relaxed">दादासाहेब फाळके. भारतीय चित्रपटसृष्टीचे जनक. Language: मराठी. 0 Reviews | Write a review | Tell a friend. Authors: बापू वाटवे. Category: व्यक्तिचित्रण. Publication: नॅशनल बुक ट्रस्ट इंडिया            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1F8-a-AYpTQCVUES5k7Sw1Qw1iPuyQ7DO/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">लेओनार्डो दा विंची </h1>
+                    <br>
+                <img src="https://m.media-amazon.com/images/I/41+n42JjrbL._SX260_.jpg">
+                    <br>
+                <p class="books-description">
+                    कोई व्यक्‍ति एक अच्छा चित्रकार हो सकता है; वैज्ञानिक हो सकता है; इंजीनियर और गणितज्ञ हो सकता है; पर एक ही व्यक्‍ति उत्कृष्‍ट चित्रकार; अच्छा वैज्ञानिक; श्रेष्‍ठ इंजीनियर; कुशल गणितज्ञ; अद‍्भुत चिंतक; गजब का वास्तुविद्; योजनाकार; संगीतज्ञ; वाद्ययंत्र डिजाइनर आदि सबकुछ हो— विश्‍वास करना कठिन है; लेकिन ऐसा ही एक अद‍्भुत व्यक्‍ति था—लियोनार्डो दा विंची।
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1EZ_gsliTmN4xhj11vcd5hvN57wUhXTwL/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्राचे शिल्पकार शंकरराव किर्लोस्कर            </h1>
-                <br>
-                 <img src="https://ia800801.us.archive.org/BookReader/BookReaderImages.php?zip=/14/items/MaharashtraCheShilpkarShankarraoKirloskar/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2.zip&file=Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_0000.jp2&id=MaharashtraCheShilpkarShankarraoKirloskar&scale=8&rotate=0               ">
-                <br>
-                <p class="leading-relaxed">महाराष्ट्राचे. 'शिल्पकार. शंकरराव किर्लोस्कर. H: RAJA BADSAL. शांता किर्लोस्कर. महाराष्ट्र राज्य साहित्य आणि संस्कृती मंडळ, मुंबई pion ...            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1GYX6jTlgMkksLeBB5PkzJGprwUMqvnzT/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">ल्रुकेना क्रांतिकारी कल्पवृक्ष</h1>
+                    <br>
+                <img src="https://epustakalay.com/wp-content/uploads/2020/04/lukena-by-vi-vi-deshpande-199x300.jpg">
+                    <br>
+                <p class="books-description">
+                    भारत की स्वतंत्रता के लिए अंग्रेज़ों के विरुद्ध आन्दोलन दो प्रकार का था - एक अहिंसक आन्दोलन एवं दूसरा सशस्त्र क्रान्तिकारी आन्दोलन। आज़ादी के लिए 1857 से 1947 के बीच जितने भी प्रयत्न हुए, उनमें स्वतंत्रता का सपना संजोये क्रान्तिकारियों और शहीदों की उपस्थिति सबसे अधिक प्रेरणादायी सिद्ध हुई। इसलिए भारतीय क्रांतिकारी आन्दोलन भारतीय इतिहास का स्वर्ण युग कहा जाता है। मातृभूमि के प्रति जितनी भक्ति और मातृ - भावना उस युग में थी, उतनी कभी नहीं रही। प्रस्तुत पुस्तक में स्वाधीनता के लिए प्राणों की आहूति देने वाले, सर्वस्व समर्पित करने वाले महान क्रांतिकारियों, अमर बलिदानियों की ये जीवन झांकियां सजीव ढंग से उकेरी गई हैं। सबसे ख़ास बात यह है कि इस पुस्तक को एक महान क्रान्तिकारी मन्मथनाथ गुप्त ने ही लिखा है, इसलिए यह एक प्रामाणिक रचना बन गई है।
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1n8Wj6UQzGJPkvfwZLVsNoXbXduiK3l8t/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्राचे शिल्पकार ताराबाई शिंदे            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2020/04/maharashtracha-shilpakar-tarabai-shinde-by-indrajit-bhalerav-212x300.jpg               ">
-                <br>
-                <p class="leading-relaxed">१८५० साली व मृत्यू इ.स. १९१०मध्ये झाला. ह्या महाराष्ट्रातील एक स्त्रीवादी लेखिका व सत्यशोधक समाजाच्या कार्यकर्त्या होत. १८८२ साली प्रसिद्ध झालेल्या स्त्री--पुरुष तुलना             </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1n9DlMvlol1QPG8IrBmprMWpi3bslUiIy/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">मधुमेह
+                </h1>
+                    <br>
+                <img src="https://www.bookganga.com/Preview/Books/4986599776184401391/Source/page6.jpg">
+                    <br>
+                <p class="books-description">
+                    उच्च रक्त शर्करा के लक्षणों में अक्सर पेशाब आना होता है, प्यास की बढ़ोतरी होती है, और भूख में वृद्धि होती है। यदि अनुपचारित छोड़ दिया जाता है, मधुमेह कई जटिलताओं का कारण बन .
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Gd6SZh-kzdLCElV9MzZwMg8rdCs-XWkN/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्राची सागरी मत्स्य्संपती            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">This book name isमहाराष्ट्राची सागरी मत्स्य्संपती and it  is in marathi language             </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FuvKy08gqorsicVHRoUfqtbQuII0TQ5p/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">मध्ययुगीन महाराष्ट्र</h1>
+                    <br>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41Q7uPR0wrL._SX320_BO1,204,203,200_.jpg">
+                    <br>
+                <p class="books-description">
+                    Prachin va Madhyayugin Bharatacha Itihaas: Maharashtrachya Vishesh Sandarbhasah पेपरबैक – 1 जनवरी 2019 ... Bhugol va Paryavaran - 9th Edition (Maharashtra, Bharat Aani Jag) - Prakrutik, Samajik, Aarthik Bhugol (Marathi) ... Good Book, much deeper information as compared with state board books.  
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1H-HeyqwHctXel-X-BYfngFVNs1uHZaos/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महात्मा ज्योतीराव फुले            </h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/41udqDCznfL.jpg               ">
-                <br>
-                <p class="leading-relaxed"> Mahatma Jyotiba Phule Yanche Sarvajanik Satyadharma · Mahatma jyotiba phule yanche samagra vangmay · Gulamgiri (Original) · Shetkaryacha Asood · Gulamgiri · Shetkaryancha Asood.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1GVYe1c3gNjwKAcsbcZMcw6TDhUWo3W76/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्राचे शिल्पकार महर्षी धोंडो के शव कवे</h1>
+                    <br>
+                <img src="https://epustakalay.com/wp-content/uploads/2020/04/maharashtrache-shilpkar-maharishi-dhondu-keshav-karve-300x212.jpg">
+                    <br>
+                <p class="books-description">
+                    महाराष्ट्राचे शिल्पकार महर्षी धोंडो केशव कर्वे | Maharashtrache Shilpakar Maharshi Dhondo Keshav Karve. भाषा : मराठी लेखक : एम. एन. जोशी (M. N. Joshi) पृष्ठे : ९८ वजन : १३४ ग्रॅम. Send to friends; Print. Categories: इतिहास ...
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FuDix5StRgME6hnhfNmO8S_hWXjoDbce/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">महाराष्ट्राचे शिल्पकार ज्योतिबा फुले            </h1>
-                <br>
-                 <img src="https://www.bookganga.com/eBooks/Content/images/books/07a40365c0b44984abe89c4077b94b11.jpg               ">
-                <br>
-                <p class="leading-relaxed">महात्मा जोतीराव गोविंदराव फुले (जन्म: ११ एप्रिल १८२७; मृत्यू: २८ नोव्हेंबर १८९०), इतर नावे: महात्मा फुले, ज्योतिबा फुले, हे मराठी लेखक, विचारवंत आणि समाजसुधारक होते. ... तसेच त्यांनी महाराष्ट्रातील स्त्री शिक्षणाची मुहूर्तमेढ रोवली. ... महात्मा ज्योतिबा फुले यांचा सार्वजनिक सत्यधर्म (संपादित) प्रकाशक : श्री गजानन बुक डेपो; महात्मा ज्योतिराव ...            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1HBcwVUEvU7KbBrEaRwLwU8ggus-qfxtz/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्राचे शिल्पकार दादासाहेब फाळके</h1>
+                    <br>
+                <img src="https://www.bookganga.com/Preview/eBooks/080811055518/Source/index.jpg">
+                    <br>
+                <p class="books-description">
+                    दादासाहेब फाळके. भारतीय चित्रपटसृष्टीचे जनक. Language: मराठी. 0 Reviews | Write a review | Tell a friend. Authors: बापू वाटवे. Category: व्यक्तिचित्रण. Publication: नॅशनल बुक ट्रस्ट इंडिया 
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1F8-a-AYpTQCVUES5k7Sw1Qw1iPuyQ7DO/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">मानवी आनुवंशिक            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">This book name is मानवी आनुवंशिका  and it  is in marathi language            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1GjUJVa7c_hcd9UPJa-TglidzNCkzw9Tp/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्राचे शिल्पकार शंकरराव किर्लोस्कर</h1>
+                    <br>
+                <img src="https://ia800801.us.archive.org/BookReader/BookReaderImages.php?zip=/14/items/MaharashtraCheShilpkarShankarraoKirloskar/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2.zip&file=Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_jp2/Maharashtra%20che%20Shilpkar%20Shankarrao%20Kirloskar_0000.jp2&id=MaharashtraCheShilpkarShankarraoKirloskar&scale=8&rotate=0">
+                    <br>
+                <p class="books-description">
+                    महाराष्ट्राचे. 'शिल्पकार. शंकरराव किर्लोस्कर. H: RAJA BADSAL. शांता किर्लोस्कर. महाराष्ट्र राज्य साहित्य आणि संस्कृती मंडळ, मुंबई pion ...
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1GYX6jTlgMkksLeBB5PkzJGprwUMqvnzT/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">भौतिकी शास्त्रातील नोबेल पारितोषक विजेते भाग ५            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2020/04/bhoutiki-shasratil-nobel-paritoshik-vijete-by-chn-ra-talpade-211x300.jpg               ">
-                <br>
-                <p class="leading-relaxed">नोबेल पारितोषिक हा भौतिकशास्त्र, रसायनशास्त्र या क्षेत्रातील "मानवजातला सर्वात मोठा फायदा" ... केलेले, ज्यात निर्दिष्ट करण्यात आले की त्याच्या नशिबी काही भाग बक्षिसे तयार करण्यासाठी वापरला जाईल. ... १९४३ मध्ये साहित्याच्या नोबेल पुरस्कारासाठी आणि नोबेल शांती पुरस्कारासाठी १९५० मध्ये ... २०१९, Abhijit Banerjee FT Goldman Sachs Business Book of the Year Award 2011 (cropped            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FSw7ak9cE06QOmKQj5dIGY1djEhD9gZ5/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्राचे शिल्पकार ताराबाई शिंदे</h1>
+                    <br>
+                <img src="https://epustakalay.com/wp-content/uploads/2020/04/maharashtracha-shilpakar-tarabai-shinde-by-indrajit-bhalerav-212x300.jpg">
+                    <br>
+                <p class="books-description">
+                    १८५० साली व मृत्यू इ.स. १९१०मध्ये झाला. ह्या महाराष्ट्रातील एक स्त्रीवादी लेखिका व सत्यशोधक समाजाच्या कार्यकर्त्या होत. १८८२ साली प्रसिद्ध झालेल्या स्त्री--पुरुष तुलना
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1n9DlMvlol1QPG8IrBmprMWpi3bslUiIy/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">भौतिकी शास्त्रातील नोबेल पारितोषक विजेते भाग ४            </h1>
-                <br>
-                 <img src="https://epustakalay.com/wp-content/uploads/2020/04/bhoutiki-shasratil-nobel-paritoshik-vijete-by-chn-ra-talpade-211x300.jpg               ">
-                <br>
-                <p class="leading-relaxed">नोबेल पारितोषिक हा जगातील अत्यंत प्रतिष्ठेचा पुरस्कार आहे. रसायनशास्त्र, भौतिकशास्त्र, साहित्य, जागतिक शांतता, वैद्यकशास्त्र किंवा ... रोजी हा पुरस्कार दिला जातो.१९४० ते १९४२ पर्यंत दुसऱ्या महायुध्दामुळे हा पुरस्कार ... ते ७० टक्के रकमेचे पाच सारखे भाग करून प्रत्येक क्षेत्रातील पारितोषिकासाठी देण्याचे ... आधीचे नोबेल पारितोषिक विजेते.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1GZvSCrPNOi8UrvVrxrcFM5jeScn14c3-/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्राची सागरी मत्स्य्संपती</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    This book name isमहाराष्ट्राची सागरी मत्स्य्संपती and it is in marathi language
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FuvKy08gqorsicVHRoUfqtbQuII0TQ5p/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">माहेरी गेली            </h1>
-                <br>
-                 <img src="https://ia800601.us.archive.org/BookReader/BookReaderImages.php?zip=/24/items/MaheriGeli/Maheri%20Geli_jp2.zip&file=Maheri%20Geli_jp2/Maheri%20Geli_0000.jp2&id=MaheriGeli&scale=4&rotate=0               ">
-                <br>
-                <p class="leading-relaxed"> Maheri Geli. by: SUVRATSUT. Publication date: 2017-09-21. Usage: Attribution-No Derivative Works 3.0 Creative Commons License by nd. Topics: MAHER. Collection: opensource. Language: Marathi. book. Addeddate: 2017-09-21 10:59:00. Identifier: MaheriGeli. Identifier-ark: ark:/13960/t0dv7rn7s</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1H8Ra-Oj4b7px6Sw46y42lhYtKG2-0KCB/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महात्मा ज्योतीराव फुले</h1>
+                    <br>
+                <img src="https://m.media-amazon.com/images/I/41udqDCznfL.jpg">
+                    <br>
+                <p class="books-description">
+                    Mahatma Jyotiba Phule Yanche Sarvajanik Satyadharma · Mahatma jyotiba phule yanche samagra vangmay · Gulamgiri (Original) · Shetkaryacha Asood · Gulamgiri · Shetkaryancha Asood.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1GVYe1c3gNjwKAcsbcZMcw6TDhUWo3W76/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">मोरस मराठी कविता दशावतार            </h1>
-                <br>
-                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsahitya.marathi.gov.in%2Fscans%2FMoras%2520Marathi%2520kavita%2520dashavatar.pdf&psig=AOvVaw2nCuArHoXPCEOzniz9c1w9&ust=1622712032344000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICUv8fP-PACFQAAAAAdAAAAABADjpg               ">
-                <br>
-                <p class="leading-relaxed">मोरस मराठी कविता दशावतार. मोरस मराठी कविता दशावतार. (प्रातिनिधिक काव्य ... 'मोरस मराठी भाषेतील साहित्य महाराष्ट्र राज्य साहित्य संस्कृती. मंडळाला उपलब्ध झाले आहे. सदाशिव ...            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Frqp0F_jPnydbAOfYVGuIl4QJZKTEDzy/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">महाराष्ट्राचे शिल्पकार ज्योतिबा फुले</h1>
+                    <br>
+                <img src="https://www.bookganga.com/eBooks/Content/images/books/07a40365c0b44984abe89c4077b94b11.jpg">
+                    <br>
+                <p class="books-description">
+                    महात्मा जोतीराव गोविंदराव फुले (जन्म: ११ एप्रिल १८२७; मृत्यू: २८ नोव्हेंबर १८९०), इतर नावे: महात्मा फुले, ज्योतिबा फुले, हे मराठी लेखक, विचारवंत आणि समाजसुधारक होते. ... तसेच त्यांनी महाराष्ट्रातील स्त्री शिक्षणाची मुहूर्तमेढ रोवली. ... महात्मा ज्योतिबा फुले यांचा सार्वजनिक सत्यधर्म (संपादित) प्रकाशक : श्री गजानन बुक डेपो; महात्मा ज्योतिराव ...
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1HBcwVUEvU7KbBrEaRwLwU8ggus-qfxtz/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">मोरस कथा दशावतार            </h1>
-                <br>
-                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsahitya.marathi.gov.in%2Febooks%2F%25E0%25A4%25AE%25E0%25A5%258B%25E0%25A4%25B0%25E0%25A4%25B8%2520%25E0%25A4%25AE%25E0%25A4%25B0%25E0%25A4%25BE%25E0%25A4%25A0%25E0%25A5%2580%2520%25E0%25A4%2595%25E0%25A4%25B5%25E0%25A4%25BF%25E0%25A4%25A4%25E0%25A4%25BE%2520%25E0%25A4%25A6%25E0%25A4%25B6%25E0%25A4%25BE%25E0%25A4%25B5%25E0%25A4%25A4%25E0%25A4%25BE%25E0%25A4%25B0.pdf&psig=AOvVaw1uS4CSYs7r3uwZ6UzAd67E&ust=1622712366756000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDc--PQ-PACFQAAAAAdAAAAABAO               ">
-                <br>
-                <p class="leading-relaxed">मोरस मराठी कविता दशावतार. मोरस मराठी कविता दशावतार ... शिवाय मॉरिशस बेटावरील दशावताराची मराठी संहिताही मंडळाला प्राप्त झाली आहे. मॉरिशस-१५० वर्षे. भारतीय             </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FmVfM0b5Alt--aW7hiv-jd6RwbQ8i3ZC/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">मानवी आनुवंशिक</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    This book name is मानवी आनुवंशिका and it is in marathi language
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1GjUJVa7c_hcd9UPJa-TglidzNCkzw9Tp/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">मुस्लिम व्यक्तिगत कायद्यात सुधारणा            </h1>
-                <br>
-                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsahitya.marathi.gov.in%2Fscans%2FMuslim%2520Vyakatigat%2520Kaydyat%2520Sudharana.pdf&psig=AOvVaw0hGNMtfgCV7OmGPcoX7lyy&ust=1622712688169000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiI9YHS-PACFQAAAAAdAAAAABAd               ">
-                <br>
-                <p class="leading-relaxed">पन्नालाल सुराणा यांनी केला असून तो “मुस्लिम व्यक्तिगत कायद्यात सुधारणा” या ... पैगंबरांच्या आयुष्यातील अखेरच्या दहा वर्षांत (हिजरी सन १ ते १०) मुस्लिम कायद्याचा उगम. आहे.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1nB6bl6iIlTIh9BAQ6TbMGqE9LlGiR02V/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">भौतिकी शास्त्रातील नोबेल पारितोषक विजेते भाग ५</h1>
+                    <br>
+                <img src="https://epustakalay.com/wp-content/uploads/2020/04/bhoutiki-shasratil-nobel-paritoshik-vijete-by-chn-ra-talpade-211x300.jpg">
+                    <br>
+                <p class="books-description">
+                    नोबेल पारितोषिक हा भौतिकशास्त्र, रसायनशास्त्र या क्षेत्रातील "मानवजातला सर्वात मोठा फायदा" ... केलेले, ज्यात निर्दिष्ट करण्यात आले की त्याच्या नशिबी काही भाग बक्षिसे तयार करण्यासाठी वापरला जाईल. ... १९४३ मध्ये साहित्याच्या नोबेल पुरस्कारासाठी आणि नोबेल शांती पुरस्कारासाठी १९५० मध्ये ... २०१९, Abhijit Banerjee FT Goldman Sachs Business Book of the Year Award 2011.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FSw7ak9cE06QOmKQj5dIGY1djEhD9gZ5/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">संगीताचार्य पं. विष्णु नारायण भारतवंडे            </h1>
-                <br>
-                 <img src="data:image/jpeg;base64,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">
-                <br>
-                <p class="leading-relaxed">भातखण्डे संगीत शास्त्र : पं. विष्णुनारायण भातखण्डे द्वारा हिंदी पीडीऍफ़ पुस्तक – संगीत | Bhatkhande Sangeet Shastra : by Pt. Vishnunarayan Bhatkhande            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1E_Q_T-YT5PYGsyMhVnYvl4qOcyoQFNU-/view?usp=sharing					                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">भौतिकी शास्त्रातील नोबेल पारितोषक विजेते भाग ४ </h1>
+                    <br>
+                <img src="https://epustakalay.com/wp-content/uploads/2020/04/bhoutiki-shasratil-nobel-paritoshik-vijete-by-chn-ra-talpade-211x300.jpg">
+                    <br>
+                <p class="books-description">
+                    नोबेल पारितोषिक हा जगातील अत्यंत प्रतिष्ठेचा पुरस्कार आहे. रसायनशास्त्र, भौतिकशास्त्र, साहित्य, जागतिक शांतता, वैद्यकशास्त्र किंवा ... रोजी हा पुरस्कार दिला जातो.१९४० ते १९४२ पर्यंत दुसऱ्या महायुध्दामुळे हा पुरस्कार ... ते ७० टक्के रकमेचे पाच सारखे भाग करून प्रत्येक क्षेत्रातील पारितोषिकासाठी देण्याचे ... आधीचे नोबेल पारितोषिक विजेते.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1GZvSCrPNOi8UrvVrxrcFM5jeScn14c3-/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">१४ पत्रे            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">Home > Books > साहित्य > १४ पत्रे. १४ पत्रे. Language: मराठी. 0 Reviews | Write a review | Tell a friend. Authors: ज. बा. कुलकर्णी. Category: साहित्य. Publication: महाराष्ट्र राज्य साहित्य व संस्कृती मंडळ. Pages: 81. Weight: 120 Gm."</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1F1jXPQFLOlDflen6UcoKSpCNAVeV7Wxl/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">माहेरी गेली</h1>
+                    <br>
+                <img src="https://ia800601.us.archive.org/BookReader/BookReaderImages.php?zip=/24/items/MaheriGeli/Maheri%20Geli_jp2.zip&file=Maheri%20Geli_jp2/Maheri%20Geli_0000.jp2&id=MaheriGeli&scale=4&rotate=0">
+                    <br>
+                <p class="books-description">
+                    Maheri Geli. by: SUVRATSUT. Publication date: 2017-09-21. Usage: Attribution-No Derivative Works 3.0 Creative Commons License by nd. Topics: MAHER. Collection: opensource. Language: Marathi. book. Addeddate: 2017-09-21 10:59:00. Identifier: MaheriGeli. Identifier-ark: ark:/13960/t0dv7rn7s
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1H8Ra-Oj4b7px6Sw46y42lhYtKG2-0KCB/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">प्लास्टिकची मेजवानी            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">प्लॅस्टिकची मेजवानी. (प्लॅस्टिक फीस्ट). प्रस्तुतचे पुस्तक प्रकाशित करताना महाराष्ट्र राज्य साहित्य आणि संस्कृती. मंडळाला आनंद होत आहे. आजच्या वैज्ञानिक युगात ...            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1FRwyqJ9AkuXpflbt4GIr0BAac0AzaAOa/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">मोरस मराठी कविता दशावतार</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    मोरस मराठी कविता दशावतार. मोरस मराठी कविता दशावतार. (प्रातिनिधिक काव्य ... 'मोरस मराठी भाषेतील साहित्य महाराष्ट्र राज्य साहित्य संस्कृती. मंडळाला उपलब्ध झाले आहे. सदाशिव ...   
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Frqp0F_jPnydbAOfYVGuIl4QJZKTEDzy/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">मराठी            </h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">सचित्र कोश            </h1>
-                <br>
-                 <img src="https://ia800807.us.archive.org/BookReader/BookReaderImages.php?zip=/32/items/KhandeshatilKrishakJivanSachitraKosh/Khandeshatil%20Krishak%20Jivan%20Sachitra%20kosh_jp2.zip&file=Khandeshatil%20Krishak%20Jivan%20Sachitra%20kosh_jp2/Khandeshatil%20Krishak%20Jivan%20Sachitra%20kosh_0000.jp2&id=KhandeshatilKrishakJivanSachitraKosh&scale=2&rotate=0               ">
-                <br>
-                <p class="leading-relaxed">खानदेशातील कृषक जीवन. सचित्र कोश. डॉ. रमेश सूर्यवंशी. महाराष्ट्र राज्य साहित्य आणि संस्कृती ... प्रस्तुतचा "खानदेशातील कृषक जीवनविषयक सचित्र कोश" हा तौलनिक अभ्यासक, भाषा.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1GsmL6CZDXEBHlfswyuLo5SiPb5cpcZ9J/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">मोरस कथा दशावतार</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    मोरस मराठी कविता दशावतार. मोरस मराठी कविता दशावतार ... शिवाय मॉरिशस बेटावरील दशावताराची मराठी संहिताही मंडळाला प्राप्त झाली आहे. मॉरिशस-१५० वर्षे. भारतीय
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FmVfM0b5Alt--aW7hiv-jd6RwbQ8i3ZC/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
-      </section>
+        </section>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">मुस्लिम व्यक्तिगत कायद्यात सुधारणा</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    पन्नालाल सुराणा यांनी केला असून तो “मुस्लिम व्यक्तिगत कायद्यात सुधारणा” या ... पैगंबरांच्या आयुष्यातील अखेरच्या दहा वर्षांत (हिजरी सन १ ते १०) मुस्लिम कायद्याचा उगम. आहे.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1nB6bl6iIlTIh9BAQ6TbMGqE9LlGiR02V/view?usp=sharing" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">संगीताचार्य पं. विष्णु नारायण भारतवंडे</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    भातखण्डे संगीत शास्त्र : पं. विष्णुनारायण भातखण्डे द्वारा हिंदी पीडीऍफ़ पुस्तक – संगीत | Bhatkhande Sangeet Shastra : by Pt. Vishnunarayan Bhatkhande
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1E_Q_T-YT5PYGsyMhVnYvl4qOcyoQFNU-/view?usp=sharing" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">१४ पत्रे</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    १४ पत्रे. १४ पत्रे. Language: मराठी. 0 Reviews | Write a review | Tell a friend. Authors: ज. बा. कुलकर्णी. Category: साहित्य. Publication: महाराष्ट्र राज्य साहित्य व संस्कृती मंडळ. Pages: 81.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1F1jXPQFLOlDflen6UcoKSpCNAVeV7Wxl/view?usp=sharing" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main> 
+
+    <main class="wrapper">
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">प्लास्टिकची मेजवानी</h1>
+                    <br>
+                <img src="marathi-cover.png">
+                    <br>
+                <p class="books-description">
+                    प्लॅस्टिकची मेजवानी. (प्लॅस्टिक फीस्ट). प्रस्तुतचे पुस्तक प्रकाशित करताना महाराष्ट्र राज्य साहित्य आणि संस्कृती. मंडळाला आनंद होत आहे. आजच्या वैज्ञानिक युगात ...
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1FRwyqJ9AkuXpflbt4GIr0BAac0AzaAOa/view?usp=sharing" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="mb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">मराठी</h2>
+                <h1 class="book-name">सचित्र कोश</h1>
+                    <br>
+                <img src="https://ia800807.us.archive.org/BookReader/BookReaderImages.php?zip=/32/items/KhandeshatilKrishakJivanSachitraKosh/Khandeshatil%20Krishak%20Jivan%20Sachitra%20kosh_jp2.zip&file=Khandeshatil%20Krishak%20Jivan%20Sachitra%20kosh_jp2/Khandeshatil%20Krishak%20Jivan%20Sachitra%20kosh_0000.jp2&id=KhandeshatilKrishakJivanSachitraKosh&scale=2&rotate=0">
+                    <br>
+                <p class="books-description">
+                    खानदेशातील कृषक जीवन. सचित्र कोश. डॉ. रमेश सूर्यवंशी. महाराष्ट्र राज्य साहित्य आणि संस्कृती ... प्रस्तुतचा "खानदेशातील कृषक जीवनविषयक सचित्र कोश" हा तौलनिक अभ्यासक, भाषा.  
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1GsmL6CZDXEBHlfswyuLo5SiPb5cpcZ9J/view?usp=sharing" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main> 
+ 
+
+    <!---------------End--------------->
+
+    <div class="end-container">
+    <h2>आप मराठी पुस्तकों के अंत तक पहुँच चुके हैं</h2>
+    <hr>
+    <a href="#top">
+        <h3>उपर वापस जाएं</h3>
+    </a>
+   </div>
+
+          <!------------Footer------------------------->
+
+          <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="footer-logo.png" alt="logo" class="footer-logo">
+                    <p style="margin-top: -50px;line-height: 25px;">This is an Online Platform for the reading of students. Please note that all the books in this platform are borrowed from other Websites and we give equal credits to them.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Credits <div class="underline"><span></span></div></h3>
+                    <ul>
+                        <li><a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a></li>
+                        <li><a href="https://z-lib.org/" target="_blank">Z Library</a></li>
+                        <li><a href="https://pdfroom.com/" target="_blank">PDF Room</a></li>
+                        <li><a href="https://planetpdf.com/" target="_blank">Planet PDF</a></li>
+                        <li><a href="https://www.planetebook.com/" target="_blank">Planet E-Book</a></li>
+                        <li><a href="https://fb2bookfree.com/" target="_blank">FB2 Book Free</a></li>
+                        <li><a href="https://allreadingworld.com/" target="_blank">All Reading World</a>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links <div class="underline"><span></span></div></h3>
+                    <ul>
+                        <li><a href="index.html" target="_blank">Home</a></li>
+                        <li><a href="About_Page.html" target="_blank">About</a></li>
+                        <li><a href="books.html" target="_blank">Books</a></li>
+                        <li><a href="Comment.html" target="_blank">Contact</a></li>
+                        <li><a href="Comment.html" target="_blank">Comment</a></li>
+                        <li><a href="Books_Review.html" target="_blank">Book Review</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us <div class="underline"><span></span></div></h3>
+                    <form class="footer-form"> 
+                        <i class="fa-solid fa-envelope"></i>
+                        <input placeholder="Enter your email-id">
+                        <a href="oops.html"><button class="footer-btn"><i class="fa-solid fa-arrow-right"></i></button></a>
+                    </form>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtN5a1UpFa2vPBlOLosZs-A" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <i class="fa-brands fa-discord"></i>
+                    </div> 
+                </div>
+            </div>
+            <hr>
+            <p class="copywright">Author's Attic | Virtual Library &#169 2022 - All rights reserved</p>
+        </footer>
+
+
+    <!--------JavaScript for toggle menu------>
+            <script>
+                var navLinks = document.getElementById("navLinks");
+                function showMenu(){
+                    navLinks.style.right = "0";
+                }
+                function hideMenu(){
+                    navLinks.style.right = "-200px";
+                }
+            </script>
+
 </body>
 </html>
