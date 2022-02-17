@@ -4,427 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <title>Scout & Guide Books | Author's Attic Virtual Library</title>
     <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-        *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-    </style>
+    <script src="https://kit.fontawesome.com/3a48330618.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Scout & Guide Books | Author's Attic Virtual Library</title>
 </head>
 <body>
+
+    <!----------------------Header------------------------------->
+
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
@@ -443,488 +31,447 @@ h3{
         <h1>Scout & Guide Books</h1>
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">APRO-Part 2</h1>
-              <br>
-               <img src="https://online.pubhtml5.com/srxr/cqgf/files/large/2.jpg?1586818200">
-              <br>
-              <p class="leading-relaxed">
-                The book was originally a manual for self-instruction in observation, tracking and woodcraft skills as well as self-discipline and self-improvement, about the Empire and duty as citizens with an eclectic mix of anecdotes and unabashed .
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1Sw9qHm3qj6BClUGEVwNijE-4D8mXH92H/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Rovering To Success</h1>
-              <br>
-               <img src="https://pictures.abebooks.com/inventory/30666280032.jpg">
-              <br>
-              <p class="leading-relaxed">
-                Illustrated by the Author. Contents: Preface; How to Be Happy Through Rich or Poor; Rocks You are Likely to Bump on; Rovering. 'To sum up in a few words, success does not consist so much in gaining money and power as in gaining happiness. Many young men drift along with the rest of the crowd according to chance, and thus never reach happiness.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1T4jB0KaK3K1-AguWwRBf-dyraD1FgVg0/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Scout And Guide Rules Book</h1>
-              <br>
-               <img src="https://image.slidesharecdn.com/scoutsguidesactivitiesinkvsfinal-150609054033-lva1-app6892/95/scouts-guides-activities-in-kvs-16-638.jpg?cb=1433828500">
-              <br>
-              <p class="leading-relaxed">
-                The Bharat Scouts and Guides is the national Scouting and Guiding association of India. The national headquarters of BSG is recognised by the Government of India.In this Book There Are Rules Of Scout And Guide.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1T509y2CND8rU4ZEcH5xjI2efdOkWyLbg/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">APRO-Part 3</h1>
-              <br>
-               <img src="data:image/jpeg;base64,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">
-              <br>
-              <p class="leading-relaxed">
-                The book was originally a manual for self-instruction in observation, tracking and woodcraft skills as well as self-discipline and self-improvement, about the Empire and duty as citizens with an eclectic mix of anecdotes and unabashed .
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1TDuhiPu2Usu-wpNVY7tflZkPNmcTSTKO/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Scouting for Boys: A Handbook for Instruction in Good Citizenship</h1>
-              <br>
-               <img src="https://cdn.asaha.com/assets/thumbs/adc/adca368635731a97b0c5595e977277ba.jpg">
-              <br>
-              <p class="leading-relaxed">
-                The book was originally a manual for self-instruction in observation, tracking and woodcraft skills as well as self-discipline and self-improvement, about the Empire and duty as citizens with an eclectic mix of anecdotes and unabashed .
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://www.pdfdrive.com/download.pdf?id=158257065&h=4bc27ac0c4c9f67e5297cea1c1b83e56&u=cache&ext=pdf">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-    
-                 <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE BOOKS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Pravesh Pratham Sopan </h1>
-                <br>
-                 <img src="https://www.scoutshopindia.in/IImage/Pratham-Sopan-Scouts-(English)-%E2%94%80-">
-                <br>
-                <p class="leading-relaxed">
-                  Opportunity by NSGDC. Material has been ... number assigned by the Local or District Association, as the case may be. The Patrol System : ... than six months service as Patrol Leader, preferably with Dwitiya Sopan. 
-                </p>
-             
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1pPaxwH3LBDXpAn2WUTXrqBcGf0Cjz0Yc/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-             
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE BOOKS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Scouting for Boys </h1>
-                <br>
-                 <img src=https://images-na.ssl-images-amazon.com/images/I/51gZgroaB-L.jpg>
-                <br>
-                <p class="leading-relaxed">
-                  Scouting for Boys: A handbook for instruction in good citizenship is a book on Boy Scout training, published in various editions since 1908. Early editions were written and illustrated by Robert Baden-Powell with later editions being extensively rewritten by others.
-                </p>
-             
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1zV3CM77S4MNMUhPsJPI5hhcp1Ko1voQ0/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-    
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-             
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE BOOKS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Scout Handbook </h1>
-                <br>
-                 <img src=https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Boy_Scout_Handbook_%2812th_edition_2009%29.png/220px-Boy_Scout_Handbook_%2812th_edition_2009%29.png>
-                <br>
-                <p class="leading-relaxed">
-                  A handbook to tell you all instructions about Scouting 
-                </p>
-             
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1pENFHGXnY7fKRdNuPg15cLXHG9nHMYo7/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-             
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">SCOUT AND GUIDE BOOKS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Selous Scouts Volume 4</h1>
-                <br>
-                 <img src=https://kbimages1-a.akamaihd.net/6e9d3686-d75d-4075-931e-938e6cc4299d/353/569/90/False/selous-scouts.jpg>
-                <br>
-                <p class="leading-relaxed">
-              The Rhodesian War. Fifty years on, this superb and exciting book depicts the military history of Southern Rhodesia from the first resistance to colonial rule.
-                </p>
-             
-                <br>
-                <br>
-                  <a href=https://drive.google.com/file/d/1wJqbCXLggY1pno1apgJq3cFaF0PDb6fz/view?usp=sharing>
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+    <!----------------Main (Books)------------------------->
 
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">the little Book incredibly useful  knots            </h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/71ltlrXDZnL.jpg">
-                <br>
-                <p class="leading-relaxed">The Little Book of Incredibly Useful Knots: 200 Practical Knots for Sailors, Climbers, Campers & Other Adventurers            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1UqOsogjSJ-BFixDYTdEc6MQfisNtWULe/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">APRO-Part 2</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The book was originally a manual for self-instruction in observation, tracking and woodcraft skills as well as self-discipline and self-improvement, about the Empire and duty as citizens with an eclectic mix of anecdotes and unabashed . 
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Sw9qHm3qj6BClUGEVwNijE-4D8mXH92H/view?usp=sharing" target="_blank">Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">the field guide to knots</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/9172Hy4wYZL.jpg">
-                <br>
-                <p class="leading-relaxed">"The Field Guide to Knots: How to Identify, Tie, and Untie Over 80 Essential Knots for Outdoor Pursuits                Book by Bob Holtzman"</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Ovh5Vz5LoBMNmUN_OwqrIgxdklTssH7U/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Rovering To Success</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Illustrated by the Author. Contents: Preface; How to Be Happy Through Rich or Poor; Rocks You are Likely to Bump on; Rovering. 'To sum up in a few words, success does not consist so much in gaining money and power as in gaining happiness. Many young men drift along with the rest of the crowd according to chance, and thus never reach happiness.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1T4jB0KaK3K1-AguWwRBf-dyraD1FgVg0/view?usp=sharing" target="_blank" >Download</a>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Scheme of Training guide wing</h1>
-                <br>
-                 <img src="data:image/jpeg;base64,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">
-                <br>
-                <p class="leading-relaxed">proof reading of this book along with other five books from 17th to 27th. March ... The Training of adults in the Guide Wing of the Bharat ... General Information -Aim -Purpose -Methods and.              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1P1XbvYEYx404BFbayJBfk6tCUjA65NLV/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">the Bharat scout & guide rule Book</h1>
-                <br>
-                 <img src="data:image/jpeg;base64,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">
-                <br>
-                <p class="leading-relaxed">thought, reasoned and written most aptly a set of Rules is extremely ... movement contained in this book have been brought about. ... Finance, Law, Management, and Information.              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1PNLHGpHUh_s-5BzkHvyGGYsDKzjhxN89/view?usp=drivesdk">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">fandamental principal of the bharat scout & guide            </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">The fundamentals of The Scout and Guide Movement describe what we are trying to achieve and how we achieve it.              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1PFqtoN56r5czEM5byevsB3GbAwpzLIgb/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Bharat scout & guide              </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">SLM. Basic CUB Master · Basic Scout Master · Basic Rover Leader · Basic Flock Leader · Basic Guide Captain · HWB CUB Master              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1P42-g3RbDG-0vgDRUMIp9zMP-wNWrm37/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">more than 50 the most useful knots              </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">"Knots More than 50 of the most useful knots for camping, sailing, fishing and climbing 4.3 out of 5 stars (5)"</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1RDC9818R4-Q9r3EvWcgmPn-OS9N6uj3c/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">the illustrated practical guide to the essential knots	              </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">Know the right knot for every situation! Whether you're tethering a canoe, hitching a horse, trying your hand at rock climbing, or just want to pick up a new skill, this conveniently-sized illustrated guide has everything you need to get started. Learn knots from the Monkey Fist to the Hunter's Bend as Andrew Adamides uses clear text and over 200 detailed illustrations to teach a complete arsenal of rope-tying techniques. This book makes knot-tying simple with: Easy step-by-step instructions Overviews of knots' histories Lists of the benefits and uses of each knot A full glossary of terms to know A fantastic reference for scouts and leaders, emergency preppers, or anyone looking to build on the basics or expand their expertise, this book is the perfect volume to round out your outdoor education.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1OOSTaUimn0O1zuyIHgWIbYTecnNRX706/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">knots you need to know              </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">Knots You Need to Know book. Read reviews from world's largest community for readers. A wonderfully illustrated guide to knot tying.              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1OO7UAO7Q4SY9A-5S4-BpJIylNrcs8Mrs/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1"> geet bharti              </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">The nursery books for our very young learners are a combination of fun and learning. Prepared after careful research and feedback, these books for the pre-schoolers serve as ideal stepping stones into the world of education.              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1PJ9e4Agd8bZg6WTQdoX7wfBIL0GSxO6Q/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">bharat scout & guide version-2024              </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">National Strategic Planning Review Workshop. Bharat Scouts and ... By 2024, The Bharat Scouts & Guides will be a globally visible, consistently growing ... 1.2 Disseminate the Handbook.               </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1PDlTTMo5UfiyTAgPWDlBgM5QJlprwOms/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">Scout and Guide</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">decorative fusion knots               </h1>
-                <br>
-                 <img src="https://bsguttarakhand.org/images/uprs.jpg">
-                <br>
-                <p class="leading-relaxed">Decorative Fusion Knots is the culmination of ten years of study, practice, and creation. ... Alongside fusion knots, this book presents logical and comprehensive instructions for a plethora of historical knots, including Celtic knots, Chinese decorative knots, maritime knots, and popular paracord ties.              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1OPk4dbfW-GLck1h-sQaNlDsvDVk1DDtX/view?usp=drivesdk                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-    
+    </main>
 
-          <!--------JavaScript for toggle menu------>
-          <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0";
-            }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-            }
-            var Cat90 = document.getElementbyId("Cat90");
-if(x = Cat90) {
-  Window.location.href("Cat90")
-}
-        </script>
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Scout And Guide Rules Book</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The Bharat Scouts and Guides is the national Scouting and Guiding association of India. The national headquarters of BSG is recognised by the Government of India.In this Book There Are Rules Of Scout And Guide.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1T509y2CND8rU4ZEcH5xjI2efdOkWyLbg/view?usp=sharing" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">APRO-Part 3</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The book was originally a manual for self-instruction in observation, tracking and woodcraft skills as well as self-discipline and self-improvement, about the Empire and duty as citizens with an eclectic mix of anecdotes and unabashed.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1TDuhiPu2Usu-wpNVY7tflZkPNmcTSTKO/view?usp=sharing" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Scouting for Boys: A Handbook for Instruction in Good Citizenship</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The book was originally a manual for self-instruction in observation, tracking and woodcraft skills as well as self-discipline and self-improvement, about the Empire and duty as citizens with an eclectic mix of anecdotes and unabashed .
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://www.pdfdrive.com/download.pdf?id=158257065&h=4bc27ac0c4c9f67e5297cea1c1b83e56&u=cache&ext=pdf" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Pravesh Pratham Sopan</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Opportunity by NSGDC. Material has been ... number assigned by the Local or District Association, as the case may be. The Patrol System : ... than six months service as Patrol Leader, preferably with Dwitiya Sopan. 
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1pPaxwH3LBDXpAn2WUTXrqBcGf0Cjz0Yc/view?usp=sharing" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Scouting for Boys</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Scouting for Boys: A handbook for instruction in good citizenship is a book on Boy Scout training, published in various editions since 1908. Early editions were written and illustrated by Robert Baden-Powell with later editions being extensively rewritten by others.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1zV3CM77S4MNMUhPsJPI5hhcp1Ko1voQ0/view?usp=sharing" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">The Scout Handbook</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    A handbook to tell you all instructions about Scouting
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1pENFHGXnY7fKRdNuPg15cLXHG9nHMYo7/view?usp=sharing" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Selous Scouts Volume 4</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The Rhodesian War. Fifty years on, this superb and exciting book depicts the military history of Southern Rhodesia from the first resistance to colonial rule.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1wJqbCXLggY1pno1apgJq3cFaF0PDb6fz/view?usp=sharing" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">The little Book incredibly useful knots</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The Little Book of Incredibly Useful Knots: 200 Practical Knots for Sailors, Climbers, Campers & Other Adventurers
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1UqOsogjSJ-BFixDYTdEc6MQfisNtWULe/view?usp=drivesdk" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">The field guide to knots</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    "The Field Guide to Knots: How to Identify, Tie, and Untie Over 80 Essential Knots for Outdoor Pursuits Book by Bob Holtzman"
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1Ovh5Vz5LoBMNmUN_OwqrIgxdklTssH7U/view?usp=drivesdk" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Scheme of Training guide wing</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Proof reading of this book along with other five books from 17th to 27th. March ... The Training of adults in the Guide Wing of the Bharat ... General Information -Aim -Purpose -Methods and.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1P1XbvYEYx404BFbayJBfk6tCUjA65NLV/view?usp=drivesdk" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">The Bharat scout & guide rule Book</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Thought, reasoned and written most aptly a set of Rules is extremely ... movement contained in this book have been brought about. ... Finance, Law, Management, and Information.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1PNLHGpHUh_s-5BzkHvyGGYsDKzjhxN89/view?usp=drivesdk" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Fundamental principal of the bharat scout & guide</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The fundamentals of The Scout and Guide Movement describe what we are trying to achieve and how we achieve it.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1PFqtoN56r5czEM5byevsB3GbAwpzLIgb/view?usp=drivesdk" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Bharat scout & guide</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    SLM. Basic CUB Master · Basic Scout Master · Basic Rover Leader · Basic Flock Leader · Basic Guide Captain · HWB CUB Master
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1P42-g3RbDG-0vgDRUMIp9zMP-wNWrm37/view?usp=drivesdk" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">More than 50 the most useful knots</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    "Knots More than 50 of the most useful knots for camping, sailing, fishing and climbing 4.3 out of 5 stars (5)"
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1RDC9818R4-Q9r3EvWcgmPn-OS9N6uj3c/view?usp=drivesdk" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Decorative fusion knots</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Decorative Fusion Knots is the culmination of ten years of study, practice, and creation. ... Alongside fusion knots, this book presents logical and comprehensive instructions for a plethora of historical knots, including Celtic knots, Chinese decorative knots, maritime knots, and popular paracord ties.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1OPk4dbfW-GLck1h-sQaNlDsvDVk1DDtX/view?usp=drivesdk" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">The illustrated practical guide to the essential knots</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Know the right knot for every situation! Whether you're tethering a canoe, hitching a horse, trying your hand at rock climbing, or just want to pick up a new skill, this conveniently-sized illustrated guide has everything you need to get started. Learn knots from the Monkey Fist to the Hunter's Bend as Andrew Adamides uses clear text and over 200 detailed illustrations to teach a complete arsenal of rope-tying techniques. This book makes knot-tying simple with: Easy step-by-step instructions Overviews of knots' histories Lists of the benefits and uses of each knot A full glossary of terms to know A fantastic reference for scouts and leaders, emergency preppers, or anyone looking to build on the basics or expand their expertise, this book is the perfect volume to round out your outdoor education.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1OOSTaUimn0O1zuyIHgWIbYTecnNRX706/view?usp=drivesdk" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Knots you need to know</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    Knots You Need to Know book. Read reviews from world's largest community for readers. A wonderfully illustrated guide to knot tying.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1OO7UAO7Q4SY9A-5S4-BpJIylNrcs8Mrs/view?usp=drivesdk" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Geet bharti</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    The nursery books for our very young learners are a combination of fun and learning. Prepared after careful research and feedback, these books for the pre-schoolers serve as ideal stepping stones into the world of education.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1PJ9e4Agd8bZg6WTQdoX7wfBIL0GSxO6Q/view?usp=drivesdk" target="_blank" >Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="wrapper">
+        <section id="sgb" class="container">
+            <div class="sub-content-container">
+                <h2 class="book-category">Scout & Guide</h2>
+                <h1 class="book-name">Bharat scout & guide version-2024</h1>
+                    <br>
+                <img src="sc-logo.png">
+                    <br>
+                <p class="books-description">
+                    National Strategic Planning Review Workshop. Bharat Scouts and ... By 2024, The Bharat Scouts & Guides will be a globally visible, consistently growing ... 1.2 Disseminate the Handbook.
+                </p>
+                    <br>
+                <div class="button-contain">
+                    <a href="https://drive.google.com/file/d/1PDlTTMo5UfiyTAgPWDlBgM5QJlprwOms/view?usp=drivesdk" target="_blank">Download</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!---------------End--------------->
+
+    <div class="end-container">
+    <h2>You have reached the end of Scout & Guide Books</h2>
+    <hr>
+    <a href="#top">
+        <h3>Go back to top</h3>
+    </a>
+   </div>
+
+       <!------------Footer------------------------->
+
+       <footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <img src="footer-logo.png" alt="logo" class="footer-logo">
+                <p style="margin-top: -50px;line-height: 25px;">This is an Online Platform for the reading of students. Please note that all the books in this platform are borrowed from other Websites and we give equal credits to them.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Credits <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a></li>
+                    <li><a href="https://z-lib.org/" target="_blank">Z Library</a></li>
+                    <li><a href="https://pdfroom.com/" target="_blank">PDF Room</a></li>
+                    <li><a href="https://planetpdf.com/" target="_blank">Planet PDF</a></li>
+                    <li><a href="https://www.planetebook.com/" target="_blank">Planet E-Book</a></li>
+                    <li><a href="https://fb2bookfree.com/" target="_blank">FB2 Book Free</a></li>
+                    <li><a href="https://allreadingworld.com/" target="_blank">All Reading World</a>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="About_Page.html" target="_blank">About</a></li>
+                    <li><a href="books.html" target="_blank">Books</a></li>
+                    <li><a href="Comment.html" target="_blank">Contact</a></li>
+                    <li><a href="Comment.html" target="_blank">Comment</a></li>
+                    <li><a href="Books_Review.html" target="_blank">Book Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us <div class="underline"><span></span></div></h3>
+                <form class="footer-form"> 
+                    <i class="fa-solid fa-envelope"></i>
+                    <input placeholder="Enter your email-id">
+                    <a href="oops.html"><button class="footer-btn"><i class="fa-solid fa-arrow-right"></i></button></a>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCtN5a1UpFa2vPBlOLosZs-A" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <i class="fa-brands fa-discord"></i>
+                </div> 
+            </div>
+        </div>
+        <hr>
+        <p class="copywright">Author's Attic | Virtual Library &#169 2022 - All rights reserved</p>
+    </footer>
+
+
+
+    <!--------JavaScript for toggle menu------>
+            <script>
+                var navLinks = document.getElementById("navLinks");
+                function showMenu(){
+                    navLinks.style.right = "0";
+                }
+                function hideMenu(){
+                    navLinks.style.right = "-200px";
+                }
+            </script>
+
 </body>
 </html>
