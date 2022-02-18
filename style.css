@@ -1,156 +1,607 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
-    <title>Extra Curricular Books | Author's Attic Virtual Library</title>
-    <script src="https://kit.fontawesome.com/3a48330618.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section class="sub-header">
-        <nav>
-            <a href="index.html"><img src=""></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
-                    <li><a href="books.html">BOOKS</a></li>
-                    <li><a href="Blog.html">BLOG</a></li>
-                    <li><a href="Comment.html">COMMENT</a></li>
-                    <li><a href="Book_Review.html">BOOK REVIEW</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <h1>Extra Curricular Books</h1>
-    </section>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-    <section class="facilites">
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
 
-        <div class="row">
-            <div class="facilites-col">
-                <a href="Sports.html">
-                <img src="https://st3.depositphotos.com/2021995/12537/i/950/depositphotos_125372852-stock-photo-sports-concept-watercolor-word-art.jpg" height="200px" alt="">
-                <h3>Sports Books</h3>
-                <p>Sport is commonly defined as an athletic activity that involves a degree of competition, such as netball or basketball. Some games and many kinds of racing are called sports. A professional at a sport is called an athlete. Many people play sports with their friends. So , here you will find some intresting sports books.</p>
-            </div>
-        </a>
+/* Scroll Bar stylings */
 
-                <div class="facilites-col">
-                    <a href="Dance.html">
-                    <img src="https://st3.depositphotos.com/2021995/12762/i/950/depositphotos_127623642-stock-photo-dance-colorful-watercolor-and-ink.jpg" height="200px" alt="">
-                    <h3>Dance Books</h3>
-                    <p>As , Dancing can be a way to stay fit for people of all ages, shapes and sizes. It has a wide range of physical and mental benefits including: improved condition of your heart and lungs. increased muscular strength, endurance and motor fitness , that's why we have kept here some Dance books.</p>
-                </a>
-                </div>
+::-webkit-scrollbar{
+    width:1em;
+}
 
-                    <div class="facilites-col">
-                        <a href="Music.html">
-                        <img src="https://st3.depositphotos.com/2021995/12537/i/950/depositphotos_125370874-stock-photo-music-concept-watercolor-word-art.jpg" height="200px" alt="">
-                        <h3>Music Books</h3>
-                        <p>Music can raise someone's mood, get them excited, or make them calm and relaxed. Music also - and this is important - allows us to feel nearly or possibly all emotions that we experience in our lives. So , read these books and then sing a song for us , if you will do then we will be very happy.</p>
-                    </div>
-                </a>
-                    </div>
-        </div>
-    </section>
+::-webkit-scrollbar-track{
+    background: #e4e4e4;
+    border-radius: 0 0 0 25vw;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 0 25vw 0 25vw;
+    background: #aaaaaa;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #5a5a5a;
+}
 
-    <section class="facilites">
+::selection{
+    background-color: grey;
+    color: #fff;
+}
 
-        <div class="row">
-            <a href="Art.html">
-            <div class="facilites-col">
-                <img src="https://makeitcenter.adobe.com/content/dam/edu-hub-assets/blog2/17_05_article.jpg" height="200px" alt="">
-                <h3>Art Books</h3>
-                <p>Art helps us emotionally, financially, psychologically, and even helps to shape individual and collective personality. There are so many reasons why art is important in the world, today and always. So , here you will find some intresting Art Books from which you learn a lot.</p>
-            </a>
-            </div>
-        
 
-                <div class="facilites-col">
-                    <a href="Tabla.html">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI7iBospWeHVMG2kGRECWIPUJRkmlFMT8XLQ&usqp=CAU" height="200px" alt="">
-                    <h3>Tabla Books</h3>
-                </a>
-                    <p>Among the percussion instruments, 'tabla' is one of the most important musical instruments in India. Tabla plays an important role in accompanying vocalists, instrumentalists and dancers in every style of music from classical to light in India, mainly used for keeping rhythm. By seeing this we realized that some Tabla books should also be there so our all readers can enjoy and learn with them.</p>
-                </div>
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 19px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #f44336;
+    border: 1px solid #f44336;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+@media(min-width: 300px) {
+    .text-box-mb-version h1 {
+        font-size:35px;
+    }
+}
 
-                    <div class="facilites-col">
-                        <a href="S-1.html">
-                        <img src="https://i.ytimg.com/vi/1hzkKupihME/hqdefault.jpg" height="200px" alt="">
-                        <h3>Scout & Guide Books</h3>
-                        <p>Scouting and Guiding is an approved type of character training & preparation for good citizenship designed for the benefit of boys and girls, which insists a sense of responsibility and trustworthiness affords to be individual opportunities for developing initiative and leadership and promotes self-control.</p>
-                    </a>
-                    </div>
-                    </div>
-        </div>
-    </section>
+@media(min-width:700px){
+    .text-box-mb-version{
+        display:none;
+    }
+}
+@media(max-width: 700px) {
+    .text-box-mb-version {
+        display:none;
+    }
+    .text-box h1{
+        font-size: 30px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+.images img{
+height: 400px;
+}
 
+
+/*---------- course ----------*/
+
+.course{
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course a{
+    text-decoration: none;
+}
+h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+.course p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 24%;
+    background: #f1c0c0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #222;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+.red-btn{
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.red-btn:hover{
+    background-color: #f44336;
+}
+
+        .cta{
+    margin: 100px auto;
+    width: 80%;
+   background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://cherwell.org/wp-content/uploads/2020/05/various-book-books.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: #fff;
+    margin: 36px;
+    padding: 0;
+    font-size: 40px;
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+.cta-1{
+    margin: 100px auto;
+    width: 80%;
+   background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://www.somagnews.com/wp-content/uploads/2021/01/BLACKPINK-and-BTS-e1610387828517.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta-1 h1{
+    color: #fff;
+    margin: 36px;
+    padding: 0;
+    font-size: 40px;
+}
+@media(max-width: 700px){
+    .cta-1 h1{
+        font-size: 24px;
+    }
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    color: #fff;
+    transition: 1s;
+}
+@media (min-width: 640px){
+.sm\:text-4xl {
+    font-size: 2.25rem;
+    overflow: hidden;
+    line-height: 2.5rem;
+} }
+
+@media(max-width: 767px){
+    .blog-images{
+        margin-left: 1px;
+    }
+}
+
+/*----------------------Testimonials----------------------*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #f1c0c0;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img{
+    height: 60px;
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials-col p{
+    padding: 0;
+    font-weight: 100;
+    margin-top: 10px;
+}
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+@media only screen and (max-width: 1000px){
+    .testimonials{
+        width: 100%;
+    }
+    .testimonials-col{
+        width: 100%;
+
+    }
     
-        <!------------Footer------------------------->
 
-        <footer>
-            <div class="footer-row">
-                <div class="footer-col">
-                    <img src="footer-logo.png" alt="logo" class="footer-logo">
-                    <p style="margin-top: -50px;line-height: 25px;">This is an Online Platform for the reading of students. Please note that all the books in this platform are borrowed from other Websites and we give equal credits to them.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Credits <div class="underline"><span></span></div></h3>
-                    <ul>
-                        <li><a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a></li>
-                        <li><a href="https://z-lib.org/" target="_blank">Z Library</a></li>
-                        <li><a href="https://pdfroom.com/" target="_blank">PDF Room</a></li>
-                        <li><a href="https://planetpdf.com/" target="_blank">Planet PDF</a></li>
-                        <li><a href="https://www.planetebook.com/" target="_blank">Planet E-Book</a></li>
-                        <li><a href="https://fb2bookfree.com/" target="_blank">FB2 Book Free</a></li>
-                        <li><a href="https://allreadingworld.com/" target="_blank">All Reading World</a>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links <div class="underline"><span></span></div></h3>
-                    <ul>
-                        <li><a href="index.html" target="_blank">Home</a></li>
-                        <li><a href="About_Page.html" target="_blank">About</a></li>
-                        <li><a href="books.html" target="_blank">Books</a></li>
-                        <li><a href="Comment.html" target="_blank">Contact</a></li>
-                        <li><a href="Comment.html" target="_blank">Comment</a></li>
-                        <li><a href="Books_Review.html" target="_blank">Book Review</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us <div class="underline"><span></span></div></h3>
-                    <form class="footer-form"> 
-                        <i class="fa-solid fa-envelope"></i>
-                        <input placeholder="Enter your email-id">
-                        <a href="oops.html"><button class="footer-btn"><i class="fa-solid fa-arrow-right"></i></button></a>
-                    </form>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/channel/UCtN5a1UpFa2vPBlOLosZs-A" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <i class="fa-brands fa-discord"></i>
-                    </div> 
-                </div>
-            </div>
-            <hr>
-            <p class="copywright">Author's Attic | Virtual Library &#169 2022 - All rights reserved</p>
-        </footer>
-                <!--------JavaScript for toggle menu------>
-                <script>
-                    var navLinks = document.getElementById("navLinks");
-                    function showMenu(){
-                        navLinks.style.right = "0";
-                    }
-                    function hideMenu(){
-                        navLinks.style.right = "-200px";
-                    }
-                    var Cat90 = document.getElementbyId("Cat90");
-        if(x = Cat90) {
-          Window.location.href("Cat90")
-        }
-                </script>
-</body>
-</html>
+}
+
+/*----------------------ABOUT PAGE----------------------*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+    font-size: 48px;
+    font-weight: 400;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.red-btn:hover{
+    background-color: #f44336;
+}
+.testimonials-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+
+footer{
+    margin-top: 100px;
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.footer-row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.footer-col:nth-child(2), .footer-col:nth-child(3){
+    flex-basis: 15%;
+}
+.footer-logo{
+    margin-bottom: 30px;
+    margin-top: -40px;
+    height: 200px;
+}
+.footer-col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    height: 30px;
+    position: relative;
+}
+.footer-col ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.footer-col ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+.footer-col ul li a:hover{
+    color: #f44;
+}
+.footer-form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.footer-form .fa{
+    margin-right: 10px;
+    font-size: 18px;
+}
+.footer-form input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+    margin-left: 10px;
+}
+.footer-btn{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+.footer-btn .fa{
+    font-size: 16px;
+}
+.fa-arrow-right:before {
+    content: "\f061";
+    color: #fff;
+}
+.social-links .fa-brands{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+    margin-right: 15px;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copywright{
+    font-size: 16px;
+    text-align: center;
+    overflow-y: hidden;
+}
+.underline{
+    width: 100%;
+    height: 5px;
+    background: rgb(100, 100, 100);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow-x: hidden;
+}
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    footer{
+        bottom: unset;
+    }
+    .footer-col{
+        flex-basis: 100%;
+    }
+    .footer-col:nth-child(2), .footer-col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+.wrapper{
+    margin-top: 100px;
+}
+.wrapper h1{
+    text-align: center;
+    font-weight: 500;
+}
+.wrapper a{
+    text-decoration: none;
+}
+.wrapper h3{
+    margin-top: 55px;
+    font-size: 17px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: #f44;
+    border: 2px solid #f44;
+    margin-right: 45%;
+    margin-left: 45%;
+    transition: 0.5s;
+}
+.wrapper h3:hover{
+    background-color: #f44;
+    color: #fff;
+}
+@media (max-width: 1000px) {
+    .wrapper h1{
+        height: 200px;
+    }
+    .wrapper h3{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+/*----------------------------Facilities------------------------------------*/
+
+.facilites{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilites-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilites-col p{
+    padding: 0;
+    color: grey;
+}
+.facilites-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: left;
+}
+.facilites-col a{
+    text-decoration: none;
+}
+@media (max-width: 1000px) {
+    .sub-header h1{
+        font-size: 35px;
+    }
+}
