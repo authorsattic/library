@@ -1,437 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <title>Mathematics Books | Author's Attic Virtual Library</title>
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <title>Mathematics | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-        *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktem.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="About_Page">ABOUT</a></li>
                     <li><a href="books.html">BOOKS</a></li>
                     <li><a href="Blog.html">BLOG</a></li>
                     <li><a href="Comment.html">COMMENT</a></li>
@@ -440,1155 +28,876 @@ h3{
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        <h1>Mathematics Books</h1>
+        <h1>Mathematics</h1>
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Introduction to Arithmetic Geometry</h1>
-              <br>
-               <img src="https://books.google.com/books/content?id=X8TkBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl">
-              <br>
-              <p class="leading-relaxed">18.782: INTRODUCTION TO ARITHMETIC GEOMETRY, FALL 2009 ... subject that applies methods from arithmetic and geometry to answer questions like “What are all ... The book [ST92] is an alternative to [Sil92]; it is more elementary, but this sometimes comes ... An introduction to arithmetic geometry</p>
-              <br>
-              <br>
-                <a href=https://drive.google.com/file/d/1Ngh90dTe-rfO_Ydc7ZF1B4G52i69dWgE/view?usp=sharing>
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-  <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Introduction To School Algebra</h1>
-              <br>
-               <img src="https://ia800205.us.archive.org/BookReader/BookReaderImages.php?zip=/9/items/introductiontoa00chrygoog/introductiontoa00chrygoog_tif.zip&file=introductiontoa00chrygoog_tif/introductiontoa00chrygoog_0009.tif&id=introductiontoa00chrygoog&scale=8&rotate=0">
-              <br>
-              <p class="leading-relaxed">This book and its companion are legendary works on the topic of Algebra. The author has taken pains to cover every topic related to algebra in a step-wise, progressive manner. This book is for every Calculus student who's run into the binomial theorem for possibly the first time in his or her life and wonders if it's really a calculus topic. It's also for every programmer and computer scientist as the techniques of working with variables are the heart of every computer program.</p>
-              <br>
-              <br>
-                <a href=https://drive.google.com/file/d/1NoyK9KM6MoieY59zQPl3zihufvkO_KHh/view?usp=sharing>
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-  <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Introduction to Mathematics</h1>
-              <br>
-               <img src=data:image/jpeg;base64,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>
-              <br>
-              <p class="leading-relaxed">This distinguished little book is a brisk introduction to a series of mathematical concepts, a history of their development, and a concise summary of how today's reader may use them.</p>
-              <br>
-              <br>
-                <a href=https://drive.google.com/file/d/1Np0AfG7IhqV1CtJjb4mxDnCDcOz12Anr/view?usp=sharing>
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-  <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Introduction to the Geometry of the Triangle</h1>
-              <br>
-               <img src=https://www.yumpu.com/en/image/facebook/11550952.jpg>
-              <br>
-              <p class="leading-relaxed">This book seeks to explore the rich tangle of properties and theories surrounding the object, Eightfold Way, as well as its esthetic aspects. This book is primarily an introduction to geometric concepts and tools needed for solving problems of a geometric nature with a computer.</p>
-              <br>
-              <br>
-                <a href=https://drive.google.com/file/d/1NtdCfGh--Tu4iU7Yp5tRjmA0sJUGVBw2/view?usp=sharing>
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-  <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Geometric Algebra and its Application to Mathematical Physics</h1>
-              <br>
-               <img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL0AAAELCAMAAAC77XfeAAAAbFBMVEX////j4+O4uLiysrKlpaWvr6/IyMjLy8u8vLyrq6v39/f8/PzCwsKsrKzOzs6oqKjU1NTd3d2fn5/y8vLn5+fX19eNjY3s7OyZmZmgoKDl5eWSkpKPj49+fn6GhoYyMjJxcXFqamomJiZjY2OTlVPzAAAEW0lEQVR4nO3ci3KjNhQG4INuCOmgCwIDduIm7fu/YwX2ZrIz2U27M7Wd7f9NbAJIyUEG2cCRiQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Hd30s27uULkp/23P2jdp9p/V1wRBXLXEjsn0qXqteItmfovbZsVRdnVOF6ySA0LolZMndechO1z38hcS4UUi3ghmviUaonJmkZPrIrNU5z7+XWuFec+3TL6lEJ/FivFbp3VyXb05Dtdlz/xk05yepYdrQuZU23yw+qi7YnWceKuvmjmzH6ILnI3ULGiJyXSOg63jJ6UDsrYYbZiTmttceGNkkSCehsOwQrujBiHSP6wCtcuZyJZTqlujSRpFZ+Wo7FWC22GbNSQZnnT6H/CcPx5AS70SQn4nCPvLtOP1tFYPlxzd67sz3+Srh2kL+/7x8bnbVIklRMHdVl40y7lU+aQVSb3Oq86q3S2KnFvutiXmF/HpG2zFkHlSUzPikmqo2G9dagP4pgWWuo7zrnt0rkJgtQzD6TVaG3ve01pqX17qd2gUuU5q9CtddG9g37jlkY15JKlVq5uCd4YYSiYpKc+T0LYeEzk2voiGXomHVqjv+1EX0s2947gNzM39zffuxEAAAAAAAAAAAAAAAC+Kc3bfWR3fZDLdwvn35n7ccuLyORpT8jZUzzivGyb4fefRyY89WtY7aE295Yxsd/N7CnEoJZx6ZbHDt8NrZzsKNuBmkNxdOLjTNEow+txOQsu9w7wE2+t6/2Hix+aKXs22kVp36/yoW5CeeTWl6V2MLIeo1s+He27eaH50vUsxRcS0pNzj5ngQl4FobpO2fMQJsqLGdVZi+FsOnKCQhIsnnupTod7B/qhbKxdlQ3M/oWIYyulFgcbbO1H66ErmEUc/0rysfJy3rztEuO2z39/rF7nvEb2GQAAAAAAADyorj7SNYe8nuO68dsKv40/dJfBPommvYi/nJy/P0VvGur5WnlnyZjkSrjO7oMPtz/qL9XCdJndll6qzL9+xt8MjqxMPedo22FslxTYMtmcjTKdDIKXlq2kNbAss1atTCREbzSHbdjexLF4k9mmNEwsR7JtpM4IFezEYmIjdN8mSkZSCEuIDQnTyiklbUSXOjv5huP4eZg/ILKkTvITL6rfBhtKazVbavsoYpdCNEbLtpfErC15bXjIFOXABy6rFsRSkF+kETJZawdymg1JmuqmseaDWcUQGkWWmUZjxDBSJ9jY1gymOSkzP1Gw3c0vOmbzzxpsuznwk7EN81e5UfDfEPvg4Lxdvvx6DSGITJLCWjbT0ojwoFf8fiDz8by07WDVpJW1qv1aA3Dc5Wrl/mTiF7npAAAAALeRzXefLVtix3T7r5L5Rdzmtks6NzmJZiIe88toH+crBz5h61mqFCysfMrrTNGt6WQOX+izmvO+Pty2JXU60yMnhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/8ffEnQxW3/TRkwAAAAASUVORK5CYII=>
-              <br>
-              <p class="leading-relaxed">Geometric algebra is a powerful mathematical language with applications across a range of subjects in physics and engineering. This book is a complete guide to the current state of the subject with early chapters providing a self-contained introduction to geometric algebra. Topics covered include new techniques for handling rotations in arbitrary dimensions, and the links between rotations, bivectors and the structure of the Lie groups. Following chapters extend the concept of a complex analytic function theory to arbitrary dimensions, with applications in quantum theory and electromagnetism. Later chapters cover advanced topics such as non-Euclidean geometry, quantum entanglement, and gauge theories. Applications such as black holes and cosmic strings are also explored. It can be used as a graduate text for courses on the physical applications of geometric algebra and is also suitable for researchers working in the fields of relativity and quantum theory.</p>
-              <br>
-              <br>
-                <a href=https://drive.google.com/file/d/1Nu44lIoKi72OozDyXTTgeK0cbzDp0ZcK/view?usp=sharing>
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math lab for kids</h1>
-              <br>
-               <img src="https://i0.wp.com/www.booknerdmommy.com/wp-content/uploads/2017/01/math-lab.jpg?resize=1024%2C683">
-              <br>
-              <p class="leading-relaxed">
-                Make math fun!Make learning math fun by sharing these hands-on labs with your child. Math Lab for Kids presents more than 50 activities that incorporate coloring, drawing, games, and items like prisms to make math more than just numbers.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1ugH9Us0JPmuaftuKvDqwuZBimhjdpm4R/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">ENGINEERING MATHEMATICS-I</h1>
-              <br>
-               <img src="https://demo.dokumen.tips/img/724x975/reader024/reader/2021010222/5afd2fe47f8b9a32349143b4/r-1.jpg">
-              <br>
-              <p class="leading-relaxed">
-                ENGINEERING MATHEMATICS-I DIPLOMA COURSE IN ENGINEERING FIRST SEMESTER A Publication under Government of Tamilnadu Distribution of Free Textbook Programme (NOT FOR SALE) Untouchability is a sin Untouchability is a crime Untouchability is a inhuman DIRECTORATE OF TECHNICAL EDUCATION GOVERNMENT OF TAMILNADU
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vRUcMjh6KA5zFU8ijroSn-ZOgu8mxVPe/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Maths made magic</h1>
-              <br>
-               <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1552018795l/44302770._SX318_.jpg">
-              <br>
-              <p class="leading-relaxed">
-                We hope you will be able to use this book in the classroom to help you teach many of the basic concepts in mathematics in an engaging and entertaining way. All the tricks are self-working and easy to do, and have been tested in UK classrooms.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vUElDCG5YeIAEqkPaTdyLLAgKDQnDYJK/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math Proofs Demystified</h1>
-              <br>
-               <img src="https://books.google.co.in/books/content?id=FuSHOUG54m4C&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U38N-Tx6NbYfaR7AyAUuavUzHtkeQ&w=1280">
-              <br>
-              <p class="leading-relaxed">
-                lmost every student has to study some sort of mathematical proofs, whether it be in geometry, trigonometry, or with higher-level topics. In addition, mathematical theorems have become an interesting course for many students outside of the mathematical arena, purely for the reasoning and logic that is needed to complete them. Therefore, it is not uncommon to have philosophy and law students grappling with proofs. This book is the perfect resource for demystifying the techniques and principles that govern the mathematical proof area, and is done with the standard “Demystified” level, questions and answers, and accessibility.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vOORaZ5ieDrnbqF0JgQcdoLDE2zPm9Hu/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">International mathematics 2nd edition</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/514tHpoCumL._SX383_BO1,204,203,200_.jpg">
-              <br>
-              <p class="leading-relaxed">
-                Advance mathematical studies by using technology to its full potential; trust an experienced team of authors offering advice on how to apply the crucial mathematical techniques covered in the latest Cambridge IGCSE International Mathematics syllabus
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vxynuEMmg9WGXNtVdDMeHfTm-Wh_8jvx/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math-Magic</h1>
-              <br>
-               <img src="https://cdn.schoolbasix.com/wp-content/uploads/2019/08/05065426/math-magic-textbook-in-mathamatics-for-class-4-1448x2048.jpg">
-              <br>
-              <p class="leading-relaxed">
-                NCERT book for class 4 Maths subject is the best book to gain an in-depth understanding of all the concepts and strengthen the fundamentals of Mathematics. NCERT Class 4 Maths Book by Jagran Josh is the latest one that has been published by the National Council of Educational Research and Training (NCERT). Students must follow the latest NCERT book to proceed on the right track and study the relevant topics only.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vnIdi8bNFqkapR7gYAvy0kHQOIg6n8Cw/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">International Mathematics for the Middle Years 5</h1>
-              <br>
-               <img src="https://www.pearson.com.au/MC_images/_amazon/9780733985911.jpg?format=webp&width=400&quality=75">
-              <br>
-              <p class="leading-relaxed">
-                International Mathematics for the Middle Years 5 – Teacher's Resource CD: Teacher's Resosurce. Alan McSeveny. £89.54 £76.11 (inc tax) Author: Alan McSeveny. Author(s): Alan McSeveny, Rob Conway, Steve Wilkes, Michael Smith.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vzz3IbGJovAh98iXW96Wcff9KQMdYO7t/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Mathematics for Machine Learning</h1>
-              <br>
-               <img src="https://books.google.co.in/books/publisher/content?id=pFjPDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0E1yXSWsjRSnvMFvGswv3U2WeWEQ&w=1280">
-              <br>
-              <p class="leading-relaxed">
-                The fundamental mathematical tools needed to understand machine learning include linear algebra, analytic geometry, matrix decompositions, vector calculus, optimization, probability and statistics. .
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1ubORsJCtFTo53Vf7iJQ4M9QL7xUGEaNw/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Textbook of Engineering Mathematics 2nd Edition</h1>
-              <br>
-               <img src=https://images-na.ssl-images-amazon.com/images/I/71JoT+yVIZL.jpg>
-              <br>
-              <p class="leading-relaxed">
-                 Description: Written for the students of BTech I year of UP Technical University, Lucknow and other states, this book discusses in detail the ...
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vTXLzZcd01-RMgQwz1mob4HncsQzV6ww/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Math Book</h1>
-              <br>
-               <img src="https://books.google.co.in/books/content?id=JrslMKTgSZwC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1w4FBszcT3MxD4Q70sai2kneSh7g&w=1025">
-              <br>
-              <p class="leading-relaxed">
-                Math’s infinite mysteries and beauty unfold in this follow-up to the best-selling The Science Book. Beginning millions of years ago with ancient “ant odometers” and moving through time to our modern-day quest for new dimensions, it covers 250 milestones in mathematical history. Among the numerous delights readers will learn about as they dip into this inviting anthology: cicada-generated prime numbers, magic squares from centuries ago, the discovery of pi and calculus, and the butterfly effect. Each topic gets a lavishly illustrated spread with stunning color art, along with formulas and concepts, fascinating facts about scientists’ lives, and real-world applications of the theorems.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1ugwiJLK2pIm2pVUSOyaRH32Y9fV2mCKE/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Everything Kids' Math Puzzles Book</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/61JitcXu1hL._SX429_BO1,204,203,200_.jpg">
-              <br>
-              <p class="leading-relaxed">
-                Stump your friends and family with this fun, challenging math puzzle book!Who knew that math could be so cool? Crammed with games, puzzles, and trivia, The Everything Kids’ Math Puzzles Book puts the fun back into playing with numbers! …
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1udS52MlxLRQR7ts-DeVGgvOvgZnJEizw/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Mathematical Methods For Physics And Engineering</h1>
-              <br>
-               <img src="https://books.google.co.in/books/content?id=Mq1nlEKhNcsC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1GO7b9EkTjUfFEhAYDdxBiwHdkfw&w=1280">
-              <br>
-              <p class="leading-relaxed">
-                All physical scientists and engineers need mathematical tools in their everyday work. This book presents mathematics in a form appropriate for undergraduate courses. 
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1uW2zXBZC8_gFHySB22lRTvk9uAViDfFL/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Advanced Problems in Mathematics: Preparing for University</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/41W7+YGCNOL._SX352_BO1,204,203,200_.jpg">
-              <br>
-              <p class="leading-relaxed">
-                About this book -- STEP -- Worked Problems ; Worked problem 1 ; Worked problem 2 ; Problems -- P1 An integer equation P2 Partitions of 10 and 20 P3 Mathematical deduction P4 Divisibility P5 The modulus function P6 The regular Reuleaux heptagon P7 Chain of equations P8 Trig
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1w-3-IRRw4TOJRv_rmb6Z8jaeBejYdu1p/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The manual of mathematical magic</h1>
-              <br>
-               <img src="http://www.mathematicalmagic.com/img/cover.jpg">
-              <br>
-              <p class="leading-relaxed">
-                The Manual of Mathematical Magic is packed full of magical miracles to impress and entertain your friends. The secrets behind street magic, close-up and stage tricks are explained clearly with instructions and videos to help you perform them perfectly. Then you can learn about the maths behind the trick and discover how that same mathematics is used to power our modern world and numerous careers
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vmeefmDf_ksobHbORauaa0e7DmlhpjGu/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">2. Number Magic</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/41-GXxTwKzL._SX331_BO1,204,203,200_.jpg">
-              <br>
-              <p class="leading-relaxed">
-                Tricks like this are lots of fun for getting kids to practice mental math, but they also ... Magic squares are the basis for the ever-popular Sudoku math ... Tip: To make it easier for kids to work out the solution to magic ... The game of dominos is really one big math puzzle all on its own, but there are lots of other ...
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vpbL7aaOsYzQTxhXZOCaWc4qFU03gRKV/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Mathematical Methods for Physics PHYS 30672 </h1>
-              <br>
-               <img src="data:image/png;base64,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">
-              <br>
-              <p class="leading-relaxed">
-                Mathematical Methods for Physics. PHYS 30672 by Niels Walet with additions by Mike Godfrey, and based on work by Graham Shaw.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1uteM_wzyuG7GlN4DnzTtZ7rXdPoZhTSw/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">MATHEMATICAL METHODS IN THE PHYSICAL SCIENCES Third Edition</h1>
-              <br>
-               <img src="https://demo.fdocuments.in/img/749x1009/reader023/reader/2020111420/587d3a5b1a28ab2a448b6c9d/r-2.jpg">
-              <br>
-              <p class="leading-relaxed">
-                Now in its third edition, Mathematical Concepts in the Physical Sciences, 3rd Editionprovides a ... The emphasis is on mathematical methods rather than applications, but students are given some idea of how the methods will be ... Mary L. Boas is currently professor emeritus in the physics department at DePaul University.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1uR23zJC1MSLdgWOCzu6XgqCe5uw6jZoD/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Advanced Engineering Mathematics</h1>
-              <br>
-               <img src="https://images-na.ssl-images-amazon.com/images/I/51cacwzYscL._SX374_BO1,204,203,200_.jpg">
-              <br>
-              <p class="leading-relaxed">
-                A revision of the market leader, Kreyszig is known for its comprehensive coverage, careful and correct mathematics, outstanding exercises, helpful worked examples, and self-contained subject-matter parts for maximum teaching flexibility. .
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1vStGArkr7qtLvh0r96KAJr8mAWt5jDFq/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A First Course in Complex Analysis Version 1.54</h1>
-              <br>
-               <img src="https://www.computer-pdf.com/documents/covers/thumbs/x0648-a-first-course-in-complex-analysis.pdf.png.pagespeed.ic.oRIh37E6p9.webp">
-              <br>
-              <p class="leading-relaxed">
-                It is never too late to start learning and it would be a shame to miss an opportunity to learn a tutorial or course that can be so useful as A First Course in Complex Analysis especially when it is free! You do not have to register for expensive classes and travel from one part of town to another to take classes. All you need to do is download the course and open the PDF file. This specific program is classified in the Mathematics category where you can find some other similar courses.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1w4UjNrwRVoJ17LyJe4SBpO0SqiUaK9An/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS BOOKS</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Categories and Homological Algebra </h1>
-              <br>
-               <img src="https://i1.rgstatic.net/publication/225279509_Three_lectures_on_Algebraic_Microlocal_Analysis/links/5748093108ae14040e290f2c/largepreview.png">
-              <br>
-              <p class="leading-relaxed">
-                These three lectures present some fundamental and classical aspects of microlocal analysis. Starting with the Sato's microlocalization functor and the microsupport of sheaves, we then construct a microlocal analogue of the Hochschild homology for sheaves and apply it to recover index theorems for D-modules and elliptic pairs. In the third lecture, we construct the ind-sheaves of temperate and Whitney holomorphic functions and give some applications to the study of irregular holonomic D-modules.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/18s632oBZ0gK1DbFy4tN6s0erEb5Thg6H/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">100 Math Brainteasers</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/publisher/content?id=Z9elAgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2_m-ENZGnxEHxw06dNlXw8nXbpfQ&w=1280">
-                <br>
-                <p class="leading-relaxed">100 Math Brainteasers (Grade 7-10) is a subtle selection of one hundred arithmetic, algebra, and geometry assignments, which efficiently train the mind in math skills. It will be helpful for students attending High School and also in preparation for Mathematical competitions or Olympiads at a younger age. ...</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/18E7TIkQMd8zn0Ug33rg4Xkf6a_dei77_/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+    <article class="article">
+        <main class="wrapper" id="main0">
+            <section class="container" id="b0">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Introduction to Arithmetic Geometry
+                    </h1><img
+                        src="https://media.springernature.com/w306/springer-static/cover/book/978-1-4613-8655-1.jpg"><br>
+                    <p class="books-description" style="height: 166px;">INTRODUCTION TO ARITHMETIC GEOMETRY, FALL 2009
+                        ... subject that applies methods from arithmetic and geometry to answer questions like “What are
+                        all ... it is more elementary, but this sometimes comes ... An introduction to arithmetic
+                        geometry</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Ngh90dTe-rfO_Ydc7ZF1B4G52i69dWgE/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Gateway to Modern Mathematics: Adventures in Iteration I</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51se6oyZPzL._SX260_.jpg">
-                <br>
-                <p class="leading-relaxed">A Gateway to Modern Mathematics: Adventures in Iteration I is the first of a two-volume work on iterations in the RMS series Little Mathematical Treasures. The books in this series address senior secondary school students who are interested in exploring mathematics a little beyond what the school curriculum offers.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17YG_cH-6cHSeoBsT9y9mThMpRyYy0pOd/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b1">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Introduction To School Algebra</h1><img
+                        src="https://ia800205.us.archive.org/BookReader/BookReaderImages.php?zip=/9/items/introductiontoa00chrygoog/introductiontoa00chrygoog_tif.zip&amp;file=introductiontoa00chrygoog_tif/introductiontoa00chrygoog_0009.tif&amp;id=introductiontoa00chrygoog&amp;scale=8&amp;rotate=0"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">This book and its companion
+                        are legendary works on the topic of Algebra. The author has taken pains to cover every topic
+                        related to algebra in a step-wise, progressive manner. This book is for every Calculus student
+                        who's run into the binomial theorem for possibly the first time in his or her life and wonders
+                        if it's really a calculus topic. It's also for every programmer and computer scientist as the
+                        techniques of working with variables are the heart of every computer program.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1NoyK9KM6MoieY59zQPl3zihufvkO_KHh/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Mind For Numbers</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/publisher/content?id=Sb1iAgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3caHPvKpehtOlT6gkP6mGKzP4BQg&w=1280">
-                <br>
-                <p class="leading-relaxed">The companion book to COURSERA®'s wildly popular massive open online course "Learning How to Learn"Whether you are a student struggling to fulfill a math or science requirement, or you are embarking ..</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/18ASCroOxh4odgDuctNCi_mSCaYE5Ql_l/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main2">
+            <section class="container" id="b2">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Introduction to Mathematics</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51ZDa4GYGeL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">This distinguished little book is a brisk
+                        introduction to a series of mathematical concepts, a history of their development, and a concise
+                        summary of how today's reader may use them.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Np0AfG7IhqV1CtJjb4mxDnCDcOz12Anr/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Primer on Number Sequences</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/content?id=FbTpPcMmgSQC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2hKHgNfR0hObkUS7MqzdnwFarLmA&w=1025">
-                <br>
-                <p class="leading-relaxed">This book offers an excursion into the world of number sequences, objects that occur widely all through Mathematics. Part I deals with the generating formula of a sequence and Part II with individual sequences such as the squares, the cubes, the primes, the unit fractions, the Fibonacci numbers and so on. The book is aimed at students and general readers. It will be particularly useful to students who wish to appear for the Mathematical Olympiads.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17mwTPx48aFJQo9kXyoHpyeeIWBJkgGo4/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b3">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Introduction to the Geometry of the
+                        Triangle</h1><img src="https://www.yumpu.com/en/image/facebook/11550952.jpg"><br>
+                    <p class="books-description" style="height: 166px;">This book seeks to explore the rich tangle of
+                        properties and theories surrounding the object, Eightfold Way, as well as its esthetic aspects.
+                        This book is primarily an introduction to geometric concepts and tools needed for solving
+                        problems of a geometric nature with a computer.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1NtdCfGh--Tu4iU7Yp5tRjmA0sJUGVBw2/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Pure Mathematics 1</h1>
-                <br>
-                 <img src="https://www.madrasshoppe.com/185975-large_default/cambridge-international-a-as-mathematics-pure-mathematics-1-practice-book-greg-port.jpg">
-                <br>
-                <p class="leading-relaxed">This brand new series has been written for the University of Cambridge International Examinations course for AS and A Level Mathematics (9709).</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/18EMCqdPUw6sb1V82ySNncngbH5b41HyW/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main4">
+            <section class="container" id="b4">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Geometric Algebra and its
+                        Application to Mathematical Physics</h1><img
+                        src="https://i3k5j8j4.rocketcdn.me/wp-content/uploads/2021/12/Geometric-Algebra-and-its-Application-to-Mathematical-Physics-469x750.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Geometric algebra is a
+                        powerful mathematical language with applications across a range of subjects in physics and
+                        engineering. This book is a complete guide to the current state of the subject with early
+                        chapters providing a self-contained introduction to geometric algebra. Topics covered include
+                        new techniques for handling rotations in arbitrary dimensions, and the links between rotations,
+                        bivectors and the structure of the Lie groups. Following chapters extend the concept of a
+                        complex analytic function theory to arbitrary dimensions, with applications in quantum theory
+                        and electromagnetism. Later chapters cover advanced topics such as non-Euclidean geometry,
+                        quantum entanglement, and gauge theories. Applications such as black holes and cosmic strings
+                        are also explored. It can be used as a graduate text for courses on the physical applications of
+                        geometric algebra and is also suitable for researchers working in the fields of relativity and
+                        quantum theory.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Nu44lIoKi72OozDyXTTgeK0cbzDp0ZcK/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Competitive Math for Middle School"</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/publisher/content?id=wshUDwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1HHYbbNA_HIwYeiAin-zYTggZ0Ig&w=1280">
-                <br>
-                <p class="leading-relaxed">The 39 self-contained sections in this book present worked-out examples as well as many sample problems categorized by the level of difficulty as Bronze, Silver, and Gold in order to help the readers gauge their progress and learning. Detailed solutions to all problems in each section are provided at the end of each chapter. The book can be used not only as a text but also for self-study.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/186Wp0Oo5iG2zbpnQQiiMXhb_5cMf_fL-/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b5">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math lab for kids</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/91wryrXnMAL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Make math fun!Make learning math fun by sharing
+                        these hands-on labs with your child. Math Lab for Kids presents more than 50 activities that
+                        incorporate coloring, drawing, games, and items like prisms to make math more than just numbers.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ugH9Us0JPmuaftuKvDqwuZBimhjdpm4R/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Love and Math: The Heart of Hidden Reality</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/publisher/content?id=AFs4DgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2MdzrdxbIvbGYXQvh_O3O1BfOc0g&w=1280">
-                <br>
-                <p class="leading-relaxed">An awesome, globe-spanning, and New York Times bestselling journey through the beauty and power of mathematics What if you had to take an art class in which you were only taught how to paint a fence? What if you were never shown the paintings of van Gogh and Picasso, weren't even told they existed? .</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16kZTQLXVPJuno8SoOhGVt6nUFom0ddbY/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main6">
+            <section class="container" id="b6">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">ENGINEERING MATHEMATICS-I</h1><img
+                        src="https://demo.dokumen.tips/img/724x975/reader024/reader/2021010222/5afd2fe47f8b9a32349143b4/r-1.jpg"><br>
+                    <p class="books-description" style="height: 166px;">ENGINEERING MATHEMATICS-I DIPLOMA COURSE IN
+                        ENGINEERING FIRST SEMESTER A Publication under Government of Tamilnadu Distribution of Free
+                        Textbook Programme Untouchability is a sin Untouchability is a crime Untouchability is a inhuman
+                        DIRECTORATE OF TECHNICAL EDUCATION GOVERNMENT OF TAMILNADU</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vRUcMjh6KA5zFU8ijroSn-ZOgu8mxVPe/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Magical Book on Quicker Maths</h1>
-                <br>
-                 <img src="https://assets.lulu.com/cover_thumbs/1/8/18k5ggwv-ebook-shortedge-384.jpg">
-                <br>
-                <p class="leading-relaxed">The competitive exams of the today are virtually a race against time. The candidate is expected to perform an incredible amount of mathematical world in a very short time. The time available for sorting out one question ranges from 0.25 to 0.75 minutes. Given such a scenario, traditional methods of solving questions seem anachronistic outdated, to put it simply. A new approach is the need of the hour—an approach that is speed—oriented and yet simple to follow and apply. It is with this one and only objective in mind that the author has prepared this book.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16kZTQLXVPJuno8SoOhGVt6nUFom0ddbY/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b7">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Maths made magic</h1><img
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1552018795l/44302770._SX318_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">We hope you will be able to use this book in the
+                        classroom to help you teach many of the basic concepts in mathematics in an engaging and
+                        entertaining way. All the tricks are self-working and easy to do, and have been tested in UK
+                        classrooms.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vUElDCG5YeIAEqkPaTdyLLAgKDQnDYJK/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math for the Non-Math Lovers</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/P/B00EPG8ZIY.01._SCLZZZZZZZ_SX500_.jpg">
-                <br>
-                <p class="leading-relaxed">Even You Can Learn Statistics, 2nd Ed. is the easiest guide to using statistics in your everyday work or study. Experienced educators David Levine and David Stephan teach statistics hands-on, in plain English, with as little math and as many revealing examples as possible.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16YjzC_RmP9jYoOXY3rk5k5IWZjUiW2wF/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main8">
+            <section class="container" id="b8">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math Proofs Demystified</h1><img
+                        src="https://books.google.co.in/books/content?id=FuSHOUG54m4C&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U38N-Tx6NbYfaR7AyAUuavUzHtkeQ&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Almost every student has to
+                        study some sort of mathematical proofs, whether it be in geometry, trigonometry, or with
+                        higher-level topics. In addition, mathematical theorems have become an interesting course for
+                        many students outside of the mathematical arena, purely for the reasoning and logic that is
+                        needed to complete them. Therefore, it is not uncommon to have philosophy and law students
+                        grappling with proofs. This book is the perfect resource for demystifying the techniques and
+                        principles that govern the mathematical proof area, and is done with the standard “Demystified”
+                        level, questions and answers, and accessibility.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vOORaZ5ieDrnbqF0JgQcdoLDE2zPm9Hu/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Math In Focus"</h1>
-                <br>
-                 <img src="http://brainbuildermaths.com/wp-content/uploads/2016/06/maths-in-focus-233x153.jpg">
-                <br>
-                <p class="leading-relaxed">Math in Focus is based on the internationally renowned Singapore Maths® method and focuses on problem solving as the heart of learning maths while teaching concepts  using concrete–pictorial–abstract learning progression through real-world, hands-on examples. This series of books has been tailored to the US curriculum based on Singapore’s successful  My Pals Are Here series and  was developed by Dr Fong and leading US educational experts.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16E09aWMCdKdHBF_A5UdJZTbpVcbWaLkU/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b9">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">International mathematics 2nd
+                        edition</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/514tHpoCumL._SX383_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Advance mathematical studies by using technology
+                        to its full potential; trust an experienced team of authors offering advice on how to apply the
+                        crucial mathematical techniques covered in the latest Cambridge IGCSE International Mathematics
+                        syllabus</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vxynuEMmg9WGXNtVdDMeHfTm-Wh_8jvx/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math Intervention 3-5</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51lehfa58yL._SY346_.jpg">
-                <br>
-                <p class="leading-relaxed">"Help all of your students reach success in math! This essential book, from bestselling author and consultant Jennifer Taylor-Cox, is filled with suggestions that teachers and RTI/MTSS specialists can use to target instruction for struggling students in grades 3-5. You’ll learn how to diagnose academic weaknesses, differentiate instruction, use formative assessments, offer corrective feedback, and motivate students with games and activities."</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16hGUsHlnxJFqVGoNAoALXA86YClrvUHV/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main10">
+            <section class="container" id="b10">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math-Magic</h1><img
+                        src="https://cdn.schoolbasix.com/wp-content/uploads/2019/08/05065426/math-magic-textbook-in-mathamatics-for-class-4-1448x2048.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">NCERT book for class 4 Maths
+                        subject is the best book to gain an in-depth understanding of all the concepts and strengthen
+                        the fundamentals of Mathematics. NCERT Class 4 Maths Book by Jagran Josh is the latest one that
+                        has been published by the National Council of Educational Research and Training (NCERT).
+                        Students must follow the latest NCERT book to proceed on the right track and study the relevant
+                        topics only.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vnIdi8bNFqkapR7gYAvy0kHQOIg6n8Cw/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math Makes Sense!: A Constructivist Approach To The Teaching And Learning Of Mathematics</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/publisher/content?id=YAXyCwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U057D6bjK0cS4S3U4SbQtQdSvv8Xw&w=1280">
-                <br>
-                <p class="leading-relaxed">The methods for teaching mathematics usually follow the structure of mathematics. The problem with this is that the structure of mathematics took centuries of elaboration to develop and is not the same as how one originally experiences mathematics. Based on research of how mathematics is actually learned, this book presents an innovative approach for teaching mathematics that will engage pupils and can have lifelong benefits for how they take on board more advanced mathematical topics.Math Makes Sense! makes use of the realistic mathematics education (RME) philosophy, which bridges the gap between informal mathematics learning (such as in day-to-day life) and more formal teaching in school. Many real-life situations as examples for learning are included, as well as different mathematica...</p>
-                <br>
-                <br>
-                  <a href="">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b11">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">International Mathematics for the
+                        Middle Years 5</h1><img
+                        src="https://www.pearson.com.au/MC_images/_amazon/9780733985911.jpg?format=webp&amp;width=400&amp;quality=75"><br>
+                    <p class="books-description" style="height: 166px;">International Mathematics for the Middle Years 5
+                        – Teacher's Resource CD: Teacher's Resosurce. Alan McSeveny. £89.54 £76.11 (inc tax) Author:
+                        Alan McSeveny. Author(s): Alan McSeveny, Rob Conway, Steve Wilkes, Michael Smith.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vzz3IbGJovAh98iXW96Wcff9KQMdYO7t/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math Puzzles and Brainteasers, Grades 6-8</h1>
-                <br>
-                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348650207l/4515980.jpg">
-                <br>
-                <p class="leading-relaxed">Number puzzles, spatial/visual puzzles, cryptograms, Sudoku, Kokuro, logic puzzles, and word games like Frame Games are all a great way to teach math and problem-solving skills to elementary and middle school students. In these two new collections, puzzle master Terry Stickels provides puzzles and brain games that range from simple to challenging and are organized by grade level and National Council of Teachers of Mathematics (NCTM) content areas. Each book offers over 300 brain games that will help students learn core math concepts and develop critical thinking skills. The books include a wide range of puzzle types and cover a variety of math topics, from fractions and geometry to probability and algebra.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17B_oce7heJKETdVSnUiRZ_vc-7_A5rVd/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main12">
+            <section class="container" id="b12">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Mathematics for Machine Learning
+                    </h1><img
+                        src="https://books.google.co.in/books/publisher/content?id=pFjPDwAAQBAJ&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U0E1yXSWsjRSnvMFvGswv3U2WeWEQ&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">The fundamental mathematical tools needed to
+                        understand machine learning include linear algebra, analytic geometry, matrix decompositions,
+                        vector calculus, optimization, probability and statistics. </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ubORsJCtFTo53Vf7iJQ4M9QL7xUGEaNw/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math Puzzles Classic Riddles and Brain Teasers in Counting, Geometry, Probability, and Game Theory</h1>
-                <br>
-                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1413328492l/14745447.jpg">
-                <br>
-                <p class="leading-relaxed">You want to cut a tortilla into 8 pieces. What's the minimum number of cuts you need to make? Is it statistically harder to guess an iPhone password that uses 3-digits or one that uses 4 unique digits? Two friends agree to meet up in a bar between midnight and 1 am.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17mr381TSF9P-aQN244dHmPdbPf7_OFGc/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b13">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">A Textbook of Engineering
+                        Mathematics 2nd Edition</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/71JoT+yVIZL.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Written for the students of BTech I year of UP
+                        Technical University, Lucknow and other states, this book discusses in detail the ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vTXLzZcd01-RMgQwz1mob4HncsQzV6ww/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"MATH TRICKS"</h1>
-                <br>
-                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1517855792l/38356209._SX318_.jpg">
-                <br>
-                <p class="leading-relaxed">This book is the result of twenty years of puzzle collecting. For these many years I have endeavored to gather everything belonging to the realm of mathematical entertainment from all available sources. As an editor of newspaper columns on scientific entertainment, I found my readers keenly interested in this kind of pastime, and these readers proved to be amongmy best so ...more</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16oS5fZ_0rYrxaYuiSTmZubAlHkD9lh6T/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main14">
+            <section class="container" id="b14">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">The Math Book</h1><img
+                        src="https://books.google.co.in/books/content?id=JrslMKTgSZwC&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U1w4FBszcT3MxD4Q70sai2kneSh7g&amp;w=1025"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Math’s infinite mysteries
+                        and beauty unfold in this follow-up to the best-selling The Science Book. Beginning millions of
+                        years ago with ancient “ant odometers” and moving through time to our modern-day quest for new
+                        dimensions, it covers 250 milestones in mathematical history. Among the numerous delights
+                        readers will learn about as they dip into this inviting anthology: cicada-generated prime
+                        numbers, magic squares from centuries ago, the discovery of pi and calculus, and the butterfly
+                        effect. Each topic gets a lavishly illustrated spread with stunning color art, along with
+                        formulas and concepts, fascinating facts about scientists’ lives, and real-world applications of
+                        the theorems.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1ugwiJLK2pIm2pVUSOyaRH32Y9fV2mCKE/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Math Wise!</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/61v9yEh0QZL._SX260_.jpg">
-                <br>
-                <p class="leading-relaxed">Math is a difficult and abstract subject for many students, yet teachers need to make sure their students comprehend basic math concepts. This engaging activity book is a resource teachers can use to give students concrete understanding of the math behind the questions on most standardized tests, and includes information that will give students a firm grounding to work with more advanced math concepts.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17MEcizEtzFm2CDa0NZOAq-6UxqAHbe4t/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b15">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The Everything Kids' Math Puzzles
+                        Book</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/61JitcXu1hL._SX429_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Stump your friends and family with this fun,
+                        challenging math puzzle book!Who knew that math could be so cool? Crammed with games, puzzles,
+                        and trivia, The Everything Kids’ Math Puzzles Book puts the fun back into playing with numbers!
+                        …</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1udS52MlxLRQR7ts-DeVGgvOvgZnJEizw/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">GMAT club math book</h1>
-                <br>
-                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500040602l/35673610._SX318_.jpg">
-                <br>
-                <p class="leading-relaxed">Read Total Gmat Math: Volume 1 book reviews & author details and more at ... Quant: 250+ Practice Problems & Online Resources (Manhattan Prep GMAT ... All the GMAT: Content Review + 6 Online Practice Tests + Effective Strategies to Get …</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17FSAN1reNRPb_QtPMr3mD6vG2AV7DT5Y/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main16">
+            <section class="container" id="b16">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Mathematical Methods For Physics And
+                        Engineering</h1><img
+                        src="https://books.google.co.in/books/content?id=Mq1nlEKhNcsC&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U1GO7b9EkTjUfFEhAYDdxBiwHdkfw&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">All physical scientists and engineers need
+                        mathematical tools in their everyday work. This book presents mathematics in a form appropriate
+                        for undergraduate courses.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1uW2zXBZC8_gFHySB22lRTvk9uAViDfFL/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Conquering SAT Math, 2nd Ed.</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/content?id=dh7Z9XDeUxoC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0khVXmWvkuCJKInVQn4tNomXq_tg&w=1280">
-                <br>
-                <p class="leading-relaxed">Triumph over tough equations and get top scores on the SAT Math section! If you're struggling with SAT math, you can rest easy-the new edition of McGraw-Hill's Conquering SAT Math is here.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16EeFA8XtNcaa0Pi5hbeLjxpoyyzdo6ra/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b17">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Advanced Problems in Mathematics:
+                        Preparing for University</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/41W7+YGCNOL._SX352_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Worked Problems ; Worked
+                        problem 1 ; Worked problem 2 ; Problems -- P1 An integer equation P2 Partitions of 10 and 20 P3
+                        Mathematical deduction P4 Divisibility P5 The modulus function P6 The regular Reuleaux heptagon
+                        P7 Chain of equations P8 Trig. equations P9 Integration by substitution P10 True or false P11
+                        Egyptian fractions P12 Maximising with constraints P13 Binomial expansion P14 Sketching subsets
+                        of the plane P15 More sketching subsets of the plane P16 Non-linear simultaneous equations P17
+                        Inequalities P18 Inequalities from cubics P19 Logarithms P20 Cosmological models P21 Melting
+                        snowballs</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1w-3-IRRw4TOJRv_rmb6Z8jaeBejYdu1p/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Number Theory</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/31knXN7l9mL._SX331_BO1,204,203,200_.jpg">
-                <br>
-                <p class="leading-relaxed">The book is divided into two parts. Part A covers key concepts of number theory and could serve as a first course on the subject. Part B delves into more advanced topics and an exploration of related mathematics. The prerequisites for this self-contained text are elements from linear algebra. Valuable references for the reader are collected at the end of each chapter. It is suitable as an introduction to higher level mathematics for undergraduates, or for self-study.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17_b2dEXrkruJTKiMzCj2XJGuwTSW8ZDR/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main18">
+            <section class="container" id="b18">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The manual of mathematical magic
+                    </h1><img src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The Manual of Mathematical
+                        Magic is packed full of magical miracles to impress and entertain your friends. The secrets
+                        behind street magic, close-up and stage tricks are explained clearly with instructions and
+                        videos to help you perform them perfectly. Then you can learn about the maths behind the trick
+                        and discover how that same mathematics is used to power our modern world and numerous careers
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vmeefmDf_ksobHbORauaa0e7DmlhpjGu/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Progress in Mathematics:</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/31JkjGxv1BL._BO1,204,203,200_.jpg">
-                <br>
-                <p class="leading-relaxed">Grade 4 Rigorous content aligns with NCTM Standards and Curriculum Focal Points. Student-centered textbooks instill confidence in all learners. Superior teacher support makes teaching easy and fun. Integrated, meaningful assessments, intervention, and analysis guarantee success for every student. Exceptional online components are whiteboard compatible and support any teaching situation.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/172DDpeJFyqFkOSZaOycw2mC_KD1RvnOc/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b19">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">2. Number Magic</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/41-GXxTwKzL._SX331_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Tricks like this are lots of fun for getting
+                        kids to practice mental math, but they also ... Magic squares are the basis for the ever-popular
+                        Sudoku math ... Tip: To make it easier for kids to work out the solution to magic ... The game
+                        of dominos is really one big math puzzle all on its own, but there are lots of other ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vpbL7aaOsYzQTxhXZOCaWc4qFU03gRKV/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Secrets of Mental Math:</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/51gV+lP6OSL._SX322_BO1,204,203,200_.jpg">
-                <br>
-                <p class="leading-relaxed">Secrets of Mental Math will have you thinking like a math genius in no time. Get ready to amaze your friends—and yourself—with incredible calculations you never thought you could master, as renowned “mathemagician” Arthur Benjamin shares his techniques for lightning-quick calculations and amazing</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/168xH9ULi72OU8lJxCksgLksZ-UoG-icg/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main20">
+            <section class="container" id="b20">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Mathematical Methods for Physics
+                        PHYS 30672</h1><img
+                        src="https://0.academia-photos.com/attachment_thumbnails/58627502/mini_magick20190315-10482-1ergtxc.png?1552642311"><br>
+                    <p class="books-description" style="height: 166px;">Mathematical Methods for Physics. PHYS 30672 by
+                        Niels Walet with additions by Mike Godfrey, and based on work by Graham Shaw.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1uteM_wzyuG7GlN4DnzTtZ7rXdPoZhTSw/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Technical Math For Dummies</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/content?id=bfhHCnGVzgEC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2aqUQT1U1_lK7Xx3JkrFjcCWdIaA&w=1280">
-                <br>
-                <p class="leading-relaxed">Technical Math For Dummies is your one-stop, hands-on guide to acing the math courses you’ll encounter as you work toward getting your degree, certification, or license in the skilled trades. You’ll get easy-to-follow, plain-English guidance on mathematical formulas and methods that professionals use every day in the automotive, health, construction, licensed trades, maintenance, and other trades. You’ll learn how to apply concepts of algebra, geometry, and trigonometry and their formulas related to occupational areas of study. Plus, you’ll find out how to perform basic arithmetic operations and solve word problems as they’re applied to specific trades.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/187_8Q5FVVw5YjjoVX5xTrIlJEm6l51I5/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b21">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">MATHEMATICAL METHODS IN THE PHYSICAL
+                        SCIENCES Third Edition</h1><img
+                        src="https://demo.fdocuments.in/img/749x1009/reader023/reader/2020111420/587d3a5b1a28ab2a448b6c9d/r-2.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Now in its third edition, Mathematical Concepts
+                        in the Physical Sciences, 3rd Editionprovides a ... The emphasis is on mathematical methods
+                        rather than applications, but students are given some idea of how the methods will be ... Mary
+                        L. Boas is currently professor emeritus in the physics department at DePaul University.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1uR23zJC1MSLdgWOCzu6XgqCe5uw6jZoD/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Maths Handbook:</h1>
-                <br>
-                 <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1359616314l/10449811.jpg">
-                <br>
-                <p class="leading-relaxed">This is the perfect introduction for those who have a lingering fear of math. If you think that math is difficult, confusing, dull or just plain scary, then "The Math Handbook" is your ideal companion."\Covering all the basics including fractions, equations, primes, squares and square roots, geometry and fractals, Dr. Richard Elwes will lead you gently towards a great goal.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/17CtbtyS3zXV-g_hnbq6bKzE5Oc60AHkr/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main22">
+            <section class="container" id="b22">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Advanced Engineering Mathematics
+                    </h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51cacwzYscL._SX374_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">A revision of the market leader, Kreyszig is
+                        known for its comprehensive coverage, careful and correct mathematics, outstanding exercises,
+                        helpful worked examples, and self-contained subject-matter parts for maximum teaching
+                        flexibility. .</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1vStGArkr7qtLvh0r96KAJr8mAWt5jDFq/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">World's Most Famous Math Problem:</h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/P/0312106572.01._SCLZZZZZZZ_SX500_.jpg">
-                <br>
-                <p class="leading-relaxed">June 23, 1993. A Princeton mathematician announces that he has unlocked, after thousands of unsuccessful attempts by others, the greatest mathematical riddle in the world. Dr. Wiles demonstrates to a group of stunned mathematicians that he has provided the proof of Fermat's Last Theorem (the equation x" + y" = z", where n is an integer greater than 2, has no solution in positive numbers), a problem that has confounded scholars for over 350 years.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16O8Tg4HwFn3JJrBmteWb7TqH-RJ6rtkx/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+            <section class="container" id="b23">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">A First Course in Complex Analysis
+                        Version 1.54</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/61BKMPNQXXL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">It is never too late to
+                        start learning and it would be a shame to miss an opportunity to learn a tutorial or course that
+                        can be so useful as A First Course in Complex Analysis especially when it is free! You do not
+                        have to register for expensive classes and travel from one part of town to another to take
+                        classes. All you need to do is download the course and open the PDF file. This specific program
+                        is classified in the Mathematics category where you can find some other similar courses.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1w4UjNrwRVoJ17LyJe4SBpO0SqiUaK9An/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">MATHEMATICS</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Handy Math Answer Book</h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/51d0dDTmF0L._SX385_BO1,204,203,200_.jpg">
-                <br>
-                <p class="leading-relaxed">From modern-day challenges such as balancing a checkbook, following the stock market, buying a home, and figuring out credit card finance charges to appreciating historical developments like the use of algebra by Mesopotamian mathematicians, this engaging resource addresses more than 1,000 questions relating to mathematics. Providing a complete overview—beginning with the early history of Pythagoras, Archimedes, and how some of the first calendars were invented—this guide helps answer questions surrounding the basics and fundamentals of algebra, calculus, geometry, and trigonometry. Organized in 16 chapters that cluster similar topics in an easily accessible format, this reference provides clear and concise explanations to paradoxes, theories, fundamentals of geometry, and other branches of...</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/16yHmJcvfycnREGiLV04L2FOElvdY6ZtR/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main24">
+            <section class="container" id="b24">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Categories and Homological Algebra
+                    </h1><img
+                        src="https://media.springernature.com/w306/springer-static/cover-hires/book/978-3-662-12492-5"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">These three lectures present
+                        some fundamental and classical aspects of microlocal analysis. Starting with the Sato's
+                        microlocalization functor and the microsupport of sheaves, we then construct a microlocal
+                        analogue of the Hochschild homology for sheaves and apply it to recover index theorems for
+                        D-modules and elliptic pairs. In the third lecture, we construct the ind-sheaves of temperate
+                        and Whitney holomorphic functions and give some applications to the study of irregular holonomic
+                        D-modules.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/18s632oBZ0gK1DbFy4tN6s0erEb5Thg6H/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            </section>
+            <section class="container" id="b25">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">100 Math Brainteasers</h1><img
+                        src="https://books.google.co.in/books/publisher/content?id=Z9elAgAAQBAJ&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U2_m-ENZGnxEHxw06dNlXw8nXbpfQ&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">100 Math Brainteasers (Grade 7-10) is a subtle
+                        selection of one hundred arithmetic, algebra, and geometry assignments, which efficiently train
+                        the mind in math skills. It will be helpful for students attending High School and also in
+                        preparation for Mathematical competitions or Olympiads at a younger age. ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/18E7TIkQMd8zn0Ug33rg4Xkf6a_dei77_/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main26">
+            <section class="container" id="b26">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">A Gateway to Modern Mathematics:
+                        Adventures in Iteration I</h1><img
+                        src="https://pictures.abebooks.com/isbn/9788173716928-us.jpg"><br>
+                    <p class="books-description" style="height: 166px;">A Gateway to Modern Mathematics: Adventures in
+                        Iteration I is the first of a two-volume work on iterations in the RMS series Little
+                        Mathematical Treasures. The books in this series address senior secondary school students who
+                        are interested in exploring mathematics a little beyond what the school curriculum offers.</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17YG_cH-6cHSeoBsT9y9mThMpRyYy0pOd/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b27">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">A Mind For Numbers</h1><img
+                        src="https://books.google.co.in/books/publisher/content?id=Sb1iAgAAQBAJ&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U3caHPvKpehtOlT6gkP6mGKzP4BQg&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">The companion book to COURSERA®'s wildly popular
+                        massive open online course 'Learning How to Learn'Whether you are a student struggling to
+                        fulfill a math or science requirement, or you are embarking ..</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/18ASCroOxh4odgDuctNCi_mSCaYE5Ql_l/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main28">
+            <section class="container" id="b28">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">A Primer on Number Sequences</h1><img
+                        src="https://books.google.co.in/books/content?id=FbTpPcMmgSQC&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U2hKHgNfR0hObkUS7MqzdnwFarLmA&amp;w=1025"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">This book offers an
+                        excursion into the world of number sequences, objects that occur widely all through Mathematics.
+                        Part I deals with the generating formula of a sequence and Part II with individual sequences
+                        such as the squares, the cubes, the primes, the unit fractions, the Fibonacci numbers and so on.
+                        The book is aimed at students and general readers. It will be particularly useful to students
+                        who wish to appear for the Mathematical Olympiads.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17mwTPx48aFJQo9kXyoHpyeeIWBJkgGo4/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b29">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Pure Mathematics 1</h1><img
+                        src="https://www.madrasshoppe.com/185975-large_default/cambridge-international-a-as-mathematics-pure-mathematics-1-practice-book-greg-port.jpg"><br>
+                    <p class="books-description" style="height: 166px;">This brand new series has been written for the
+                        University of Cambridge International Examinations course for AS and A Level Mathematics (9709).
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/18EMCqdPUw6sb1V82ySNncngbH5b41HyW/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main30">
+            <section class="container" id="b30">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Competitive Math for Middle School
+                    </h1><img
+                        src="https://books.google.co.in/books/publisher/content?id=wshUDwAAQBAJ&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U1HHYbbNA_HIwYeiAin-zYTggZ0Ig&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The 39 self-contained
+                        sections in this book present worked-out examples as well as many sample problems categorized by
+                        the level of difficulty as Bronze, Silver, and Gold in order to help the readers gauge their
+                        progress and learning. Detailed solutions to all problems in each section are provided at the
+                        end of each chapter. The book can be used not only as a text but also for self-study.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/186Wp0Oo5iG2zbpnQQiiMXhb_5cMf_fL-/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b31">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Love and Math: The Heart of Hidden
+                        Reality</h1><img
+                        src="https://books.google.co.in/books/publisher/content?id=AFs4DgAAQBAJ&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U2MdzrdxbIvbGYXQvh_O3O1BfOc0g&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">An awesome, globe-spanning, and New York Times
+                        bestselling journey through the beauty and power of mathematics What if you had to take an art
+                        class in which you were only taught how to paint a fence? What if you were never shown the
+                        paintings of van Gogh and Picasso, weren't even told they existed? .</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16kZTQLXVPJuno8SoOhGVt6nUFom0ddbY/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main32">
+            <section class="container" id="b32">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Magical Book on Quicker Maths</h1><img
+                        src="https://assets.lulu.com/cover_thumbs/1/8/18k5ggwv-ebook-shortedge-384.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The competitive exams of the
+                        today are virtually a race against time. The candidate is expected to perform an incredible
+                        amount of mathematical world in a very short time. The time available for sorting out one
+                        question ranges from 0.25 to 0.75 minutes. Given such a scenario, traditional methods of solving
+                        questions seem anachronistic outdated, to put it simply. A new approach is the need of the
+                        hour—an approach that is speed—oriented and yet simple to follow and apply. It is with this one
+                        and only objective in mind that the author has prepared this book.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16kZTQLXVPJuno8SoOhGVt6nUFom0ddbY/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b33">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math for the Non-Math Lovers</h1><img
+                        src="https://m.media-amazon.com/images/P/B00EPG8ZIY.01._SCLZZZZZZZ_SX500_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Even You Can Learn Statistics, 2nd Ed. is the
+                        easiest guide to using statistics in your everyday work or study. Experienced educators David
+                        Levine and David Stephan teach statistics hands-on, in plain English, with as little math and as
+                        many revealing examples as possible.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16YjzC_RmP9jYoOXY3rk5k5IWZjUiW2wF/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main34">
+            <section class="container" id="b34">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math In Focus</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/91JH-aBX8fL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Math in Focus is based on
+                        the internationally renowned Singapore Maths® method and focuses on problem solving as the heart
+                        of learning maths while teaching concepts using concrete–pictorial–abstract learning progression
+                        through real-world, hands-on examples. This series of books has been tailored to the US
+                        curriculum based on Singapore’s successful My Pals Are Here series and was developed by Dr Fong
+                        and leading US educational experts.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16E09aWMCdKdHBF_A5UdJZTbpVcbWaLkU/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b35">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math Intervention 3-5</h1><img
+                        src="https://m.media-amazon.com/images/I/51RmulxKQqL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Help all of your students
+                        reach success in math! This essential book, from bestselling author and consultant Jennifer
+                        Taylor-Cox, is filled with suggestions that teachers and RTI/MTSS specialists can use to target
+                        instruction for struggling students in grades 3-5. You’ll learn how to diagnose academic
+                        weaknesses, differentiate instruction, use formative assessments, offer corrective feedback, and
+                        motivate students with games and activities.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16hGUsHlnxJFqVGoNAoALXA86YClrvUHV/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main36">
+            <section class="container" id="b36">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Math Puzzles and Brainteasers,
+                        Grades 6-8</h1><img
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348650207l/4515980.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Number puzzles,
+                        spatial/visual puzzles, cryptograms, Sudoku, Kokuro, logic puzzles, and word games like Frame
+                        Games are all a great way to teach math and problem-solving skills to elementary and middle
+                        school students. In these two new collections, puzzle master Terry Stickels provides puzzles and
+                        brain games that range from simple to challenging and are organized by grade level and National
+                        Council of Teachers of Mathematics (NCTM) content areas. Each book offers over 300 brain games
+                        that will help students learn core math concepts and develop critical thinking skills. The books
+                        include a wide range of puzzle types and cover a variety of math topics, from fractions and
+                        geometry to probability and algebra.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17B_oce7heJKETdVSnUiRZ_vc-7_A5rVd/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b37">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Math Puzzles Classic Riddles and
+                        Brain Teasers in Counting, Geometry, Probability, and Game Theory</h1><img
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1413328492l/14745447.jpg"><br>
+                    <p class="books-description" style="height: 166px;">You want to cut a tortilla into 8 pieces. What's
+                        the minimum number of cuts you need to make? Is it statistically harder to guess an iPhone
+                        password that uses 3-digits or one that uses 4 unique digits? Two friends agree to meet up in a
+                        bar between midnight and 1 am.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17mr381TSF9P-aQN244dHmPdbPf7_OFGc/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main38">
+            <section class="container" id="b38">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">MATH TRICKS</h1><img
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1517855792l/38356209._SX318_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">This book is the result of
+                        twenty years of puzzle collecting. For these many years I have endeavored to gather everything
+                        belonging to the realm of mathematical entertainment from all available sources. As an editor of
+                        newspaper columns on scientific entertainment, I found my readers keenly interested in this kind
+                        of pastime, and these readers proved to be amongmy best so ...more</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16oS5fZ_0rYrxaYuiSTmZubAlHkD9lh6T/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b39">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Math Wise!</h1><img
+                        src="https://media.wiley.com/product_data/coverImage300/99/04704719/0470471999.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Math is a difficult and
+                        abstract subject for many students, yet teachers need to make sure their students comprehend
+                        basic math concepts. This engaging activity book is a resource teachers can use to give students
+                        concrete understanding of the math behind the questions on most standardized tests, and includes
+                        information that will give students a firm grounding to work with more advanced math concepts.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17MEcizEtzFm2CDa0NZOAq-6UxqAHbe4t/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main40">
+            <section class="container" id="b40">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">GMAT club math book</h1><img
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500040602l/35673610._SX318_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Read Total Gmat Math: Volume 1 book reviews
+                        &amp; author details and more at ... Quant: 250+ Practice Problems &amp; Online Resources
+                        (Manhattan Prep GMAT ... All the GMAT: Content Review + 6 Online Practice Tests + Effective
+                        Strategies to Get …</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17FSAN1reNRPb_QtPMr3mD6vG2AV7DT5Y/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b41">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Conquering SAT Math, 2nd Ed.</h1><img
+                        src="https://books.google.co.in/books/content?id=dh7Z9XDeUxoC&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;sig=ACfU3U0khVXmWvkuCJKInVQn4tNomXq_tg&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">Triumph over tough equations and get top scores
+                        on the SAT Math section! If you're struggling with SAT math, you can rest easy-the new edition
+                        of McGraw-Hill's Conquering SAT Math is here.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16EeFA8XtNcaa0Pi5hbeLjxpoyyzdo6ra/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main42">
+            <section class="container" id="b42">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Number Theory</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/31knXN7l9mL._SX331_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The book is divided into two
+                        parts. Part A covers key concepts of number theory and could serve as a first course on the
+                        subject. Part B delves into more advanced topics and an exploration of related mathematics. The
+                        prerequisites for this self-contained text are elements from linear algebra. Valuable references
+                        for the reader are collected at the end of each chapter. It is suitable as an introduction to
+                        higher level mathematics for undergraduates, or for self-study.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17_b2dEXrkruJTKiMzCj2XJGuwTSW8ZDR/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b43">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Progress in Mathematics</h1><img
+                        src="https://online.issuhub.com/etfs/3und/files/shot.png"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Grade 4 Rigorous content
+                        aligns with NCTM Standards and Curriculum Focal Points. Student-centered textbooks instill
+                        confidence in all learners. Superior teacher support makes teaching easy and fun. Integrated,
+                        meaningful assessments, intervention, and analysis guarantee success for every student.
+                        Exceptional online components are whiteboard compatible and support any teaching situation.</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/172DDpeJFyqFkOSZaOycw2mC_KD1RvnOc/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main44">
+            <section class="container" id="b44">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Secrets of Mental Math</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51gV+lP6OSL._SX322_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Secrets of Mental Math will have you thinking
+                        like a math genius in no time. Get ready to amaze your friends—and yourself—with incredible
+                        calculations you never thought you could master, as renowned “mathemagician” Arthur Benjamin
+                        shares his techniques for lightning-quick calculations and amazing.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/168xH9ULi72OU8lJxCksgLksZ-UoG-icg/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b45">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">Technical Math For Dummies</h1><img
+                        src="https://books.google.co.in/books/content?id=bfhHCnGVzgEC&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U2aqUQT1U1_lK7Xx3JkrFjcCWdIaA&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Technical Math For Dummies
+                        is your one-stop, hands-on guide to acing the math courses you’ll encounter as you work toward
+                        getting your degree, certification, or license in the skilled trades. You’ll get easy-to-follow,
+                        plain-English guidance on mathematical formulas and methods that professionals use every day in
+                        the automotive, health, construction, licensed trades, maintenance, and other trades. You’ll
+                        learn how to apply concepts of algebra, geometry, and trigonometry and their formulas related to
+                        occupational areas of study. Plus, you’ll find out how to perform basic arithmetic operations
+                        and solve word problems as they’re applied to specific trades.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/187_8Q5FVVw5YjjoVX5xTrIlJEm6l51I5/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main46">
+            <section class="container" id="b46">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">The Maths Handbook</h1><img
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1359616314l/10449811.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">This is the perfect
+                        introduction for those who have a lingering fear of math. If you think that math is difficult,
+                        confusing, dull or just plain scary, then 'The Math Handbook' is your ideal companion. Covering
+                        all the basics including fractions, equations, primes, squares and square roots, geometry and
+                        fractals, Dr. Richard Elwes will lead you gently towards a great goal.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/17CtbtyS3zXV-g_hnbq6bKzE5Oc60AHkr/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b47">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">World's Most Famous Math Problem
+                    </h1><img src="https://m.media-amazon.com/images/P/0312106572.01._SCLZZZZZZZ_SX500_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">June 23, 1993. A Princeton
+                        mathematician announces that he has unlocked, after thousands of unsuccessful attempts by
+                        others, the greatest mathematical riddle in the world. Dr. Wiles demonstrates to a group of
+                        stunned mathematicians that he has provided the proof of Fermat's Last Theorem (the equation x'
+                        + y' = z', where n is an integer greater than 2, has no solution in positive numbers), a problem
+                        that has confounded scholars for over 350 years.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16O8Tg4HwFn3JJrBmteWb7TqH-RJ6rtkx/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main48">
+            <section class="container" id="b48">
+                <div class="sub-content-container">
+                    <h2 class="book-category">Mathematics</h2>
+                    <h1 class="book-name" style="height: 50px;">The Handy Math Answer Book</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51d0dDTmF0L._SX385_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">From modern-day challenges
+                        such as balancing a checkbook, following the stock market, buying a home, and figuring out
+                        credit card finance charges to appreciating historical developments like the use of algebra by
+                        Mesopotamian mathematicians, this engaging resource addresses more than 1,000 questions relating
+                        to mathematics. Providing a complete overview—beginning with the early history of Pythagoras,
+                        Archimedes, and how some of the first calendars were invented—this guide helps answer questions
+                        surrounding the basics and fundamentals of algebra, calculus, geometry, and trigonometry.
+                        Organized in 16 chapters that cluster similar topics in an easily accessible format, this
+                        reference provides clear and concise explanations to paradoxes, theories, fundamentals of
+                        geometry, and other branches of...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/16yHmJcvfycnREGiLV04L2FOElvdY6ZtR/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </article>
 
-
-
-                        <!--------JavaScript for toggle menu------>
-                        <script>
-                            var navLinks = document.getElementById("navLinks");
-                            function showMenu(){
-                                navLinks.style.right = "0";
-                            }
-                            function hideMenu(){
-                                navLinks.style.right = "-200px";
-                            }
-                        </script>
+    <footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <img src="footer-logo.png" alt="logo" class="footer-logo">
+                <p style="margin-top: -50px;line-height: 25px;">This is an Online Platform for the reading of students.
+                    Please note that all the books in this platform are borrowed from other Websites and we give equal
+                    credits to them.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Credits <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a></li>
+                    <li><a href="https://z-lib.org/" target="_blank">Z Library</a></li>
+                    <li><a href="https://pdfroom.com/" target="_blank">PDF Room</a></li>
+                    <li><a href="https://planetpdf.com/" target="_blank">Planet PDF</a></li>
+                    <li><a href="https://www.planetebook.com/" target="_blank">Planet E-Book</a></li>
+                    <li><a href="https://fb2bookfree.com/" target="_blank">FB2 Book Free</a></li>
+                    <li><a href="https://allreadingworld.com/" target="_blank">All Reading World</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="About_Page.html" target="_blank">About</a></li>
+                    <li><a href="books.html" target="_blank">Books</a></li>
+                    <li><a href="Comment.html" target="_blank">Contact</a></li>
+                    <li><a href="Comment.html" target="_blank">Comment</a></li>
+                    <li><a href="Books_Review.html" target="_blank">Book Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us <div class="underline"><span></span></div>
+                </h3>
+                <form class="footer-form">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input placeholder="Enter your email-id">
+                    <a href="oops.html"><button class="footer-btn"><i class="fa-solid fa-arrow-right"></i></button></a>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCtN5a1UpFa2vPBlOLosZs-A" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copywright">Author's Attic | Virtual Library © 2022 - All rights reserved</p>
+    </footer>
 </body>
+
 </html>
