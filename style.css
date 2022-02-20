@@ -327,15 +327,11 @@ h1{
     text-align: left;
 }
 @media only screen and (max-width: 1000px){
-    .testimonials{
-        width: 100%;
-    }
-    .testimonials-col{
-        width: 100%;
-
-    }
+.testimonials-col{
+    display: flex;
+    flex-direction: column;
+}
     
-
 }
 
 /*----------------------ABOUT PAGE----------------------*/
