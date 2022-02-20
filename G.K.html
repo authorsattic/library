@@ -1,437 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <title>G.K Books | Author's Attic Virtual Library</title>
-    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg"/>
+    <title>General Knowledge | Author's Attic Virtual Library</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://i.ibb.co/s33vLxy/Logo.jpg" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-              *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav img{
-    width: 150px;
-}
-.nav-links{
-    flex: 1;
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336 ;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.text-box{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-nav .fa{
-    display: none;
-}
-
-@media(max-width: 700px) {
-    .text-box h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    nav .fa{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
-    }
-}
-
-
-/*---------- course ----------*/
-
-.course{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.course a{
-    text-decoration: none;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.course-col{
-    flex-basis: 24%;
-    background: #f1c0c0;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #222;
-}
-.course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-@media(max-width: 700px) {
-    .row{
-        flex-direction: column;
-    }
-}
-
-
-/*----------Campus Codes---------*/
-
-.campus{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.campus-col img{
-    width: 100%;
-    display: block;
-}
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-.layer:hover{
-    background: rgba(226,0,0,0.7);
-}
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-}
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*----------------------------Facilities------------------------------------*/
-
-.facilites{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.facilites-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-.facilites-col img{
-    width: 100%;
-    border-radius: 10px;
-}
-.facilites-col p{
-    padding: 0;
-}
-.facilites-col h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-.facilites-col a{
-    text-decoration: none;
-}
-/*----------------------Testimonials----------------------*/
-
-.testimonials{
-    width: 80%;
-    margin: auto;
-    padding-top: 100px;
-    text-align: center;
-}
-.testimonials-col{
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #eed7d7;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-.testimonials-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-.testimonials-col p{
-    padding: 0;
-}
-.testimonials-col h3{
-    margin-top: 15px;
-    text-align: left;
-}
-
-/*----------------------CONTACT----------------------*/
-
-.cta{
-    margin: 100px auto;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(eduford_img/banner2.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta h1{
-    color: #fff;
-    margin: 40px;
-    padding: 0;
-}
-@media(max-width: 700px){
-    .cta h1{
-        font-size: 24px;
-    }
-}
-
-/*----------------------FOOTER----------------------*/
-
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-}
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-/*----------------------ABOUT PAGE----------------------*/
-
-.sub-header{
-    height: 50vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) , rgba(4,9,30,0.7)) , url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 100px;
-}
-.about-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.about-col{
-    flex-basis: 48%;
-    padding: 30px 2px;
-}
-.about-col img{
-    width: 100%;
-}
-.about-col h1{
-    padding-top: 0;
-}
-.about-col p{
-    padding: 15px 0 25px;
-}
-.red-btn{
-    border: 1px solid #f44336;
-    background: transparent;
-    color: #f44336;
-}
-.red-btn:hover{
-    color: white;
-}
-
-/*----------------------BLOG CONTENT----------------------*/
-
-.blog-content{
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-.blog-left{
-    flex-basis: 65%;
-}
-.blog-left img{
-    width: 100%;
-}
-.blog-left h4{
-    color: #222;
-    font-weight: 600;
-    margin: 30px 0;
-}
-.blog-left p{
-    color: #999;
-    padding: 0;
-}
-.blog-right{
-    flex-basis: 32%;
-}
-.blog-right h3{
-    background: #f44336;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.blog-right div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #555;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.footer{
-    background-color: lightcoral;
-    text-align: left;
-    color: white;
-}
-        h1{
-            font-size: 38px;
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booktem.css">
 </head>
+
 <body>
     <section class="sub-header">
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About_Page.html">ABOUT</a></li>
+                    <li><a href="index">HOME</a></li>
+                    <li><a href="About_Page">ABOUT</a></li>
                     <li><a href="books.html">BOOKS</a></li>
                     <li><a href="Blog.html">BLOG</a></li>
                     <li><a href="Comment.html">COMMENT</a></li>
@@ -440,993 +28,763 @@ h3{
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        <h1>General Knowledge Books</h1>
+        <h1>General Knowledge</h1>
     </section>
 
-    <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">GK</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Building Blocks Of Table Top Design</h1>
-              <br>
-               <img src="https://books.google.co.in/books/publisher/content?id=X0-fDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73HiYxlyZDxWvnbRQI1kBiRCSYx9yOfHrwNh_FUgOxCVPJY1D4IWgaVnwWvAiGJN4F3YttdJfRkPKbh6jI948OA9lSKcszXzSAn4jPWn81swfM-VCA4uN8DMvBdbjKlFMXMPiEE">
-              <br>
-              <p class="leading-relaxed">
-                Building Blocks of Tabletop Game Design: An Encyclopedia of Mechanisms compiles hundreds of different mechanisms, organized by category. Each has a description of how it works, discussion of its pros and cons, how it can be implemented, and examples of specific games that use it. Building Blocks can be read cover to cover, used as a reference when looking for inspiration for a new design, help solving a specific problem, or assist in getting unstuck in the midst of a project. This book, the first to collect mechanisms like this in the tabletop game design field, aims to be a practical guide that will be a great starting point for beginning designers,
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1GKkya6My3EL0Vs9MmY_HRZpT6uN5Uhde/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">First Children's Encyclopedia</h1>
-              <br>
-               <img src="data:image/jpeg;base64,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">
-              <br>
-              <p class="leading-relaxed">
-                Discover everything you ever wanted to know about anything with this first reference for young readers and writers An inspiring and comprehensive collection of the best in the DK First Reference series, all gathered together in one superb volume. From prehistoric life to space travel, bacteria to the human brain help your child discover all about the world we live in.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1GKxIoJTVxxfR5sCW6otzGKgWeHwGedF4/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">STUDENT’S
-                ENCYCLOPEDIA OF
-                GENERAL
-                KNOWLEDGE</h1>
-              <br>
-               <img src="https://books.google.co.in/books/content?id=RwNPgzQXCHMC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72ATF_e1qVh7ebfGTJpaKC8VVBQS4tX_iSXcQn9dBrtbVCkSK4ZG5rjZk8MAlSEC_YoTcReghsa3SYVTXtRRR6jWv2poVValvIVoTPxNagExm-A238kH08RWYPcZcvLe8ShFoWq">
-              <br>
-              <p class="leading-relaxed">
-                This encyclopedia is the best source of information and reference in a single volume, particularly for students of classes III to VIII. It provides the best of GK to its readers. Every piece of information is authentic - culled together from several areas of knowledge ranging from encyclopedias, fact books, year books, official government releases, internet and other reliable sources - and verified for accuracy.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1GRVWb0aTK4xE2vpq6g9pndGNYAPBaJRQ/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Current Affairs</h1>
-              <br>
-               <img src="https://www.examveda.com/images/theory-image/current-affairs/download/2021/1618920373-march-2021-current-affairs-download-pdf.png">
-              <br>
-              <p class="leading-relaxed">
-                Current Affairs March 2021 PDF is created by keeping the demands of a recent pattern of various competitive exams in major view. It is brought to you by examveda.com. The topics for a cover story and entire news section are selected on the basis of an analysis of general knowledge sections in all important exams including BANK, SSC, IAS, PCS, Insurance and others. And the time duration of topics covered in PDF includes all exam oriented current affairs of March 2021.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://drive.google.com/file/d/1IQO50vKR-cU82IZA-c0QET36M5MPgVP1/view?usp=sharing">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-           
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-              <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Children's Illustrated Encyclopedia</h1>
-              <br>
-               <img src="https://cdn.asaha.com/assets/thumbs/6a8/6a8f1504b00a80870a2771122b8c4fb2.jpg">
-              <br>
-              <p class="leading-relaxed">
-                From dinosaurs to digital technology, DK's Children's Illustrated Encyclopedia is a must-have knowledge compendium exploring more than 380 topics. Help your child find out everything they need to know about anything with this fact-packed encyclopedia. Arranged from A-Z on subjects they need to know about, all illustrated with dramatic photos, cut-aways, charts and maps.
-              </p>
-           
-              <br>
-              <br>
-                <a href="https://www.pdfdrive.com/download.pdf?id=185374827&h=c999de780b7ee98e125c5297a1cc5630&u=cache&ext=pdf">
-                <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">April 2021 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of April 2021</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1rcZpbxc9FA_AvKz8CkbB9QKYq-r02T1-/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+    <article class="article">
+        <main class="wrapper" id="main0">
+            <section class="container" id="b0">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Building Blocks Of Table Top Design
+                    </h1><img src="https://m.media-amazon.com/images/I/41bNiBqEFeL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Building Blocks of Tabletop
+                        Game Design: An Encyclopedia of Mechanisms compiles hundreds of different mechanisms, organized
+                        by category. Each has a description of how it works, discussion of its pros and cons, how it can
+                        be implemented, and examples of specific games that use it. Building Blocks can be read cover to
+                        cover, used as a reference when looking for inspiration for a new design, help solving a
+                        specific problem, or assist in getting unstuck in the midst of a project. This book, the first
+                        to collect mechanisms like this in the tabletop game design field, aims to be a practical guide
+                        that will be a great starting point for beginning designers,</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1GKkya6My3EL0Vs9MmY_HRZpT6uN5Uhde/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">August 2020 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of August 2020
-              </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1rgv6RuA_8XrSz78klr_iI73gJ_jEuooJ/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b1">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">First Children's Encyclopedia</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/914QuIPW22L.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Discover everything you ever
+                        wanted to know about anything with this first reference for young readers and writers An
+                        inspiring and comprehensive collection of the best in the DK First Reference series, all
+                        gathered together in one superb volume. From prehistoric life to space travel, bacteria to the
+                        human brain help your child discover all about the world we live in.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1GKxIoJTVxxfR5sCW6otzGKgWeHwGedF4/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Covid-19 Information</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">COVID-19 Book of Five: Response and Containment Measures for ANM, ASHA, AWW. in January 2020 the World Health Organization (WHO) declared the outbreak of a new coronavirus disease in Hubei Province, China to be a Public Health Emergency of International Concern.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1rtxXAXRED6NMEuyVjb0bmnkxwngIsXBR/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main2">
+            <section class="container" id="b2">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">STUDENT’S ENCYCLOPEDIA OF GENERAL
+                        KNOWLEDGE</h1><img
+                        src="https://3.bp.blogspot.com/-WW90w9k8ACg/XGo4m4hpzBI/AAAAAAAAdME/iIh-WHysm1ghMZa3kHuSb0KBqoIBD2lfQCLcBGAs/s1600/IMG_20190218_094603.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">This encyclopedia is the
+                        best source of information and reference in a single volume, particularly for students of
+                        classes III to VIII. It provides the best of GK to its readers. Every piece of information is
+                        authentic - culled together from several areas of knowledge ranging from encyclopedias, fact
+                        books, year books, official government releases, internet and other reliable sources - and
+                        verified for accuracy.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1GRVWb0aTK4xE2vpq6g9pndGNYAPBaJRQ/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Covid-19 Vaccines: Safety Surveillance Manual</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">The COVID-19 vaccine safety guidance manual has been developed upon recommendation and guidance of GACVS members, as well as by experts incorporating current and available information critical to all stakeholders when COVID-19 vaccines will be introduced.by World Health Organization · 2020 ·  COVID-19 vaccines: safety surveillance manual.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sZoR_w_dyOaFl7mD0bNR38B8JkFoJZWK/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b3">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Current Affairs</h1><img
+                        src="https://www.examveda.com/images/theory-image/current-affairs/download/2021/1618920373-march-2021-current-affairs-download-pdf.png"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Current Affairs March 2021
+                        PDF is created by keeping the demands of a recent pattern of various competitive exams in major
+                        view. It is brought to you by examveda.com. The topics for a cover story and entire news section
+                        are selected on the basis of an analysis of general knowledge sections in all important exams
+                        including BANK, SSC, IAS, PCS, Insurance and others. And the time duration of topics covered in
+                        PDF includes all exam oriented current affairs of March 2021.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1IQO50vKR-cU82IZA-c0QET36M5MPgVP1/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                  <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Current Affairs- March 2021</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">March Current Affairs of 2021 are covered all types of  important points in National, International , Business and Economy, Sports, Science and Technology, Special days, Deaths,Awards which covered exams like IBPS,SSC,IAS, and other competitive exams </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1rxxhtfa36vOaJ2JHka8zpoiX1_By3lfP/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main4">
+            <section class="container" id="b4">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Children's Illustrated Encyclopedia
+                    </h1><img src="https://cdn.asaha.com/assets/thumbs/6a8/6a8f1504b00a80870a2771122b8c4fb2.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">From dinosaurs to digital
+                        technology, DK's Children's Illustrated Encyclopedia is a must-have knowledge compendium
+                        exploring more than 380 topics. Help your child find out everything they need to know about
+                        anything with this fact-packed encyclopedia. Arranged from A-Z on subjects they need to know
+                        about, all illustrated with dramatic photos, cut-aways, charts and maps.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://www.pdfdrive.com/download.pdf?id=185374827&amp;h=c999de780b7ee98e125c5297a1cc5630&amp;u=cache&amp;ext=pdf">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">June 2020 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of June 2020</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1rzsZbl-JrMidg3r7f-Hsq-GLOBLBz_5d/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b5">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">April 2021 Monthly Magazine</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of April 2021</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1rcZpbxc9FA_AvKz8CkbB9QKYq-r02T1-/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Lucent GK Book 2016</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">This book on general knowledge is important for exams like SSC, Railway Recruitment Exams, Bank Exams, PO, Army, Airforce etc.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1VHTOsn7TPTeAlqur5B8DoXmywXNeXWIN/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main6">
+            <section class="container" id="b6">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">August 2020 Monthly Magazine</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of August 2020</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1rgv6RuA_8XrSz78klr_iI73gJ_jEuooJ/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">December 2020 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of December 2020.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1s1maq-xhtRLSVL_jKJBnYZAFvIWnw751/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b7">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Covid-19 Information</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">COVID-19 Book of Five: Response and Containment
+                        Measures for ANM, ASHA, AWW. in January 2020 the World Health Organization (WHO) declared the
+                        outbreak of a new coronavirus disease in Hubei Province, China to be a Public Health Emergency
+                        of International Concern.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1rtxXAXRED6NMEuyVjb0bmnkxwngIsXBR/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">January 2021 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of January 2021.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1s7tUhYiIMWPYbZvcvWdUCsBUgsLgQ8ru/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main8">
+            <section class="container" id="b8">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Covid-19 Vaccines: Safety
+                        Surveillance Manual</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">The COVID-19 vaccine safety
+                        guidance manual has been developed upon recommendation and guidance of GACVS members, as well as
+                        by experts incorporating current and available information critical to all stakeholders when
+                        COVID-19 vaccines will be introduced.by World Health Organization · 2020 · COVID-19 vaccines:
+                        safety surveillance manual.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sZoR_w_dyOaFl7mD0bNR38B8JkFoJZWK/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">November 2020 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of November 2020.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sCLc22JDlsjT6l5Y-5MRrgksdKdWGW96/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b9">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Current Affairs- March 2021</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">March Current Affairs of 2021 are covered all
+                        types of important points in National, International , Business and Economy, Sports, Science and
+                        Technology, Special days, Deaths,Awards which covered exams like IBPS,SSC,IAS, and other
+                        competitive exams</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1rxxhtfa36vOaJ2JHka8zpoiX1_By3lfP/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">October 2020  Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of October 2020.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sKv36xWMQwm4aW4bUO2U0iw2BAlFVT7Q/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main10">
+            <section class="container" id="b10">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">June 2020 Monthly Magazine</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of June 2020</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1rzsZbl-JrMidg3r7f-Hsq-GLOBLBz_5d/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">September 2020 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of September  2020.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sLTR507_zFWhl0CggEFpT9y_1xY2n9Qf/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b11">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Lucent GK Book 2016</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">This book on general knowledge is important for
+                        exams like SSC, Railway Recruitment Exams, Bank Exams, PO, Army, Airforce etc.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1VHTOsn7TPTeAlqur5B8DoXmywXNeXWIN/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">July 2020 Monthly Magazine</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Current Affairs for the month of July  2020.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sVyoU_lLTAeyw59XGUPhCLXuWN0kAgf9/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main12">
+            <section class="container" id="b12">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">December 2020 Monthly Magazine</h1>
+                    <img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of December 2020
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1s1maq-xhtRLSVL_jKJBnYZAFvIWnw751/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Nitrogen</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">LIN, Cryogenic Liquid Nitrogen, Liquid Nitrogen, Liquid Nitrogen NF, Liquid Nitrogen FG. Liquefied gas ... This material is considered hazardous by the OSHA Hazard Communication Standard.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sWmIwW9bYTXJVX0s-YfbiaFi0fBFZuC-/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b13">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">January 2021 Monthly Magazine</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of January 2021.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1s7tUhYiIMWPYbZvcvWdUCsBUgsLgQ8ru/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Facts on Water Resources</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">The world's water exists naturally in different forms and locations: in the air, on the surface, below the ground, and in the oceans. Freshwater accounts for only 2.5% of the Earth's water, and most of it is frozen in glaciers and icecaps.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1sYe2XoHWha5JVaOW73zGE5ZUdCjyoEhD/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main14">
+            <section class="container" id="b14">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">November 2020 Monthly Magazine</h1>
+                    <img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of November 2020.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sCLc22JDlsjT6l5Y-5MRrgksdKdWGW96/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">5000 GK Questions</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">5000 GK (General knowledge) MCQs for SSC, RRB, IBPS etc exam in pdf</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1-4qLfcqwOiK6L6wAv9YMmtRKgZLDP6gL/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b15">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">October 2020 Monthly Magazine</h1>
+                    <img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of October 2020.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sKv36xWMQwm4aW4bUO2U0iw2BAlFVT7Q/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">2009 General Knowledge</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">General Knowledge India Kalpana ... General Awareness India What is the maximum period of gap between any two sessions of the Indian Parliament?</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1-5CmGNu5FeGkqkYHfqQDFPzOwC5NBDfO/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main16">
+            <section class="container" id="b16">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">September 2020 Monthly Magazine</h1>
+                    <img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of September 2020.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sLTR507_zFWhl0CggEFpT9y_1xY2n9Qf/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">A Handbook on Legal GK 2018</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Dateline of important events in the year 2009, General Knowledge of events of 2009. Increase your knowledge of GK of events in 2009.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1--Tb1gqf45cJN0BsXlSp_qSQCBn-VlPR/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+            <section class="container" id="b17">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">July 2020 Monthly Magazine</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs for the month of July 2020.</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sVyoU_lLTAeyw59XGUPhCLXuWN0kAgf9/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">          
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">GENERAL KNOWLEDGE</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">AIIMS General Knowledge with Logical Thinking</h1>
-                <br>
-                 <img src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png">
-                <br>
-                <p class="leading-relaxed">Update yourself with emerging trends in the legal arena. This book encompasses the Important Judgments of 2018, Landmark Supreme Court Judgements, Important amendments and new enactments – 2018, Constitution of India- Glance, International Legal Developments 2018, Important Committees and Commissions 2018, Important Latin Maxims, Key Legal Concepts, Important Books and Authors.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/12e7GaDG3RTD5hKxGuuDS_5rekdprxf21/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>               
-                  </button>
+            </section>
+        </main>
+        <main class="wrapper" id="main18">
+            <section class="container" id="b18">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Nitrogen</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">LIN, Cryogenic Liquid Nitrogen, Liquid Nitrogen,
+                        Liquid Nitrogen NF, Liquid Nitrogen FG. Liquefied gas ... This material is considered hazardous
+                        by the OSHA Hazard Communication Standard.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sWmIwW9bYTXJVX0s-YfbiaFi0fBFZuC-/view?usp=sharing">Download</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            </section>
+            <section class="container" id="b19">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Facts on Water Resources</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">The world's water exists naturally in different
+                        forms and locations: in the air, on the surface, below the ground, and in the oceans. Freshwater
+                        accounts for only 2.5% of the Earth's water, and most of it is frozen in glaciers and icecaps.
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1sYe2XoHWha5JVaOW73zGE5ZUdCjyoEhD/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main20">
+            <section class="container" id="b20">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">5000 GK Questions</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">5000 GK (General knowledge) MCQs for SSC, RRB,
+                        IBPS etc exam in pdf</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1-4qLfcqwOiK6L6wAv9YMmtRKgZLDP6gL/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b21">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">2009 General Knowledge</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">General Knowledge India Kalpana ... General
+                        Awareness India What is the maximum period of gap between any two sessions of the Indian
+                        Parliament?</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1-5CmGNu5FeGkqkYHfqQDFPzOwC5NBDfO/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main22">
+            <section class="container" id="b22">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">A Handbook on Legal GK 2018</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px;">Dateline of important events in the year 2009,
+                        General Knowledge of events of 2009. Increase your knowledge of GK of events in 2009.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1--Tb1gqf45cJN0BsXlSp_qSQCBn-VlPR/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b23">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">AIIMS General Knowledge with Logical
+                        Thinking</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Update yourself with
+                        emerging trends in the legal arena. This book encompasses the Important Judgments of 2018,
+                        Landmark Supreme Court Judgements, Important amendments and new enactments – 2018, Constitution
+                        of India- Glance, International Legal Developments 2018, Important Committees and Commissions
+                        2018, Important Latin Maxims, Key Legal Concepts, Important Books and Authors.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/12e7GaDG3RTD5hKxGuuDS_5rekdprxf21/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main24">
+            <section class="container" id="b24">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">100 Ways to Motivate Yourself</h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51t8MAl13nL._SX311_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">In this first-ever paperback edition of his
+                        longtime bestseller, motivational speaker Chandler helps readers create an action plan for
+                        living their vision in business and in life.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1VvKG_VSoINEb_uLk4WV6hdmAxrsk4oO4/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b25">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Current Affairs – June 1-15, 2018</h1><img
+                        src="https://www.clipartmax.com/png/middle/240-2408499_gk-in-hindi-version-general-knowledge-icon-png.png"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">GKToday’s Fortnightly
+                        Current Affairs PDF E-Book comprises Current Affairs News Headlines from June 1 to 15, 2018
+                        along with date wise Current Affairs Updates and 130 Multiple Choice Questions published in
+                        GKToday from June 1 to 15, 2018. This PDF E-book is available instantly after payment for
+                        download. No Hardcopy is provided. This e-book is suitable for SSC, Bank PO, Bank Clerical,
+                        IBPS, CLAT, Railways, State Level / Union Public Services examinations.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WnJb8CCM3e1Ydz2RP3rrW7GLXYYFUAsI/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main26">
+            <section class="container" id="b26">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">100 WAYS TO MOTIVATE OTHERS</h1><img
+                        src="https://mastic.mosti.gov.my/sites/default/files/library-collection/2019-11/buku%20terpilih%20dec%202019015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">100 Ways to Motivate Others is the culmination
+                        of many years of successful leadership coaching and training by best-selling author Steve
+                        Chandler and attorney Scott Richardson, and the natural follow-up to Steve's two previous
+                        best-sellers—100 Ways to Motivate Yourself and Reinventing Yourself.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WkgpHw_S5FXA8AwEeItgE8JL3kr9wNhQ/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b27">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Increase your General knowledge
+                        Questions &amp; Answers</h1><img
+                        src="https://4.bp.blogspot.com/-NCdcxhLW9dY/XLsNesYkMCI/AAAAAAAAGJk/iU7Oiw6lYq8zbAKYKnqix5G-hXc1Fd5HQCLcBGAs/s1600/IMG_20190420_173600.jpg"><br>
+                    <p class="books-description" style="height: 166px;">General Knowledge 2021: Check GK Questions
+                        Answers (General ... Improve your GK Here! ... How to link Aadhaar with UAN through the e-KYC
+                        portal? World Food Safety Day 2021: Theme this year, History and Significance · World Oceans ...
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1YORlvY-tS7QQQ4YU3vQRMB7zvDMp_q4O/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main28">
+            <section class="container" id="b28">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">10000 general knowledge questions
+                        and answers</h1><img
+                        src="https://image.slidesharecdn.com/10000quizquestionsandanswers-130206040519-phpapp01/95/10000-quiz-questions-and-answers-1-638.jpg?cb=1360124437"><br>
+                    <p class="books-description" style="height: 166px;">10000 quiz questions and answers www.cartiaz.ro
+                        10000 general knowledge ... for the African Queen Bogart 54 Who sang the theme song in 9 to 5
+                        Dolly Parton .</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1Xte26jYmOVHt-CqktLwaFtd7K_o3X8gM/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b29">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">General Knowledge India Kalpana</h1>
+                    <img src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">India Gk upto july 2012 by the author
+                        Kalpana...It is useful for the competitive exams like UPSC,TNPSC,PRELIMS.. THIs book contains
+                        current affairs upto July 2012.It is written by renowed author Kalpana</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1-5CmGNu5FeGkqkYHfqQDFPzOwC5NBDfO/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main30">
+            <section class="container" id="b30">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">clat 2018 a handbook on legal GK
+                    </h1><img src="https://images-na.ssl-images-amazon.com/images/I/712xCTKlHzL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Update yourself with
+                        emerging trends in the legal arena. This book encompasses the Important Judgments of 2018,
+                        Landmark Supreme Court Judgements, Important amendments and new enactments – 2018, Constitution
+                        of India- Glance, International Legal Developments 2018, Important Committees and Commissions
+                        2018, Important Latin Maxims, Key Legal Concepts, Important Books and Authors ..</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/12e7GaDG3RTD5hKxGuuDS_5rekdprxf21/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b31">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">basic general knowledge book 2012
+                    </h1><img src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">General Knowledge 2012 A
+                        Power-packed General Studies &amp; Current Affairs Package General Knowledge 2012 is an
+                        extensive guide that provides facts and details on essential topics like history, Indian polity,
+                        geography, and current affairs. This is the right book for all quizzing enthusiasts, as it helps
+                        readers brush up and learn more about the above topics. The book, General Knowledge 2012, is
+                        divided into six categories, and these are: General Science, General Knowledge, History,
+                        Geography</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1VzoMRY-SMWzXyPy86pvX5r0VP1JRe41N/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main32">
+            <section class="container" id="b32">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Tutorialspoint General Knowledge
+                    </h1><img
+                        src="https://lh3.googleusercontent.com/-hEkEWkFdj1w/Wa9_vESlZKI/AAAAAAAAHTk/8fDtrMdkP1s9IByhmsz36a63RNDW8rnYwCHMYCw/s640/IMG_20170906_101745.jpg"><br>
+                    <p class="books-description" style="height: 166px;">General Knowledge is a discipline that includes
+                        the facts of almost all the subjects such as Geography, Indian Polity, History, Science, Sports,
+                        and many other ...</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WyTNWZvS-G2CpOCC6qkn8ZFT6Jwt5HnM/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b33">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">GK Digest for NTPC 2017</h1><img
+                        src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Here's Railways RRB NTPC Mains Analysis 19th
+                        January 2017. ... Railways RRB Mains exam pattern 2017; Section-wise Analysis of ... However,
+                        the GK based questions were a bit moderate in difficulty, overall. ... Get Daily GK &amp;
+                        Current Affairs Capsule &amp; PDFs ... Salary &amp; Job Profile · Syllabus · Books.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1XomYY02rDWyuE2gg3qrr_pNlh-974hbI/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main34">
+            <section class="container" id="b34">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">GK Digest for RRB NTPC 2017 hindi
+                    </h1><img src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">GK Digest for RRB NTPC Mains exam is available
+                        to download now. Right now it's available in English medium, Hindi version will be available</p>
+                    <br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1YSikdxZ5gve1da_rbIsLbUOMyo28Ll3-/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b35">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">General knowledge 2009</h1><img
+                        src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">General Knowledge Manual has been conceptualized
+                        and developed on the basis of the requirements of competitive examinations conducted by Union
+                        Public Service Commission, State Public Service Commissions, Indian Forest Services, Indian
+                        Engineering Service</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1--Tb1gqf45cJN0BsXlSp_qSQCBn-VlPR/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main36">
+            <section class="container" id="b36">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">Rajasthan GK Trick</h1><img
+                        src="https://simg.pothi.com/TQMsuV3HC08Zey9cvBXqpR59RljJJbPkY3W5BZHWO-k/rs:fit/w:371/h:477/el:1/g:sm/cb:rev-3/bG9jYWw6Ly8vaW1h/Z2VzL3Byb2R1Y3Rz/LzIwMTkvMTEvZWJv/b2s0MDI0L0ltYWdl/XzAuanBn.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">How to do technical studies
+                        - By the way, you can customize the way you study in some special ways. Which may be a little
+                        different for everyone, but at the same time, if you are serious about your studies from the
+                        beginning, then you do not find the concept of preparing for the exam difficult, yet if you wake
+                        up at the time of the examination itself, then let you know. To study any topic with a technical
+                        approach, you can make charts and prepare notes by highlighting any topic with important points
+                        in a special important way. Due to which you do not get bored while studying any subject or
+                        topic because after remembering the important things, it is easy for you to remember the topic
+                        around or related to it</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1YEm1oEnh7gvAsi38-Z6cnukXLhxQfbNm/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b37">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">Random Fun Facts and Motivational
+                        Quotes</h1><img src="https://m.media-amazon.com/images/I/51TZaDeAurL.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Learning a thousand facts
+                        guarantees that you know at least a thousand more things than the person standing next to you.
+                        This could help you win quizzes, boost your survival skills, and even save a life. Trivia
+                        junkies will love this! You’ll come across facts that enlighten you about the world, some that
+                        fill you with delight, and others that make you go “Wow!”</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WV2ozJvbTEYRQdTBln0Lf8uQ3IeCgH0m/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main38">
+            <section class="container" id="b38">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">The 5 Second Rule</h1><img
+                        src="https://books.google.co.in/books/publisher/content?id=l18QDgAAQBAJ&amp;pg=PP1&amp;img=1&amp;zoom=3&amp;hl=en&amp;bul=1&amp;sig=ACfU3U3uMbTiXPTcxzT-z1ld2ZuqFd1h2A&amp;w=1280"><br>
+                    <p class="books-description" style="height: 166px;">Using the science habits, riveting stories and
+                        surprising facts from some of the most famous moments in history, art and business, Mel Robbins
+                        will explain the power of a 'push moment.' Then, she'll give you one simple tool you can use to
+                        become your greatest self.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WlQN157898YHtNMu3ukExdUse16t7ZhY/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b39">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The Fun Knowledge Encyclopedia</h1>
+                    <img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51tnb4oExtS._SX311_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px;">we've got you covered with The Fun Knowledge
+                        Encyclopedia: The Crazy Stories Behind the World's Most Interesting Facts. The book contains
+                        hundreds of trivia facts and stories, ranging from the interesting and informative to the simply
+                        outrageous.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1W5M3I5y4zDld7wakGU-KNF8UpOloqPnM/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main40">
+            <section class="container" id="b40">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The Fun Knowledge Encyclopedia 2
+                    </h1><img
+                        src="https://rukminim1.flixcart.com/image/416/416/k0plpjk0/book/7/0/9/the-fun-knowledge-encyclopedia-volume-2-original-imafkg5bkpnzrrae.jpeg?q=70"><br>
+                    <p class="books-description" style="height: 166px;">Are you a real trivia nerd who just can't get
+                        enough of trivia, fun facts and interesting stories that surely will impress anyone that you're
+                        having a conversation with? Then The Fun Knowledge Encyclopedia is for you! Packed with
+                        interesting trivia stories, this will surely be the funniest 'encyclopedia' you've ever read!
+                    </p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1W0HEE-1nZ0QXwoWVbEVqhiLhA8OQytmU/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b41">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The Fun Knowledge Encyclopedia 3
+                    </h1><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/51CdD8hVGpL._SX331_BO1,204,203,200_.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">This encyclopedia of facts
+                        is going to allow you to delve deeper into the world of humanity than you ever thought possible,
+                        and we will throw in some facts about the animal kingdom as well. Covering countries far and
+                        wide and various time spans, you are going to be taken on a journey that will further expand
+                        your own knowledge on all things connected to being a human being</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1WRNWPACfaKi3YH7nE70nBMbg7sDXuK1E/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main42">
+            <section class="container" id="b42">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px; overflow-y: scroll;">The general knowledge quiz book</h1>
+                    <img
+                        src="https://demo.vdocuments.mx/img/745x1004/reader024/reader/2021010214/55a803ef1a28ab976c8b4719/r-2.jpg"><br>
+                    <p class="books-description" style="height: 166px; overflow-y: scroll;">Offering questions on a wide
+                        variety of subjects from geography, sport and art to literature, science and history - you will
+                        find the Multiple Choice General Knowledge Quiz Book a great source of entertainment. While
+                        guaranteed to pep up family get-togethers or pub quiz nights, it can also be stimulating
+                        companion for quiet evenings on your own, curled up on the sofa. Arranged into 375 individual
+                        quizzes, and packed with facts, Multiple Choice General Knowledge Quiz Book will ensure you are
+                        never lost for an answer again.</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1X8L4BBYxjK5muWObAIBZ4wo05RC23oeV/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b43">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">GK-10</h1><img
+                        src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs include various GK Topics like
+                        sports, national &amp; international awards, economy, rank &amp; reports, summits &amp;
+                        conferences, current banking news,​</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1XRi4bVuFBHK9rHhcsiYYj7MAhI5-u8sy/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="wrapper" id="main44">
+            <section class="container" id="b44">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">GK-11</h1><img
+                        src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs include various GK Topics like
+                        sports, national &amp; international awards, economy, rank &amp; reports, summits &amp;
+                        conferences, current banking news,​</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1XVM68hOL2mZ4l0lTeRLpWRo6l4RSF2oz/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container" id="b45">
+                <div class="sub-content-container">
+                    <h2 class="book-category">G-K</h2>
+                    <h1 class="book-name" style="height: 50px;">GK-13</h1><img
+                        src="https://islandpress.org/sites/default/files/default_book_cover_2015.jpg"><br>
+                    <p class="books-description" style="height: 166px;">Current Affairs include various GK Topics like
+                        sports, national &amp; international awards, economy, rank &amp; reports, summits &amp;
+                        conferences, current banking news,​</p><br>
+                    <div class="button-contain"><a target="_blank"
+                            href="https://drive.google.com/file/d/1XfRsBnFAMm6Jn5AOjfII1dtvlqUMKMbQ/view?usp=sharing">Download</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </article>
 
-        <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">100 Ways to Motivate Yourself            </h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/51t8MAl13nL._SX311_BO1,204,203,200_.jpg               ">
-                <br>
-                <p class="leading-relaxed">In this first-ever paperback edition of his longtime bestseller, motivational speaker Chandler helps readers create an action plan for living their vision in business and in life.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1VvKG_VSoINEb_uLk4WV6hdmAxrsk4oO4/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
+    <footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <img src="footer-logo.png" alt="logo" class="footer-logo">
+                <p style="margin-top: -50px;line-height: 25px;">This is an Online Platform for the reading of students.
+                    Please note that all the books in this platform are borrowed from other Websites and we give equal
+                    credits to them.</p>
             </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Current Affairs – June 1-15, 2018            </h1>
-                <br>
-                 <img src="https://www.gktoday.in/wp-content/uploads/2018/06/june-1-cover-150x131.jpg.webp               ">
-                <br>
-                <p class="leading-relaxed">GKToday’s Fortnightly Current Affairs PDF E-Book  comprises Current Affairs News Headlines from June 1 to 15, 2018 along with date wise Current Affairs Updates and  130 Multiple Choice Questions published in GKToday from June 1 to 15, 2018.  This PDF E-book is available instantly after payment for download. No Hardcopy is provided. This e-book is suitable for  SSC, Bank PO, Bank Clerical, IBPS, CLAT, Railways, State Level / Union Public Services examinations.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1WnJb8CCM3e1Ydz2RP3rrW7GLXYYFUAsI/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
+            <div class="footer-col">
+                <h3>Credits <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="https://www.pdfdrive.com/" target="_blank">PDF Drive</a></li>
+                    <li><a href="https://z-lib.org/" target="_blank">Z Library</a></li>
+                    <li><a href="https://pdfroom.com/" target="_blank">PDF Room</a></li>
+                    <li><a href="https://planetpdf.com/" target="_blank">Planet PDF</a></li>
+                    <li><a href="https://www.planetebook.com/" target="_blank">Planet E-Book</a></li>
+                    <li><a href="https://fb2bookfree.com/" target="_blank">FB2 Book Free</a></li>
+                    <li><a href="https://allreadingworld.com/" target="_blank">All Reading World</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">100 WAYS TO MOTIVATE OTHERS            </h1>
-                <br>
-                 <img src="https://mastic.mosti.gov.my/sites/default/files/library-collection/2019-11/buku%20terpilih%20dec%202019015.jpg               ">
-                <br>
-                <p class="leading-relaxed">100 Ways to Motivate Others is the culmination of many years of successful leadership coaching and training by best-selling author Steve Chandler and attorney Scott Richardson, and the natural follow-up to Steve's two previous best-sellers—100 Ways to Motivate Yourself and Reinventing Yourself.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1WkgpHw_S5FXA8AwEeItgE8JL3kr9wNhQ/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
+            <div class="footer-col">
+                <h3>Quick Links <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="About_Page.html" target="_blank">About</a></li>
+                    <li><a href="books.html" target="_blank">Books</a></li>
+                    <li><a href="Comment.html" target="_blank">Contact</a></li>
+                    <li><a href="Comment.html" target="_blank">Comment</a></li>
+                    <li><a href="Books_Review.html" target="_blank">Book Review</a></li>
+                </ul>
             </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Increase your General knowledge Questions & Answers            </h1>
-                <br>
-                 <img src="https://4.bp.blogspot.com/-NCdcxhLW9dY/XLsNesYkMCI/AAAAAAAAGJk/iU7Oiw6lYq8zbAKYKnqix5G-hXc1Fd5HQCLcBGAs/s200/IMG_20190420_173600.jpg               ">
-                <br>
-                <p class="leading-relaxed">"General Knowledge 2021: Check GK Questions Answers (General ... Improve your GK Here! ... How to link Aadhaar with UAN through the e-KYC portal? World Food Safety Day 2021: Theme this year, History and Significance · World Oceans ...</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1YORlvY-tS7QQQ4YU3vQRMB7zvDMp_q4O/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
+            <div class="footer-col">
+                <h3>Contact Us <div class="underline"><span></span></div>
+                </h3>
+                <form class="footer-form">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input placeholder="Enter your email-id">
+                    <a href="oops.html"><button class="footer-btn"><i class="fa-solid fa-arrow-right"></i></button></a>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCtN5a1UpFa2vPBlOLosZs-A" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <i class="fa-brands fa-discord"></i>
                 </div>
-              </div>
             </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">10000 general knowledge questions and answers            </h1>
-                <br>
-                 <img src="https://image.slidesharecdn.com/10000quizquestionsandanswers-130206040519-phpapp01/95/10000-quiz-questions-and-answers-1-638.jpg?cb=1360124437               ">
-                <br>
-                <p class="leading-relaxed">"10000 quiz questions and answers www.cartiaz.ro 10000 general knowledge ... for the African Queen Bogart 54 Who sang the theme song in 9 to 5 Dolly Parton .</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1Xte26jYmOVHt-CqktLwaFtd7K_o3X8gM/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"General Knowledge India Kalpana"</h1>
-                <br>
-                 <img src="https://html.scribdassets.com/4wzzhv3mtc40c0kz/images/1-217c92483f.jpg               ">
-                <br>
-                <p class="leading-relaxed">India Gk upto july 2012 by the author Kalpana...It is useful for the competitive exams like UPSC,TNPSC,PRELIMS.. THIs book contains current affairs upto July 2012.It is written by renowed author Kalpana            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1-5CmGNu5FeGkqkYHfqQDFPzOwC5NBDfO/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">clat 2018 a handbook on legal GK            </h1>
-                <br>
-                 <img src="https://clattutorials.com/wp-content/uploads/2018/07/LMPD_Magazine_page_1-600x776.png               ">
-                <br>
-                <p class="leading-relaxed">Update yourself with emerging trends in the legal arena. This book encompasses the Important Judgments of 2018, Landmark Supreme Court Judgements, Important amendments and new enactments – 2018, Constitution of India- Glance, International Legal Developments 2018, Important Committees and Commissions 2018, Important Latin Maxims, Key Legal Concepts, Important Books and Authors ..            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/12e7GaDG3RTD5hKxGuuDS_5rekdprxf21/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">basic general knowledge book 2012            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">General Knowledge 2012 A Power-packed General Studies & Current Affairs Package General Knowledge 2012 is an extensive guide that provides facts and details on essential topics like history, Indian polity, geography, and current affairs. This is the right book for all quizzing enthusiasts, as it helps readers brush up and learn more about the above topics. The book, General Knowledge 2012, is divided into six categories, and these are: General Science, General Knowledge, History, Geography,            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1VzoMRY-SMWzXyPy86pvX5r0VP1JRe41N/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"Tutorialspoint General Knowledge</h1>
-                <br>
-                 <img src="https://4.bp.blogspot.com/-tNnimMEV5c0/XL3nyffokrI/AAAAAAAAEdo/3PJiYodjZAoEB3k-GpsC6gPRKRU55SLEgCLcBGAs/s1600/Exam%2BStudy%2BBooks%255BPavithran%2B%252824%2529.jpg               ">
-                <br>
-                <p class="leading-relaxed">"General Knowledge is a discipline that includes the facts of almost all the subjects such as Geography, Indian Polity, History, Science, Sports, and many other ...</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1WyTNWZvS-G2CpOCC6qkn8ZFT6Jwt5HnM/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"GK Digest for NTPC 2017"</h1>
-                <br>
-                 <img src="https://2.bp.blogspot.com/-bk4SpHCX4hw/WGN38nPHQiI/AAAAAAAAMMc/MsFQ6h609zUCsBJkD9x53cEid7MytafyQCLcB/s400/digest-rrb-min.jpg               ">
-                <br>
-                <p class="leading-relaxed">Here's Railways RRB NTPC Mains Analysis 19th January 2017. ... Railways RRB Mains exam pattern 2017; Section-wise Analysis of ... However, the GK based questions were a bit moderate in difficulty, overall. ... Get Daily GK & Current Affairs Capsule & PDFs ... Salary & Job Profile · Syllabus · Books.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1XomYY02rDWyuE2gg3qrr_pNlh-974hbI/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">GK Digest for RRB NTPC 2017 hindi             </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed"> GK Digest for RRB NTPC Mains exam is available to download now. Right now it's available in English medium, Hindi version will be available            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1YSikdxZ5gve1da_rbIsLbUOMyo28Ll3-/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">General knowledge 2009            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">General Knowledge Manual has been conceptualized and developed on the basis of the requirements of competitive examinations conducted by Union Public Service Commission, State Public Service Commissions, Indian Forest Services, Indian Engineering Service            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1--Tb1gqf45cJN0BsXlSp_qSQCBn-VlPR/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Rajasthan GK Trick            </h1>
-                <br>
-                 <img src="https://simg.pothi.com/TQMsuV3HC08Zey9cvBXqpR59RljJJbPkY3W5BZHWO-k/rs:fit/w:371/h:477/el:1/g:sm/cb:rev-3/bG9jYWw6Ly8vaW1h/Z2VzL3Byb2R1Y3Rz/LzIwMTkvMTEvZWJv/b2s0MDI0L0ltYWdl/XzAuanBn.jpg               ">
-                <br>
-                <p class="leading-relaxed">"How to do technical studies - By the way, you can customize the way you study in some special ways. Which may be a little different for everyone, but at the same time, if you are serious about your studies from the beginning, then you do not find the concept of preparing for the exam difficult, yet if you wake up at the time of the examination itself, then let you know. To study any topic with a technical approach, you can make charts and prepare notes by highlighting any topic with important points in a special important way. Due to which you do not get bored while studying any subject or topic because after remembering the important things, it is easy for you to remember the topic around or related to it."</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1YEm1oEnh7gvAsi38-Z6cnukXLhxQfbNm/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">Random Fun Facts and Motivational Quotes            </h1>
-                <br>
-                 <img src="https://m.media-amazon.com/images/I/51TZaDeAurL.jpg               ">
-                <br>
-                <p class="leading-relaxed">"Learning a thousand facts guarantees that you know at least a thousand more things than the person standing next to you. This could help you win quizzes, boost your survival skills, and even save a life. Trivia junkies will love this! You’ll come across facts that enlighten you about the world, some that fill you with delight, and others that make you go “Wow!”</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1WV2ozJvbTEYRQdTBln0Lf8uQ3IeCgH0m/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"The 5 Second Rule</h1>
-                <br>
-                 <img src="https://books.google.co.in/books/publisher/content?id=l18QDgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3uMbTiXPTcxzT-z1ld2ZuqFd1h2A&w=1280               ">
-                <br>
-                <p class="leading-relaxed">"Using the science habits, riveting stories and surprising facts from some of the most famous moments in history, art and business, Mel Robbins will explain the power of a ""push moment."" Then, she'll give you one simple tool you can use to become your greatest self.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1WlQN157898YHtNMu3ukExdUse16t7ZhY/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Fun Knowledge Encyclopedia            </h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/51tnb4oExtS._SX311_BO1,204,203,200_.jpg               ">
-                <br>
-                <p class="leading-relaxed">"we've got you covered with The Fun Knowledge Encyclopedia: The Crazy Stories Behind the World's Most Interesting Facts. The book contains hundreds of trivia facts and stories, ranging from the interesting and informative to the simply outrageous.</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1W5M3I5y4zDld7wakGU-KNF8UpOloqPnM/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">"The Fun Knowledge Encyclopedia 2"</h1>
-                <br>
-                 <img src="https://rukminim1.flixcart.com/image/416/416/k0plpjk0/book/7/0/9/the-fun-knowledge-encyclopedia-volume-2-original-imafkg5bkpnzrrae.jpeg?q=70               ">
-                <br>
-                <p class="leading-relaxed">"Are you a real trivia nerd who just can't get enough of trivia, fun facts and interesting stories that surely will impress anyone that you're having a conversation with? Then The Fun Knowledge Encyclopedia is for you! Packed with interesting trivia stories, this will surely be the funniest ""encyclopedia"" you've ever read!</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1W0HEE-1nZ0QXwoWVbEVqhiLhA8OQytmU/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The Fun Knowledge Encyclopedia 3            </h1>
-                <br>
-                 <img src="https://images-na.ssl-images-amazon.com/images/I/51CdD8hVGpL._SX331_BO1,204,203,200_.jpg               ">
-                <br>
-                <p class="leading-relaxed">"This encyclopedia of facts is going to allow you to delve deeper into the world of humanity than you ever thought possible, and we will throw in some facts about the animal kingdom as well. Covering countries far and wide and various time spans, you are going to be taken on a journey that will further expand your own knowledge on all things connected to being a human being</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1WRNWPACfaKi3YH7nE70nBMbg7sDXuK1E/view?usp=sharing			                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">The general knowledge quiz book             </h1>
-                <br>
-                 <img src="https://demo.vdocuments.mx/img/745x1004/reader024/reader/2021010214/55a803ef1a28ab976c8b4719/r-2.jpg               ">
-                <br>
-                <p class="leading-relaxed">Offering questions on a wide variety of subjects from geography, sport and art to literature, science and history - you will find the Multiple Choice General Knowledge Quiz Book a great source of entertainment. While guaranteed to pep up family get-togethers or pub quiz nights, it can also be stimulating companion for quiet evenings on your own, curled up on the sofa. Arranged into 375 individual quizzes, and packed with facts, Multiple Choice General Knowledge Quiz Book will ensure you are never lost for an answer again.            </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1X8L4BBYxjK5muWObAIBZ4wo05RC23oeV/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">GK10            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">"Current Affairs include various GK Topics like sports, national & international awards, economy, rank & reports, summits & conferences, current banking news,​</p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1XRi4bVuFBHK9rHhcsiYYj7MAhI5-u8sy/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">GK11            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">Current Affairs include various GK Topics like sports, national & international awards, economy, rank & reports, summits & conferences, current banking news,​             </p>
-                <br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1XVM68hOL2mZ4l0lTeRLpWRo6l4RSF2oz/view?usp=sharing                ">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="text-gray-600 body-font overflow-hidden">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 class="text-sm title-font text-gray-500 tracking-widest">General knowledge</h2>
-                <h1 class="text-gray-800 text-3xl title-font font-medium mb-1">GK  13            </h1>
-                <br>
-                 <img src="https://i.imgur.com/J5LVHEL.jpg               ">
-                <br>
-                <p class="leading-relaxed">Current Affairs include various GK Topics like sports, national & international awards, economy, rank & reports, summits & conferences, current banking news,​             </p>
-                sss<br>
-                <br>
-                  <a href="https://drive.google.com/file/d/1XfRsBnFAMm6Jn5AOjfII1dtvlqUMKMbQ/view?usp=sharing">
-                  <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Download</button></a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section> 
-
-
-
-                            <!--------JavaScript for toggle menu------>
-                            <script>
-                                var navLinks = document.getElementById("navLinks");
-                                function showMenu(){
-                                    navLinks.style.right = "0";
-                                }
-                                function hideMenu(){
-                                    navLinks.style.right = "-200px";
-                                }
-                                var Cat90 = document.getElementbyId("Cat90");
-                    if(x = Cat90) {
-                      Window.location.href("Cat90")
-                    }
-                            </script>
+        </div>
+        <hr>
+        <p class="copywright">Author's Attic | Virtual Library © 2022 - All rights reserved</p>
+    </footer>
 </body>
+
 </html>
