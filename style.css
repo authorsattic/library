@@ -331,6 +331,10 @@ h1{
     display: flex;
     flex-direction: column;
 }
+    .testimonials-col img{
+    height: 60px;
+    width: 200px;
+}
     
 }
 
