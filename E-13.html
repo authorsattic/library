@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="booktem.css">
 </head>
-
 <body>
     <section class="sub-header">
         <nav>
@@ -133,5 +132,17 @@
         <p class="copywright">Author's Attic | Virtual Library © 2022 - All rights reserved</p>
     </footer>
 </body>
+    
+                <!--------JavaScript for toggle menu------>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    <script src="https://kit.fontawesome.com/3a48330618.js" crossorigin="anonymous"></script>
 
 </html>
