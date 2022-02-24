@@ -21,6 +21,10 @@
 ::-webkit-scrollbar-thumb:hover{
     background: #5a5a5a;
 }
+::selection{
+    background-color: rgb(255, 86, 86);
+    color: #fff;
+}
 
 .container{
     margin-left: 10px;
