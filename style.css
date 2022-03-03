@@ -184,6 +184,12 @@ h1{
     display: flex;
     justify-content: space-between;
 }
+@media screen and (min-device-width: 670px) and (max-device-width: 768px) {
+.row{
+    display:flex;
+    flex-direction:column;
+    }
+}
 .course-col{
     flex-basis: 24%;
     background: #f1c0c0;
